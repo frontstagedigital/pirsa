@@ -5,7 +5,7 @@
 [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat)](https://github.com/yesnoruly/parcel-start/pulls)
 
 
-## HETI-FPAM Site
+## PIRSA
 
 ### Branch Structure
 
@@ -29,9 +29,7 @@ A simple parcel starter template for plain websites.
 - 🎡 Automatic deploy to gh-pages branch
 - 🔄 CSS reset
 
-## Demo
 
-[Demo](https://yesnoruly.github.io/parcel-start/)
 
 ## Quick start
 
