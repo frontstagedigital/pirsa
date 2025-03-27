@@ -1,0 +1,15 @@
+
+@import 'node_modules/nsw-design-system/src/main';
+
+// Core libraries
+@import 'node_modules/nsw-design-system/src/global/scss/settings/settings';
+@import 'node_modules/nsw-design-system/src/global/scss/base/all';
+@import 'node_modules/nsw-design-system/src/global/scss/helpers/all';
+@import 'node_modules/nsw-design-system/src/global/scss/settings/palette';
+@import 'node_modules/nsw-design-system/src/global/scss/settings/theme';
+@import 'node_modules/nsw-design-system/src/core/all';
+
+// Components
+@import 'node_modules/nsw-design-system/src/components/accordion/accordion';
+@import 'node_modules/nsw-design-system/src/components/card/card';
+@import 'node_modules/nsw-design-system/src/components/in-page-alert/in-page-alert';
