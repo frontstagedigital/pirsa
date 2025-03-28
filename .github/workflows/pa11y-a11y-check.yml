@@ -1,0 +1,48 @@
+name: Pa11y Accessibility Check
+
+on:
+  pull_request:
+    branches: [master, main, develop, staging]
+
+jobs:
+  pa11y-check:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      - name: Install Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: '18'
+
+      - name: Install dependencies
+        run: npm install
+
+      - name: Build assets
+        run: npm run build
+
+      - name: Serve build
+        run: npx serve dist -l 1234 &
+
+      - name: Wait for server
+        run: sleep 10
+
+      - name: Run Pa11y and generate JSON report (don't fail CI)
+        run: npx pa11y http://localhost:1234 --reporter json > pa11y-report.json || true
+
+      - name: Upload Pa11y report
+        uses: actions/upload-artifact@v3
+        with:
+          name: pa11y-report
+          path: pa11y-report.json
+
+      - name: Comment Pa11y report link in PR
+        uses: peter-evans/create-or-update-comment@v3
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+          issue-number: ${{ github.event.pull_request.number }}
+          body: |
+            ✅ **Pa11y Accessibility Report**  
+            Download the latest report from the GitHub Actions [Artifacts section](https://github.com/${{ github.repository }}/actions/runs/${{ github.run_id }}) for this PR.
