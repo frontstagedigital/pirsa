@@ -2,7 +2,7 @@ name: Pa11y Accessibility Check
 
 on:
   pull_request:
-    branches: [master, main, develop, staging, pa11y-setup]
+    branches: [main, develop, staging, pa11y-setup]
 
 jobs:
   pa11y-check:
@@ -23,26 +23,11 @@ jobs:
       - name: Build assets
         run: npm run build
 
-      - name: Serve build
+      - name: Serve build locally
         run: npx serve dist -l 1234 &
 
-      - name: Wait for server
+      - name: Wait for server to be ready
         run: sleep 10
 
-      - name: Run Pa11y and generate JSON report (don't fail CI)
-        run: npx pa11y http://localhost:1234 --reporter json > pa11y-report.json || true
-
-      - name: Upload Pa11y report
-        uses: actions/upload-artifact@v2
-        with:
-          name: pa11y-report
-          path: pa11y-report.json
-
-      - name: Comment Pa11y report link in PR
-        uses: peter-evans/create-or-update-comment@v3
-        with:
-          token: ${{ secrets.GITHUB_TOKEN }}
-          issue-number: ${{ github.event.pull_request.number }}
-          body: |
-            ✅ **Pa11y Accessibility Report**  
-            Download the latest report from the GitHub Actions [Artifacts section](https://github.com/${{ github.repository }}/actions/runs/${{ github.run_id }}) for this PR.
+      - name: Run Pa11y and output results to logs (does not fail PR)
+        run: npx pa11y http://localhost:1234 --reporter cli || true
