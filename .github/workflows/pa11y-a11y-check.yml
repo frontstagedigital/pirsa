@@ -37,5 +37,10 @@ jobs:
       - name: Wait for server
         run: sleep 10
 
-      - name: Run Pa11y (using system Chromium)
-        run: pa11y http://localhost:1234 --reporter cli || true
+      - name: Run Pa11y on all pages
+        run: |
+          find dist -name "*.html" | while read file; do
+            url="http://localhost:1234/${file#dist/}"
+            echo "🔎 Testing $url"
+            pa11y "$url" --reporter cli || true
+          done
