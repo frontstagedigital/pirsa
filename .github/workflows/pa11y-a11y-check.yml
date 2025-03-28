@@ -52,7 +52,7 @@ jobs:
             echo "Accessibility issues found. Build will fail."
             exit $EXIT_CODE
           else
-            echo "⚠️ Accessibility issues found, but build passes because bypass is enabled (A11Y_ENFORCE=${A11Y_ENFORCE})"
+            echo "⚠️ Accessibility issues found, but build passes because bypass is enabled (A11Y_ENFORCE=${A11Y_ENFORCE} ${EXIT_CODE})"
             exit 0
           fi
         env:
