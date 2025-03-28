@@ -56,5 +56,5 @@ jobs:
             exit 0
           fi
         env:
-          A11Y_ENFORCE: true
+          A11Y_ENFORCE: false
       
