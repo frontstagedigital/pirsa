@@ -2,7 +2,7 @@ name: Pa11y Accessibility Check
 
 on:
   pull_request:
-    branches: [master, main, develop, staging]
+    branches: [master, main, develop, staging, pa11y-setup]
 
 jobs:
   pa11y-check:
