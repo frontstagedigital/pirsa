@@ -33,7 +33,7 @@ jobs:
         run: npx pa11y http://localhost:1234 --reporter json > pa11y-report.json || true
 
       - name: Upload Pa11y report
-        uses: actions/upload-artifact@v3.1.3
+        uses: actions/upload-artifact@v2
         with:
           name: pa11y-report
           path: pa11y-report.json
