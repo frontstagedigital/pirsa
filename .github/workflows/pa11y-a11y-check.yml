@@ -42,9 +42,9 @@ jobs:
           set -e
           EXIT_CODE=0
           find dist -name "*.html" | while read file; do
-            url="http://localhost:1234/${file#dist/}"
-            echo "🔎 Testing $url"
-            pa11y "$url" --reporter cli || EXIT_CODE=$?
+              url="http://localhost:1234/${file#dist/}"
+              echo "🔎 Testing $url"
+              pa11y "$url" --reporter cli || EXIT_CODE=1
           done
       
           echo "A11Y_ENFORCE = '${A11Y_ENFORCE}'"
