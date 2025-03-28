@@ -29,5 +29,6 @@ jobs:
       - name: Wait for server to be ready
         run: sleep 10
 
-      - name: Run Pa11y and output results to logs (does not fail PR)
-        run: npx pa11y http://localhost:1234 --reporter cli || true
+      - name: Run Pa11y safely in GitHub Actions
+        run: npx pa11y http://localhost:1234 --chrome-launcher-flags="--no-sandbox" --reporter cli || true
+      
