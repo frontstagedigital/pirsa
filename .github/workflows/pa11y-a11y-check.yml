@@ -20,9 +20,9 @@ jobs:
       - name: Install dependencies
         run: npm install
 
-      - name: Install Pa11y v7.4.0
-        run: npm install -g pa11y@7.4.0
-
+      - name: Install Pa11y v7
+        run: npm install -g pa11y@7.3.1
+    
       - name: Build assets
         run: npm run build
 
