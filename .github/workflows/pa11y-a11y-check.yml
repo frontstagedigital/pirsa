@@ -1,4 +1,4 @@
-name: Pa11y Accessibility Check
+name: Pa11y Accessibility Check (Safe for CI)
 
 on:
   pull_request:
@@ -20,18 +20,17 @@ jobs:
       - name: Install dependencies
         run: npm install
 
+      - name: Install Pa11y v7.4.0
+        run: npm install -g pa11y@7.4.0
+
       - name: Build assets
         run: npm run build
 
-      - name: Serve build locally
+      - name: Serve Parcel build
         run: npx serve dist -l 1234 &
 
       - name: Wait for server to be ready
         run: sleep 10
 
-      - name: Run Pa11y against local Parcel site
-        run: |
-          export PA11Y_CHROME_LAUNCH_CONFIG='{"args": ["--no-sandbox"]}'
-          npx pa11y http://localhost:1234 --reporter cli || true
-      
-      
+      - name: Run Pa11y with --no-sandbox
+        run: pa11y http://localhost:1234 --chrome-launcher-flags="--no-sandbox" --reporter cli || true
