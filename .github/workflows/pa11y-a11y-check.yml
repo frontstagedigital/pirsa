@@ -36,11 +36,22 @@ jobs:
 
       - name: Wait for server
         run: sleep 10
-
-      - name: Run Pa11y on all pages
+          
+      - name: Run Pa11y with optional bypass
         run: |
-          find dist -name "*.html" | while read file; do
-            url="http://localhost:1234/${file#dist/}"
-            echo "🔎 Testing $url"
-            pa11y "$url" --reporter cli || true
-          done
+            set -e
+            EXIT_CODE=0
+            find dist -name "*.html" | while read file; do
+              url="http://localhost:1234/${file#dist/}"
+              echo "🔎 Testing $url"
+              pa11y "$url" --reporter cli || EXIT_CODE=$?
+            done
+            if [ "${A11Y_ENFORCE}" = "true" ] && [ "$EXIT_CODE" -ne 0 ]; then
+              echo "Accessibility issues found. Failing the build."
+              exit $EXIT_CODE
+            else
+              echo "Accessibility issues found but build is allowed to pass (A11Y_ENFORCE=$A11Y_ENFORCE)"
+              exit 0
+            fi
+        env:
+            A11Y_ENFORCE: true  # <-- change this to false to bypass
