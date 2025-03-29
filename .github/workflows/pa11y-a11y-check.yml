@@ -50,7 +50,7 @@ jobs:
           done
       
           echo "A11Y_ENFORCE = '${A11Y_ENFORCE}'"
-          if [ "$A11Y_ENFORCE" === true ] && [ "$EXIT_CODE" != 0 ]; then
+          if [ "$A11Y_ENFORCE" === true ] && [ "$EXIT_CODE" -ne 0 ]; then
             echo "Accessibility issues found. Build will fail."
             exit $EXIT_CODE
           else
