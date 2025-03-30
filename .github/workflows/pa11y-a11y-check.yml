@@ -1,0 +1,62 @@
+name: Pa11y Accessibility Check
+
+on:
+  pull_request:
+
+jobs:
+  pa11y-check:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      - name: Install Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: '18'
+
+      - name: Install system Chromium
+        run: sudo apt-get install -y chromium-browser
+
+      - name: Set Puppeteer executable path
+        run: echo "PUPPETEER_EXECUTABLE_PATH=/usr/bin/chromium-browser" >> $GITHUB_ENV
+
+      - name: Install dependencies
+        run: npm install
+
+      - name: Install Pa11y
+        run: npm install -g pa11y
+
+      - name: Build assets
+        run: npm run build
+
+      - name: Serve site
+        run: npx serve dist -l 1234 &
+
+      - name: Wait for server
+        run: sleep 10
+          
+      - name: Run Pa11y with optional bypass (corrected)
+        run: |
+          set -e
+          EXIT_CODE=0
+          for file in $(find dist -name "*.html"); do
+              url="http://localhost:1234/${file#dist/}"
+              echo "🔎 Testing $url"
+              if ! pa11y "$url" --reporter cli; then
+                  EXIT_CODE=1
+              fi
+          done
+      
+          echo "A11Y_ENFORCE = '${A11Y_ENFORCE}'"
+          if [ "$A11Y_ENFORCE" = "true" ] && [ "$EXIT_CODE" -ne 0 ]; then
+            echo "Accessibility issues found. Build will fail."
+            exit $EXIT_CODE
+          else
+            echo "⚠️ Accessibility issues found, but build passes because bypass is enabled (A11Y_ENFORCE=${A11Y_ENFORCE} ${EXIT_CODE})"
+            exit 0
+          fi
+        env:
+          A11Y_ENFORCE: true
+      
