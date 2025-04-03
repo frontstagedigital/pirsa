@@ -23,6 +23,7 @@
     "url": ""
   },
   "dependencies": {
+    "jquery": "^3.7.1",
     "nsw-design-system": "^3.18.11"
   }
 }

@@ -1,1 +1,37 @@
 /* Footer */
+.nsw-footer {
+    a {
+        font-weight: var(--nsw-font-normal);
+    }
+    &__lower {
+        ul {
+            flex-direction: column;
+            @include breakpoint('md') {
+                flex-direction: row;
+            }           
+            &.link-list {
+            display: list-item; 
+            }
+        }
+        li {
+            flex-basis: 100%;
+            max-width: 100%;
+            @include breakpoint('md') {
+                flex-basis: unset;
+                max-width: unset;
+            }              
+        }
+    }
+
+    &__social {
+        a {
+            &.nsw-icon-button {
+            margin: 0;
+            padding-right: 0;
+                &:first-of-type {
+                    margin-left: 0.25rem;
+                }
+            }
+        }
+    }
+}
