@@ -31,6 +31,10 @@
                 &:first-of-type {
                     margin-left: 0.25rem;
                 }
+                &:hover, &:focus {
+                    background-color: unset;
+                    outline: none;
+                } 
             }
         }
     }
