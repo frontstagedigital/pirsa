@@ -1,7 +1,28 @@
 .pirsa-header {
+    .nsw-header__waratah {
+        justify-content: left;
+        padding: 14px 6px;
+
+        a {
+            width: 180px;
+        }
+
+        img {
+            width: 100%;
+        }
+    }
+
     .nsw-header__search {
         display: flex;
         gap: 8px;
+        top: 8px;
+        right: 0;
+    }
+
+    .nsw-header__menu {
+        top: 8px;
+        right: 64px; 
+        left: unset;
     }
 
     .translate__container {
@@ -93,12 +114,36 @@
 
 
     @media screen and (min-width: 62rem) {
+
+        .nsw-header__main {
+            margin: 14px 0;
+        }
+        .nsw-header__waratah {
+            // justify-content: left;
+            padding: 0;
+    
+            a {
+                width: 297px;
+            }
+        }
+
+        .nsw-header__search {
+            top: 50%;
+            align-items: center;
+        }
         .translate__container {
             display: block;
         }
 
         .utility-link {
-            display: block;
+            display: flex;
+            color: var(--neutral-grey-02, #495054);
+            font-feature-settings: 'liga' off, 'clig' off;
+            font-size: 14px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 19px;
+            width: unset;
         }
     }
 }
