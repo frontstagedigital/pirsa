@@ -1,0 +1,38 @@
+.pirsa-hero-banner {
+    background-color: transparent;
+
+    &__video {
+        background: rgba(0, 0, 0, .6);
+        overflow: hidden;
+        //min-height: 30rem;
+        position: relative;
+
+        @include breakpoint('sm') {
+            max-height: 30rem;
+        }   
+
+        .nsw-media__video {
+            width: 100vh;
+            
+            @include breakpoint('sm') {
+                width: 100%;
+            }   
+            
+            iframe {
+                height: 100%;
+                object-fit: cover;
+                position: absolute;
+                width: 100%;
+                z-index: -1;
+            }
+        }
+    }
+
+    &__content {
+        bottom: 0;
+        padding-bottom: 2rem;
+        padding-top: 2rem;
+        position: absolute;
+        z-index: 1;
+    }
+}
