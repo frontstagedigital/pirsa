@@ -1,0 +1,6 @@
+.pirsa-page-banner {    
+    min-height: 20rem;
+    @include breakpoint('sm') {
+        max-height: 20rem;
+    }   
+}
