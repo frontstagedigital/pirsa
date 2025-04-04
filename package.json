@@ -8,7 +8,7 @@
   "source": "src/index.html",
   "scripts": {
     "dev": "parcel",
-    "build": "parcel build src/*.html --public-url ./"
+    "build": "parcel build src/*.html --public-url ./ --no-cache"
   },
   "devDependencies": {
     "@parcel/transformer-sass": "^2.12.0",
