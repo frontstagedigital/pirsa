@@ -1,0 +1,19 @@
+.pirsa-searchbar {
+    .nsw-button {
+        border-color: var(--nsw-brand-dark);
+        border-radius: var(--pirsa-border-radius);
+        padding: .5rem;
+        margin-left: -1.5rem;
+    }
+    .nsw-form__input {
+        border-color: var(--nsw-brand-dark);
+        border-bottom-left-radius: var(--pirsa-border-radius);
+        border-top-left-radius: var(--pirsa-border-radius);
+        &:focus {
+            position: unset;
+        }
+    }
+    .nsw-material-icons {
+        font-size: 1.75rem;
+    }
+}
