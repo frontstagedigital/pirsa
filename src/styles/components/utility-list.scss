@@ -1,0 +1,26 @@
+.pirsa-utility-list {
+    background-color: transparent;
+    margin-left: -0.5rem;
+    .nsw-utility-list__item {
+        border-bottom: none;
+        font-weight: var(--nsw-font-normal);
+        padding: .5rem;
+    }
+    &__icon {
+        border: 2px solid currentColor;
+        border-radius: 50%;
+        height: 32px;
+        width: 32px;      
+        display: flex;
+        justify-content: center; 
+        align-items: center;         
+        padding: 4px;
+
+        svg {
+            fill: currentColor;
+            path {
+                fill: currentColor;
+            }
+        }
+    }
+}
