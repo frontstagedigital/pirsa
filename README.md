@@ -37,7 +37,6 @@ How it works:
 - When you open a PR, the site gets built and served locally.
 - Pa11y crawls every .html page inside the dist/ folder and checks for accessibility issues.
 - Enabled caching using setup-node’s built-in cache: 'npm'
-- Switched from npm install → npm ci for faster and deterministic installs
 
 If it finds problems:
 - The build will fail if A11Y_ENFORCE=true (which it is by default).
