@@ -49,7 +49,7 @@
         border-bottom: 1px solid var(--nsw-grey-03);
 
         .nsw-header__main {
-            margin: 14px 0;
+            margin: 20px 0;
         }
 
         .nsw-header__waratah {
@@ -57,7 +57,7 @@
             padding: 0;
     
             a {
-                width: 297px;
+                width: 240px;
             }
         }
 
@@ -66,7 +66,7 @@
             right: 0;
             align-items: center;
             display: flex;
-            gap: 8px;
+            gap: 6px;
 
             button .nsw-material-icons {
                 font-size: 2rem;
@@ -74,7 +74,8 @@
         }
 
         .nsw-header__search-area {
-            right: 476px;// 508 + 16 - 48
+            right: 462px;// 494 + 16 - 48 (search menu + padding - search button)
+            width: 16.25rem;
 
             form .nsw-material-icons {
                 font-size: 2rem;
@@ -175,6 +176,25 @@
             line-height: 19px;
             width: unset;
             padding: 0 16px;
+        }
+    }
+
+    @media screen and (min-width: 75rem) {
+        .nsw-header__main {
+            margin: 14px 0;
+        }
+
+        .nsw-header__waratah a {
+            width: 297px;
+        }
+
+        .nsw-header__search {
+            gap: 8px;
+        }
+
+        .nsw-header__search-area {
+            right: 470px; // 502 + 16 - 48
+            width: 24.625rem;
         }
     }
 }
