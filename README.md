@@ -36,6 +36,7 @@ How it works:
 - The workflow lives in .github/workflows/pa11y-a11y-check.yml.
 - When you open a PR, the site gets built and served locally.
 - Pa11y crawls every .html page inside the dist/ folder and checks for accessibility issues.
+- Enabled caching using setup-node’s built-in cache: 'npm'
 
 If it finds problems:
 - The build will fail if A11Y_ENFORCE=true (which it is by default).
