@@ -1,0 +1,20 @@
+/* SARDI colour overrides */
+
+.sardi {
+
+    &-color {
+        &--brand * {
+            color: var(--sardi-brand) !important;   
+        }
+    }
+
+    &-bg {
+        &--brand {
+            background-color: var(--sardi-brand);
+        }
+        &--light {
+            background-color: var(--sardi-brand-light);
+        }
+    }
+
+}
