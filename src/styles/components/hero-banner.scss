@@ -24,6 +24,11 @@
                 position: absolute;
                 width: 100%;
                 z-index: -1;
+                transform: translateX(-25%);
+
+                @include breakpoint('sm') {
+                    transform: unset;
+                }                  
             }
         }
     }
@@ -34,5 +39,6 @@
         padding-top: 2rem;
         position: absolute;
         z-index: 1;
+        width: auto;
     }
 }
