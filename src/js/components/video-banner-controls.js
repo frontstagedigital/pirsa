@@ -25,16 +25,24 @@ let playpauseButtons = document.getElementsByClassName("js-video-button__playpau
 for (let playpauseButton of playpauseButtons) {
     playpauseButton.addEventListener("click", function () {
         let buttonState = this.getAttribute('data-button-state');
+        let buttonType = this.getAttribute('data-button-type');
         let videoFrameId = this.getAttribute('data-video-frameid');
         let videoSource = document.getElementById(videoFrameId).getAttribute('data-video-source');
         if(buttonState == "pause") {
             messageVideoiFrame('pause',videoFrameId,videoSource);         
             this.setAttribute('data-button-state','play');
-            this.innerHTML="Play";
+            if(buttonType == 'material') {
+                this.innerHTML="play_arrow";
+            } else {
+                this.innerHTML="Play";
+            }
         } else if(buttonState == "play") {
             messageVideoiFrame('play',videoFrameId,videoSource);
             this.setAttribute('data-button-state','pause');
-            this.innerHTML="Pause";
-        }
+            if(buttonType == 'material') {
+                this.innerHTML="pause";
+            } else {
+                this.innerHTML="Pause";
+            }        }
     });
 }
