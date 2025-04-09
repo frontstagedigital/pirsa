@@ -1,0 +1,33 @@
+.pirsa-icon {
+    background-repeat: no-repeat;
+    background-size: 1.25rem auto; 
+    background-position: center center;
+    color: var(--nsw-text-light);
+    display: inline-block;
+    width: 2em;
+    height: 2em;    
+    text-indent: -9999px;
+
+    &__apple {
+        background-image: url('../image/icon-apple.svg');
+    }
+
+    &__fish {
+        background-image: url('../image/icon-fish.svg');
+    }
+    
+    &__pig {
+        background-image: url('../image/icon-pig.svg');
+    }
+    
+    &__plant-leaf {
+        background-image: url('../image/icon-plant-leaf.svg');
+    }    
+
+    &--rounded {
+        background-color: white;
+        border: 2px solid;
+        border-radius: 50%;
+        padding: 4px;
+    }
+}

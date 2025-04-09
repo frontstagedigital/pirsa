@@ -2,9 +2,40 @@
 
 .sardi {
     // --sardi-brand-primary: #009661;
-    --nsw-brand-dark: #009661;
+    --nsw-brand-dark: #007C54;
+
     // --sardi-brand-dark: #007C54;
-    --nsw-brand-supplementary: #007C54;
+    --nsw-brand-supplementary: #009661;
+
     // --sardi-brand-light: #EEF7F4;
     --nsw-brand-light: #EEF7F4;
+
+
+    .pirsa-intro-block {
+        background-color: var(--nsw-brand-light);
+    }
+
+    .pirsa-utility-list {
+        color: var(--nsw-brand-dark);
+    }
+
+    .pirsa-icon {
+        &__apple {
+            background-image: url('../image/icon-apple-green.svg');
+        }
+    
+        &__fish {
+            background-image: url('../image/icon-fish-green.svg');
+        }
+        
+        &__pig {
+            background-image: url('../image/icon-pig-green.svg');
+        }
+        
+        &__plant-leaf {
+            background-image: url('../image/icon-plant-leaf-green.svg');
+        }   
+    }
+ 
+
 }
