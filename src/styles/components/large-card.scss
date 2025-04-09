@@ -1,0 +1,44 @@
+.pirsa-large-card {
+    align-items: flex-end;
+    color: var(--nsw-text-light);
+    min-height: 32.5rem;
+    
+    .nsw-card__image {
+        display: none;
+    }
+        
+    .nsw-card__content {
+        background-color: var(--pirsa-card-dark);
+        border: none;
+        height: auto;
+        margin-top: auto;
+        width: 100%;
+
+        &:hover {
+            background-color: var(--pirsa-card-dark-hover);
+            padding-bottom: 2rem;
+
+            .nsw-material-icons {
+                left: unset;
+                right: 2rem;
+            }
+        }
+    }
+    
+    .nsw-card__tag {
+        font-weight: var(--nsw-font-normal);
+        text-transform: uppercase;
+    }
+
+    a {
+        color: var(--nsw-text-light);
+    }
+  
+    .nsw-material-icons {
+        border: 2px solid;
+        border-radius: 50%;
+        color: var(--nsw-text-light);
+        font-size: 1.25em;        
+        padding: 4px;
+    }    
+}

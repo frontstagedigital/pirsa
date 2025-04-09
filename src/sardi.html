@@ -7,23 +7,22 @@
     }
 </include>
 
-<body class="page__body">
+<body class="page__body sardi">
 
     <include src="partials/header.html"></include>
 
     <div class="nsw-container">
-        <div class="nsw-layout">
-            <div class="nsw-layout__sidebar nsw-layout__sidebar--desktop">
-                <!-- START: Left sidebar content -->
-                <div class="nsw-docs__box nsw-docs__box--large">left</div>
-                <!-- END: Left sidebar content -->
+
+        <div class="nsw-display-flex">
+            <div class="nsw-p-top-xs nsw-flex-grow-1">
+                <h3>Explore our research projects</h3>
             </div>
-            <main class="nsw-layout__main">
-                <!-- START: Main content -->
-                <div class="nsw-docs__box nsw-docs__box--large">main</div>
-                <!-- END: Main content -->
-            </main>
+            <div>
+                <a href="#" class="nsw-button nsw-button--dark-outline-solid pirsa-button--rounded">View all projects</a>  
+            </div>          
         </div>
+        
+        <include src="partials/large-cards-sardi.html"></include>
     </div>
 
 

@@ -11,10 +11,11 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v3
 
-      - name: Install Node.js
+      - name: Set up Node.js with caching
         uses: actions/setup-node@v3
         with:
           node-version: '18'
+          cache: 'npm'  # Enable npm cache automatically
 
       - name: Install system Chromium
         run: sudo apt-get install -y chromium-browser
@@ -23,7 +24,7 @@ jobs:
         run: echo "PUPPETEER_EXECUTABLE_PATH=/usr/bin/chromium-browser" >> $GITHUB_ENV
 
       - name: Install dependencies
-        run: npm install
+        run: npm ci  # Faster and cleaner than `npm install` in CI
 
       - name: Install Pa11y
         run: npm install -g pa11y
@@ -37,7 +38,7 @@ jobs:
       - name: Wait for server
         run: sleep 10
           
-      - name: Run Pa11y with optional bypass (corrected)
+      - name: Run Pa11y with optional bypass
         run: |
           set -e
           EXIT_CODE=0
@@ -59,4 +60,3 @@ jobs:
           fi
         env:
           A11Y_ENFORCE: true
-      

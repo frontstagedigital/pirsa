@@ -1,16 +1,26 @@
 .pirsa-footer {
     .nsw-footer {
-        a {
-            font-weight: var(--nsw-font-normal);
+        &__acknowledgement {
+            font-size: .9rem;
         }
+
         &__lower {
+            background-color: var(--nsw-grey-02);
+
+            a {
+                font-weight: var(--nsw-font-normal);
+            }
+
             ul {
                 flex-direction: column;
                 @include breakpoint('md') {
                     flex-direction: row;
                 }           
-                &.link-list {
-                display: list-item; 
+                &.pirsa-footer__link-list {
+                    display: list-item; 
+                    li {
+                        margin-right: 0;
+                    }
                 }
             }
             li {
@@ -21,20 +31,15 @@
                     max-width: unset;
                 }              
             }
-        }
+        } 
 
         &__social {
             a {
                 &.nsw-icon-button {
                 margin: 0;
-                padding-right: 0;
                     &:first-of-type {
                         margin-left: 0.25rem;
                     }
-                    &:hover, &:focus {
-                        background-color: unset;
-                        outline: none;
-                    } 
                 }
             }
         }
