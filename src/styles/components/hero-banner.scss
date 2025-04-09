@@ -33,12 +33,52 @@
         }
     }
 
-    &__content {
+    & &__content {
         bottom: 0;
         padding-bottom: 2rem;
         padding-top: 2rem;
         position: absolute;
         z-index: 1;
         width: auto;
+
+        @include breakpoint('md') {
+            width: 85%;
+            max-width: 85%;
+        }
+
+        .nsw-button {
+            margin-top: 0;
+        }
+
+        h1 {
+            @include breakpoint('md') {
+                font-size: var(--nsw-font-size-xxl-mobile);
+                max-width: 25rem;
+            }
+            @include breakpoint('lg') {
+                font-size: var(--nsw-font-size-xxl-mobile);
+                max-width: 35rem;
+            }            
+        }
     }
+
+    .nsw-hero-banner__button {
+        bottom: 2rem;
+        position: absolute;
+        right: 1rem;
+        z-index: 1;
+
+        .nsw-material-icons {
+            border: 2px solid transparent;
+            border-radius: 50%;
+            background-color: var(--nsw-text-light);
+            color: var(--nsw-brand-dark);
+            font-size: 1.25em;        
+            padding: 4px;
+            height: 2rem;
+            width: 2rem;
+        }  
+
+    }
+
 }
