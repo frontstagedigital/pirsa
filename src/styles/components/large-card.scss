@@ -6,7 +6,7 @@
     .nsw-card__image {
         display: none;
     }
-    
+        
     .nsw-card__content {
         background-color: var(--pirsa-card-dark);
         border: none;
@@ -25,6 +25,11 @@
         }
     }
     
+    .nsw-card__tag {
+        font-weight: var(--nsw-font-normal);
+        text-transform: uppercase;
+    }
+
     a {
         color: var(--nsw-text-light);
     }
