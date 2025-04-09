@@ -21,20 +21,15 @@
                     max-width: unset;
                 }              
             }
-        }
+        } 
 
         &__social {
             a {
                 &.nsw-icon-button {
                 margin: 0;
-                padding-right: 0;
                     &:first-of-type {
                         margin-left: 0.25rem;
                     }
-                    &:hover, &:focus {
-                        background-color: unset;
-                        outline: none;
-                    } 
                 }
             }
         }
