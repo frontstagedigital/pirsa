@@ -8,7 +8,16 @@
             </div>
 
             <div class="nsw-show-md">
-              <include src="partials/searchbar.html"></include>
+              <!-- <include src="partials/searchbar.html"></include> -->
+              <form role="search" class="hero-search__form">
+                <label class="sr-only nsw-form__label" for="form-input-group-md">Search site for:</label>
+                <div class="nsw-form__input-group pirsa-searchbar">
+                  <input class="nsw-form__input" type="text" id="form-input-group-md" name="form-input-group-md" value="" placeholder="Search for information and services">
+                  <button class="nsw-button nsw-button--dark nsw-button--flex" type="submit">
+                      <span class="material-icons nsw-material-icons" focusable="false" aria-hidden="true">search</span><span class="sr-only">Search</span>                 
+                  </button>
+                </div>
+              </form>
 
               <p><strong>Hot topics</strong></p>
               <div class="nsw-list nsw-list--8 nsw-m-top-xs">
@@ -34,7 +43,16 @@
   </div>
 
   <div class="nsw-container nsw-m-bottom-md nsw-bg--grey-04 pirsa-intro-block nsw-hide-md">
-    <include src="partials/searchbar.html"></include>
+    <!-- <include src="partials/searchbar.html"></include> -->
+    <form role="search" class="hero-search__form">
+      <label class="sr-only nsw-form__label" for="form-input-group-sm">Search site for:</label>
+      <div class="nsw-form__input-group pirsa-searchbar">
+        <input class="nsw-form__input" type="text" id="form-input-group-sm" name="form-input-group-sm" value="" placeholder="Search for information and services">
+        <button class="nsw-button nsw-button--dark nsw-button--flex" type="submit">
+            <span class="material-icons nsw-material-icons" focusable="false" aria-hidden="true">search</span><span class="sr-only">Search</span>                 
+        </button>
+      </div>
+    </form>     
 
     <p><strong>Hot topics</strong></p>
     <div class="nsw-list nsw-list--8 nsw-m-top-xs">
