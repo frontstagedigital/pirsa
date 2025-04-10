@@ -9,7 +9,7 @@
     --nsw-brand-light: #EEF7F4;
 
 
-    .pirsa-intro-block {
+    .pirsa-section {
         background-color: var(--nsw-brand-light);
     }
 
@@ -33,6 +33,10 @@
         &__plant-leaf {
             background-image: url('../image/icon-plant-leaf-green.svg');
         }   
+
+        &__pageview {
+            background-image: url('../image/icon-pageview-green.svg');
+        }
     }
  
 
