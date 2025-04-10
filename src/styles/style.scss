@@ -7,6 +7,9 @@
 @import 'reset.css';
 @import 'variables.scss';
 
+/* Core */
+@import 'core/section.scss';
+
 /* Components */
 
 @import 'components/footer.scss';
@@ -20,8 +23,10 @@
 @import 'components/utility-list.scss';
 @import 'components/tag.scss';
 
+/* Utilities */
+@import 'utilities.scss';
 
-/* theme override */
+/* Theme override */
 @import 'sardi.scss';
 
 
