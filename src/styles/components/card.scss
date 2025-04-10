@@ -1,0 +1,21 @@
+.pirsa-card {
+    height: auto;
+
+    &__meta {
+        font-weight: var(--nsw-font-normal);
+        text-transform: uppercase;
+        font-size: var(--nsw-font-size-xxs-desktop);
+        line-height: var(--nsw-line-height-xxs-desktop);   
+        margin-bottom: .5rem;     
+    }
+
+    &__tag {
+        display: inline-block;
+        &::after {
+            content: "•";
+            padding-left: 0.4rem;
+            padding-right: 0.4rem;
+        }
+    }
+
+}
