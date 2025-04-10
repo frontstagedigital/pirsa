@@ -4,12 +4,12 @@
     &__video {
         background: rgba(0, 0, 0, .6);
         overflow: hidden;
-        //min-height: 30rem;
+        max-height: 25rem;
         position: relative;
 
-        @include breakpoint('sm') {
+        @include breakpoint('lg') {
             max-height: 30rem;
-        }   
+        }          
 
         .nsw-media__video {
             width: 100vh;
@@ -33,17 +33,31 @@
         }
     }
 
-    & &__content {
+    & &__wrapper {
         bottom: 0;
-        padding-bottom: 2rem;
-        padding-top: 2rem;
+        padding: 0;
+        margin: 0;
         position: absolute;
         z-index: 1;
-        width: auto;
+        width: calc(100vw - 1em);
+        height: 100%;
+    }
+
+    & &__content {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        padding: 0;
+        padding-bottom: 2rem;
+        width: 100%;
+        max-width: 100%;
+
+        @include breakpoint('sm') {
+            width: 90%;
+        }
 
         @include breakpoint('md') {
-            width: 85%;
-            max-width: 85%;
+            width: 93%;
         }
 
         .nsw-button {
@@ -62,8 +76,32 @@
         }
     }
 
+    &__logo {
+        position: absolute;
+        right: 0;
+        top: 0;
+        z-index: 1;
+
+        @include breakpoint('sm') {
+            right: 1rem;
+        }
+
+        img {
+            height: 8rem;
+            
+            @include breakpoint('sm') {
+                height: 10rem;
+            }    
+            
+            @include breakpoint('md') {
+                height: unset;
+            }                
+            
+        }
+    }
+
     .nsw-hero-banner__button {
-        bottom: 2rem;
+        bottom: 2.5rem;
         position: absolute;
         right: 1rem;
         z-index: 1;
@@ -72,7 +110,6 @@
             border: 2px solid transparent;
             border-radius: 50%;
             background-color: var(--nsw-text-light);
-            color: var(--nsw-brand-dark);
             font-size: 1.25em;        
             padding: 4px;
             height: 2rem;
