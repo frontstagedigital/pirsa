@@ -1,0 +1,34 @@
+.pirsa-carousel {
+    --carousel-item-auto-size: 320px;
+
+    &__item {
+        width: var(--carousel-item-auto-size);
+
+        // &:nth-of-type(odd) {
+        //     margin-bottom: 3rem;
+        // }
+
+    }
+
+    .nsw-card__content {
+        background-color: var(--pirsa-card-dark);
+        color: var(--nsw-text-light);
+        padding-bottom: 5rem;
+        border: 0;
+    }    
+
+    a {
+        color: var(--nsw-text-light);
+    }
+  
+    .nsw-material-icons {
+        border: 2px solid;
+        border-radius: 50%;
+        color: var(--nsw-text-light);
+        font-size: 1.25em;        
+        padding: 4px;
+        height: 2rem;
+        width: 2rem;
+    }    
+
+}
