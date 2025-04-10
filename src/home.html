@@ -10,8 +10,10 @@
 <body class="page__body">
     <include src="partials/header.html"></include>
 
+    <include src="partials/hero-banner-pirsa.html"></include>
+
     <!-- START PIR 196 intro block -->
-    <div class="nsw-p-x-sm nsw-p-y-md nsw-m-bottom-lg nsw-bg--grey-04 pirsa-intro-block">
+    <section class="nsw-section pirsa-section">
       <div class="nsw-container">
           <div class="nsw-grid">
               <div class="nsw-col nsw-col-sm-9">
@@ -36,14 +38,31 @@
               </div>
           </div>
       </div>
-    </div>
+    </section>
     <!-- END PIR 196 intro block -->
 
+    <section class="nsw-section">
+        <div class="nsw-container">
+            <h3>Top stories</h3>
+            <include src="partials/large-cards.html"></include>
+        </div>
+    </section>
 
-    <div class="nsw-container">
-        <h3>Top stories</h3>
-        <include src="partials/large-cards.html"></include>
-    </div>
+    <section class="nsw-section">
+        <div class="nsw-container">
+            <h3>Latest news</h3>
+            <include src="partials/carousel-items.html"></include>
+        </div>
+    </section>
+
+    <section class="nsw-section pirsa-section">
+        <div class="nsw-container">
+            <h3>Events</h3>
+            <include src="partials/event-items.html"></include>
+        </div>
+    </section>
+
+
 
     <include src="partials/footer.html"></include>
 

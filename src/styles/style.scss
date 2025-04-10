@@ -7,15 +7,27 @@
 @import 'reset.css';
 @import 'variables.scss';
 
+/* Core */
+@import 'core/section.scss';
+
 /* Components */
 
 @import 'components/footer.scss';
 @import 'components/header.scss';
 @import 'components/icon.scss';
+@import 'components/hero-banner.scss';
+@import 'components/page-banner.scss';
 @import 'components/button.scss';
 @import 'components/large-card.scss';
-@import 'components/page-banner.scss';
 @import 'components/searchbar.scss';
+@import 'components/utility-list.scss';
+@import 'components/tag.scss';
 
-/* theme override */
+/* Utilities */
+@import 'utilities.scss';
+
+/* Theme override */
 @import 'sardi.scss';
+
+
+
