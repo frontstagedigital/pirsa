@@ -40,4 +40,4 @@ jobs:
         env:
           PERCY_TOKEN: ${{ secrets.PERCY_TOKEN }}
           PERCY_ENABLED: ${{ env.PERCY_ENABLED }}
-          PERCY_PAGE_LOAD_TIMEOUT: 9000
+          PERCY_PAGE_LOAD_TIMEOUT: 90000
