@@ -17,7 +17,7 @@
         &:hover {
             background-color: var(--pirsa-card-dark-hover);
             padding-bottom: 2rem;
-            padding-right: 3rem;
+            padding-right: 5rem;
 
             .nsw-material-icons {
                 left: unset;
@@ -41,5 +41,7 @@
         color: var(--nsw-text-light);
         font-size: 1.25em;        
         padding: 4px;
+        height: 2rem;
+        width: 2rem;
     }    
 }
