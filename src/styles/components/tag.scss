@@ -7,5 +7,7 @@
        background-color: var(--nsw-brand-light);
        color: var(--nsw-brand-dark);
     }
-    
+    &:visited {
+       color: var(--nsw-brand-light);
+    }
 }
