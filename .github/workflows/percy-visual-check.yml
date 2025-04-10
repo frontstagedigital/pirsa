@@ -1,0 +1,42 @@
+name: Percy Visual Check
+
+on:
+  push:
+
+jobs:
+  percy-snapshot:
+    runs-on: ubuntu-latest
+    env:
+      PERCY_ENABLED: true  # Toggle to true to enable visual testing
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      - name: Set up Node.js with cache
+        uses: actions/setup-node@v3
+        with:
+          node-version: '18'
+          cache: 'npm'
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Install Percy CLI
+        run: npm install --save-dev @percy/cli
+
+      - name: Build site
+        run: npm run build
+
+      - name: Run Percy Snapshots (if enabled)
+        run: |
+          if [ "$PERCY_ENABLED" = "false" ]; then
+            echo "Percy check disabled via env flag. Skipping visual testing."
+            exit 0
+          fi
+
+          echo "Percy check enabled. Running visual snapshots..."
+          npx percy snapshot dist
+        env:
+          PERCY_TOKEN: ${{ secrets.PERCY_TOKEN }}
+          PERCY_ENABLED: ${{ env.PERCY_ENABLED }}
