@@ -48,6 +48,7 @@
         height: 100%;
     }
 
+    /* default content styling for video banner */
     & &__content {
         display: flex;
         flex-direction: column;
@@ -146,8 +147,24 @@
 
         .pirsa-hero-banner__content {
             width: calc(100vw - 2em);
-        }
 
+            h1 {
+                max-width: unset;
+            }               
+
+        }  
+
+    }
+
+    &--text {
+        .pirsa-hero-banner__content {
+            width: calc(100vw - 2em);
+
+            h1 {
+                max-width: unset;
+            }               
+
+        }          
     }
 
     &--video {
