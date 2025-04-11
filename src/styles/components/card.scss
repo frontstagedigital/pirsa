@@ -1,0 +1,66 @@
+.pirsa-card {
+    //height: auto;
+
+    &__meta {
+        font-weight: var(--nsw-font-normal);
+        text-transform: uppercase;
+        font-size: var(--pirsa-font-size-meta);
+        line-height: var(--nsw-line-height-xxs-desktop);   
+        margin-bottom: .5rem;     
+    }
+
+    &__tag {
+        font-size: var(--pirsa-font-size-meta);
+        display: inline-block;
+        &::after {
+            content: "•";
+            padding-left: 0.4rem;
+            padding-right: 0.4rem;
+        }
+    }
+
+    .nsw-card__content {
+        padding: 1rem 1rem 4rem 1rem;
+    }
+
+    .nsw-card__title {
+        font-size: var(--pirsa-font-size-title);
+    }
+
+    .nsw-card__copy {
+        font-size: var(--pirsa-font-size-copy);
+    }    
+
+    .nsw-card__date {
+        font-size: var(--pirsa-font-size-meta);
+    }
+
+    .nsw-material-icons {
+        bottom: 1rem;
+        left: 1rem;          
+    } 
+
+
+    //has to be used with nsw-card
+    &--small {
+        padding: 0;
+        font-size: var(--nsw-font-size-xs-desktop);
+        line-height: var(--nsw-line-height-xs-desktop);
+        height: 100%;
+
+        .nsw-card__content {
+            padding: 1rem;
+        }
+
+        .nsw-card__title {
+            font-size: var(--nsw-font-size-xs-desktop);
+            line-height: var(--nsw-line-height-xs-desktop);
+            font-weight: var(--nsw-font-normal);
+        }
+
+        a {
+            font-weight: var(--nsw-font-normal);
+        }
+    }
+
+}

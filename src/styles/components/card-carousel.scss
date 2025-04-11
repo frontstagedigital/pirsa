@@ -1,0 +1,82 @@
+.pirsa-carousel {
+    --carousel-item-auto-size: 320px;
+
+    &__item {
+        width: var(--carousel-item-auto-size);
+
+        // &:nth-of-type(odd) {
+        //     margin-bottom: 3rem;
+        // }
+
+    }
+
+    &__controls {
+        display: flex;
+        align-items: center;
+        flex-wrap: wrap;
+
+        @include breakpoint('md') {
+            flex-wrap: nowrap;
+        }  
+
+        &__title {
+            flex-grow: 1;
+            margin-top: .25rem;
+            width: 100%;
+            
+            @include breakpoint('md') {
+                width: auto;
+            }              
+        }
+
+        &__buttons {
+            display: flex;
+            margin-top: 0;
+            justify-content: space-between !important;
+            width: 100%;
+            
+            @include breakpoint('md') {
+                justify-content: flex-end;
+                width: auto;
+            }   
+
+        }
+    }
+
+    .nsw-carousel__wrapper {
+        width: 100%;
+    }
+
+
+    .nsw-card__title {
+        font-size:var(--pirsa-font-size-title);
+    }
+
+    .nsw-card__copy {
+        font-size:var(--pirsa-font-size-copy);
+    }
+
+    .nsw-card__content {
+        background-color: var(--pirsa-card-dark);
+        color: var(--nsw-text-light);
+        padding: 1rem 1rem 4rem 1rem;
+        border: 0;
+    }    
+
+    a {
+        color: var(--nsw-text-light);
+    }
+  
+    .nsw-material-icons {
+        border: 2px solid;
+        border-radius: 50%;
+        color: var(--nsw-text-light);
+        font-size: 1.25em;        
+        padding: 4px;
+        height: 2rem;
+        width: 2rem;
+        bottom: 1rem;
+        left: 1rem;        
+    }    
+
+}

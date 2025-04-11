@@ -18,8 +18,15 @@ function messageVideoiFrame(vidFunc,vidID,vidSrc) {
             "*"
         );        
     }
+    if(vidSrc == 'video') {
+        const videoEl = document.getElementById(vidID);
+        if(videoiFrameFunc == 'play') {
+            videoEl.play();
+        } else if(videoiFrameFunc == 'pause') {
+            videoEl.pause();
+        }   
+    }    
 }
-
 
 let playpauseButtons = document.getElementsByClassName("js-video-button__playpause");
 for (let playpauseButton of playpauseButtons) {
@@ -43,6 +50,7 @@ for (let playpauseButton of playpauseButtons) {
                 this.innerHTML="pause";
             } else {
                 this.innerHTML="Pause";
-            }        }
+            }       
+        }
     });
 }

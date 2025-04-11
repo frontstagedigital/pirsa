@@ -8,6 +8,9 @@
     // --sardi-brand-light: #EEF7F4;
     --nsw-brand-light: #EEF7F4;
 
+    .nsw-breadcrumbs a:not(.current) {
+        color: var(--nsw-brand-dark);
+    }
 
     .pirsa-section {
         background-color: var(--nsw-brand-light);
