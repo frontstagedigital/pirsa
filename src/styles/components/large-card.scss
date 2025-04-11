@@ -14,7 +14,7 @@
     }    
 
     .nsw-card__content {
-        background-color: var(--pirsa-card-dark);
+        background-color: var(--pirsa-dark-overlay);
         border: none;
         height: auto;
         margin-top: auto;
@@ -22,7 +22,7 @@
         padding: 1rem 1rem 4rem 1rem;
 
         &:hover {
-            background-color: var(--pirsa-card-dark-hover);
+            background-color: var(--pirsa-dark-overlay-hover);
             padding-bottom: 1rem;
             padding-right: 4rem;
 
