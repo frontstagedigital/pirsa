@@ -1,8 +1,13 @@
 .pirsa-hero-banner {
-    background-color: transparent;
+    background-color: var(--nsw-brand-dark);
+    color: var(--nsw-text-light);
+    min-height: 25rem;
+    @include breakpoint('lg') {
+        min-height: 30rem;
+    }   
 
     &__video {
-        background: rgba(0, 0, 0, .6);
+        background-color: var(--pirsa-dark-overlay);
         overflow: hidden;
         max-height: 25rem;
         position: relative;
@@ -116,6 +121,38 @@
             width: 2rem;
         }  
 
+    }
+
+    &--image {
+        padding: 0;
+        min-height: 25rem;
+        color: var(--nsw-font-light);
+        background-size: cover;
+        background-position: center;
+        
+        @include breakpoint('lg') {
+            min-height: 30rem;
+        }
+        .nsw-hero-banner__container {
+            background-color: var(--pirsa-dark-overlay);
+            padding-bottom: 0;
+            padding-top: 0;
+            min-height: 25rem;
+            
+            @include breakpoint('lg') {
+                min-height: 30rem;
+            }
+        }
+
+        .pirsa-hero-banner__content {
+            width: calc(100vw - 2em);
+        }
+
+    }
+
+    &--video {
+        background-color: transparent;
+        min-height: unset;
     }
 
 }
