@@ -8,27 +8,33 @@
     .nsw-card__image {
         display: none;
     }
-        
+
+    .nsw-card__copy {
+        font-size:var(--pirsa-font-size-copy);
+    }    
+
     .nsw-card__content {
         background-color: var(--pirsa-card-dark);
         border: none;
         height: auto;
         margin-top: auto;
         width: 100%;
+        padding: 1rem 1rem 4rem 1rem;
 
         &:hover {
             background-color: var(--pirsa-card-dark-hover);
-            padding-bottom: 2rem;
-            padding-right: 5rem;
+            padding-bottom: 1rem;
+            padding-right: 4rem;
 
             .nsw-material-icons {
                 left: unset;
-                right: 2rem;
+                right: 1rem;
             }
         }
     }
     
     .nsw-card__tag {
+        font-size: var(--pirsa-font-size-meta);
         font-weight: var(--nsw-font-normal);
         text-transform: uppercase;
     }
@@ -45,5 +51,7 @@
         padding: 4px;
         height: 2rem;
         width: 2rem;
+        bottom: 1rem;
+        left: 1rem;          
     }    
 }
