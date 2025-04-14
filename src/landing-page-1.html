@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html class="page" lang="en">
+
+<include src="partials/head.html">
+    {
+    "title": "Landing page level 1"
+    }
+</include>
+
+<body class="page__body">
+    <include src="partials/header.html"></include>
+
+    <include src="partials/page-banner.html"></include>
+
+    <nav aria-label="Breadcrumbs" class="nsw-breadcrumbs js-breadcrumbs">
+        <div class="nsw-container">
+        <ol>
+            <li>
+              <a href="index.html">Home</a>
+            </li>
+            <li>
+              <a href="#" class="current" aria-current="page">Primary Industries</a>
+            </li>
+        </ol>
+        </div>       
+      </nav>
+
+      <section class="nsw-section pirsa-section">
+        <div class="nsw-container">
+            <h1>Primary Industries</h1>
+            <include src="partials/primary-industries-cards.html"></include>
+        </div>
+    </section>
+    
+    <section class="nsw-section">
+        <div class="nsw-container">
+            <h2>Growing SA's primary industries</h2>
+            <p>The Department of Primary Industries and Regions (PIRSA) partners with peak industry associations and stakeholders to advance the state's key economic sectors. We are responsible for:</p>
+            <ul>
+                <li>leasing and licencing to regulate industries</li>
+                <li>developing policy, legislation, and informative guides</li>
+                <li>providing programs and funding opportunities for producers</li>
+                <li>delivering scientific research and innovation that benefits industry.</li>
+            </ul>
+        </div>
+    </section>
+
+
+    <section class="nsw-section pirsa-section">
+        <div class="nsw-container">
+            <h3>Key links</h3>
+            <include src="partials/large-cards-primary-industries.html"></include>
+            <include src="partials/feature-topic-panels.html"></include>
+        </div>
+    </section>
+
+    <include src="partials/footer.html"></include>
+
+    <include src="partials/scripts.html"></include>
+</body>
+
+</html>
