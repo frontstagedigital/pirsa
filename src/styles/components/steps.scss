@@ -1,0 +1,14 @@
+.pirsa-steps {
+    .nsw-steps__item {
+
+        &:last-child {
+
+          .nsw-steps__content {
+            &::before {
+              display: none;
+            }
+          }
+
+        }
+    }
+}
