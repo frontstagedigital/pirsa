@@ -1,0 +1,18 @@
+.pirsa-breadcrumbs {
+    display: flex;
+
+    .nsw-breadcrumbs {
+        flex-grow: 1;
+        margin-top: 0;
+
+        ol li {
+            margin-top: 0;
+        }
+    }
+
+    .pirsa-page-updated {
+        align-self: flex-end;
+        font-size: var(--nsw-font-size-xs-desktop);
+        line-height: var(--nsw-line-height-xs-desktop);
+    }
+}
