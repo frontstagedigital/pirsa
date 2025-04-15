@@ -12,6 +12,6 @@
     }
 }
 
-.nsw-tag {
+.nsw-tag:not(.pirsa-tag) {
    background-color: var(--nsw-white);
 }
