@@ -19,13 +19,17 @@
 @import 'components/header.scss';
 @import 'components/hero-banner.scss';
 @import 'components/icon.scss';
+@import 'components/image-gallery.scss';
 @import 'components/info-card.scss';
 @import 'components/large-card.scss';
 @import 'components/page-banner.scss';
 @import 'components/searchbar.scss';
+@import 'components/steps.scss';
 @import 'components/utility-list.scss';
 @import 'components/tag.scss';
 
+/* WYSIWYG content */
+@import 'wysiwyg.scss';
 
 /* Utilities */
 @import 'utilities.scss';

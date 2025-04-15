@@ -1,0 +1,18 @@
+.nsw-wysiwyg-content {
+
+    ul {
+        padding-left: 2rem;
+        li {
+            list-style: initial;
+        }
+    }
+
+    hr {
+        background-color: var(--nsw-grey-03);
+    }
+
+    hr:has(+h2) {
+        margin-top: 3rem;
+    }
+
+}

@@ -1,3 +1,23 @@
 .pirsa-section {
     background-color: var(--pirsa-accent-light);
+
+    .pirsa-section__sidebar {
+        padding: 1.5rem;
+    
+        &__content {
+            border-bottom: 1px solid var(--nsw-grey-03);
+            padding-bottom: 2rem;
+        }
+    
+        &:last-of-type {
+            .pirsa-sidebar-section__content {
+                border-bottom: 0;
+            }
+        }
+    
+        & + & {
+            padding-top: .5rem;
+        }
+    }
+
 }

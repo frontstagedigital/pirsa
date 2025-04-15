@@ -1,13 +1,22 @@
 .pirsa-info-card {
-    height: 100%;
     color: var(--nsw-text-dark);
-    background-color: var(--nsw-white);
-    border-radius: var(--nsw-border-radius);
-    border: 1px solid var(--nsw-grey-03);    
     display: flex;
     flex-direction: row;
     align-items: stretch;
-    min-height: 5rem;
+    min-height: 4rem;
+
+    &--fill {
+        background-color: var(--nsw-white);
+    }
+
+    &--border {
+        border-radius: var(--nsw-border-radius);
+        border: 1px solid var(--nsw-grey-03);    
+    }
+
+    &--full-height {
+        height: 100%;
+    }
 
     // &:hover {
     //     color: var(--nsw-text-light);
@@ -20,6 +29,26 @@
     //         }
     //     }
     // }
+
+    &__avatar {
+        padding: 0.5rem;
+        
+        &__image {
+            height: 3.375rem;
+            width: 3.375rem;
+            border-radius: 100%; 
+            overflow: hidden; 
+            display: flex; 
+            align-items: center; 
+            justify-content: center;   
+        }
+
+        img {
+            width: 100%; 
+            height: 100%; 
+            object-fit: cover; 
+        }
+    }
 
     &__icon {
         padding: .5rem;
@@ -42,6 +71,15 @@
         //     text-decoration: none;
         //     transition: color .15s ease-in-out;
         // }
+    }
+
+    &__title {
+        font-size: var(--pirsa-font-size-title);
+        font-weight: var(--nsw-font-bold);
+    }
+
+    &__subtitle {
+        font-size: var(--pirsa-font-size-copy);
     }
 
 }
