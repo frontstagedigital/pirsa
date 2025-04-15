@@ -2,7 +2,6 @@
     background-repeat: no-repeat;
     background-size: 1.25rem auto; 
     background-position: center center;
-    color: var(--nsw-text-light);
     display: inline-block;
     width: 2em;
     height: 2em;    
@@ -26,8 +25,11 @@
 
     &--rounded {
         background-color: white;
-        border: 2px solid;
         border-radius: 50%;
         padding: 4px;
+    }
+
+    &--outline {
+        border: 2px solid currentColor;
     }
 }
