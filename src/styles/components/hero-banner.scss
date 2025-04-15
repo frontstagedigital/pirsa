@@ -6,8 +6,12 @@
         min-height: 30rem;
     }   
 
-    &__video {
+    &__overlay {
         background-color: var(--pirsa-dark-overlay);
+    }    
+
+    &__video {
+        //background-color: var(--pirsa-dark-overlay);
         overflow: hidden;
         max-height: 25rem;
         position: relative;
@@ -135,7 +139,7 @@
             min-height: 30rem;
         }
         .nsw-hero-banner__container {
-            background-color: var(--pirsa-dark-overlay);
+            //background-color: var(--pirsa-dark-overlay);
             padding-bottom: 0;
             padding-top: 0;
             min-height: 25rem;
@@ -157,6 +161,9 @@
     }
 
     &--text {
+        .pirsa-hero-banner__overlay {
+            background-color: transparent;
+        }
         .pirsa-hero-banner__content {
             width: calc(100vw - 2em);
 
