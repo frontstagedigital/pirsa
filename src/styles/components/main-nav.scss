@@ -39,4 +39,14 @@
             color: var(--pirsa-brand-primary);
         }
     }
+
+    &__header {
+        border-color: var(--pirsa-brand-light);
+
+        .nsw-icon-button .nsw-material-icons {
+            color: var(--nsw-black);
+        }
+    }
+
+
 }
