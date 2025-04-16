@@ -4,9 +4,28 @@
 
     a {
         justify-content: start;
-        padding: .5rem;
+        padding: 1rem;
+        font-weight: var(--nsw-font-normal);
+        text-decoration: none;
+
+        &:hover {
+            text-decoration: underline;
+        }
+
+        span {
+            text-decoration: none;
+        }
+
     }
     span {
-        margin-right: .5rem;
+        margin-right: .75rem;
+    }
+
+    li {
+        border: 0;
+    }
+
+    .pirsa-icon {
+        color: var(--nsw-brand-supplementary);
     }
 }
