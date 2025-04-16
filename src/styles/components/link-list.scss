@@ -23,6 +23,9 @@
 
     li {
         border: 0;
+        &:last-child {
+            border: 0;
+        }
     }
 
     .pirsa-icon {
