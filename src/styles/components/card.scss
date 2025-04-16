@@ -19,10 +19,6 @@
         }
     }
 
-    .nsw-card__content {
-        padding: 1rem 1rem 4rem 1rem;
-    }
-
     .nsw-card__title {
         font-size: var(--pirsa-font-size-title);
     }
@@ -34,12 +30,6 @@
     .nsw-card__date {
         font-size: var(--pirsa-font-size-meta);
     }
-
-    .nsw-material-icons {
-        bottom: 1rem;
-        left: 1rem;          
-    } 
-
 
     //has to be used with nsw-card
     &--small {

@@ -19,17 +19,9 @@
         height: auto;
         margin-top: auto;
         width: 100%;
-        padding: 1rem 1rem 4rem 1rem;
 
         &:hover {
             background-color: var(--pirsa-dark-overlay-hover);
-            padding-bottom: 1rem;
-            padding-right: 4rem;
-
-            .nsw-material-icons {
-                left: unset;
-                right: 1rem;
-            }
         }
     }
     
@@ -50,8 +42,6 @@
         font-size: 1.25em;        
         padding: 4px;
         height: 2rem;
-        width: 2rem;
-        bottom: 1rem;
-        left: 1rem;          
+        width: 2rem;        
     }    
 }
