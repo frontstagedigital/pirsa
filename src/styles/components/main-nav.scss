@@ -1,6 +1,14 @@
 .nsw-main-nav {
     background-color: var(--nsw-white);
 
+    &__wrapper {
+        display: flex;
+        flex-direction: column;
+        height: 100%;
+        width: 100%;
+        overflow: hidden;
+    }
+
     li {
         a {
             .nsw-material-icons {
@@ -10,6 +18,8 @@
     } 
 
     &__list {
+        flex-grow: 1;
+
         > li {      
             @include breakpoint($nsw-desktop-breakpoint) {
               &.active {
@@ -111,4 +121,11 @@
             }
         }
     }
+
+    &__mobile-extra-links {
+        align-self: flex-end;
+        background-color: var(--pirsa-accent-light);
+        width: 100%;
+    }
+
 }
