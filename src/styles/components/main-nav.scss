@@ -50,6 +50,12 @@
         &__mega-menu {
             padding: 0 1rem;
 
+            h3 {
+                a {
+                    padding: 0 !important;
+                }
+            }
+
             &__logo {
                 a {
                     margin: 0;
