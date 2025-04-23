@@ -53,4 +53,30 @@
         }
     }
 
+    &--light {
+        .nsw-card__title {
+            a {
+                color: var(--nsw-brand-dark);
+    
+                &:hover {
+                    color: var(--nsw-brand-dark);
+                }
+            }
+        }
+    
+        &:hover {
+            color: var(--nsw-text-dark);
+        
+            .nsw-card__content {
+                background-color: var(--nsw-grey-04);
+                border-color: var(--nsw-grey-04);
+            }
+    
+            .nsw-material-icons {
+                color: var(--nsw-brand-dark);
+            }
+        }
+    }
+
 }
+
