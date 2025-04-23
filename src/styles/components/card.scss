@@ -1,34 +1,40 @@
 .pirsa-card {
     //height: auto;
 
-    &__meta {
-        font-weight: var(--nsw-font-normal);
-        text-transform: uppercase;
-        font-size: var(--pirsa-font-size-meta);
-        line-height: var(--nsw-line-height-xxs-desktop);   
-        margin-bottom: .5rem;     
-    }
+    &.nsw-card--horizontal {
+        display: block;
+        @include breakpoint('lg') {
+            display: flex;
+        }    
 
-    &__tag {
-        font-size: var(--pirsa-font-size-meta);
-        display: inline-block;
-        &::after {
-            content: "•";
-            padding-left: 0.4rem;
-            padding-right: 0.4rem;
+        .nsw-card__image + .nsw-card__content {
+            border-left-width: 1px;
+            border-bottom-left-radius: var(--nsw-border-radius);
+            @include breakpoint('lg') {
+                border-left-width: 0px;
+                border-bottom-left-radius: 0px;
+            }
         }
+
     }
 
-    .nsw-card__title {
-        font-size: var(--pirsa-font-size-title);
+    .nsw-card__content {
+        border-color: var(--nsw-grey-04);
+        width: 100%;
+ 
     }
 
-    .nsw-card__copy {
-        font-size: var(--pirsa-font-size-copy);
-    }    
+    .nsw-material-icons {
+        left: unset;
+    }
 
-    .nsw-card__date {
-        font-size: var(--pirsa-font-size-meta);
+    &:not(.nsw-card) {
+        .nsw-card__content {
+            padding-bottom: 1rem;
+            @include breakpoint('lg') {
+                padding-bottom: 2rem;
+            }              
+        }
     }
 
     //has to be used with nsw-card
@@ -53,7 +59,8 @@
         }
     }
 
-    &--light {
+    //light grey version
+    &--light {   
         .nsw-card__title {
             a {
                 color: var(--nsw-brand-dark);
@@ -77,6 +84,39 @@
             }
         }
     }
-
 }
 
+.nsw-card {
+    &--pirsa {
+
+        &__meta {
+            font-weight: var(--nsw-font-normal);
+            text-transform: uppercase;
+            font-size: var(--pirsa-font-size-meta);
+            line-height: var(--nsw-line-height-xxs-desktop);   
+            margin-bottom: .5rem;     
+        }
+    
+        &__tag {
+            font-size: var(--pirsa-font-size-meta);
+            display: inline-block;
+            &::after {
+                content: "•";
+                padding-left: 0.4rem;
+                padding-right: 0.4rem;
+            }
+        }
+    
+        .nsw-card__title {
+            font-size: var(--pirsa-font-size-title);
+        }
+    
+        .nsw-card__copy {
+            font-size: var(--pirsa-font-size-copy);
+        }    
+    
+        .nsw-card__date {
+            font-size: var(--pirsa-font-size-meta);
+        }
+    }
+}
