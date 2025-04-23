@@ -7,6 +7,15 @@
         height: 100%;
         width: 100%;
         overflow: hidden;
+
+        @include breakpoint('lg') {
+            display: block;
+            flex-direction: unset;
+            width: unset;
+            height: unset;
+            overflow: visible;
+        }
+
     }
 
     li {
