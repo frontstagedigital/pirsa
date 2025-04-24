@@ -1,0 +1,14 @@
+.sardi-project-listing {
+    .nsw-grid {
+        @media screen and (min-width: 48rem) {
+            margin: 0 -0.5rem;
+        }
+    }
+    .nsw-col {
+        padding: 8px;
+
+        @media screen and (min-width: 75rem) {
+            padding: 12px 8px;
+        }
+    }
+}
