@@ -1,0 +1,16 @@
+.nsw-media {
+    figcaption {
+         .nsw-accordion__button[aria-expanded=false] {
+            background-color: var(--nsw-white);
+
+            &:hover {
+                color: var(--nsw-text-dark);
+
+                .nsw-material-icons {
+                    color: var(--nsw-brand-dark);
+                }
+            }
+
+        }
+    }
+}
