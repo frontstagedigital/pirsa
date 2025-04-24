@@ -1,6 +1,23 @@
 .nsw-main-nav {
     background-color: var(--nsw-white);
 
+    &__wrapper {
+        display: flex;
+        flex-direction: column;
+        height: 100%;
+        width: 100%;
+        overflow: hidden;
+
+        @include breakpoint('lg') {
+            display: block;
+            flex-direction: unset;
+            width: unset;
+            height: unset;
+            overflow: visible;
+        }
+
+    }
+
     li {
         a {
             .nsw-material-icons {
@@ -10,6 +27,8 @@
     } 
 
     &__list {
+        flex-grow: 1;
+
         > li {      
             @include breakpoint($nsw-desktop-breakpoint) {
               &.active {
@@ -28,6 +47,14 @@
 
     }
 
+    &__header {
+        border-color: var(--pirsa-brand-light);
+
+        .nsw-icon-button .nsw-material-icons {
+            color: var(--nsw-black);
+        }
+    }
+
     &__sub-nav {
         li {
             a {
@@ -38,15 +65,76 @@
         .nsw-main-nav__title a {
             color: var(--pirsa-brand-primary);
         }
-    }
 
-    &__header {
-        border-color: var(--pirsa-brand-light);
+        &__mega-menu {
+            padding: 0 1rem;
 
-        .nsw-icon-button .nsw-material-icons {
-            color: var(--nsw-black);
+            h3 {
+                a {
+                    padding: 0 !important;
+                }
+            }
+
+            &__logo {
+                a {
+                    margin: 0;
+                    padding: 0 !important;
+
+                    &:hover {
+                        background-color: transparent !important; 
+                    }
+                }
+            }
+
+            &__group {
+                border-top: solid 1px var(--nsw-grey-04);   
+                margin-bottom: 2rem;
+
+                &:last-of-type {
+                    margin-bottom: 0;
+                }
+
+                &__title {
+                    font-weight: var(--nsw-font-bold);
+                    margin-top: 1rem;
+
+                    a {
+                        padding: 0 !important;
+                    }
+                }
+
+                ul &__list-links {
+                    display: block;
+                    margin: 0;
+                    flex-flow: unset;
+
+                    li {
+                        border: 0;
+                        margin: .5rem 0;
+                        width: 100%;
+
+                        &:nth-child(3n+2) {
+                            margin: 0;
+                        }
+
+                        &:nth-last-child(-n+3) {
+                            box-shadow: none;
+                        }
+
+                        a {
+                            font-weight: var(--nsw-font-normal);
+                            padding:0;
+                        }
+                    }
+                }
+            }
         }
     }
 
+    &__mobile-extra-links {
+        align-self: flex-end;
+        background-color: var(--pirsa-accent-light);
+        width: 100%;
+    }
 
 }
