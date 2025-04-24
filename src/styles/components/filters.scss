@@ -1,0 +1,26 @@
+.nsw-filters {
+
+    &__wrapper {
+        background-color: var(--nsw-off-white);
+
+        .nsw-filters--down & {
+                  
+            @include breakpoint('lg') {
+              background-color: var(--nsw-off-white);
+              padding-left: 2rem;
+              padding-right: 2rem;
+            }
+        }
+    }
+
+    &__title {
+        margin-top: 0;
+        padding-bottom: 0;
+    }
+
+    &--down {
+        .nsw-filters__item:first-child {
+            border-top: 0;
+        }
+    }
+}

@@ -1,0 +1,12 @@
+.nsw-status-label {
+    &--results {
+        border-color: var(--nsw-brand-supplementary);
+        background-color: var(--nsw-brand-supplementary);
+        color: var(--nsw-white);
+        font-size: .688rem;
+        font-weight: var(--nsw-font-normal);
+        margin-left: .2rem;
+        padding: 0 .4rem;
+        vertical-align: text-bottom;        
+    }
+}
