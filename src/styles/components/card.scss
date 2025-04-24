@@ -1,5 +1,5 @@
 .pirsa-card {
-    //height: auto;
+    height: auto;
 
     &.nsw-card--horizontal {
         display: block;
@@ -37,6 +37,59 @@
         }
     }
 
+    &--avatar {
+        border: 1px solid var(--nsw-grey-04);
+        border-radius: var(--nsw-border-radius);
+        transition: background .15s ease-in-out, border .15s ease-in-out;
+        
+        &:hover {
+            color: var(--nsw-text-dark);
+            background-color: var(--nsw-grey-04);
+            
+            .nsw-card__content {
+                background-color: var(--nsw-grey-04);
+                border-color: var(--nsw-grey-04);
+            }
+    
+            .nsw-material-icons {
+                color: var(--nsw-brand-dark);
+            }            
+        }
+
+        a, a:hover {
+            color: var(--nsw-brand-dark);
+        }
+
+        .pirsa-card__image {
+            height: 160px;
+            min-height: 160px;
+            width: 160px;
+            border-radius: 100%; 
+            overflow: hidden; 
+            display: flex; 
+            align-items: center; 
+            justify-content: center;   
+            margin: 1rem 1rem 0;
+
+            @include breakpoint('lg') {
+                margin: 2rem 2rem 0;
+            }     
+
+            img {
+                width: 100%; 
+                height: 100%; 
+                object-fit: cover; 
+            }
+        }
+
+        .nsw-card__content {
+            border: 0;
+            border-radius: 0;
+        }
+
+
+    }    
+
     //has to be used with nsw-card
     &--small {
         padding: 0;
@@ -73,7 +126,8 @@
     
         &:hover {
             color: var(--nsw-text-dark);
-        
+            background-color: var(--nsw-grey-04);
+       
             .nsw-card__content {
                 background-color: var(--nsw-grey-04);
                 border-color: var(--nsw-grey-04);
@@ -118,5 +172,12 @@
         .nsw-card__date {
             font-size: var(--pirsa-font-size-meta);
         }
+    }
+}
+
+//if card is within a col, make height 100%
+.nsw-col {
+    .pirsa-card {
+        height: 100%;
     }
 }
