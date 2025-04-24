@@ -15,4 +15,20 @@
         margin-top: 3rem;
     }
 
+    a {
+        text-decoration: none;
+
+        //only style link which does not have a span with icon
+        &[target=_blank]:not(:has(span.material-icons)) { 
+            &::after {
+                content: "\e89e";
+                font-family: "Material Icons";
+                font-size: 1.25rem;
+                font-weight: var(--nsw-font-normal);
+                margin-left: .5rem;
+                text-decoration: none;
+                vertical-align: bottom;
+            }
+        }
+    }
 }
