@@ -1,0 +1,12 @@
+.nsw-tabs {
+    &__list { 
+        a { 
+            color: var(--pirsa-grey-tabs);
+            &.active {
+                &:after {
+                    border-color: var( --nsw-brand-supplementary);
+                }
+            }
+        }        
+    }
+}
