@@ -1,0 +1,35 @@
+.nsw-list-item {
+
+    &__label {
+        .nsw-search-results & {
+            font-size: var(--pirsa-font-size-meta);
+            font-weight: var(--nsw-font-normal);
+            text-transform: uppercase;            
+        }
+    }
+
+    &__info {
+        .nsw-search-results & {
+            &::before {
+                content: "\ebcc";
+                font-family: "Material Icons";
+                font-size: 1rem;
+                font-weight: var(--nsw-font-normal);
+                margin-right: .25rem;
+                text-decoration: none;
+                vertical-align: bottom;
+            }
+        }
+    }
+
+    &__image {
+        .nsw-search-results & {
+            min-width: 7rem;
+            width: 7rem;
+
+            img {
+                height: auto;
+            }
+        }
+    }
+}
