@@ -8,6 +8,7 @@
 @import 'variables.scss';
 
 /* Core */
+@import 'core/layout.scss';
 @import 'core/section.scss';
 
 /* Components */
@@ -15,6 +16,7 @@
 @import 'components/button.scss';
 @import 'components/card.scss';
 @import 'components/card-carousel.scss';
+@import 'components/content-block.scss';
 @import 'components/filters.scss';
 @import 'components/footer.scss';
 @import 'components/header.scss';

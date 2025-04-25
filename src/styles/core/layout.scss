@@ -1,0 +1,50 @@
+.nsw-layout {
+
+
+    &--3-col {
+        flex-wrap: wrap;
+
+        @include breakpoint('lg') {
+            flex-wrap: nowrap;
+        }   
+    }
+
+
+    &__sidebar {
+        .nsw-layout--3-col & {
+            width: 100%;
+            padding-right: 1rem;
+
+            @include breakpoint('lg') {
+                width: 21rem;
+                min-width: 21rem;
+            }   
+
+
+            &:last-child {
+                width: 100%;
+                padding-left: 1rem;
+
+                @include breakpoint('lg') {
+                    width: 16rem;
+                    min-width: 16rem;
+                }   
+
+                .search-results & {
+                    padding-top: 2.25rem;
+                }
+            }
+
+ 
+
+        }
+    }
+
+    &__main {
+        .nsw-layout--3-col & {
+            width: auto;
+        }
+
+    }
+
+}
