@@ -1,0 +1,9 @@
+.nsw-pagination {
+    a {
+        &.active {
+            &:after {
+                background-color: var(--nsw-brand-supplementary);
+            }
+        }
+    }
+}
