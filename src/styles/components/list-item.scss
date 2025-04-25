@@ -1,5 +1,30 @@
 .nsw-list-item {
 
+    .nsw-search-results & {
+        flex-flow: column;
+    }
+
+    &__meta {
+        .nsw-search-results & {
+            margin-bottom: 1rem;
+            width: 100%;
+        }
+    }
+
+    &__content__wrapper {
+        .nsw-search-results & {
+            display: flex;
+            flex-direction: row-reverse;
+            width: 100%;
+        }
+    }
+
+    &__content {
+        .nsw-search-results & {
+            width: auto;
+        }
+    }
+
     &__label {
         .nsw-search-results & {
             font-size: var(--pirsa-font-size-meta);
@@ -26,10 +51,21 @@
         .nsw-search-results & {
             min-width: 7rem;
             width: 7rem;
+            height: 7rem;
+            margin: 0 1.5rem 0 0;
 
             img {
-                height: auto;
+                border-radius: var(--nsw-border-radius);
+
             }
+        }
+
+        &--avatar {
+            border-radius: 100%; 
+            overflow: hidden; 
+            display: flex; 
+            align-items: center; 
+            justify-content: center;   
         }
     }
 }
