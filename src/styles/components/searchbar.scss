@@ -3,17 +3,21 @@
         border-color: var(--nsw-brand-dark);
         border-radius: 3rem;
         padding: .5rem;
-        margin-left: -1.5rem;
+        margin-left: -3rem;
+
+        @include breakpoint('lg') {
+            margin-left: -3.5rem;
+        }
     }
+
     .nsw-form__input {
         border-color: var(--nsw-brand-dark);
-        border-bottom-left-radius: 3rem;
-        border-top-left-radius: 3rem;
+        border-radius: 3rem;
         padding-left: 1.5rem;
 
         @include breakpoint('lg') {
             font-size: 1.25rem;
-        }           
+        }
 
         &:focus {
             position: unset;
@@ -26,7 +30,7 @@
         @include breakpoint('lg') {
             height: 3.5rem;
             width: 3.5rem;
-        }          
+        }
     }
     .nsw-material-icons {
         font-size: 1.75rem;
