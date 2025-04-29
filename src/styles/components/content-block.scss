@@ -1,0 +1,30 @@
+.pirsa-content-block {
+    .search-results & {
+
+        .nsw-content-block__title {
+            font-size: var(--nsw-font-size-md-desktop);
+            line-height: var(--nsw-line-height-md-desktop);
+            border-bottom: 1px solid var(--nsw-grey-03);
+            padding-bottom: 1.5rem;
+        }
+    
+        .nsw-content-block__list {
+            list-style: none;
+
+            li {
+                padding-left: 0;
+            }
+
+            li::before {
+                content: none;
+            }
+        }
+    
+        a {
+            font-weight: var(--nsw-font-normal);
+            text-decoration: none;
+        }
+
+    }
+
+}

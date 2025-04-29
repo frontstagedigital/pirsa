@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html class="page" lang="en">
+
+<include src="partials/head.html">
+    {
+    "title": "Search Results"
+    }
+</include>
+
+<body class="page__body search search-results">
+
+    <include src="partials/header.html"></include>
+    <include src="partials/main-nav.html"></include>
+
+    <include src="partials/page-banner-search.html"></include>
+
+        <main id="content" class="nsw-container nsw-p-top-lg nsw-p-bottom-lg pirsa-search-results">
+
+          <div class="nsw-tabs"> 
+            <ul class="nsw-tabs__list">
+              <li><a href="#" class="active">All <span class="nsw-status-label nsw-status-label--results">3</span></a></li>
+              <li><a href="#">People <span class="nsw-status-label nsw-status-label--results">12</span></a></li>
+              <li><a href="#">Research <span class="nsw-status-label nsw-status-label--results">10</span></a></li>
+              <li><a href="#">Publications <span class="nsw-status-label nsw-status-label--results">4</span></a></li>
+              <li><a href="#">News & events <span class="nsw-status-label nsw-status-label--results">14</span></a></li>
+            </ul>
+          </div>
+          <div class="nsw-tabs__content"></div>
+
+          <div class="nsw-layout nsw-layout--3-col">
+
+            <div class="nsw-layout__sidebar">
+                <include src="partials/search-results-filters.html"></include>
+            </div>
+
+            <div class="nsw-layout__main">
+
+              <div class="nsw-results-bar nsw-m-top-0">
+                <div class="nsw-results-bar__info">Showing results 1 - 10 of 5917 results</div>
+                <div class="nsw-results-bar__sorting">
+                  <label class="nsw-form__label" for="results-sort">Sort by:</label>
+                  <select class="nsw-form__select" id="results-sort" name="results-sort">
+                    <option value="3">Relevance</option>
+                    <option value="3">Most popular</option>
+                    <option value="3">Most recent</option>
+                  </select>
+                </div>
+              </div>
+        
+              <include src="partials/search-results-list.html"></include>
+
+            </div>
+
+            <div class="nsw-layout__sidebar nsw-layout__sidebar--right">
+              
+              <div class="nsw-content-block pirsa-content-block">
+                <div class="nsw-content-block__content">
+                  <div class="nsw-content-block__title">Related search items</div>
+                  <ul class="nsw-content-block__list">
+                    <li><a href="#">Wheat breeding initiatives</a></li>
+                    <li><a href="#">Pests and diseases affecting wheat</a></li>
+                    <li><a href="#">Current Wheat Production Statistics</a></li>
+                    <li><a href="#">History of Wheat in South Australia</a></li>
+                  </ul>
+                </div>
+
+              </div>
+
+            </div>
+          </div>
+        </main>
+
+
+    <include src="partials/footer.html"></include>
+
+    <include src="partials/scripts.html"></include>
+</body>
+
+</html>

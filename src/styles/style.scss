@@ -8,6 +8,7 @@
 @import 'variables.scss';
 
 /* Core */
+@import 'core/layout.scss';
 @import 'core/section.scss';
 
 /* Components */
@@ -15,6 +16,8 @@
 @import 'components/button.scss';
 @import 'components/card.scss';
 @import 'components/card-carousel.scss';
+@import 'components/content-block.scss';
+@import 'components/filters.scss';
 @import 'components/footer.scss';
 @import 'components/header.scss';
 @import 'components/hero-banner.scss';
@@ -24,10 +27,14 @@
 @import 'components/large-card.scss';
 @import 'components/link.scss';
 @import 'components/link-list.scss';
+@import 'components/list-item.scss';
 @import 'components/main-nav.scss';
 @import 'components/page-banner.scss';
+@import 'components/pagination.scss';
 @import 'components/sardi-listing.scss';
 @import 'components/searchbar.scss';
+@import 'components/search-results.scss';
+@import 'components/status-labels.scss';
 @import 'components/steps.scss';
 @import 'components/utility-list.scss';
 @import 'components/tag.scss';

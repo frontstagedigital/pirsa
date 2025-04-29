@@ -1,0 +1,10 @@
+.nsw-pagination {
+    a {
+        color: var(--nsw-grey-01);
+        &.active {
+            &:after {
+                background-color: var(--nsw-brand-supplementary);
+            }
+        }
+    }
+}

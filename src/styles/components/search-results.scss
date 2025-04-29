@@ -1,0 +1,47 @@
+.pirsa-search-results {
+    .nsw-tabs__list {
+        // border-bottom: 2px solid var(--Greys-Grey-04, #EBEBEB);
+        padding: 0;
+        padding-top: 12px;
+        // padding-bottom: 0;
+        // margin-bottom: 32px;
+        @include breakpoint('lg') {
+            padding-top: 0;
+            // margin-bottom: 12px;
+        }
+
+        a {
+            font-weight: 600;
+            color: var(--pirsa-inactive);
+            &.active {
+                color: var(--nsw-grey-01);
+            }
+        }
+    }
+
+    .nsw-tabs__content {
+        border-bottom: none;
+        padding: 1rem 0;
+        @include breakpoint('lg') {
+            padding: 0.5rem 0;
+        }
+    }
+
+    .nsw-layout__sidebar--right {
+        display: none;
+        @include breakpoint('lg') {
+            display: block;
+        }
+    }
+
+    .nsw-layout--3-col {
+        gap: 2rem;
+        @include breakpoint('lg') {
+            gap: 0;
+        }
+    }
+
+    .nsw-list-item:first-child {
+        padding-top: 2rem;
+    }
+}
