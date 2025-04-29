@@ -14,6 +14,11 @@
         border-color: var(--nsw-brand-dark);
         border-radius: 3rem;
         padding-left: 1.5rem;
+        padding-right: 3rem;
+        overflow: hidden;
+        text-overflow: ellipsis; 
+        white-space: nowrap;
+
 
         @include breakpoint('lg') {
             font-size: 1.25rem;
