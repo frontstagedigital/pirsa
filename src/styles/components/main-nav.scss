@@ -20,9 +20,9 @@
 
     li {
         a {
-            color: var(--pirsa-brand-primary);
-            font-weight: 600;
             @include breakpoint('lg') {
+                color: var(--pirsa-brand-primary);
+                font-weight: 600;
                 padding: 10px 16px;
             }
             .nsw-material-icons {
