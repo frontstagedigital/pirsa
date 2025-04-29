@@ -2,6 +2,10 @@
 
     .nsw-search-results & {
         flex-flow: column;
+        border-bottom: 1px solid var(--nsw-grey-03);
+        &:first-child {
+            border-top: 1px solid var(--nsw-grey-03);
+        }
     }
 
     &__meta {
@@ -14,8 +18,13 @@
     &__content__wrapper {
         .nsw-search-results & {
             display: flex;
-            flex-direction: row-reverse;
+            flex-direction: column-reverse;
             width: 100%;
+            gap: 1rem;
+            
+            @include breakpoint('sm') {
+                flex-direction: row-reverse;
+            }
         }
     }
 
@@ -25,16 +34,40 @@
         }
     }
 
+    &__title {
+        a{
+            .nsw-search-results & {
+                font-size: 18px;
+                line-height: 28px;
+                font-weight: 600;
+                text-decoration: none;
+
+                @include breakpoint('lg') {
+                    font-size: 20px;
+                }
+            }
+        }
+    }
+
     &__label {
         .nsw-search-results & {
+            color: #000;
             font-size: var(--pirsa-font-size-meta);
             font-weight: var(--nsw-font-normal);
             text-transform: uppercase;            
         }
     }
 
+    &__info-container {
+        .nsw-search-results & {
+            flex-wrap: wrap;
+            row-gap: 0.5rem;;
+        }
+    }
+
     &__info {
         .nsw-search-results & {
+            color: var(--nsw-grey-02);
             &::before {
                 content: "\ebcc";
                 font-family: "Material Icons";
@@ -47,12 +80,18 @@
         }
     }
 
+    &__copy {
+        .nsw-search-results & {
+            color: var(--nsw-grey-02);
+        }
+    }
+
     &__image {
         .nsw-search-results & {
             min-width: 7rem;
             width: 7rem;
             height: 7rem;
-            margin: 0 1.5rem 0 0;
+            margin: 0;
 
             img {
                 border-radius: var(--nsw-border-radius);

@@ -13,9 +13,9 @@
     &__sidebar {
         .nsw-layout--3-col & {
             width: 100%;
-            padding-right: 1rem;
-
+            
             @include breakpoint('lg') {
+                padding-right: 1rem;
                 width: 21rem;
                 min-width: 21rem;
             }   
@@ -23,9 +23,9 @@
 
             &:last-child {
                 width: 100%;
-                padding-left: 1rem;
-
+                
                 @include breakpoint('lg') {
+                    padding-left: 1rem;
                     width: 16rem;
                     min-width: 16rem;
                 }   
