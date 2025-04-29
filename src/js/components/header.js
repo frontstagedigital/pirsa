@@ -20,14 +20,25 @@ $(document).ready(function () {
 });
 
 function initTranslateMobile() {
+  // Toggle mobile translate dropdown
   $('.translate-mobile .nsw-form__select').on('mousedown', function (event) {
     event.preventDefault();
     $('.translate-mobile').toggleClass('active');
-  })
+  });
+  
+  // Toggle mobile translate dropdown with spacebar
   $(".translate-mobile .nsw-form__select").on("keydown", function (e) {
     if (e.keyCode == 32) {
-      event.preventDefault();
+      e.preventDefault();
       $(".translate-mobile").toggleClass("active");
+    }
+  });
+  
+  // Close mobile translate dropdown when clicking outside
+  $('html').on('click', function (event) {
+    // if NOT mobile menu && is active then close
+    if (!$(event.target).closest('.translate-mobile').length && $('.translate-mobile').hasClass('active')) {
+      $('.translate-mobile').removeClass('active');
     }
   });
 }
