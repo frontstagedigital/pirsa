@@ -1,0 +1,45 @@
+.nsw-filters {
+
+    &__wrapper {
+        background-color: var(--nsw-off-white);
+
+        .nsw-filters--down & {
+                  
+            @include breakpoint('lg') {
+              background-color: var(--nsw-off-white);
+              padding-left: 2rem;
+              padding-right: 2rem;
+            }
+        }
+    }
+
+    &__title {
+        margin-top: 0;
+        padding-bottom: 0;
+        color: #000;
+    }
+
+    .nsw-filters__item-content {
+        color: var(--nsw-grey-02);
+    }
+
+    &--down {
+        .nsw-filters__item:first-child {
+            border-top: 0;
+        }
+        .nsw-filters__item,
+        .nsw-filters__accept {
+            border-top: 1px solid var(--nsw-grey-03);
+        }
+    }
+
+    .nsw-filters__cancel {
+        button[type="reset"] {
+            text-decoration: none;
+        }
+    }
+
+    .nsw-filters__more {
+        text-decoration: none;
+    }
+}

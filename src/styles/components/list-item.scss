@@ -1,0 +1,110 @@
+.nsw-list-item {
+
+    .nsw-search-results & {
+        flex-flow: column;
+        border-bottom: 1px solid var(--nsw-grey-03);
+        &:first-child {
+            border-top: 1px solid var(--nsw-grey-03);
+        }
+    }
+
+    &__meta {
+        .nsw-search-results & {
+            margin-bottom: 1rem;
+            width: 100%;
+        }
+    }
+
+    &__content__wrapper {
+        .nsw-search-results & {
+            display: flex;
+            flex-direction: column-reverse;
+            width: 100%;
+            gap: 1rem;
+            
+            @include breakpoint('sm') {
+                flex-direction: row-reverse;
+            }
+        }
+    }
+
+    &__content {
+        .nsw-search-results & {
+            width: auto;
+        }
+    }
+
+    &__title {
+        a{
+            .nsw-search-results & {
+                font-size: 18px;
+                line-height: 28px;
+                font-weight: 600;
+                text-decoration: none;
+
+                @include breakpoint('lg') {
+                    font-size: 20px;
+                }
+            }
+        }
+    }
+
+    &__label {
+        .nsw-search-results & {
+            color: #000;
+            font-size: var(--pirsa-font-size-meta);
+            font-weight: var(--nsw-font-normal);
+            text-transform: uppercase;            
+        }
+    }
+
+    &__info-container {
+        .nsw-search-results & {
+            flex-wrap: wrap;
+            row-gap: 0.5rem;;
+        }
+    }
+
+    &__info {
+        .nsw-search-results & {
+            color: var(--nsw-grey-02);
+            &::before {
+                content: "\ebcc";
+                font-family: "Material Icons";
+                font-size: 1rem;
+                font-weight: var(--nsw-font-normal);
+                margin-right: .25rem;
+                text-decoration: none;
+                vertical-align: bottom;
+            }
+        }
+    }
+
+    &__copy {
+        .nsw-search-results & {
+            color: var(--nsw-grey-02);
+        }
+    }
+
+    &__image {
+        .nsw-search-results & {
+            min-width: 7rem;
+            width: 7rem;
+            height: 7rem;
+            margin: 0;
+
+            img {
+                border-radius: var(--nsw-border-radius);
+
+            }
+        }
+
+        &--avatar {
+            border-radius: 100%; 
+            overflow: hidden; 
+            display: flex; 
+            align-items: center; 
+            justify-content: center;   
+        }
+    }
+}

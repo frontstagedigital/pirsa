@@ -6,7 +6,7 @@
     background-position: center;
 
     &__overlay {
-        background-color: var(--pirsa-dark-overlay);
+        background-color: var(--pirsa-overlay);
     }
 
     &__container {
@@ -47,6 +47,15 @@
                 height: unset;
             }                
             
+        }
+    }
+
+    &__search {
+        align-items: center;
+
+        .pirsa-page-banner__content {
+            padding-bottom: 0;
+            width: 100%;
         }
     }
 
