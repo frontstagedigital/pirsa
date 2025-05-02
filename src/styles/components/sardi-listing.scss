@@ -2,7 +2,7 @@
     .nsw-results-bar {
         border-bottom: 1px solid var(--neutral-grey-03, #CDD3D6);
         padding-bottom: 1.5rem;
-        margin: 1rem 0 1.5rem;
+        margin: 2rem 0 1.5rem;
         @include breakpoint('lg') {
             margin: 0 0 1rem;
         }
