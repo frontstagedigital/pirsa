@@ -1,4 +1,12 @@
 .sardi-project-listing {
+    .nsw-results-bar {
+        border-bottom: 1px solid var(--neutral-grey-03, #CDD3D6);
+        padding-bottom: 1.5rem;
+        margin: 1rem 0 1.5rem;
+        @include breakpoint('lg') {
+            margin: 0 0 1rem;
+        }
+    }
     .nsw-grid {
         @media screen and (min-width: 48rem) {
             margin: 0 -0.5rem;
