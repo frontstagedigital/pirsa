@@ -1,5 +1,6 @@
 .pirsa-card {
     height: auto;
+    position: relative;
 
     &.nsw-card--horizontal {
         display: block;
@@ -16,14 +17,6 @@
             }
         }
 
-    }
-
-    .nsw-card__title {
-        a {
-            &::after {
-                display: none;
-            }
-        }
     }
 
     .nsw-card__content {
@@ -44,6 +37,17 @@
             }              
         }
     }
+
+    &--multi-cta {
+        .nsw-card__title {
+            a {
+                &::after {
+                    display: none;
+                }
+            }
+        }
+    }
+
 
     &--avatar {
         border: 1px solid var(--nsw-grey-04);
