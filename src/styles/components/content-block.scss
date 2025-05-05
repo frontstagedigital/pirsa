@@ -1,4 +1,37 @@
 .pirsa-content-block {
+
+    a {
+        font-weight: var(--nsw-font-normal);
+        text-decoration: none;
+    }    
+
+    .nsw-content-block__list {
+
+        li {
+            padding: .25rem 0 .25rem .875rem;
+        }
+
+        li::before {
+            top: .875rem;
+        }
+    }
+
+    .nsw-content-block__link {
+        a {
+            font-weight: var(--nsw-font-bold);
+        }
+    }
+
+    &__title {
+        color: var(--nsw-brand-dark);
+    }
+
+
+    &--full-height {
+        height: 100%;
+    }
+
+
     .search-results & {
 
         .nsw-content-block__title {
@@ -12,7 +45,7 @@
             list-style: none;
 
             li {
-                padding-left: 0;
+                padding: .5rem 0 .5rem 0;
             }
 
             li::before {
@@ -20,11 +53,8 @@
             }
         }
     
-        a {
-            font-weight: var(--nsw-font-normal);
-            text-decoration: none;
-        }
-
     }
+
+
 
 }
