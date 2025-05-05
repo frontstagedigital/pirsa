@@ -15,4 +15,21 @@
         margin-top: 3rem;
     }
 
+    .nsw-form__group {
+        margin-top: 2rem;
+
+
+        input[type="text"],
+        textarea {
+            width: 100%;
+        }
+
+        @include breakpoint('sm') {
+            input[type="text"],
+            textarea {
+                width: 540px;
+            }
+        }
+    }
+
 }

@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html class="page" lang="en">
+
+<include src="partials/head.html">
+    {
+    "title": "General Enquiry Form"
+    }
+</include>
+
+<body class="page__body">
+    <include src="partials/header.html"></include>
+    <include src="partials/main-nav.html"></include>
+    <include src="partials/page-banner-enq-form.html"></include>
+
+     <section class="nsw-section">
+        <div class="nsw-container pirsa-breadcrumbs">
+            <nav aria-label="Breadcrumbs" class="nsw-breadcrumbs js-breadcrumbs">
+                <ol>
+                    <li>
+                      <a href="home.html">Home</a>
+                    </li>
+                    <li>
+                        <a href="#">Contact</a>
+                    </li>
+                    <li>
+                        <a href="#" class="current" aria-current="page">General enquiry form</a>
+                    </li>
+                </ol>
+            </nav>
+            <div class="pirsa-page-updated">Page updated: 26 Feb 2025</div>
+        </div>       
+    </section>
+    <div class="nsw-container">
+        <div class="nsw-layout">
+            <main class="nsw-layout__main">
+                <!-- START: Main content -->
+                <div class="nsw-wysiwyg-content">
+                    <h1>General enquiries</h1>
+
+                    <p>We take feedback on board and use it to improve our performance. How we manage your feedback is outlined in the <a href="#">PIRSA
+                    customer service policy.</a></p>
+                    <p>Please fill in the form below if you have an enquiry for the Department of Primary Industries and Regions (PIRSA).If
+                    you want to be contacted please leave your contact details.</p>
+
+                    <div class="nsw-form">
+                        <div class="nsw-form__group">
+                            <fieldset class="nsw-form__fieldset">
+                                <legend>
+                                    <span class="nsw-form__legend">I would like to</span>
+                                    <!-- <span class="nsw-form__helper">Select closest match</span> -->
+                                </legend>
+                                <input class="nsw-form__radio-input" type="radio" name="form-radio-2" id="form-radio-2-a" checked>
+                                <label class="nsw-form__radio-label" for="form-radio-2-a">Ask a question</label>
+                                <input class="nsw-form__radio-input" type="radio" name="form-radio-2" id="form-radio-2-b">
+                                <label class="nsw-form__radio-label" for="form-radio-2-b">Provide a comment</label>
+                                <input class="nsw-form__radio-input" type="radio" name="form-radio-2" id="form-radio-2-c">
+                                <label class="nsw-form__radio-label" for="form-radio-2-c">Make a complaint</label>
+                            </fieldset>
+                        </div>
+                        <div class="nsw-form__group">
+                            <fieldset class="nsw-form__fieldset">
+                                <legend>
+                                    <span class="nsw-form__legend">My enquiry relates to</span>
+                                </legend>
+
+                                <input class="nsw-form__radio-input" type="radio" name="enquiry-topic" id="fishing" checked>
+                                <label class="nsw-form__radio-label" for="fishing">Fishing</label>
+
+                                <input class="nsw-form__radio-input" type="radio" name="enquiry-topic" id="travel-sa">
+                                <label class="nsw-form__radio-label" for="travel-sa">Traveling to South Australia</label>
+
+                                <input class="nsw-form__radio-input" type="radio" name="enquiry-topic" id="pic">
+                                <label class="nsw-form__radio-label" for="pic">Property identification code</label>
+
+                                <input class="nsw-form__radio-input" type="radio" name="enquiry-topic" id="animal-pests">
+                                <label class="nsw-form__radio-label" for="animal-pests">Animal Pests and Diseases</label>
+
+                                <input class="nsw-form__radio-input" type="radio" name="enquiry-topic" id="plant-pests">
+                                <label class="nsw-form__radio-label" for="plant-pests">Plant Pests and Diseases</label>
+
+                                <input class="nsw-form__radio-input" type="radio" name="enquiry-topic" id="food-safety">
+                                <label class="nsw-form__radio-label" for="food-safety">Food safety</label>
+
+                                <input class="nsw-form__radio-input" type="radio" name="enquiry-topic" id="rural-chemicals">
+                                <label class="nsw-form__radio-label" for="rural-chemicals">Rural chemicals</label>
+
+                                <input class="nsw-form__radio-input" type="radio" name="enquiry-topic" id="grants">
+                                <label class="nsw-form__radio-label" for="grants">Grants and Funding</label>
+
+                                <input class="nsw-form__radio-input" type="radio" name="enquiry-topic" id="emergencies">
+                                <label class="nsw-form__radio-label" for="emergencies">Emergencies and recovery</label>
+
+                                <input class="nsw-form__radio-input" type="radio" name="enquiry-topic" id="other">
+                                <label class="nsw-form__radio-label" for="other">Other</label>
+                            </fieldset>
+                        </div>
+
+                        <div class="nsw-form__group">
+                            <label class="nsw-form__label" for="form-textarea-2">Message</label>
+                            <span class="nsw-form__helper" id="form-textarea-2-helper-text">Maximum 500 characters</span>
+                            <textarea class="nsw-form__input" name="textarea" id="form-textarea-2"
+                                aria-describedby="form-textarea-2-helper-text"></textarea>
+                        </div>
+
+                    </div>
+
+                </div>
+                <!-- END: Main content -->
+            </main>
+        </div>
+    </div>
+
+
+    <include src="partials/footer.html"></include>
+
+    <include src="partials/scripts.html"></include>
+</body>
+
+</html>
