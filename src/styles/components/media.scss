@@ -1,6 +1,13 @@
 .nsw-media {
     figcaption {
-         .nsw-accordion__button[aria-expanded=false] {
+        font-size: unset;
+        line-height: unset;
+
+        .nsw-accordion {
+            margin-top: 1rem;
+        }
+
+        .nsw-accordion__button[aria-expanded=false] {
             background-color: var(--nsw-white);
 
             &:hover {
