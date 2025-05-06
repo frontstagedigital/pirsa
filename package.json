@@ -11,6 +11,7 @@
     "build": "parcel build src/*.html --public-url ./ --no-cache"
   },
   "devDependencies": {
+    "@parcel/transformer-jsonld": "^2.12.0",
     "@parcel/transformer-sass": "^2.12.0",
     "autoprefixer": "^10.4.8",
     "parcel": "^2.6.0",

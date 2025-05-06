@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html class="page" lang="en">
+
+<include src="partials/head.html">
+    {
+    "title": "Sardi Project Page"
+    }
+</include>
+
+<body class="page__body sardi">
+
+    <include src="partials/header.html"></include>
+    <include src="partials/main-nav.html"></include>
+    <include src="partials/page-banner-sardi.html"></include>
+
+    <section class="nsw-section">
+        <div class="nsw-container pirsa-breadcrumbs">
+            <nav aria-label="Breadcrumbs" class="nsw-breadcrumbs js-breadcrumbs">
+                <ol>
+                    <li>
+                        <a href="home.html">Home</a>
+                    </li>
+                    <li>
+                        <a href="sardi.html">SARDI Research</a>
+                    </li>
+                    <li>
+                        <a href="#" class="current" aria-current="page">SARDI Projects</a>
+                    </li>
+                </ol>
+            </nav>
+            <div class="pirsa-page-updated">Page updated: 26 Feb 2025</div>
+        </div>
+    </section>
+    <main id="content" class="nsw-container results-listing">
+        <div class="nsw-layout">
+            <main class="nsw-layout__main">
+                <h1>SARDI Projects</h1>
+            </main>
+        </div>
+        <div class="nsw-layout nsw-layout--2-col">
+            <div class="nsw-layout__sidebar">
+                <!-- START: sidebar content -->
+                <include src="partials/sardi-project-filters.html"></include>
+                <!-- END: sidebar content -->
+            </div>
+            <div class="nsw-layout__main">
+                <!-- START: Main content -->
+                <div class="nsw-results-bar">
+                    <div class="nsw-results-bar__info">Showing results 1 - 10 of 5917 results</div>
+                    <div class="nsw-results-bar__sorting">
+                        <label class="nsw-form__label" for="results-sort">Sort by:</label>
+                        <select class="nsw-form__select" id="results-sort" name="results-sort">
+                            <option value="3">Relevance</option>
+                            <option value="3">Most popular</option>
+                            <option value="3">Most recent</option>
+                        </select>
+                    </div>
+                </div>
+
+                <include src="partials/medium-cards-listing.html"></include>
+                <include src="partials/pagination.html"></include>
+
+    
+                <!-- END: Main content -->
+    
+            </div>
+    
+            <!-- <a href="#content" class="nsw-button nsw-button--dark pirsa-button--rounded nsw-m-y-md"><span>Back to
+                    top</span><span class="material-icons nsw-material-icons" focusable="false"
+                    aria-hidden="true">north</span></a> -->
+    
+        </div>
+    </main>
+
+    <include src="partials/footer.html"></include>
+
+    <include src="partials/scripts.html"></include>
+</body>
+
+</html>
