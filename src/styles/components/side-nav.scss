@@ -1,0 +1,45 @@
+.nsw-side-nav {
+
+    a {
+        background-color: var(--pirsa-side-nav-light);
+        padding: 1rem 1rem 1rem 2rem;
+        
+        &.current {
+            background-color: var(--pirsa-accent-light);
+            padding-left: 2.75rem;
+
+            &::before {
+                color: var(--nsw-brand-supplementary);
+                content: "\f1df";
+                font-family: "Material Icons";
+                font-size: 1.25rem;
+                font-weight: var(--nsw-font-normal);
+                position: absolute;
+                left: 1rem;
+            }
+        }
+    }
+
+    &__header {
+        a {
+            background-color: var(--nsw-brand-supplementary);
+            border-radius: 4px 4px 0px 0px;
+            color: var(--nsw-text-light);
+            padding: 1rem;
+
+            &:hover {
+                background-color: var(--nsw-brand-dark);
+            }
+        }       
+    }
+
+    > ul {
+        > li {
+            &.active {
+                border-left: 0;
+                line-height: 1.4rem;
+                position: relative;
+            }
+        }
+    }
+}
