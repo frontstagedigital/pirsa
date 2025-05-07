@@ -7,4 +7,241 @@
             }
         }
     }
+
+
+
+    /* 
+    For reference: NSW DS breakpoint sizes 
+
+    breakpoint-xs: 0
+    breakpoint-sm: 576px
+    breakpoint-md: 768px
+    breakpoint-lg: 992px
+    breakpoint-xl: 1200px
+    */
+
+    &-p {
+
+        &-top {
+
+            &-0 {
+                padding-top: 0;
+            }
+            &-1 {
+                padding-top: 1rem;
+            }
+            &-2 {
+                padding-top: 2rem;
+            }
+            &-3 {
+                padding-top: 3rem;
+            }    
+
+            //@include breakpoint('xs') {
+            @media screen and (min-width: 0) and (max-width: 575px) {  
+                &-xs {
+                    &-0 {
+                        padding-top: 0;
+                    }
+                    &-1 {
+                        padding-top: 1rem;
+                    }
+                    &-2 {
+                        padding-top: 2rem;
+                    }
+                    &-3 {
+                        padding-top: 3rem;
+                    }                                                            
+                }
+            }
+
+            //@include breakpoint('sm') {
+            @media screen and (min-width: 576px) and (max-width: 765px) {              
+                &-sm {
+                    &-0 {
+                        padding-top: 0;
+                    }
+                    &-1 {
+                        padding-top: 1rem;
+                    }
+                    &-2 {
+                        padding-top: 2rem;
+                    }
+                    &-3 {
+                        padding-top: 3rem;
+                    }                                                            
+                }
+            }
+
+            //@include breakpoint('md') {
+            @media screen and (min-width: 768px) and (max-width: 991px) {  
+                &-md {
+                    &-0 {
+                        padding-top: 0;
+                    }
+                    &-1 {
+                        padding-top: 1rem;
+                    }
+                    &-2 {
+                        padding-top: 2rem;
+                    }
+                    &-3 {
+                        padding-top: 3rem;
+                    }                                                            
+                }
+            }
+
+            //@include breakpoint($nsw-desktop-breakpoint) {
+            @media screen and (min-width: 992px) and (min-width: 1199px) {  
+                &-lg {
+                    &-0 {
+                        padding-top: 0;
+                    }
+                    &-1 {
+                        padding-top: 1rem;
+                    }
+                    &-2 {
+                        padding-top: 2rem;
+                    }
+                    &-3 {
+                        padding-top: 3rem;
+                    }                                                            
+                }
+            }
+
+            //@include breakpoint('xl') {
+            @media screen and (min-width: 1200px) {  
+                &-xl {
+                    &-0 {
+                        padding-top: 0;
+                    }
+                    &-1 {
+                        padding-top: 1rem;
+                    }
+                    &-2 {
+                        padding-top: 2rem;
+                    }
+                    &-3 {
+                        padding-top: 3rem;
+                    }                                                            
+                }
+            }
+
+
+        }
+
+        &-bottom {
+
+            &-0 {
+                padding-bottom: 0;
+            }
+            &-1 {
+                padding-bottom: 1rem;
+            }
+            &-2 {
+                padding-bottom: 2rem;
+            }
+            &-3 {
+                padding-bottom: 3rem;
+            }    
+
+            //@include breakpoint('xs') {
+            @media screen and (min-width: 0) and (max-width: 575px) {  
+                &-xs {
+                    &-0 {
+                        padding-bottom: 0;
+                    }
+                    &-1 {
+                        padding-bottom: 1rem;
+                    }
+                    &-2 {
+                        padding-bottom: 2rem;
+                    }
+                    &-3 {
+                        padding-bottom: 3rem;
+                    }                                                            
+                }
+            }
+
+            //@include breakpoint('sm') {
+            @media screen and (min-width: 576px) and (max-width: 765px) {              
+                &-sm {
+                    &-0 {
+                        padding-bottom: 0;
+                    }
+                    &-1 {
+                        padding-bottom: 1rem;
+                    }
+                    &-2 {
+                        padding-bottom: 2rem;
+                    }
+                    &-3 {
+                        padding-bottom: 3rem;
+                    }                                                            
+                }
+            }
+
+            //@include breakpoint('md') {
+            @media screen and (min-width: 768px) and (max-width: 991px) {  
+                &-md {
+                    &-0 {
+                        padding-bottom: 0;
+                    }
+                    &-1 {
+                        padding-bottom: 1rem;
+                    }
+                    &-2 {
+                        padding-bottom: 2rem;
+                    }
+                    &-3 {
+                        padding-bottom: 3rem;
+                    }                                                            
+                }
+            }
+
+            //@include breakpoint($nsw-desktop-breakpoint) {
+            @media screen and (min-width: 992px) and (min-width: 1199px) {  
+                &-lg {
+                    &-0 {
+                        padding-bottom: 0;
+                    }
+                    &-1 {
+                        padding-bottom: 1rem;
+                    }
+                    &-2 {
+                        padding-bottom: 2rem;
+                    }
+                    &-3 {
+                        padding-bottom: 3rem;
+                    }                                                            
+                }
+            }
+
+            //@include breakpoint('xl') {
+            @media screen and (min-width: 1200px) {  
+                &-xl {
+                    &-0 {
+                        padding-bottom: 0;
+                    }
+                    &-1 {
+                        padding-bottom: 1rem;
+                    }
+                    &-2 {
+                        padding-bottom: 2rem;
+                    }
+                    &-3 {
+                        padding-bottom: 3rem;
+                    }                                                            
+                }
+            }
+
+
+        }
+
+
+
+        
+
+    }
+
 }
