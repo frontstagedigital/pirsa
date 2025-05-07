@@ -1,0 +1,32 @@
+.results-listing {
+    .nsw-results-bar {
+        border-bottom: 1px solid var(--neutral-grey-03, #CDD3D6);
+        padding-bottom: 1.5rem;
+        margin: 2rem 0 1.5rem;
+        @include breakpoint('lg') {
+            margin: 0 0 1rem;
+        }
+    }
+    .nsw-grid {
+        @media screen and (min-width: 48rem) {
+            margin: 0 -0.5rem;
+        }
+    }
+    .nsw-col {
+        padding: 8px;
+
+        @media screen and (min-width: 75rem) {
+            padding: 12px 8px;
+        }
+    }
+
+    .nsw-card__title {
+        font-size: var(--nsw-font-size-lg-mobile);
+        line-height: var(--nsw-line-height-lg-mobile);
+
+        @include breakpoint('lg') {
+            font-size: var(--nsw-font-size-lg-desktop);
+            line-height: var(--nsw-line-height-lg-desktop);
+        }
+    }
+}
