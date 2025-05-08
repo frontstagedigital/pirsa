@@ -15,7 +15,7 @@
         margin-top: 3rem;
     }
 
-    a {
+    a:not(.nsw-button) {
         text-decoration: none;
         font-weight: var(--nsw-font-normal);
 
