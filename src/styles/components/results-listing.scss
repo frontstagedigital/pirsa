@@ -29,4 +29,14 @@
             line-height: var(--nsw-line-height-lg-desktop);
         }
     }
+
+    //  news cards
+    .nsw-card--pirsa {
+        .nsw-card__image {
+            @include breakpoint('lg') {
+                height: 16rem;
+                min-height: 16rem;
+            }
+        }
+    }
 }
