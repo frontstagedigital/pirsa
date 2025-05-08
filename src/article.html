@@ -7,7 +7,7 @@
     }
 </include>
 
-<body class="page__body">
+<body id="top" class="page__body">
 
     <include src="partials/header.html"></include>
     <include src="partials/main-nav.html"></include>
@@ -61,8 +61,9 @@
 
             <div class="pirsa-widget pirsa-widget__page_helpful"> <div class="nsw-form"> <div class="nsw-form__group"> <fieldset class="nsw-form__fieldset"> <legend> <span class="nsw-form__legend">Was this page helpful?</span> </legend> <input class="nsw-form__radio-input" type="radio" name="form-radio-2" id="form-radio-2-a" value="Yes"> <label class="nsw-form__radio-label" for="form-radio-2-a">Yes</label> <input class="nsw-form__radio-input" type="radio" name="form-radio-2" id="form-radio-2-b" value="No"> <label class="nsw-form__radio-label" for="form-radio-2-b">No</label> </fieldset> </div> </div> </div>
 
-            <a href="#content" class="nsw-button nsw-button--dark pirsa-button--rounded nsw-m-y-md"><span>Back to top</span><span class="material-icons nsw-material-icons" focusable="false" aria-hidden="true">north</span></a>
-
+            <div class="pirsa-back-to-top__wrapper">
+              <a href="#top" class="nsw-button nsw-button--dark pirsa-button--rounded pirsa-back-to-top__link"><span>Back to top</span><span class="material-icons nsw-material-icons" focusable="false" aria-hidden="true">arrow_upward</span></a>
+            </div>
           </div>
 
           <div class="nsw-layout__sidebar nsw-layout__sidebar--right">
