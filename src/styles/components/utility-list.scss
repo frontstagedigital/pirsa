@@ -27,4 +27,10 @@
     .nsw-icon-button {
         padding: 0;
     }
+
+    &.nsw-utility-list--horizontal ul {
+        width: 100%;
+        display: flex
+;
+    }
 }
