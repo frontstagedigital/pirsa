@@ -29,4 +29,42 @@
             line-height: var(--nsw-line-height-lg-desktop);
         }
     }
+
+    //  news cards
+    .nsw-card--pirsa {
+        .nsw-card__image {
+            @include breakpoint('lg') {
+                height: 16rem;
+                min-height: 16rem;
+            }
+        }
+        .nsw-material-icons {
+            border: 2px solid;
+            border-radius: 50%;
+            color: var(--nsw-brand-dark);
+            font-size: 1.25em;
+            height: 2rem;
+            width: 2rem;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            @include breakpoint('lg') {
+                height: 2.5rem;
+                width: 2.5rem;
+                font-size: 1.5rem;
+            }
+        }
+
+        &:hover {
+            .nsw-card__content {
+                background-color: var(--nsw-brand-light);
+                color: var(--nsw-text-dark);
+        
+                a {
+                    color: var(--nsw-text-dark);
+                }
+            }
+        }
+    }
 }
