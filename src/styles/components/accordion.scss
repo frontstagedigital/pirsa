@@ -1,0 +1,8 @@
+.nsw-accordion {
+    &__content {
+        border-right: 1px solid var(--nsw-grey-04);
+        border-bottom: 1px solid var(--nsw-grey-04);
+        border-left: 1px solid var(--nsw-grey-04);
+        border-radius: var(--nsw-border-radius);
+    }
+}
