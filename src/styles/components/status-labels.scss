@@ -9,4 +9,17 @@
         padding: 0 .4rem;
         vertical-align: text-bottom;        
     }
+
+    &--protected {
+        border-color: var(--pirsa-dark-grey);
+        background-color: var(--pirsa-dark-grey);
+        color: var(--nsw-white);
+    }   
+    
+    &--report {
+        border-color: var(--pirsa-misc-yellow);
+        background-color: var(--pirsa-misc-yellow);
+        color: var(--nsw-black);
+    }       
+    
 }
