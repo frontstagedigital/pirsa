@@ -42,4 +42,37 @@
             }
         }
     }
+
+    &--accordion-mobile {
+        .nsw-side-nav__header {
+            a {
+                background-image: url('../image/icon-chevron-down.svg');
+                background-repeat: no-repeat;
+                background-size: 1.875rem auto; 
+                background-position: right 1rem center; 
+                @include breakpoint('lg') {
+                    background-image: none;
+                }                     
+            }
+            &.active a {
+                background-image: url('../image/icon-chevron-up.svg');
+                @include breakpoint('lg') {
+                    background-image: none;
+                }                     
+            }
+        } 
+
+        &-open {
+            ul {
+                display: block !important;
+            }
+        }
+
+        ul {
+            display: none;
+            @include breakpoint('lg') {
+                display: block;
+            }           
+        }       
+    }
 }
