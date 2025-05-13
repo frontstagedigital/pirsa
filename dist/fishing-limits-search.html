@@ -1,0 +1,2242 @@
+<!DOCTYPE html>
+<html class="page" lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" href="/favicon.8d3427ea.png">
+
+    <!-- nsw design system -->
+    <link href="https://fonts.googleapis.com/css2?family=Public+Sans:ital,wght@0,400;0,600;0,700;1,400&amp;display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+    <link rel="stylesheet" type="text/css" href="/pirsa.38ec9247.css">
+    <title>Fishing limits search</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+</head>
+
+
+<body class="page__body search-results">
+
+    <header class="nsw-header pirsa-header">
+    <div class="nsw-header__container">
+        <div class="nsw-header__inner">
+            <div class="nsw-header__main">
+                <div class="nsw-header__waratah">
+                    <a href="/">
+                        <img class="" src="/logo-mobile.b850d6e5.svg" alt="PIRSA Logo">
+                        <span class="sr-only">PIRSA</span>
+                    </a>
+                </div>
+                <!-- <div class="nsw-header__name">
+                    <div class="nsw-header__title">Digital NSW</div>
+                </div> -->
+            </div>
+            <div class="nsw-header__menu">
+                <button type="button" class="js-open-nav" aria-expanded="false" aria-controls="main-nav">
+                    <span class="material-icons nsw-material-icons" focusable="false" aria-hidden="true">menu</span>
+                    <span><span class="sr-only">Open</span></span>
+                </button>
+            </div>
+            <div class="nsw-header__search">
+                <button type="button" class="js-open-search" aria-expanded="false" aria-controls="header-search">
+                    <span class="material-icons nsw-material-icons" focusable="false" aria-hidden="true">search</span>
+                    <span><span class="sr-only">Show</span></span>
+                </button>
+                <div class="translate__container">
+                    <button aria-haspopup="true" aria-controls="translateMenu0" aria-expanded="false" class="translate__button">
+                        <div class="globe">
+                            <svg width="16" height="17" viewBox="0 0 16 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g id="Globe">
+<path d="M8 0.508301C3.58174 0.508301 0 4.09004 0 8.5083C0 12.9266 3.58174 16.5083 8 16.5083C12.4183 16.5083 16 12.9266 16 8.5083C16 4.09004 12.4183 0.508301 8 0.508301ZM8.25046 15.0589C8.15918 15.1407 8.06441 15.1579 8.00082 15.1579C7.93662 15.1579 7.84082 15.1405 7.7481 15.0572C6.62215 14.0443 5.79344 12.7493 5.32185 11.3157C7.07918 10.8667 8.92513 10.8605 10.6851 11.297C10.2144 12.7389 9.38215 14.0414 8.25046 15.0589ZM5.02031 10.1227C4.9241 9.59466 4.87179 9.05497 4.87179 8.5083C4.87179 7.96163 4.9241 7.42194 5.0201 6.89394C6.01026 7.14645 7.02544 7.27322 8.04103 7.27322C9.02974 7.27322 10.0183 7.15281 10.9836 6.91343C11.0773 7.43528 11.1284 7.9684 11.1284 8.5083C11.1284 9.0482 11.0773 9.58133 10.9836 10.1032C9.02667 9.61784 6.97436 9.62399 5.02031 10.1227ZM7.74974 1.95774C7.84082 1.87589 7.93579 1.85866 7.99918 1.85866C8.06338 1.85866 8.15918 1.8763 8.2519 1.95938C9.38277 2.97661 10.2142 4.27856 10.6847 5.71958C8.92472 6.15589 7.07877 6.14994 5.32144 5.70092C5.79323 4.26666 6.62277 2.97086 7.74974 1.95774ZM12.1678 6.55384C12.8421 6.31158 13.4989 6.00758 14.1307 5.64286C14.5395 6.51363 14.7692 7.48451 14.7692 8.5083C14.7692 9.5321 14.5395 10.503 14.1309 11.3737C13.4991 11.0088 12.8423 10.705 12.168 10.4628C12.2919 9.82563 12.3592 9.17189 12.3592 8.5083C12.359 7.84471 12.2919 7.19117 12.1678 6.55384ZM13.5085 4.58112C12.9772 4.88758 12.4265 5.14707 11.8615 5.35692C11.4683 4.14522 10.8494 3.02399 10.0429 2.05456C11.4539 2.50235 12.665 3.40143 13.5085 4.58112ZM5.95733 2.05476C5.15713 3.01661 4.54215 4.12799 4.14872 5.32881C3.58831 5.1161 3.04185 4.85599 2.51528 4.54789C3.35754 3.38461 4.55938 2.49825 5.95733 2.05476ZM1.88574 5.60574C2.51364 5.97353 3.16656 6.28102 3.83713 6.52697C3.70974 7.17271 3.64103 7.83548 3.64103 8.5083C3.64103 9.18112 3.70954 9.84389 3.83713 10.4896C3.16656 10.7358 2.51364 11.0431 1.88574 11.4109C1.46626 10.5307 1.23077 9.54666 1.23077 8.5083C1.23077 7.46994 1.46626 6.48594 1.88574 5.60574ZM2.51528 12.4685C3.04164 12.1606 3.5881 11.9003 4.14872 11.6876C4.54215 12.8884 5.15713 14 5.95733 14.9618C4.55938 14.5184 3.35754 13.632 2.51528 12.4685ZM10.0429 14.9618C10.8494 13.9922 11.4681 12.8712 11.8613 11.6595C12.4263 11.8693 12.977 12.129 13.5083 12.4353C12.665 13.615 11.4539 14.514 10.0429 14.9618Z" fill="#495054"></path>
+</g>
+</svg>
+
+                        </div>
+                        <div class="text">Language</div>
+                        <!-- <span class="chevron material-symbols-outlined">
+                                chevron_right
+                                </span> -->
+                        <div class="chevron">
+                            <svg width="16" height="17" viewBox="0 0 16 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g id="expand_more">
+<path d="M10.5832 6.50848L7.99657 9.09514L5.4099 6.50848C5.1499 6.24848 4.7299 6.24848 4.4699 6.50848C4.2099 6.76848 4.2099 7.18848 4.4699 7.44848L7.5299 10.5085C7.7899 10.7685 8.2099 10.7685 8.4699 10.5085L11.5299 7.44848C11.7899 7.18848 11.7899 6.76848 11.5299 6.50848C11.2699 6.25514 10.8432 6.24848 10.5832 6.50848Z" fill="#22272B"></path>
+</g>
+</svg>
+
+                        </div>
+                    </button>
+                    <ul class="translate__languages nsw-small" id="translateMenu0" role="menu" aria-hidden="true" tabindex="-1">
+                        <li role="none"><a data-language="en" href="https://www.nsw.gov.au/?language=en" role="menuitem">English</a>
+                        </li>
+                        <li role="none"><a data-language="af" href="https://www.nsw.gov.au/?language=af" role="menuitem">Afrikaans
+                                (Afrikaans)</a></li>
+                        <li role="none"><a data-language="sq" href="https://www.nsw.gov.au/?language=sq" role="menuitem">Albanian
+                                (shqip)</a>
+                        </li>
+                        <li role="none"><a data-language="ar" href="https://www.nsw.gov.au/?language=ar" role="menuitem">Arabic
+                                (العربية)</a>
+                        </li>
+                        <li role="none"><a data-language="hy" href="https://www.nsw.gov.au/?language=hy" role="menuitem">Armenian
+                                (Հայերեն)</a></li>
+                        <li role="none"><a data-language="az" href="https://www.nsw.gov.au/?language=az" role="menuitem">Azerbaijani
+                                (Azərbaycan)</a></li>
+                        <li role="none"><a data-language="eu" href="https://www.nsw.gov.au/?language=eu" role="menuitem">Basque
+                                (Euskara)</a>
+                        </li>
+                        <li role="none"><a data-language="be" href="https://www.nsw.gov.au/?language=be" role="menuitem">Belarusian
+                                (Беларуская)</a></li>
+                        <li role="none"><a data-language="bn" href="https://www.nsw.gov.au/?language=bn" role="menuitem">Bengali
+                                (বাংলা)</a>
+                        </li>
+                        <li role="none"><a data-language="bs" href="https://www.nsw.gov.au/?language=bs" role="menuitem">Bosnian
+                                (Bosanski)</a></li>
+                        <li role="none"><a data-language="bg" href="https://www.nsw.gov.au/?language=bg" role="menuitem">Bulgarian
+                                (Български)</a></li>
+                        <li role="none"><a data-language="ca" href="https://www.nsw.gov.au/?language=ca" role="menuitem">Catalan
+                                (Català)</a>
+                        </li>
+                        <li role="none"><a data-language="zh-CN" href="https://www.nsw.gov.au/?language=zh-CN" role="menuitem">Chinese
+                                Simplified (简体中文)</a></li>
+                        <li role="none"><a data-language="zh-TW" href="https://www.nsw.gov.au/?language=zh-TW" role="menuitem">Chinese
+                                Traditional (繁體中文)</a></li>
+                        <li role="none"><a data-language="hr" href="https://www.nsw.gov.au/?language=hr" role="menuitem">Croatian
+                                (Hrvatski)</a></li>
+                        <li role="none"><a data-language="cs" href="https://www.nsw.gov.au/?language=cs" role="menuitem">Czech
+                                (čeština)</a>
+                        </li>
+                        <li role="none"><a data-language="da" href="https://www.nsw.gov.au/?language=da" role="menuitem">Danish
+                                (Dansk)</a>
+                        </li>
+                        <li role="none"><a data-language="nl" href="https://www.nsw.gov.au/?language=nl" role="menuitem">Dutch
+                                (Nederlands)</a></li>
+                        <li role="none"><a data-language="et" href="https://www.nsw.gov.au/?language=et" role="menuitem">Estonian (Eesti
+                                keel)</a></li>
+                        <li role="none"><a data-language="tl" href="https://www.nsw.gov.au/?language=tl" role="menuitem">Filipino
+                                (Tagalog)</a></li>
+                        <li role="none"><a data-language="fi" href="https://www.nsw.gov.au/?language=fi" role="menuitem">Finnish
+                                (Suomi)</a>
+                        </li>
+                        <li role="none"><a data-language="fr" href="https://www.nsw.gov.au/?language=fr" role="menuitem">French
+                                (Français)</a>
+                        </li>
+                        <li role="none"><a data-language="gl" href="https://www.nsw.gov.au/?language=gl" role="menuitem">Galician
+                                (Galego)</a>
+                        </li>
+                        <li role="none"><a data-language="ka" href="https://www.nsw.gov.au/?language=ka" role="menuitem">Georgian
+                                (ქართული)</a></li>
+                        <li role="none"><a data-language="de" href="https://www.nsw.gov.au/?language=de" role="menuitem">German
+                                (Deutsch)</a>
+                        </li>
+                        <li role="none"><a data-language="el" href="https://www.nsw.gov.au/?language=el" role="menuitem">Greek
+                                (Ελληνικά)</a>
+                        </li>
+                        <li role="none"><a data-language="gu" href="https://www.nsw.gov.au/?language=gu" role="menuitem">Gujarati
+                                (ગુજરાતી)</a></li>
+                        <li role="none"><a data-language="ht" href="https://www.nsw.gov.au/?language=ht" role="menuitem">Haitian Creole
+                                (Kreyòl ayisyen)</a></li>
+                        <li role="none"><a data-language="iw" href="https://www.nsw.gov.au/?language=iw" role="menuitem">Hebrew
+                                (עברית)</a>
+                        </li>
+                        <li role="none"><a data-language="hi" href="https://www.nsw.gov.au/?language=hi" role="menuitem">Hindi
+                                (हिन्दी)</a>
+                        </li>
+                        <li role="none"><a data-language="hu" href="https://www.nsw.gov.au/?language=hu" role="menuitem">Hungarian
+                                (Magyar)</a></li>
+                        <li role="none"><a data-language="is" href="https://www.nsw.gov.au/?language=is" role="menuitem">Icelandic
+                                (íslenska)</a></li>
+                        <li role="none"><a data-language="id" href="https://www.nsw.gov.au/?language=id" role="menuitem">Indonesian
+                                (Bahasa
+                                Indonesia)</a></li>
+                        <li role="none"><a data-language="ga" href="https://www.nsw.gov.au/?language=ga" role="menuitem">Irish
+                                (Gaeilge)</a>
+                        </li>
+                        <li role="none"><a data-language="it" href="https://www.nsw.gov.au/?language=it" role="menuitem">Italian
+                                (Italiano)</a></li>
+                        <li role="none"><a data-language="ja" href="https://www.nsw.gov.au/?language=ja" role="menuitem">Japanese
+                                (日本語)</a>
+                        </li>
+                        <li role="none"><a data-language="km" href="https://www.nsw.gov.au/?language=km" role="menuitem">Khmer
+                                (ខ្មែរ)</a>
+                        </li>
+                        <li role="none"><a data-language="ko" href="https://www.nsw.gov.au/?language=ko" role="menuitem">Korean
+                                (한국어)</a></li>
+                        <li role="none"><a data-language="ku" href="https://www.nsw.gov.au/?language=ku" role="menuitem">Kurdish -
+                                Kurmanji
+                                (Kurmancî)</a></li>
+                        <li role="none"><a data-language="ckb" href="https://www.nsw.gov.au/?language=ckb" role="menuitem">Kurdish -
+                                Sorani
+                                (سۆرانی)</a></li>
+                        <li role="none"><a data-language="lo" href="https://www.nsw.gov.au/?language=lo" role="menuitem">Lao (ລາວ)</a>
+                        </li>
+                        <li role="none"><a data-language="lv" href="https://www.nsw.gov.au/?language=lv" role="menuitem">Latvian
+                                (Latviešu)</a></li>
+                        <li role="none"><a data-language="lt" href="https://www.nsw.gov.au/?language=lt" role="menuitem">Lithuanian
+                                (Lietuvių)</a></li>
+                        <li role="none"><a data-language="mk" href="https://www.nsw.gov.au/?language=mk" role="menuitem">Macedonian
+                                (Mакедонски)</a></li>
+                        <li role="none"><a data-language="ms" href="https://www.nsw.gov.au/?language=ms" role="menuitem">Malay (Bahasa
+                                Melayu)</a></li>
+                        <li role="none"><a data-language="ml" href="https://www.nsw.gov.au/?language=ml" role="menuitem">Malayalam
+                                (മലയാളം)</a></li>
+                        <li role="none"><a data-language="mt" href="https://www.nsw.gov.au/?language=mt" role="menuitem">Maltese
+                                (Malti)</a>
+                        </li>
+                        <li role="none"><a data-language="mn" href="https://www.nsw.gov.au/?language=mn" role="menuitem">Mongolian
+                                (Монгол)</a></li>
+                        <li role="none"><a data-language="ne" href="https://www.nsw.gov.au/?language=ne" role="menuitem">Nepali
+                                (नेपाली)</a>
+                        </li>
+                        <li role="none"><a data-language="no" href="https://www.nsw.gov.au/?language=no" role="menuitem">Norwegian
+                                (Norsk)</a>
+                        </li>
+                        <li role="none"><a data-language="ps" href="https://www.nsw.gov.au/?language=ps" role="menuitem">Pashto
+                                (پښتو)</a>
+                        </li>
+                        <li role="none"><a data-language="fa" href="https://www.nsw.gov.au/?language=fa" role="menuitem">Persian
+                                (فارسی)</a>
+                        </li>
+                        <li role="none"><a data-language="pl" href="https://www.nsw.gov.au/?language=pl" role="menuitem">Polish
+                                (Polski)</a>
+                        </li>
+                        <li role="none"><a data-language="pt" href="https://www.nsw.gov.au/?language=pt" role="menuitem">Portuguese
+                                (Português)</a></li>
+                        <li role="none"><a data-language="pa" href="https://www.nsw.gov.au/?language=pa" role="menuitem">Punjabi
+                                (ਪੰਜਾਬੀ)</a>
+                        </li>
+                        <li role="none"><a data-language="ro" href="https://www.nsw.gov.au/?language=ro" role="menuitem">Romanian
+                                (Română)</a>
+                        </li>
+                        <li role="none"><a data-language="ru" href="https://www.nsw.gov.au/?language=ru" role="menuitem">Russian
+                                (Русский)</a>
+                        </li>
+                        <li role="none"><a data-language="sm" href="https://www.nsw.gov.au/?language=sm" role="menuitem">Samoan (Gagana
+                                Sāmoa)</a></li>
+                        <li role="none"><a data-language="sr" href="https://www.nsw.gov.au/?language=sr" role="menuitem">Serbian
+                                (Српски)</a>
+                        </li>
+                        <li role="none"><a data-language="sk" href="https://www.nsw.gov.au/?language=sk" role="menuitem">Slovak
+                                (slovenčina)</a></li>
+                        <li role="none"><a data-language="sl" href="https://www.nsw.gov.au/?language=sl" role="menuitem">Slovenian
+                                (Slovenščina)</a></li>
+                        <li role="none"><a data-language="es" href="https://www.nsw.gov.au/?language=es" role="menuitem">Spanish
+                                (Español)</a>
+                        </li>
+                        <li role="none"><a data-language="sw" href="https://www.nsw.gov.au/?language=sw" role="menuitem">Swahili
+                                (Kiswahili)</a></li>
+                        <li role="none"><a data-language="sv" href="https://www.nsw.gov.au/?language=sv" role="menuitem">Swedish
+                                (Svenska)</a>
+                        </li>
+                        <li role="none"><a data-language="ta" href="https://www.nsw.gov.au/?language=ta" role="menuitem">Tamil
+                                (தமிழ்)</a>
+                        </li>
+                        <li role="none"><a data-language="te" href="https://www.nsw.gov.au/?language=te" role="menuitem">Telugu
+                                (తెలుగు)</a>
+                        </li>
+                        <li role="none"><a data-language="th" href="https://www.nsw.gov.au/?language=th" role="menuitem">Thai (ไทย)</a>
+                        </li>
+                        <li role="none"><a data-language="tr" href="https://www.nsw.gov.au/?language=tr" role="menuitem">Turkish
+                                (Türkçe)</a>
+                        </li>
+                        <li role="none"><a data-language="uk" href="https://www.nsw.gov.au/?language=uk" role="menuitem">Ukrainian
+                                (Українська)</a></li>
+                        <li role="none"><a data-language="ur" href="https://www.nsw.gov.au/?language=ur" role="menuitem">Urdu (اردو)</a>
+                        </li>
+                        <li role="none"><a data-language="vi" href="https://www.nsw.gov.au/?language=vi" role="menuitem">Vietnamese
+                                (Tiếng
+                                Việt)</a></li>
+                        <li role="none"><a data-language="cy" href="https://www.nsw.gov.au/?language=cy" role="menuitem">Welsh
+                                (Cymraeg)</a>
+                        </li>
+                        <li role="none"><a data-language="yi" href="https://www.nsw.gov.au/?language=yi" role="menuitem">Yiddish
+                                (ייִדיש)</a>
+                        </li>
+                    </ul>
+                </div>
+                <a class="menu-item" href="#">About Us</a>
+                <a class="menu-item" href="#">myPIRSA</a>
+                <a class="menu-item" href="#">Contact</a>
+            </div>
+        </div>
+
+        <div class="nsw-header__search-area js-search-area" id="header-search" hidden="">
+            <form role="search">
+                <label for="nsw-header-input" class="sr-only">Search site for:</label>
+                <input class="nsw-header__input js-search-input" type="text" autocomplete="off" id="nsw-header-input" name="nsw-header-input">
+                <button class="nsw-icon-button nsw-icon-button--flex" type="submit" aria-controls="header-search">
+                    <span class="material-icons nsw-material-icons" focusable="false" aria-hidden="true">search</span>
+                    <span class="sr-only">Search</span>
+                </button>
+            </form>
+            <button class="nsw-icon-button js-close-search" aria-expanded="true" aria-controls="header-search">
+                <span class="material-icons nsw-material-icons" focusable="false" aria-hidden="true">close</span>
+                <span class="sr-only">Close search</span>
+            </button>
+        </div>
+    </div>
+</header>
+
+    <nav class="nsw-main-nav js-mega-menu" id="main-nav" aria-label="Main menu">
+
+  <div class="nsw-main-nav__wrapper">
+     
+      <div class="nsw-main-nav__header">
+        <div class="nsw-main-nav__title">Menu</div>
+        <button class="nsw-icon-button js-close-nav" type="button" aria-expanded="true">
+          <span class="material-icons nsw-material-icons" focusable="false" aria-hidden="true">close</span>
+          <span class="sr-only">Close Menu</span>
+        </button>
+      </div>
+
+      <ul class="nsw-main-nav__list">
+
+        <li>
+          <a href="/landing-page-1.html" role="button" aria-expanded="false" aria-controls="sub-nav-1">
+            <span>Primary Industries</span>
+            <span class="material-icons nsw-material-icons" focusable="false" aria-hidden="true">keyboard_arrow_right</span>
+          </a>
+      
+          
+          <div class="nsw-main-nav__sub-nav" id="sub-nav-1" role="region" aria-label="Primary Industries Submenu">
+            <div class="nsw-main-nav__header">
+              <button class="nsw-icon-button nsw-icon-button--flex js-close-sub-nav" type="button" aria-expanded="true" aria-controls="sub-nav-1">
+                <span class="material-icons nsw-material-icons" focusable="false" aria-hidden="true">keyboard_arrow_left</span>
+                <span>Back<span class="sr-only"> to previous menu</span></span>
+              </button>
+
+              <button class="nsw-icon-button js-close-nav" type="button" aria-expanded="true">
+                <span class="material-icons nsw-material-icons" focusable="false" aria-hidden="true">close</span>
+                <span class="sr-only">Close Menu</span>
+              </button>
+            </div>
+
+            <!-- DESKTOP ONLY MEGA MENU -->
+            <div class="nsw-grid nsw-main-nav__sub-nav__mega-menu nsw-display-none nsw-display-lg-flex">
+              <div class="nsw-col nsw-col-md-6 nsw-col-lg-3">
+                <h3><a href="/landing-page-1.html">Primary Industries</a></h3>
+                <p>The South Australian Research and Development Institute (SARDI) is the research arm of the Department of Primary Industries and Regions (PIRSA).
+                </p>
+              </div>
+              <div class="nsw-col nsw-col-md-6 nsw-col-lg-3">
+                <div class="nsw-main-nav__sub-nav__mega-menu__group">
+                  <div class="nsw-main-nav__sub-nav__mega-menu__group__title"><a href="#">Aquaculture</a></div>
+                  <ul class="nsw-main-nav__sub-nav__mega-menu__group__list-links">
+                    <li><a href="#">Land-based aquaculture</a></li>
+                    <li><a href="#">Marine aquaculture</a></li>
+                    <li><a href="#">Monitoring &amp; assessment</a></li>
+                    <li><a href="#">Leasing &amp; licensing</a></li>
+                    <li><a href="#">Aquatic animal health</a></li>
+                    <li><a href="#">Policy &amp; legislation</a></li>
+                    <li><a href="#">Community consultation</a></li>
+                    <li><a href="#">Publications</a></li>
+                    <li><a href="#">Aquaculture contacts</a></li>
+                  </ul>
+                </div>
+                <div class="nsw-main-nav__sub-nav__mega-menu__group">
+                  <div class="nsw-main-nav__sub-nav__mega-menu__group__title"><a href="#">Forestry</a></div>
+                  <ul class="nsw-main-nav__sub-nav__mega-menu__group__list-links">
+                    <li><a href="#">SA Wood Fibre and Timber Industry Master Plan</a></li>
+                    <li><a href="#">Forestry Centre of Excellence</a></li>
+                    <li><a href="#">Trees on Farms Initiative</a></li>
+                    <li><a href="#">Mid North forests</a></li>
+                    <li><a href="#">Forest Industries Advisory Council of SA</a></li>
+                  </ul>
+                </div>            
+                <div class="nsw-main-nav__sub-nav__mega-menu__group">
+                  <div class="nsw-main-nav__sub-nav__mega-menu__group__title"><a href="#">Horticulture</a></div>
+                  <ul class="nsw-main-nav__sub-nav__mega-menu__group__list-links">
+                    <li><a href="#">Citrus Growers Fund</a></li>
+                    <li><a href="#">Alkaloid poppy production</a></li>
+                  </ul>
+                </div>               
+              </div>
+              <div class="nsw-col nsw-col-md-6 nsw-col-lg-3">
+                <div class="nsw-main-nav__sub-nav__mega-menu__group">
+                  <div class="nsw-main-nav__sub-nav__mega-menu__group__title"><a href="/landing-page-2.html">Commercial fishing</a></div>
+                  <ul class="nsw-main-nav__sub-nav__mega-menu__group__list-links">
+                    <li><a href="#">Commercial fisheries</a></li>
+                    <li><a href="#">Commercial size limits</a></li>
+                    <li><a href="#">Fish processing</a></li>
+                    <li><a href="#">Fisheries management</a></li>
+                    <li><a href="#">Licensing &amp; registration</a></li>
+                    <li><a href="#">Online payments</a></li>
+                    <li><a href="#">Permits &amp; exemptions</a></li>
+                    <li><a href="#">Community consultations</a></li>
+                    <li><a href="#">Public register</a></li>
+                    <li><a href="#">Digital reporting</a></li>
+                  </ul>
+                </div>
+
+                <div class="nsw-main-nav__sub-nav__mega-menu__group">
+                  <div class="nsw-main-nav__sub-nav__mega-menu__group__title"><a href="#">Grains &amp; crops</a></div>
+                  <ul class="nsw-main-nav__sub-nav__mega-menu__group__list-links">
+                    <li><a href="#">Grain Industry Funds</a></li>
+                  <li><a href="#"> Crop &amp; pasture reports</a></li>
+                    <li><a href="#">Genetically modified crops</a></li>
+                    <li><a href="#">Grains Farm Biosecurity Program</a></li>
+                    <li><a href="#">Industrial hemp</a></li>
+                    <li><a href="#">Reducing smoke taint in grapes</a></li>
+                  </ul>
+                </div>               
+                <div class="nsw-main-nav__sub-nav__mega-menu__group">
+                  <div class="nsw-main-nav__sub-nav__mega-menu__group__title"><a href="#">Livestock, wool &amp; dairy</a></div>
+                  <ul class="nsw-main-nav__sub-nav__mega-menu__group__list-links">
+                    <li><a href="#">Apiary Industry Fund</a></li>
+                    <li><a href="#">Cattle Industry Fund</a></li>
+                    <li><a href="#">Pig Industry Fund</a></li>
+                    <li><a href="#">Sheep Industry Fund</a></li>
+                    <li><a href="#">Livestock movement</a></li>
+                  </ul>
+                </div>               
+              </div>
+              <div class="nsw-col nsw-col-md-6 nsw-col-lg-3">
+                <div class="nsw-main-nav__sub-nav__mega-menu__group">
+                  <div class="nsw-main-nav__sub-nav__mega-menu__group__title"><a href="#">Food &amp; beverage</a></div>
+                  <ul class="nsw-main-nav__sub-nav__mega-menu__group__list-links">
+                    <li><a href="#">SA ambassadors</a></li>
+                    <li><a href="#">Produce sectors</a></li>
+                      <li><a href="#">SA advantages</a></li>
+                    <li><a href="#">Culinary tourism</a></li>
+                  </ul>
+                </div>  
+                <div class="nsw-main-nav__sub-nav__mega-menu__group">
+                  <div class="nsw-main-nav__sub-nav__mega-menu__group__title"><a href="#">Grape &amp; wine</a></div>
+                  <ul class="nsw-main-nav__sub-nav__mega-menu__group__list-links">
+                  <li><a href="#"> Legislation</a></li>
+                    <li><a href="#">Wine Industry Funds</a></li>
+                    <li><a href="#">No and low (NOLO) alcohol wine</a></li>
+                    <li><a href="#">Adelaide Great Wine Capital</a></li>
+                  </ul>
+                </div>  
+                <div class="nsw-main-nav__sub-nav__mega-menu__group">
+                  <div class="nsw-main-nav__sub-nav__mega-menu__group__title"><a href="#">Climate change</a></div>
+                  <ul class="nsw-main-nav__sub-nav__mega-menu__group__list-links">
+                    <li><a href="#">Government policies &amp; initiatives</a></li>
+                    <li><a href="#">Carbon footprint</a></li>
+                    <li><a href="#">Carbon farming</a></li>
+                    <li><a href="#">Carbon Farming Demonstration Pilot</a></li>
+                  </ul>
+                </div>                          
+              </div>
+            </div>
+
+            <!-- MOBILE ONLY SUB NAV -->
+            <ul class="nsw-main-nav__sub-list nsw-display-block nsw-display-lg-none">
+              <li>
+                <a href="/landing-page-1.html">
+                  <span>Primary Industries</span>
+                </a>
+              </li><li>
+              </li><li>
+                <a href="#" role="button" aria-expanded="false" aria-controls="sub-nav-aquaculture">
+                  <span>Aquaculture</span>
+                  <span class="material-icons nsw-material-icons" focusable="false" aria-hidden="true">keyboard_arrow_right</span>
+                </a>
+                <div class="nsw-main-nav__sub-nav" id="sub-nav-aquaculture" role="region" aria-label="Aquaculture Submenu">
+                  <div class="nsw-main-nav__header">
+                    <button class="nsw-icon-button nsw-icon-button--flex js-close-sub-nav" type="button" aria-expanded="true" aria-controls="sub-nav-aquaculture">
+                      <span class="material-icons nsw-material-icons" focusable="false" aria-hidden="true">keyboard_arrow_left</span>
+                      <span>Back<span class="sr-only"> to previous menu</span></span> 
+                    </button>
+    
+                    <button class="nsw-icon-button js-close-nav" type="button" aria-expanded="true">
+                      <span class="material-icons nsw-material-icons" focusable="false" aria-hidden="true">close</span>
+                      <span class="sr-only">Close Menu</span>
+                    </button>
+                  </div>
+       
+                  <ul class="nsw-main-nav__sub-list">
+                    <li><a href="#">Land-based aquaculture</a></li>
+                    <li><a href="#">Marine aquaculture</a></li>
+                    <li><a href="#">Monitoring &amp; assessment</a></li>
+                    <li><a href="#">Leasing &amp; licensing</a></li>
+                    <li><a href="#">Aquatic animal health</a></li>
+                    <li><a href="#">Policy &amp; legislation</a></li>
+                    <li><a href="#">Community consultation</a></li>
+                    <li><a href="#">Publications</a></li>
+                    <li><a href="#">Aquaculture contacts</a></li>
+                  </ul>
+                </div>
+              </li>
+
+              <li>
+                <a href="#" role="button" aria-expanded="false" aria-controls="sub-nav-forestry">
+                  <span>Forestry</span>
+                  <span class="material-icons nsw-material-icons" focusable="false" aria-hidden="true">keyboard_arrow_right</span>
+                </a>
+                <div class="nsw-main-nav__sub-nav" id="sub-nav-forestry" role="region" aria-label="Forestry Submenu">
+                  <div class="nsw-main-nav__header">
+                    <button class="nsw-icon-button nsw-icon-button--flex js-close-sub-nav" type="button" aria-expanded="true" aria-controls="sub-nav-forestry">
+                      <span class="material-icons nsw-material-icons" focusable="false" aria-hidden="true">keyboard_arrow_left</span>
+                      <span>Back<span class="sr-only"> to previous menu</span></span> 
+                    </button>
+    
+                    <button class="nsw-icon-button js-close-nav" type="button" aria-expanded="true">
+                      <span class="material-icons nsw-material-icons" focusable="false" aria-hidden="true">close</span>
+                      <span class="sr-only">Close Menu</span>
+                    </button>
+                  </div>
+       
+                  <ul class="nsw-main-nav__sub-list">
+                    <li><a href="#">SA Wood Fibre and Timber Industry Master Plan</a></li>
+                    <li><a href="#">Forestry Centre of Excellence</a></li>
+                    <li><a href="#">Trees on Farms Initiative</a></li>
+                    <li><a href="#">Mid North forests</a></li>
+                    <li><a href="#">Forest Industries Advisory Council of SA</a></li>
+                  </ul>
+                </div>
+              </li>              
+
+              <li>
+                <a href="#" role="button" aria-expanded="false" aria-controls="sub-nav-horticulture">
+                  <span>Horticulture</span>
+                  <span class="material-icons nsw-material-icons" focusable="false" aria-hidden="true">keyboard_arrow_right</span>
+                </a>
+                <div class="nsw-main-nav__sub-nav" id="sub-nav-horticulture" role="region" aria-label="Horticulture Submenu">
+                  <div class="nsw-main-nav__header">
+                    <button class="nsw-icon-button nsw-icon-button--flex js-close-sub-nav" type="button" aria-expanded="true" aria-controls="sub-nav-horticulture">
+                      <span class="material-icons nsw-material-icons" focusable="false" aria-hidden="true">keyboard_arrow_left</span>
+                      <span>Back<span class="sr-only"> to previous menu</span></span> 
+                    </button>
+    
+                    <button class="nsw-icon-button js-close-nav" type="button" aria-expanded="true">
+                      <span class="material-icons nsw-material-icons" focusable="false" aria-hidden="true">close</span>
+                      <span class="sr-only">Close Menu</span>
+                    </button>
+                  </div>
+       
+                  <ul class="nsw-main-nav__sub-list">
+                    <li><a href="#">Citrus Growers Fund</a></li>
+                    <li><a href="#">Alkaloid poppy production</a></li>
+                  </ul>
+                </div>
+              </li>     
+
+              <li>
+                <a href="/landing-page-2.html" role="button" aria-expanded="false" aria-controls="sub-nav-commercial-fishing">
+                  <span>Commercial fishing</span>
+                  <span class="material-icons nsw-material-icons" focusable="false" aria-hidden="true">keyboard_arrow_right</span>
+                </a>
+                <div class="nsw-main-nav__sub-nav" id="sub-nav-commercial-fishing" role="region" aria-label="Commercial-fishing Submenu">
+                  <div class="nsw-main-nav__header">
+                    <button class="nsw-icon-button nsw-icon-button--flex js-close-sub-nav" type="button" aria-expanded="true" aria-controls="sub-nav-commercial-fishing">
+                      <span class="material-icons nsw-material-icons" focusable="false" aria-hidden="true">keyboard_arrow_left</span>
+                      <span>Back<span class="sr-only"> to previous menu</span></span> 
+                    </button>
+    
+                    <button class="nsw-icon-button js-close-nav" type="button" aria-expanded="true">
+                      <span class="material-icons nsw-material-icons" focusable="false" aria-hidden="true">close</span>
+                      <span class="sr-only">Close Menu</span>
+                    </button>
+                  </div>
+       
+                  <ul class="nsw-main-nav__sub-list">
+                    <li><a href="#">Commercial fisheries</a></li>
+                    <li><a href="#">Commercial size limits</a></li>
+                    <li><a href="#">Fish processing</a></li>
+                    <li><a href="#">Fisheries management</a></li>
+                    <li><a href="#">Licensing &amp; registration</a></li>
+                    <li><a href="#">Online payments</a></li>
+                    <li><a href="#">Permits &amp; exemptions</a></li>
+                    <li><a href="#">Community consultations</a></li>
+                    <li><a href="#">Public register</a></li>
+                    <li><a href="#">Digital reporting</a></li>
+                  </ul>
+                </div>
+              </li>     
+
+              <li>
+                <a href="#" role="button" aria-expanded="false" aria-controls="sub-nav-grains-crops">
+                  <span>Grains &amp; crops</span>
+                  <span class="material-icons nsw-material-icons" focusable="false" aria-hidden="true">keyboard_arrow_right</span>
+                </a>
+                <div class="nsw-main-nav__sub-nav" id="sub-nav-grains-crops" role="region" aria-label="Grains &amp; crops Submenu">
+                  <div class="nsw-main-nav__header">
+                    <button class="nsw-icon-button nsw-icon-button--flex js-close-sub-nav" type="button" aria-expanded="true" aria-controls="sub-nav-grains-crops">
+                      <span class="material-icons nsw-material-icons" focusable="false" aria-hidden="true">keyboard_arrow_left</span>
+                      <span>Back<span class="sr-only"> to previous menu</span></span> 
+                    </button>
+    
+                    <button class="nsw-icon-button js-close-nav" type="button" aria-expanded="true">
+                      <span class="material-icons nsw-material-icons" focusable="false" aria-hidden="true">close</span>
+                      <span class="sr-only">Close Menu</span>
+                    </button>
+                  </div>
+       
+                  <ul class="nsw-main-nav__sub-list">
+                    <li><a href="#">Grain Industry Funds</a></li>
+                    <li><a href="#">Crop &amp; pasture reports</a></li>
+                    <li><a href="#">Genetically modified crops</a></li>
+                    <li><a href="#">Grains Farm Biosecurity Program</a></li>
+                    <li><a href="#">Industrial hemp</a></li>
+                    <li><a href="#">Reducing smoke taint in grapes</a></li>
+                  </ul>
+                </div>
+              </li>    
+
+              <li>
+                <a href="#" role="button" aria-expanded="false" aria-controls="sub-nav-livestock-wool-dairy">
+                  <span>Livestock, wool &amp; dairy</span>
+                  <span class="material-icons nsw-material-icons" focusable="false" aria-hidden="true">keyboard_arrow_right</span>
+                </a>
+                <div class="nsw-main-nav__sub-nav" id="sub-nav-livestock-wool-dairy" role="region" aria-label="Livestock, wool &amp; dairy Submenu">
+                  <div class="nsw-main-nav__header">
+                    <button class="nsw-icon-button nsw-icon-button--flex js-close-sub-nav" type="button" aria-expanded="true" aria-controls="sub-nav-livestock-wool-dairy">
+                      <span class="material-icons nsw-material-icons" focusable="false" aria-hidden="true">keyboard_arrow_left</span>
+                      <span>Back<span class="sr-only"> to previous menu</span></span> 
+                    </button>
+    
+                    <button class="nsw-icon-button js-close-nav" type="button" aria-expanded="true">
+                      <span class="material-icons nsw-material-icons" focusable="false" aria-hidden="true">close</span>
+                      <span class="sr-only">Close Menu</span>
+                    </button>
+                  </div>
+       
+                  <ul class="nsw-main-nav__sub-list">
+                    <li><a href="#">Apiary Industry Fund</a></li>
+                    <li><a href="#">Cattle Industry Fund</a></li>
+                    <li><a href="#">Pig Industry Fund</a></li>
+                    <li><a href="#">Sheep Industry Fund</a></li>
+                    <li><a href="#">Livestock movement</a></li>
+                  </ul>
+                </div>
+              </li>    
+
+              <li>
+                <a href="#" role="button" aria-expanded="false" aria-controls="sub-nav-food-beverage">
+                  <span>Food &amp; beverage</span>
+                  <span class="material-icons nsw-material-icons" focusable="false" aria-hidden="true">keyboard_arrow_right</span>
+                </a>
+                <div class="nsw-main-nav__sub-nav" id="sub-nav-food-beverage" role="region" aria-label="Food &amp; beverage Submenu">
+                  <div class="nsw-main-nav__header">
+                    <button class="nsw-icon-button nsw-icon-button--flex js-close-sub-nav" type="button" aria-expanded="true" aria-controls="sub-nav-food-beverage">
+                      <span class="material-icons nsw-material-icons" focusable="false" aria-hidden="true">keyboard_arrow_left</span>
+                      <span>Back<span class="sr-only"> to previous menu</span></span> 
+                    </button>
+    
+                    <button class="nsw-icon-button js-close-nav" type="button" aria-expanded="true">
+                      <span class="material-icons nsw-material-icons" focusable="false" aria-hidden="true">close</span>
+                      <span class="sr-only">Close Menu</span>
+                    </button>
+                  </div>
+       
+                  <ul class="nsw-main-nav__sub-list">
+                    <li><a href="#">SA ambassadors</a></li>
+                    <li><a href="#">Produce sectors</a></li>
+                    <li><a href="#">SA advantages</a></li>
+                    <li><a href="#">Culinary tourism</a></li>
+                  </ul>
+                </div>
+              </li>  
+
+              <li>
+                <a href="#" role="button" aria-expanded="false" aria-controls="sub-nav-grape-wine">
+                  <span>Grape &amp; wine</span>
+                  <span class="material-icons nsw-material-icons" focusable="false" aria-hidden="true">keyboard_arrow_right</span>
+                </a>
+                <div class="nsw-main-nav__sub-nav" id="sub-nav-grape-wine" role="region" aria-label="Grape &amp; wine Submenu">
+                  <div class="nsw-main-nav__header">
+                    <button class="nsw-icon-button nsw-icon-button--flex js-close-sub-nav" type="button" aria-expanded="true" aria-controls="sub-nav-grape-wine">
+                      <span class="material-icons nsw-material-icons" focusable="false" aria-hidden="true">keyboard_arrow_left</span>
+                      <span>Back<span class="sr-only"> to previous menu</span></span> 
+                    </button>
+    
+                    <button class="nsw-icon-button js-close-nav" type="button" aria-expanded="true">
+                      <span class="material-icons nsw-material-icons" focusable="false" aria-hidden="true">close</span>
+                      <span class="sr-only">Close Menu</span>
+                    </button>
+                  </div>
+       
+                  <ul class="nsw-main-nav__sub-list">
+                    <li><a href="#"> Legislation</a></li>
+                    <li><a href="#">Wine Industry Funds</a></li>
+                    <li><a href="#">No and low (NOLO) alcohol wine</a></li>
+                    <li><a href="#">Adelaide Great Wine Capital</a></li>
+                  </ul>
+                </div>
+              </li>  
+              
+              <li>
+                <a href="#" role="button" aria-expanded="false" aria-controls="sub-nav-climate-change">
+                  <span>Climate change</span>
+                  <span class="material-icons nsw-material-icons" focusable="false" aria-hidden="true">keyboard_arrow_right</span>
+                </a>
+                <div class="nsw-main-nav__sub-nav" id="sub-nav-climate-change" role="region" aria-label="Climate change Submenu">
+                  <div class="nsw-main-nav__header">
+                    <button class="nsw-icon-button nsw-icon-button--flex js-close-sub-nav" type="button" aria-expanded="true" aria-controls="sub-nav-climate-change">
+                      <span class="material-icons nsw-material-icons" focusable="false" aria-hidden="true">keyboard_arrow_left</span>
+                      <span>Back<span class="sr-only"> to previous menu</span></span> 
+                    </button>
+    
+                    <button class="nsw-icon-button js-close-nav" type="button" aria-expanded="true">
+                      <span class="material-icons nsw-material-icons" focusable="false" aria-hidden="true">close</span>
+                      <span class="sr-only">Close Menu</span>
+                    </button>
+                  </div>
+       
+                  <ul class="nsw-main-nav__sub-list">
+                    <li><a href="#">Government policies &amp; initiatives</a></li>
+                    <li><a href="#">Carbon footprint</a></li>
+                    <li><a href="#">Carbon farming</a></li>
+                    <li><a href="#">Carbon Farming Demonstration Pilot</a></li>
+                  </ul>
+                </div>
+              </li>                
+
+            </ul>
+
+          </div>
+        </li>
+
+        <li>
+          <a href="#" role="button" aria-expanded="false" aria-controls="sub-nav-3">
+            <span>Regions</span>
+          </a>
+        </li>
+
+        <li>
+          <a href="#" role="button" aria-expanded="false" aria-controls="sub-nav-4">
+            <span>Biosecurity</span>
+            <span class="material-icons nsw-material-icons" focusable="false" aria-hidden="true">keyboard_arrow_right</span>
+          </a>
+            
+          <div class="nsw-main-nav__sub-nav" id="sub-nav-4" role="region" aria-label="Biosecurity Submenu">
+            <div class="nsw-main-nav__header">
+              <button class="nsw-icon-button nsw-icon-button--flex js-close-sub-nav" type="button" aria-expanded="true" aria-controls="sub-nav-1">
+                <span class="material-icons nsw-material-icons" focusable="false" aria-hidden="true">keyboard_arrow_left</span>
+                <span>Back<span class="sr-only"> to previous menu</span></span>
+              </button>
+
+              <button class="nsw-icon-button js-close-nav" type="button" aria-expanded="true">
+                <span class="material-icons nsw-material-icons" focusable="false" aria-hidden="true">close</span>
+                <span class="sr-only">Close Menu</span>
+              </button>
+            </div>
+
+            <!-- DESKTOP ONLY MEGA MENU -->
+            <div class="nsw-grid nsw-main-nav__sub-nav__mega-menu nsw-display-none nsw-display-lg-flex">
+              <div class="nsw-col nsw-col-md-6 nsw-col-lg-3">
+                <h3><a href="/landing-page-1.html">Biosecurity</a></h3>
+                <p>The South Australian Research and Development Institute (SARDI) is the research arm of the Department of Primary Industries and Regions (PIRSA).
+                </p>
+              </div>
+              <div class="nsw-col nsw-col-md-6 nsw-col-lg-3">
+                <div class="nsw-main-nav__sub-nav__mega-menu__group">
+                  <div class="nsw-main-nav__sub-nav__mega-menu__group__title"><a href="#">Animal species</a></div>
+                  <ul class="nsw-main-nav__sub-nav__mega-menu__group__list-links">
+                    <li><a href="#">Animal species</a></li>
+                    <li><a href="#">Reporting animal disease</a></li>
+                    <li><a href="#">Disease surveillance initiatives</a></li>
+                    <li><a href="#">Veterinary resources</a></li>
+                    <li><a href="#">Animal welfare &amp; feeding</a></li>
+                    <li><a href="#">Helping wildlife</a></li>
+                    <li><a href="#">One Biosecurity</a></li>
+                    <li><a href="#">Contact</a></li>
+                  </ul>
+                </div>
+                <div class="nsw-main-nav__sub-nav__mega-menu__group">
+                  <div class="nsw-main-nav__sub-nav__mega-menu__group__title"><a href="#">Food safety</a></div>
+                  <ul class="nsw-main-nav__sub-nav__mega-menu__group__list-links">
+                    <li><a href="#">Dairy</a></li>
+                    <li><a href="#">Eggs</a></li>
+                    <li><a href="#">Horticulture</a></li>
+                    <li><a href="#">Meat</a></li>
+                    <li><a href="#">Seafood</a></li>
+                    <li><a href="#">Seed sprouts</a></li>
+                    <li><a href="#">SASQAP</a></li>
+                    <li><a href="#">Food safety schemes &amp; legislation</a></li>
+                    <li><a href="#">Food safety links</a></li>
+                  </ul>
+                </div>            
+                <div class="nsw-main-nav__sub-nav__mega-menu__group">
+                  <div class="nsw-main-nav__sub-nav__mega-menu__group__title"><a href="#">Plant health</a></div>
+                  <ul class="nsw-main-nav__sub-nav__mega-menu__group__list-links">
+                    <li><a href="#">Importing commercial plants &amp; plant products</a></li>
+                    <li><a href="#">Exporting commercial plants &amp; plant products</a></li>
+                    <li><a href="#">Plant import &amp; export forms &amp; fees</a></li>
+                    <li><a href="#">Reporting plant pests</a></li>
+                    <li><a href="#">Travelling with plants</a></li>
+                  </ul>
+                </div>               
+              </div>
+              <div class="nsw-col nsw-col-md-6 nsw-col-lg-3">
+                <div class="nsw-main-nav__sub-nav__mega-menu__group">
+                  <div class="nsw-main-nav__sub-nav__mega-menu__group__title"><a href="#">Livestock movement</a></div>
+                  <ul class="nsw-main-nav__sub-nav__mega-menu__group__list-links">
+                    <li><a href="#">Property identification code</a></li>
+                    <li><a href="#">National Livestock Identification System</a></li>
+                    <li><a href="#">eID for sheep &amp; goats</a></li>
+                    <li><a href="#">SA property clearance certificates</a></li>
+                  </ul>
+                </div>
+
+                <div class="nsw-main-nav__sub-nav__mega-menu__group">
+                  <div class="nsw-main-nav__sub-nav__mega-menu__group__title"><a href="#">Fruit fly</a></div>
+                  <ul class="nsw-main-nav__sub-nav__mega-menu__group__list-links">
+                    <li><a href="#">Outbreak map</a></li>
+                    <li><a href="#">Outbreak restrictions</a></li>
+                    <li><a href="#">Travel restrictions</a></li>
+                    <li><a href="#">Industry support</a></li>
+                    <li><a href="#">Prevent fruit fly</a></li>
+                    <li><a href="#">News &amp; resources</a></li>
+                  </ul>
+                </div>               
+                <div class="nsw-main-nav__sub-nav__mega-menu__group">
+                  <div class="nsw-main-nav__sub-nav__mega-menu__group__title"><a href="#">Rural chemicals</a></div>
+                  <ul class="nsw-main-nav__sub-nav__mega-menu__group__list-links">
+                    <li><a href="#">Storing &amp; disposal of chemicals</a></li>
+                    <li><a href="#">Chemical use &amp; best practice</a></li>
+                    <li><a href="#">Comply with legislation</a></li>
+                    <li><a href="#">Reporting chemical misuse</a></li>
+                  </ul>
+                </div>               
+              </div>
+              <div class="nsw-col nsw-col-md-6 nsw-col-lg-3">
+                <div class="nsw-main-nav__sub-nav__mega-menu__group">
+                  <div class="nsw-main-nav__sub-nav__mega-menu__group__title"><a href="#">Aquatics</a></div>
+                  <ul class="nsw-main-nav__sub-nav__mega-menu__group__list-links">
+                    <li><a href="#">Aquatic diseases</a></li>
+                    <li><a href="#">Aquatic pests</a></li>
+                    <li><a href="#">Moving or importing aquatic animals</a></li>
+                    <li><a href="#">Mass fish die-off</a></li>
+                    <li><a href="#">Dredging &amp; biosecurity risks</a></li>
+                    <li><a href="#">Biofouling &amp; ballast water</a></li>
+                  </ul>
+                </div>  
+                <div class="nsw-main-nav__sub-nav__mega-menu__group">
+                  <div class="nsw-main-nav__sub-nav__mega-menu__group__title"><a href="#">Introduced &amp; pest animals</a></div>
+                  <ul class="nsw-main-nav__sub-nav__mega-menu__group__list-links">
+                    <li><a href="#">Find a pest animal</a></li>
+                    <li><a href="#">Reporting pest animals</a></li>
+                    <li><a href="#">Legal requirements</a></li>
+                    <li><a href="#">Keeping declared animals</a></li>
+                    <li><a href="#">Using poison baits in SA</a></li>
+                  </ul>
+                </div>  
+                <div class="nsw-main-nav__sub-nav__mega-menu__group">
+                  <div class="nsw-main-nav__sub-nav__mega-menu__group__title"><a href="#">Weeds</a></div>
+                  <ul class="nsw-main-nav__sub-nav__mega-menu__group__list-links">
+                    <li><a href="#">Identifying declared weeds</a></li>
+                    <li><a href="#">Reporting alert weeds</a></li>
+                    <li><a href="#">Managing weeds</a></li>
+                    <li><a href="#">Landholder responsibilities</a></li>
+                    <li><a href="#">Weed management programs</a></li>
+                  </ul>
+                </div>                          
+              </div>
+            </div>
+
+              <!-- MOBILE ONLY SUB NAV -->
+              <ul class="nsw-main-nav__sub-list nsw-display-block nsw-display-lg-none">
+                <li>
+                  <a href="#">
+                    <span>Biosecurity</span>
+                  </a>
+                </li><li>
+                </li><li>
+                  <a href="#" role="button" aria-expanded="false" aria-controls="sub-nav-animal-species">
+                    <span>Animal species</span>
+                    <span class="material-icons nsw-material-icons" focusable="false" aria-hidden="true">keyboard_arrow_right</span>
+                  </a>
+                  <div class="nsw-main-nav__sub-nav" id="sub-nav-animal-species" role="region" aria-label="Animal species Submenu">
+                    <div class="nsw-main-nav__header">
+                      <button class="nsw-icon-button nsw-icon-button--flex js-close-sub-nav" type="button" aria-expanded="true" aria-controls="sub-nav-animal-species">
+                        <span class="material-icons nsw-material-icons" focusable="false" aria-hidden="true">keyboard_arrow_left</span>
+                        <span>Back<span class="sr-only"> to previous menu</span></span> 
+                      </button>
+
+                      <button class="nsw-icon-button js-close-nav" type="button" aria-expanded="true">
+                        <span class="material-icons nsw-material-icons" focusable="false" aria-hidden="true">close</span>
+                        <span class="sr-only">Close Menu</span>
+                      </button>
+                    </div>
+
+                    <ul class="nsw-main-nav__sub-list">
+                      <li><a href="#">Animal species</a></li>
+                      <li><a href="#">Reporting animal disease</a></li>
+                      <li><a href="#">Disease surveillance initiatives</a></li>
+                      <li><a href="#">Veterinary resources</a></li>
+                      <li><a href="#">Animal welfare &amp; feeding</a></li>
+                      <li><a href="#">Helping wildlife</a></li>
+                      <li><a href="#">One Biosecurity</a></li>
+                      <li><a href="#">Contact</a></li>
+                    </ul>
+                  </div>
+                </li>
+
+                <li>
+                  <a href="#" role="button" aria-expanded="false" aria-controls="sub-nav-food-safety">
+                    <span>Food safety</span>
+                    <span class="material-icons nsw-material-icons" focusable="false" aria-hidden="true">keyboard_arrow_right</span>
+                  </a>
+                  <div class="nsw-main-nav__sub-nav" id="sub-nav-food-safety" role="region" aria-label="Food safety Submenu">
+                    <div class="nsw-main-nav__header">
+                      <button class="nsw-icon-button nsw-icon-button--flex js-close-sub-nav" type="button" aria-expanded="true" aria-controls="sub-nav-food-safety">
+                        <span class="material-icons nsw-material-icons" focusable="false" aria-hidden="true">keyboard_arrow_left</span>
+                        <span>Back<span class="sr-only"> to previous menu</span></span> 
+                      </button>
+
+                      <button class="nsw-icon-button js-close-nav" type="button" aria-expanded="true">
+                        <span class="material-icons nsw-material-icons" focusable="false" aria-hidden="true">close</span>
+                        <span class="sr-only">Close Menu</span>
+                      </button>
+                    </div>
+
+                    <ul class="nsw-main-nav__sub-list">
+                      <li><a href="#">Dairy</a></li>
+                      <li><a href="#">Eggs</a></li>
+                      <li><a href="#">Horticulture</a></li>
+                      <li><a href="#">Meat</a></li>
+                      <li><a href="#">Seafood</a></li>
+                      <li><a href="#">Seed sprouts</a></li>
+                      <li><a href="#">SASQAP</a></li>
+                      <li><a href="#">Food safety schemes &amp; legislation</a></li>
+                      <li><a href="#">Food safety links</a></li>
+                    </ul>
+                  </div>
+                </li>              
+
+                <li>
+                  <a href="#" role="button" aria-expanded="false" aria-controls="sub-nav-plant-health">
+                    <span>Plant health</span>
+                    <span class="material-icons nsw-material-icons" focusable="false" aria-hidden="true">keyboard_arrow_right</span>
+                  </a>
+                  <div class="nsw-main-nav__sub-nav" id="sub-nav-plant-health" role="region" aria-label="Plant health Submenu">
+                    <div class="nsw-main-nav__header">
+                      <button class="nsw-icon-button nsw-icon-button--flex js-close-sub-nav" type="button" aria-expanded="true" aria-controls="sub-nav-plant-health">
+                        <span class="material-icons nsw-material-icons" focusable="false" aria-hidden="true">keyboard_arrow_left</span>
+                        <span>Back<span class="sr-only"> to previous menu</span></span> 
+                      </button>
+
+                      <button class="nsw-icon-button js-close-nav" type="button" aria-expanded="true">
+                        <span class="material-icons nsw-material-icons" focusable="false" aria-hidden="true">close</span>
+                        <span class="sr-only">Close Menu</span>
+                      </button>
+                    </div>
+
+                    <ul class="nsw-main-nav__sub-list">
+                      <li><a href="#">Importing commercial plants &amp; plant products</a></li>
+                      <li><a href="#">Exporting commercial plants &amp; plant products</a></li>
+                      <li><a href="#">Plant import &amp; export forms &amp; fees</a></li>
+                      <li><a href="#">Reporting plant pests</a></li>
+                      <li><a href="#">Travelling with plants</a></li>
+                    </ul>
+                  </div>
+                </li>     
+
+                <li>
+                  <a href="#" role="button" aria-expanded="false" aria-controls="sub-nav-livestock-movement">
+                    <span>Livestock movement</span>
+                    <span class="material-icons nsw-material-icons" focusable="false" aria-hidden="true">keyboard_arrow_right</span>
+                  </a>
+                  <div class="nsw-main-nav__sub-nav" id="sub-nav-livestock-movement" role="region" aria-label="Livestock movement Submenu">
+                    <div class="nsw-main-nav__header">
+                      <button class="nsw-icon-button nsw-icon-button--flex js-close-sub-nav" type="button" aria-expanded="true" aria-controls="sub-nav-livestock-movement">
+                        <span class="material-icons nsw-material-icons" focusable="false" aria-hidden="true">keyboard_arrow_left</span>
+                        <span>Back<span class="sr-only"> to previous menu</span></span> 
+                      </button>
+
+                      <button class="nsw-icon-button js-close-nav" type="button" aria-expanded="true">
+                        <span class="material-icons nsw-material-icons" focusable="false" aria-hidden="true">close</span>
+                        <span class="sr-only">Close Menu</span>
+                      </button>
+                    </div>
+
+                    <ul class="nsw-main-nav__sub-list">
+                      <li><a href="#">Property identification code</a></li>
+                      <li><a href="#">National Livestock Identification System</a></li>
+                      <li><a href="#">eID for sheep &amp; goats</a></li>
+                      <li><a href="#">SA property clearance certificates</a></li>
+                    </ul>
+                  </div>
+                </li>     
+
+                <li>
+                  <a href="#" role="button" aria-expanded="false" aria-controls="sub-nav-fruit-fly">
+                    <span>Fruit fly</span>
+                    <span class="material-icons nsw-material-icons" focusable="false" aria-hidden="true">keyboard_arrow_right</span>
+                  </a>
+                  <div class="nsw-main-nav__sub-nav" id="sub-nav-fruit-fly" role="region" aria-label="Fruit fly Submenu">
+                    <div class="nsw-main-nav__header">
+                      <button class="nsw-icon-button nsw-icon-button--flex js-close-sub-nav" type="button" aria-expanded="true" aria-controls="sub-nav-fruit-fly">
+                        <span class="material-icons nsw-material-icons" focusable="false" aria-hidden="true">keyboard_arrow_left</span>
+                        <span>Back<span class="sr-only"> to previous menu</span></span> 
+                      </button>
+
+                      <button class="nsw-icon-button js-close-nav" type="button" aria-expanded="true">
+                        <span class="material-icons nsw-material-icons" focusable="false" aria-hidden="true">close</span>
+                        <span class="sr-only">Close Menu</span>
+                      </button>
+                    </div>
+
+                    <ul class="nsw-main-nav__sub-list">
+                      <li><a href="#">Outbreak map</a></li>
+                      <li><a href="#">Outbreak restrictions</a></li>
+                      <li><a href="#">Travel restrictions</a></li>
+                      <li><a href="#">Industry support</a></li>
+                      <li><a href="#">Prevent fruit fly</a></li>
+                      <li><a href="#">News &amp; resources</a></li>
+                    </ul>
+                  </div>
+                </li>    
+
+                <li>
+                  <a href="#" role="button" aria-expanded="false" aria-controls="sub-nav-rural-chemicals">
+                    <span>Rural chemicals</span>
+                    <span class="material-icons nsw-material-icons" focusable="false" aria-hidden="true">keyboard_arrow_right</span>
+                  </a>
+                  <div class="nsw-main-nav__sub-nav" id="sub-nav-rural-chemicals" role="region" aria-label="Rural chemicals Submenu">
+                    <div class="nsw-main-nav__header">
+                      <button class="nsw-icon-button nsw-icon-button--flex js-close-sub-nav" type="button" aria-expanded="true" aria-controls="sub-nav-rural-chemicals">
+                        <span class="material-icons nsw-material-icons" focusable="false" aria-hidden="true">keyboard_arrow_left</span>
+                        <span>Back<span class="sr-only"> to previous menu</span></span> 
+                      </button>
+
+                      <button class="nsw-icon-button js-close-nav" type="button" aria-expanded="true">
+                        <span class="material-icons nsw-material-icons" focusable="false" aria-hidden="true">close</span>
+                        <span class="sr-only">Close Menu</span>
+                      </button>
+                    </div>
+
+                    <ul class="nsw-main-nav__sub-list">
+                      <li><a href="#">Storing &amp; disposal of chemicals</a></li>
+                      <li><a href="#">Chemical use &amp; best practice</a></li>
+                      <li><a href="#">Comply with legislation</a></li>
+                      <li><a href="#">Reporting chemical misuse</a></li>
+                    </ul>
+                  </div>
+                </li>    
+
+                <li>
+                  <a href="#" role="button" aria-expanded="false" aria-controls="sub-nav-aquatics">
+                    <span>Aquatics</span>
+                    <span class="material-icons nsw-material-icons" focusable="false" aria-hidden="true">keyboard_arrow_right</span>
+                  </a>
+                  <div class="nsw-main-nav__sub-nav" id="sub-nav-aquatics" role="region" aria-label="Aquatics Submenu">
+                    <div class="nsw-main-nav__header">
+                      <button class="nsw-icon-button nsw-icon-button--flex js-close-sub-nav" type="button" aria-expanded="true" aria-controls="sub-nav-aquatics">
+                        <span class="material-icons nsw-material-icons" focusable="false" aria-hidden="true">keyboard_arrow_left</span>
+                        <span>Back<span class="sr-only"> to previous menu</span></span> 
+                      </button>
+
+                      <button class="nsw-icon-button js-close-nav" type="button" aria-expanded="true">
+                        <span class="material-icons nsw-material-icons" focusable="false" aria-hidden="true">close</span>
+                        <span class="sr-only">Close Menu</span>
+                      </button>
+                    </div>
+
+                    <ul class="nsw-main-nav__sub-list">
+                      <li><a href="#">Aquatic diseases</a></li>
+                      <li><a href="#">Aquatic pests</a></li>
+                      <li><a href="#">Moving or importing aquatic animals</a></li>
+                      <li><a href="#">Mass fish die-off</a></li>
+                      <li><a href="#">Dredging &amp; biosecurity risks</a></li>
+                      <li><a href="#">Biofouling &amp; ballast water</a></li>
+                    </ul>
+                  </div>
+                </li>  
+
+                <li>
+                  <a href="#" role="button" aria-expanded="false" aria-controls="sub-nav-introduced-pest-animals">
+                    <span>Introduced &amp; pest animals</span>
+                    <span class="material-icons nsw-material-icons" focusable="false" aria-hidden="true">keyboard_arrow_right</span>
+                  </a>
+                  <div class="nsw-main-nav__sub-nav" id="sub-nav-introduced-pest-animals" role="region" aria-label="Introduced &amp; pest animals Submenu">
+                    <div class="nsw-main-nav__header">
+                      <button class="nsw-icon-button nsw-icon-button--flex js-close-sub-nav" type="button" aria-expanded="true" aria-controls="sub-nav-introduced-pest-animals">
+                        <span class="material-icons nsw-material-icons" focusable="false" aria-hidden="true">keyboard_arrow_left</span>
+                        <span>Back<span class="sr-only"> to previous menu</span></span> 
+                      </button>
+
+                      <button class="nsw-icon-button js-close-nav" type="button" aria-expanded="true">
+                        <span class="material-icons nsw-material-icons" focusable="false" aria-hidden="true">close</span>
+                        <span class="sr-only">Close Menu</span>
+                      </button>
+                    </div>
+
+                    <ul class="nsw-main-nav__sub-list">
+                      <li><a href="#">Find a pest animal</a></li>
+                      <li><a href="#">Reporting pest animals</a></li>
+                      <li><a href="#">Legal requirements</a></li>
+                      <li><a href="#">Keeping declared animals</a></li>
+                      <li><a href="#">Using poison baits in SA</a></li>
+                    </ul>
+                  </div>
+                </li>  
+                
+                <li>
+                  <a href="#" role="button" aria-expanded="false" aria-controls="sub-nav-weeds">
+                    <span>Weeds</span>
+                    <span class="material-icons nsw-material-icons" focusable="false" aria-hidden="true">keyboard_arrow_right</span>
+                  </a>
+                  <div class="nsw-main-nav__sub-nav" id="sub-nav-weeds" role="region" aria-label="Weeds Submenu">
+                    <div class="nsw-main-nav__header">
+                      <button class="nsw-icon-button nsw-icon-button--flex js-close-sub-nav" type="button" aria-expanded="true" aria-controls="sub-nav-weeds">
+                        <span class="material-icons nsw-material-icons" focusable="false" aria-hidden="true">keyboard_arrow_left</span>
+                        <span>Back<span class="sr-only"> to previous menu</span></span> 
+                      </button>
+
+                      <button class="nsw-icon-button js-close-nav" type="button" aria-expanded="true">
+                        <span class="material-icons nsw-material-icons" focusable="false" aria-hidden="true">close</span>
+                        <span class="sr-only">Close Menu</span>
+                      </button>
+                    </div>
+
+                    <ul class="nsw-main-nav__sub-list">
+                      <li><a href="#">Identifying declared weeds</a></li>
+                      <li><a href="#">Reporting alert weeds</a></li>
+                      <li><a href="#">Managing weeds</a></li>
+                      <li><a href="#">Landholder responsibilities</a></li>
+                      <li><a href="#">Weed management programs</a></li>
+                    </ul>
+                  </div>
+                </li>                
+
+              </ul>
+
+
+          </div>
+        </li>
+
+        <li>
+          <a href="#" role="button" aria-expanded="false" aria-controls="sub-nav-5">
+            <span>Rec Fishing</span>
+          </a>
+        </li>
+
+        <li>
+          <a href="#" role="button" aria-expanded="false" aria-controls="sub-nav-6">
+            <span>Emergencies &amp; Recovery</span>
+          </a>
+        </li>
+
+        <li>
+          <a href="/sardi.html" role="button" aria-expanded="false" aria-controls="sub-nav-7">
+            <span>SARDI Research</span>
+            <span class="material-icons nsw-material-icons" focusable="false" aria-hidden="true">keyboard_arrow_right</span>
+          </a>
+
+          <div class="nsw-main-nav__sub-nav" id="sub-nav-7" role="region" aria-label="SARDI Research Submenu">
+            <div class="nsw-main-nav__header">
+              <button class="nsw-icon-button nsw-icon-button--flex js-close-sub-nav" type="button" aria-expanded="true" aria-controls="sub-nav-7">
+                <span class="material-icons nsw-material-icons" focusable="false" aria-hidden="true">keyboard_arrow_left</span>
+                <span>Back<span class="sr-only"> to previous menu</span></span>
+              </button>
+
+              <button class="nsw-icon-button js-close-nav" type="button" aria-expanded="true">
+                <span class="material-icons nsw-material-icons" focusable="false" aria-hidden="true">close</span>
+                <span class="sr-only">Close Menu</span>
+              </button>
+            </div>
+
+            <!-- DESKTOP ONLY MEGA MENU -->
+            <div class="nsw-grid nsw-main-nav__sub-nav__mega-menu nsw-display-none nsw-display-lg-flex">
+              <div class="nsw-col nsw-col-md-6 nsw-col-lg-3">
+                <div class="nsw-main-nav__sub-nav__mega-menu__logo"><a href="/sardi.html"><img src="/SARDI-Colour-logo.43d1b07c.svg" alt="South Australian Research and Development Institute (SARDI) logo"></a></div>
+                <p>The South Australian Research and Development Institute (SARDI) is the research arm of the Department of Primary Industries and Regions (PIRSA).
+                </p>
+              </div>
+              <div class="nsw-col nsw-col-md-6 nsw-col-lg-3">
+                <div class="nsw-main-nav__sub-nav__mega-menu__group">
+                  <div class="nsw-main-nav__sub-nav__mega-menu__group__title"><a href="/sardi.html">SARDI Research</a></div>
+                  <ul class="nsw-main-nav__sub-nav__mega-menu__group__list-links">
+                    <li><a href="#">Research centres and facilities</a></li>
+                    <li><a href="#">Careers and scholarships</a></li>
+                    <li><a href="#">Animal Ethics Committee</a></li>
+                    <li><a href="#">Research reports</a></li>
+                  </ul>
+                </div>
+                <div class="nsw-main-nav__sub-nav__mega-menu__group">
+                  <div class="nsw-main-nav__sub-nav__mega-menu__group__title"><a href="#">Aquatic sciences</a></div>
+                  <ul class="nsw-main-nav__sub-nav__mega-menu__group__list-links">
+                    <li><a href="#">Aquaculture</a></li>
+                    <li><a href="#">Fisheries</a></li>
+                    <li><a href="#">Inland waters &amp; catchment ecology</a></li>
+                    <li><a href="#">Marine ecosystems</a></li>
+                  </ul>
+                </div>            
+              </div>
+              <div class="nsw-col nsw-col-md-6 nsw-col-lg-3">
+                <div class="nsw-main-nav__sub-nav__mega-menu__group">
+                  <div class="nsw-main-nav__sub-nav__mega-menu__group__title"><a href="#">Crop sciences</a></div>
+                  <ul class="nsw-main-nav__sub-nav__mega-menu__group__list-links">
+                    <li><a href="#">Agronomy</a></li>
+                    <li><a href="#">Crop &amp; pasture improvement</a></li>
+                    <li><a href="#">Entomology</a></li>
+                    <li><a href="#">Irrigated crops</a></li>
+                    <li><a href="#">Plant health &amp; diagnostics</a></li>
+
+                  </ul>
+                </div>
+                <div class="nsw-main-nav__sub-nav__mega-menu__group">
+                  <div class="nsw-main-nav__sub-nav__mega-menu__group__title"><a href="#">Food sciences</a></div>
+                  <ul class="nsw-main-nav__sub-nav__mega-menu__group__list-links">
+                    <li><a href="#">Seafood safety &amp; market access</a></li>
+                    <li><a href="#">Meat safety &amp; market access</a></li>
+                    <li><a href="#">Food technology</a></li>
+                    <li><a href="#">Food pilot laboratory</a></li>
+                    <li><a href="#">Food microbiology</a></li>
+                    <li><a href="#">Food statistical services</a></li>
+                  </ul>
+                </div>   
+                <div class="nsw-main-nav__sub-nav__mega-menu__group">
+                  <div class="nsw-main-nav__sub-nav__mega-menu__group__title"><a href="#">Livestock sciences</a></div>
+                  <ul class="nsw-main-nav__sub-nav__mega-menu__group__list-links">
+                    <li><a href="#">Livestock innovation &amp; welfare</a></li>
+                    <li><a href="#">Pigs &amp; poultry</a></li>
+                  </ul>
+                </div>               
+              </div>
+              <div class="nsw-col nsw-col-md-6 nsw-col-lg-3">
+                <div class="nsw-main-nav__sub-nav__mega-menu__group">
+                  <div class="nsw-main-nav__sub-nav__mega-menu__group__title"><a href="#">Services</a></div>
+                  <ul class="nsw-main-nav__sub-nav__mega-menu__group__list-links">
+                    <li><a href="#">Crop diagnostics</a></li>
+                    <li><a href="#">Molecular diagnostics</a></li>
+                    <li><a href="#">Australian Pastures Genebank</a></li>
+                    <li><a href="#">Seed Services</a></li>
+                    <li><a href="#">Insect identification service</a></li>
+                  </ul>
+                </div>   
+                <div class="nsw-main-nav__sub-nav__mega-menu__group">
+                  <div class="nsw-main-nav__sub-nav__mega-menu__group__title"><a href="#">Feature projects</a></div>
+                  <ul class="nsw-main-nav__sub-nav__mega-menu__group__list-links">
+                    <li><a href="#">Snapper recovery</a></li>
+                  </ul>
+                </div>  
+              </div>
+            </div>
+
+              <!-- MOBILE ONLY SUB NAV -->
+              <ul class="nsw-main-nav__sub-list nsw-display-block nsw-display-lg-none">
+                <li>
+                  <a href="/sardi.html">
+                    <span>SARDI Research</span>
+                  </a>
+                </li><li>
+                </li><li>
+                  <a href="/sardi.html" role="button" aria-expanded="false" aria-controls="sub-nav-sardi-research">
+                    <span>SARDI Research</span>
+                    <span class="material-icons nsw-material-icons" focusable="false" aria-hidden="true">keyboard_arrow_right</span>
+                  </a>
+                  <div class="nsw-main-nav__sub-nav" id="sub-nav-sardi-research" role="region" aria-label="SARDI Research Submenu">
+                    <div class="nsw-main-nav__header">
+                      <button class="nsw-icon-button nsw-icon-button--flex js-close-sub-nav" type="button" aria-expanded="true" aria-controls="sub-nav-sardi-research">
+                        <span class="material-icons nsw-material-icons" focusable="false" aria-hidden="true">keyboard_arrow_left</span>
+                        <span>Back<span class="sr-only"> to previous menu</span></span> 
+                      </button>
+
+                      <button class="nsw-icon-button js-close-nav" type="button" aria-expanded="true">
+                        <span class="material-icons nsw-material-icons" focusable="false" aria-hidden="true">close</span>
+                        <span class="sr-only">Close Menu</span>
+                      </button>
+                    </div>
+
+                    <ul class="nsw-main-nav__sub-list">
+                      <li><a href="#">Research centres and facilities</a></li>
+                      <li><a href="#">Careers and scholarships</a></li>
+                      <li><a href="#">Animal Ethics Committee</a></li>
+                      <li><a href="#">Research reports</a></li>
+                    </ul>
+                  </div>
+                </li>
+
+                <li>
+                  <a href="#" role="button" aria-expanded="false" aria-controls="sub-nav-aquatic-sciences">
+                    <span>Aquatic sciences</span>
+                    <span class="material-icons nsw-material-icons" focusable="false" aria-hidden="true">keyboard_arrow_right</span>
+                  </a>
+                  <div class="nsw-main-nav__sub-nav" id="sub-nav-aquatic-sciences" role="region" aria-label="Aquatic sciences Submenu">
+                    <div class="nsw-main-nav__header">
+                      <button class="nsw-icon-button nsw-icon-button--flex js-close-sub-nav" type="button" aria-expanded="true" aria-controls="sub-nav-aquatic-sciences">
+                        <span class="material-icons nsw-material-icons" focusable="false" aria-hidden="true">keyboard_arrow_left</span>
+                        <span>Back<span class="sr-only"> to previous menu</span></span> 
+                      </button>
+
+                      <button class="nsw-icon-button js-close-nav" type="button" aria-expanded="true">
+                        <span class="material-icons nsw-material-icons" focusable="false" aria-hidden="true">close</span>
+                        <span class="sr-only">Close Menu</span>
+                      </button>
+                    </div>
+
+                    <ul class="nsw-main-nav__sub-list">
+                      <li><a href="#">Aquaculture</a></li>
+                      <li><a href="#">Fisheries</a></li>
+                      <li><a href="#">Inland waters &amp; catchment ecology</a></li>
+                      <li><a href="#">Marine ecosystems</a></li>
+                    </ul>
+                  </div>
+                </li>              
+
+                <li>
+                  <a href="#" role="button" aria-expanded="false" aria-controls="sub-nav-crop-sciences">
+                    <span>Crop sciences</span>
+                    <span class="material-icons nsw-material-icons" focusable="false" aria-hidden="true">keyboard_arrow_right</span>
+                  </a>
+                  <div class="nsw-main-nav__sub-nav" id="sub-nav-crop-sciences" role="region" aria-label="Crop sciences Submenu">
+                    <div class="nsw-main-nav__header">
+                      <button class="nsw-icon-button nsw-icon-button--flex js-close-sub-nav" type="button" aria-expanded="true" aria-controls="sub-nav-crop-sciences">
+                        <span class="material-icons nsw-material-icons" focusable="false" aria-hidden="true">keyboard_arrow_left</span>
+                        <span>Back<span class="sr-only"> to previous menu</span></span> 
+                      </button>
+
+                      <button class="nsw-icon-button js-close-nav" type="button" aria-expanded="true">
+                        <span class="material-icons nsw-material-icons" focusable="false" aria-hidden="true">close</span>
+                        <span class="sr-only">Close Menu</span>
+                      </button>
+                    </div>
+
+                    <ul class="nsw-main-nav__sub-list">
+                      <li><a href="#">Agronomy</a></li>
+                      <li><a href="#">Crop &amp; pasture improvement</a></li>
+                      <li><a href="#">Entomology</a></li>
+                      <li><a href="#">Irrigated crops</a></li>
+                      <li><a href="#">Plant health &amp; diagnostics</a></li>
+                    </ul>
+                  </div>
+                </li>    
+
+                <li>
+                  <a href="#" role="button" aria-expanded="false" aria-controls="sub-nav-food-sciences">
+                    <span>Food sciences</span>
+                    <span class="material-icons nsw-material-icons" focusable="false" aria-hidden="true">keyboard_arrow_right</span>
+                  </a>
+                  <div class="nsw-main-nav__sub-nav" id="sub-nav-food-sciences" role="region" aria-label="Food sciences Submenu">
+                    <div class="nsw-main-nav__header">
+                      <button class="nsw-icon-button nsw-icon-button--flex js-close-sub-nav" type="button" aria-expanded="true" aria-controls="sub-nav-food-sciences">
+                        <span class="material-icons nsw-material-icons" focusable="false" aria-hidden="true">keyboard_arrow_left</span>
+                        <span>Back<span class="sr-only"> to previous menu</span></span> 
+                      </button>
+
+                      <button class="nsw-icon-button js-close-nav" type="button" aria-expanded="true">
+                        <span class="material-icons nsw-material-icons" focusable="false" aria-hidden="true">close</span>
+                        <span class="sr-only">Close Menu</span>
+                      </button>
+                    </div>
+
+                    <ul class="nsw-main-nav__sub-list">
+                      <li><a href="#">Seafood safety &amp; market access</a></li>
+                      <li><a href="#">Meat safety &amp; market access</a></li>
+                      <li><a href="#">Food technology</a></li>
+                      <li><a href="#">Food pilot laboratory</a></li>
+                      <li><a href="#">Food microbiology</a></li>
+                      <li><a href="#">Food statistical services</a></li>
+                    </ul>
+                  </div>
+                </li>    
+                
+                <li>
+                  <a href="#" role="button" aria-expanded="false" aria-controls="sub-nav-livestock-sciences">
+                    <span>Livestock sciences</span>
+                    <span class="material-icons nsw-material-icons" focusable="false" aria-hidden="true">keyboard_arrow_right</span>
+                  </a>
+                  <div class="nsw-main-nav__sub-nav" id="sub-nav-livestock-sciences" role="region" aria-label="Livestock sciences Submenu">
+                    <div class="nsw-main-nav__header">
+                      <button class="nsw-icon-button nsw-icon-button--flex js-close-sub-nav" type="button" aria-expanded="true" aria-controls="sub-nav-livestock-sciences">
+                        <span class="material-icons nsw-material-icons" focusable="false" aria-hidden="true">keyboard_arrow_left</span>
+                        <span>Back<span class="sr-only"> to previous menu</span></span> 
+                      </button>
+
+                      <button class="nsw-icon-button js-close-nav" type="button" aria-expanded="true">
+                        <span class="material-icons nsw-material-icons" focusable="false" aria-hidden="true">close</span>
+                        <span class="sr-only">Close Menu</span>
+                      </button>
+                    </div>
+
+                    <ul class="nsw-main-nav__sub-list">
+                      <li><a href="#">Livestock innovation &amp; welfare</a></li>
+                      <li><a href="#">Pigs &amp; poultry</a></li>
+                    </ul>
+                  </div>
+                </li>    
+                
+                <li>
+                  <a href="#" role="button" aria-expanded="false" aria-controls="sub-nav-services">
+                    <span>Services</span>
+                    <span class="material-icons nsw-material-icons" focusable="false" aria-hidden="true">keyboard_arrow_right</span>
+                  </a>
+                  <div class="nsw-main-nav__sub-nav" id="sub-nav-services" role="region" aria-label="Services Submenu">
+                    <div class="nsw-main-nav__header">
+                      <button class="nsw-icon-button nsw-icon-button--flex js-close-sub-nav" type="button" aria-expanded="true" aria-controls="sub-nav-services">
+                        <span class="material-icons nsw-material-icons" focusable="false" aria-hidden="true">keyboard_arrow_left</span>
+                        <span>Back<span class="sr-only"> to previous menu</span></span> 
+                      </button>
+
+                      <button class="nsw-icon-button js-close-nav" type="button" aria-expanded="true">
+                        <span class="material-icons nsw-material-icons" focusable="false" aria-hidden="true">close</span>
+                        <span class="sr-only">Close Menu</span>
+                      </button>
+                    </div>
+
+                    <ul class="nsw-main-nav__sub-list">
+                      <li><a href="#">Crop diagnostics</a></li>
+                      <li><a href="#">Molecular diagnostics</a></li>
+                      <li><a href="#">Australian Pastures Genebank</a></li>
+                      <li><a href="#">Seed Services</a></li>
+                      <li><a href="#">Insect identification service</a></li>
+                    </ul>
+                  </div>
+                </li>    
+                
+                <li>
+                  <a href="#" role="button" aria-expanded="false" aria-controls="sub-nav-feature-projects">
+                    <span>Feature projects</span>
+                    <span class="material-icons nsw-material-icons" focusable="false" aria-hidden="true">keyboard_arrow_right</span>
+                  </a>
+                  <div class="nsw-main-nav__sub-nav" id="sub-nav-feature-projects" role="region" aria-label="Feature projects Submenu">
+                    <div class="nsw-main-nav__header">
+                      <button class="nsw-icon-button nsw-icon-button--flex js-close-sub-nav" type="button" aria-expanded="true" aria-controls="sub-nav-feature-projects">
+                        <span class="material-icons nsw-material-icons" focusable="false" aria-hidden="true">keyboard_arrow_left</span>
+                        <span>Back<span class="sr-only"> to previous menu</span></span> 
+                      </button>
+
+                      <button class="nsw-icon-button js-close-nav" type="button" aria-expanded="true">
+                        <span class="material-icons nsw-material-icons" focusable="false" aria-hidden="true">close</span>
+                        <span class="sr-only">Close Menu</span>
+                      </button>
+                    </div>
+
+                    <ul class="nsw-main-nav__sub-list">
+                      <li><a href="#">Snapper recovery</a></li>
+                    </ul>
+                  </div>
+                </li>                    
+
+
+              </ul>
+
+          </div>
+        </li>
+
+
+      </ul>
+
+
+
+    <div class="nsw-main-nav__mobile-extra-links nsw-hide-lg">
+      <ul>
+        <li><a class="menu-item" href="#">myPIRSA</a></li>
+        <li><a class="menu-item" href="#">Contact</a></li>
+        <li><a class="menu-item" href="#">About Us</a></li>
+                <li class="nsw-form__group translate-mobile">
+                    <label class="nsw-form__label" for="select-all-regions-1">Language</label>
+                    <select class="nsw-form__select" name="select-all-regions-1" id="select-all-regions-1">
+                        <option value="eng">Select Language</option>
+                    </select>
+                
+                    <div class="translate__container">
+                        <ul class="translate__languages nsw-small" id="translateMenu0" role="menu" aria-hidden="true" style="max-height: 50vh; padding-left: 0; position: relative; overflow-y: scroll">
+                            <li role="none" translate="no">
+                                <a id="language-english" data-language="en" href="https://www.sira.nsw.gov.au/consultations" role="menuitem" onclick="">English</a>
+                            </li>
+                            <li role="none">
+                                <a data-language="af" href="https://www.sira.nsw.gov.au/consultations/#googtrans(en|af)" role="menuitem">Afrikaans (Afrikaans)</a>
+                            </li>
+                            <li role="none">
+                                <a data-language="sq" href="https://www.sira.nsw.gov.au/consultations/#googtrans(en|sq)" role="menuitem">Albanian (shqip)</a>
+                            </li>
+                            <li role="none">
+                                <a data-language="ar" href="https://www.sira.nsw.gov.au/consultations/#googtrans(en|ar)" role="menuitem">Arabic (العربية)</a>
+                            </li>
+                            <li role="none">
+                                <a data-language="hy" href="https://www.sira.nsw.gov.au/consultations/#googtrans(en|hy)" role="menuitem">Armenian (Հայերեն)</a>
+                            </li>
+                            <li role="none">
+                                <a data-language="az" href="https://www.sira.nsw.gov.au/consultations/#googtrans(en|az)" role="menuitem">Azerbaijani (Azərbaycan)</a>
+                            </li>
+                            <li role="none">
+                                <a data-language="eu" href="https://www.sira.nsw.gov.au/consultations/#googtrans(en|eu)" role="menuitem">Basque (Euskara)</a>
+                            </li>
+                            <li role="none">
+                                <a data-language="be" href="https://www.sira.nsw.gov.au/consultations/#googtrans(en|be)" role="menuitem">Belarusian (Беларуская)</a>
+                            </li>
+                            <li role="none">
+                                <a data-language="bn" href="https://www.sira.nsw.gov.au/consultations/#googtrans(en|bn)" role="menuitem">Bengali (বাংলা)</a>
+                            </li>
+                            <li role="none">
+                                <a data-language="bs" href="https://www.sira.nsw.gov.au/consultations/#googtrans(en|bs)" role="menuitem">Bosnian (Bosanski)</a>
+                            </li>
+                            <li role="none">
+                                <a data-language="bg" href="https://www.sira.nsw.gov.au/consultations/#googtrans(en|bg)" role="menuitem">Bulgarian (Български)</a>
+                            </li>
+                            <li role="none">
+                                <a data-language="ca" href="https://www.sira.nsw.gov.au/consultations/#googtrans(en|ca)" role="menuitem">Catalan (Català)</a>
+                            </li>
+                            <li role="none">
+                                <a data-language="zh-CN" href="https://www.sira.nsw.gov.au/consultations/#googtrans(en|zh-CN)" role="menuitem">Chinese Simplified (简体中文)</a>
+                            </li>
+                            <li role="none">
+                                <a data-language="zh-TW" href="https://www.sira.nsw.gov.au/consultations/#googtrans(en|zh-TW)" role="menuitem">Chinese Traditional (繁體中文)</a>
+                            </li>
+                            <li role="none">
+                                <a data-language="hr" href="https://www.sira.nsw.gov.au/consultations/#googtrans(en|hr)" role="menuitem">Croatian (Hrvatski)</a>
+                            </li>
+                            <li role="none">
+                                <a data-language="cs" href="https://www.sira.nsw.gov.au/consultations/#googtrans(en|cs)" role="menuitem">Czech (čeština)</a>
+                            </li>
+                            <li role="none">
+                                <a data-language="da" href="https://www.sira.nsw.gov.au/consultations/#googtrans(en|da)" role="menuitem">Danish (Dansk)</a>
+                            </li>
+                            <li role="none">
+                                <a data-language="nl" href="https://www.sira.nsw.gov.au/consultations/#googtrans(en|nl)" role="menuitem">Dutch (Nederlands)</a>
+                            </li>
+                            <li role="none">
+                                <a data-language="et" href="https://www.sira.nsw.gov.au/consultations/#googtrans(en|et)" role="menuitem">Estonian (Eesti keel)</a>
+                            </li>
+                            <li role="none">
+                                <a data-language="tl" href="https://www.sira.nsw.gov.au/consultations/#googtrans(en|tl)" role="menuitem">Filipino (Tagalog)</a>
+                            </li>
+                            <li role="none">
+                                <a data-language="fi" href="https://www.sira.nsw.gov.au/consultations/#googtrans(en|fi)" role="menuitem">Finnish (Suomi)</a>
+                            </li>
+                            <li role="none">
+                                <a data-language="fr" href="https://www.sira.nsw.gov.au/consultations/#googtrans(en|fr)" role="menuitem">French (Français)</a>
+                            </li>
+                            <li role="none">
+                                <a data-language="gl" href="https://www.sira.nsw.gov.au/consultations/#googtrans(en|gl)" role="menuitem">Galician (Galego)</a>
+                            </li>
+                            <li role="none">
+                                <a data-language="ka" href="https://www.sira.nsw.gov.au/consultations/#googtrans(en|ka)" role="menuitem">Georgian (ქართული)</a>
+                            </li>
+                            <li role="none">
+                                <a data-language="de" href="https://www.sira.nsw.gov.au/consultations/#googtrans(en|de)" role="menuitem">German (Deutsch)</a>
+                            </li>
+                            <li role="none">
+                                <a data-language="el" href="https://www.sira.nsw.gov.au/consultations/#googtrans(en|el)" role="menuitem">Greek (Ελληνικά)</a>
+                            </li>
+                            <li role="none">
+                                <a data-language="gu" href="https://www.sira.nsw.gov.au/consultations/#googtrans(en|gu)" role="menuitem">Gujarati (ગુજરાતી)</a>
+                            </li>
+                            <li role="none">
+                                <a data-language="ht" href="https://www.sira.nsw.gov.au/consultations/#googtrans(en|ht)" role="menuitem">Haitian Creole (Kreyòl ayisyen)</a>
+                            </li>
+                            <li role="none">
+                                <a data-language="iw" href="https://www.sira.nsw.gov.au/consultations/#googtrans(en|iw)" role="menuitem">Hebrew (עברית)</a>
+                            </li>
+                            <li role="none">
+                                <a data-language="hi" href="https://www.sira.nsw.gov.au/consultations/#googtrans(en|hi)" role="menuitem">Hindi (हिन्दी)</a>
+                            </li>
+                            <li role="none">
+                                <a data-language="hu" href="https://www.sira.nsw.gov.au/consultations/#googtrans(en|hu)" role="menuitem">Hungarian (Magyar)</a>
+                            </li>
+                            <li role="none">
+                                <a data-language="is" href="https://www.sira.nsw.gov.au/consultations/#googtrans(en|is)" role="menuitem">Icelandic (íslenska)</a>
+                            </li>
+                            <li role="none">
+                                <a data-language="id" href="https://www.sira.nsw.gov.au/consultations/#googtrans(en|id)" role="menuitem">Indonesian (Bahasa Indonesia)</a>
+                            </li>
+                            <li role="none">
+                                <a data-language="ga" href="https://www.sira.nsw.gov.au/consultations/#googtrans(en|ga)" role="menuitem">Irish (Gaeilge)</a>
+                            </li>
+                            <li role="none">
+                                <a data-language="it" href="https://www.sira.nsw.gov.au/consultations/#googtrans(en|it)" role="menuitem">Italian (Italiano)</a>
+                            </li>
+                            <li role="none">
+                                <a data-language="ja" href="https://www.sira.nsw.gov.au/consultations/#googtrans(en|ja)" role="menuitem">Japanese (日本語)</a>
+                            </li>
+                            <li role="none">
+                                <a data-language="km" href="https://www.sira.nsw.gov.au/consultations/#googtrans(en|km)" role="menuitem">Khmer (ខ្មែរ)</a>
+                            </li>
+                            <li role="none">
+                                <a data-language="ko" href="https://www.sira.nsw.gov.au/consultations/#googtrans(en|ko)" role="menuitem">Korean (한국어)</a>
+                            </li>
+                            <li role="none">
+                                <a data-language="ku" href="https://www.sira.nsw.gov.au/consultations/#googtrans(en|ku)" role="menuitem">Kurdish - Kurmanji (Kurmancî)</a>
+                            </li>
+                            <li role="none">
+                                <a data-language="ckb" href="https://www.sira.nsw.gov.au/consultations/#googtrans(en|ckb)" role="menuitem">Kurdish - Sorani (سۆرانی)</a>
+                            </li>
+                            <li role="none">
+                                <a data-language="lo" href="https://www.sira.nsw.gov.au/consultations/#googtrans(en|lo)" role="menuitem">Lao (ລາວ)</a>
+                            </li>
+                            <li role="none">
+                                <a data-language="lv" href="https://www.sira.nsw.gov.au/consultations/#googtrans(en|lv)" role="menuitem">Latvian (Latviešu)</a>
+                            </li>
+                            <li role="none">
+                                <a data-language="lt" href="https://www.sira.nsw.gov.au/consultations/#googtrans(en|lt)" role="menuitem">Lithuanian (Lietuvių)</a>
+                            </li>
+                            <li role="none">
+                                <a data-language="mk" href="https://www.sira.nsw.gov.au/consultations/#googtrans(en|mk)" role="menuitem">Macedonian (Mакедонски)</a>
+                            </li>
+                            <li role="none">
+                                <a data-language="ms" href="https://www.sira.nsw.gov.au/consultations/#googtrans(en|ms)" role="menuitem">Malay (Bahasa Melayu)</a>
+                            </li>
+                            <li role="none">
+                                <a data-language="ml" href="https://www.sira.nsw.gov.au/consultations/#googtrans(en|ml)" role="menuitem">Malayalam (മലയാളം)</a>
+                            </li>
+                            <li role="none">
+                                <a data-language="mt" href="https://www.sira.nsw.gov.au/consultations/#googtrans(en|mt)" role="menuitem">Maltese (Malti)</a>
+                            </li>
+                            <li role="none">
+                                <a data-language="mr" href="https://www.sira.nsw.gov.au/consultations/#googtrans(en|mr)" role="menuitem">Marathi (मराठी)</a>
+                            </li>
+                            <li role="none">
+                                <a data-language="mn" href="https://www.sira.nsw.gov.au/consultations/#googtrans(en|mn)" role="menuitem">Mongolian (Монгол)</a>
+                            </li>
+                            <li role="none">
+                                <a data-language="ne" href="https://www.sira.nsw.gov.au/consultations/#googtrans(en|ne)" role="menuitem">Nepali (नेपाली)</a>
+                            </li>
+                            <li role="none">
+                                <a data-language="no" href="https://www.sira.nsw.gov.au/consultations/#googtrans(en|no)" role="menuitem">Norwegian (Norsk)</a>
+                            </li>
+                            <li role="none">
+                                <a data-language="fa" href="https://www.sira.nsw.gov.au/consultations/#googtrans(en|fa)" role="menuitem">Persian (فارسی)</a>
+                            </li>
+                            <li role="none">
+                                <a data-language="pl" href="https://www.sira.nsw.gov.au/consultations/#googtrans(en|pl)" role="menuitem">Polish (Polski)</a>
+                            </li>
+                            <li role="none">
+                                <a data-language="pt" href="https://www.sira.nsw.gov.au/consultations/#googtrans(en|pt)" role="menuitem">Portuguese (Português)</a>
+                            </li>
+                            <li role="none">
+                                <a data-language="pa" href="https://www.sira.nsw.gov.au/consultations/#googtrans(en|pa)" role="menuitem">Punjabi (ਪੰਜਾਬੀ)</a>
+                            </li>
+                            <li role="none">
+                                <a data-language="ro" href="https://www.sira.nsw.gov.au/consultations/#googtrans(en|ro)" role="menuitem">Romanian (Română)</a>
+                            </li>
+                            <li role="none">
+                                <a data-language="ru" href="https://www.sira.nsw.gov.au/consultations/#googtrans(en|ru)" role="menuitem">Russian (Pусский)</a>
+                            </li>
+                            <li role="none">
+                                <a data-language="sr" href="https://www.sira.nsw.gov.au/consultations/#googtrans(en|sr)" role="menuitem">Serbian (српски)</a>
+                            </li>
+                            <li role="none">
+                                <a data-language="si" href="https://www.sira.nsw.gov.au/consultations/#googtrans(en|si)" role="menuitem">Sinhala (සිංහල)</a>
+                            </li>
+                            <li role="none">
+                                <a data-language="sk" href="https://www.sira.nsw.gov.au/consultations/#googtrans(en|sk)" role="menuitem">Slovak (Slovenčina)</a>
+                            </li>
+                            <li role="none">
+                                <a data-language="sl" href="https://www.sira.nsw.gov.au/consultations/#googtrans(en|sl)" role="menuitem">Slovenian (Slovenščina)</a>
+                            </li>
+                            <li role="none">
+                                <a data-language="es" href="https://www.sira.nsw.gov.au/consultations/#googtrans(en|es)" role="menuitem">Spanish (Español)</a>
+                            </li>
+                            <li role="none">
+                                <a data-language="sw" href="https://www.sira.nsw.gov.au/consultations/#googtrans(en|sw)" role="menuitem">Swahili (Kiswahili)</a>
+                            </li>
+                            <li role="none">
+                                <a data-language="sv" href="https://www.sira.nsw.gov.au/consultations/#googtrans(en|sv)" role="menuitem">Swedish (Svenska)</a>
+                            </li>
+                            <li role="none">
+                                <a data-language="ta" href="https://www.sira.nsw.gov.au/consultations/#googtrans(en|ta)" role="menuitem">Tamil (தமிழ்)</a>
+                            </li>
+                            <li role="none">
+                                <a data-language="te" href="https://www.sira.nsw.gov.au/consultations/#googtrans(en|te)" role="menuitem">Telugu (తెలుగు)</a>
+                            </li>
+                            <li role="none">
+                                <a data-language="th" href="https://www.sira.nsw.gov.au/consultations/#googtrans(en|th)" role="menuitem">Thai (ไทย)</a>
+                            </li>
+                            <li role="none">
+                                <a data-language="tr" href="https://www.sira.nsw.gov.au/consultations/#googtrans(en|tr)" role="menuitem">Turkish (Türkçe)</a>
+                            </li>
+                            <li role="none">
+                                <a data-language="uk" href="https://www.sira.nsw.gov.au/consultations/#googtrans(en|uk)" role="menuitem">Ukrainian (Українська)</a>
+                            </li>
+                            <li role="none">
+                                <a data-language="ur" href="https://www.sira.nsw.gov.au/consultations/#googtrans(en|ur)" role="menuitem">Urdu (اردو)</a>
+                            </li>
+                            <li role="none">
+                                <a data-language="uz" href="https://www.sira.nsw.gov.au/consultations/#googtrans(en|uz)" role="menuitem">Uzbek (O‘zbek)</a>
+                            </li>
+                            <li role="none">
+                                <a data-language="vi" href="https://www.sira.nsw.gov.au/consultations/#googtrans(en|vi)" role="menuitem">Vietnamese (Tiếng Việt)</a>
+                            </li>
+                            <li role="none">
+                                <a data-language="cy" href="https://www.sira.nsw.gov.au/consultations/#googtrans(en|cy)" role="menuitem">Welsh (Cymraeg)</a>
+                            </li>
+                            <li role="none">
+                                <a data-language="xh" href="https://www.sira.nsw.gov.au/consultations/#googtrans(en|xh)" role="menuitem">Xhosa (isiXhosa)</a>
+                            </li>
+                            <li role="none">
+                                <a data-language="yi" href="https://www.sira.nsw.gov.au/consultations/#googtrans(en|yi)" role="menuitem">Yiddish (ייִדיש)</a>
+                            </li>
+                            <li role="none">
+                                <a data-language="zu" href="https://www.sira.nsw.gov.au/consultations/#googtrans(en|zu)" role="menuitem">Zulu (isiZulu)</a>
+                            </li>
+                        </ul>
+                    </div>
+                </li>
+      </ul>
+    </div>
+
+
+  </div>
+</nav>
+    <div class="nsw-section nsw-hero-banner--dark nsw-section--image pirsa-page-banner" style="background-image: url(&quot;4788241ca3029b6556406252735aaf643c603ed1.fafe1da8.jpg&quot;)">
+    <div class="pirsa-page-banner__overlay">
+        <div class="nsw-container pirsa-page-banner__container pirsa-page-banner__search">
+            <div class="pirsa-page-banner__content">
+                <h1 class="nsw-h2">Search for species</h1>
+                <form role="search" class="hero-search__form">
+                    <label class="sr-only nsw-form__label" for="form-input-group-">Search for species:</label>
+                    <div class="nsw-form__input-group pirsa-searchbar">
+                      <input class="nsw-form__input" type="text" id="form-input-group-" name="form-input-group-" value="" placeholder="Search for species">
+                      <button class="nsw-button nsw-button--dark nsw-button--flex" type="submit">
+                          <span class="material-icons nsw-material-icons" focusable="false" aria-hidden="true">search</span><span class="sr-only">Search</span>                 
+                      </button>
+                    </div>
+                  </form>
+            </div>
+        </div>
+    </div>
+</div>  
+
+    <section class="nsw-section">
+        <div class="nsw-container pirsa-breadcrumbs">
+            <nav aria-label="Breadcrumbs" class="nsw-breadcrumbs js-breadcrumbs">
+                <ol>
+                    <li>
+                        <a href="/home.html">Home</a>
+                    </li>
+                    <li>
+                        <a href="#">Rec fishing</a>
+                    </li>
+                    <li>
+                        <a href="#">Rules</a>
+                    </li>                                        
+                    <li>
+                        <a href="#" class="current" aria-current="page">Fishing limits search</a>
+                    </li>
+                </ol>
+            </nav>
+            <div class="pirsa-page-updated">Page updated: 26 Feb 2025</div>
+        </div>
+    </section>
+    <main id="content" class="nsw-container results-listing">
+        <div class="nsw-layout">
+            <main class="nsw-layout__main">
+                <h1>Fishing limits search</h1>
+                <p>Recreational fishers must comply with the daily fishing limits for marine and freshwater species caught in South Australian waters.</p>
+                <p>All limits apply for a 24-hour period from midnight to midnight. Once you have caught the limit for a species, you are not allowed to take any more.</p>
+                <p>Use the search function below to select different species and see their daily fishing limits.</p>
+                <p>Any species that is not listed in the search does not have size or bag limit restrictions in SA – take only what you need for personal use.</p>
+                <p>For more information, check the <a href="#">explanations for size, bag and boat limits</a>, including how to request a measuring device. Limits may vary for <a href="#">charter boat fishing</a>.</p>
+                <p>Download the printable <a href="#">SA recreational fishing limits brochure</a> (PDF 2.5 MB).</p>
+            </main>
+        </div>
+        <div class="nsw-layout nsw-layout--2-col">
+            <div class="nsw-layout__sidebar">
+                <!-- START: sidebar content -->
+                <form class="nsw-filters nsw-filters--down js-filters">
+    <div class="nsw-filters__controls js-filters__count">
+        <button>
+            <span class="material-icons nsw-material-icons" focusable="false" aria-hidden="true">tune</span>
+            <span>Filters</span>
+            <span class="material-icons nsw-material-icons" focusable="false" aria-hidden="true">keyboard_arrow_down</span>
+        </button>
+    </div>
+    <div class="nsw-filters__wrapper">
+        <div class="nsw-filters__title">Filters</div>
+        <div class="nsw-filters__list">
+            <div class="nsw-filters__item">
+                <div class="nsw-filters__item-content">
+                    <fieldset class="nsw-form__fieldset">
+                        <legend class="nsw-form__legend">Habitat</legend>
+                        <input class="nsw-form__checkbox-input" type="checkbox" name="filters-instant-habitat" value="All" id="filters-instant-habitat-0-7">
+                        <label class="nsw-form__checkbox-label" for="filters-instant-habitat-0-7">All habitats</label>
+
+                        <input class="nsw-form__checkbox-input" type="checkbox" name="filters-instant-habitat" value="Freshwater" id="filters-instant-habitat-1-7">
+                        <label class="nsw-form__checkbox-label" for="filters-instant-habitat-1-7">Freshwater</label>
+
+                        <input class="nsw-form__checkbox-input" type="checkbox" name="filters-instant-habitat" value="Marine" id="filters-instant-habitat-2-7">
+                        <label class="nsw-form__checkbox-label" for="filters-instant-habitat-2-7">Marine</label>
+
+                        <input class="nsw-form__checkbox-input" type="checkbox" name="filters-instant-habitat" value="Reservoir" id="filters-instant-habitat-3-7">
+                        <label class="nsw-form__checkbox-label" for="filters-instant-habitat-3-7">Reservoir</label>
+
+                    </fieldset>
+                </div>
+            </div>
+            <div class="nsw-filters__item">
+                <div class="nsw-filters__item-content">
+                    <fieldset class="nsw-form__fieldset">
+                        <legend class="nsw-form__legend">Limits and protections</legend>
+
+                        <input class="nsw-form__checkbox-input" type="checkbox" name="filters-limits-protections" value="Closures or protections apply" id="filters-limits-protections-0-1">
+                        <label class="nsw-form__checkbox-label" for="filters-limits-protections-0-1">Closures or protections apply</label>
+            
+                        <input class="nsw-form__checkbox-input" type="checkbox" name="filters-limits-protections" value="Do not release" id="filters-limits-protections-0-2">
+                        <label class="nsw-form__checkbox-label" for="filters-limits-protections-0-2">Do not release</label>
+
+                        <input class="nsw-form__checkbox-input" type="checkbox" name="filters-limits-protections" value="Limits apply" id="filters-limits-protections-0-3">
+                        <label class="nsw-form__checkbox-label" for="filters-limits-protections-0-3">Limits apply</label>
+
+                        <input class="nsw-form__checkbox-input" type="checkbox" name="filters-limits-protections" value="Reservoir limits apply" id="filters-limits-protections-0-4">
+                        <label class="nsw-form__checkbox-label" for="filters-limits-protections-0-4">Reservoir limits apply</label>
+
+                        <input class="nsw-form__checkbox-input" type="checkbox" name="filters-limits-protections" value="Take only what you need" id="filters-limits-protections-0-5">
+                        <label class="nsw-form__checkbox-label" for="filters-limits-protections-0-5">Take only what you need</label>
+
+                    </fieldset>
+                </div>
+            </div>
+            <div class="nsw-filters__item">
+                <div class="nsw-filters__item-content">
+                    <fieldset class="nsw-form__fieldset">
+                        <legend class="nsw-form__legend">Species type</legend>
+
+                    </fieldset>
+                </div>
+            </div>
+
+            <div class="nsw-filters__item">
+                <div class="nsw-filters__item-content">
+                    <fieldset class="nsw-form__fieldset">
+                        <legend class="nsw-form__legend">Environmental impact</legend>
+
+                    </fieldset>
+                </div>
+            </div>
+
+            <div class="nsw-filters__item">
+                <div class="nsw-filters__item-content">
+                    <fieldset class="nsw-form__fieldset">
+                        <legend class="nsw-form__legend">Significance</legend>
+
+                    </fieldset>
+                </div>
+            </div>            
+            
+
+
+        </div>
+        <div class="nsw-filters__accept">
+            <button type="submit" class="nsw-button nsw-button--dark nsw-button--full-width pirsa-button--rounded">Apply
+                filters</button>
+        </div>
+        <div class="nsw-filters__cancel">
+            <button type="reset">Clear all filters</button>
+        </div>
+    </div>
+</form>
+                <!-- END: sidebar content -->
+            </div>
+            <div class="nsw-layout__main">
+                <!-- START: Main content -->
+                <div class="nsw-results-bar">
+                    <div class="nsw-results-bar__info">Showing results 1 - 12 of 45 results</div>
+                    <div class="nsw-results-bar__sorting">
+                        <label class="nsw-form__label" for="results-sort">Sort by:</label>
+                        <select class="nsw-form__select" id="results-sort" name="results-sort">
+                            <option value="3">Common name</option>
+                            <option value="3">Relevance</option>
+                            <option value="3">Most popular</option>
+                        </select>
+                    </div>
+                </div>
+
+                
+<div class="nsw-grid nsw-grid--spaced">
+
+    <div class="nsw-col nsw-col-sm-6 nsw-col-xl-4">
+        <div class="search-result-card">
+            <div class="search-result-card__title">
+                <h4><a href="#">Abalone</a></h4>
+                <em>(Haliotis spp.)</em>
+            </div>
+
+            <div class="search-result-card__content">
+                <div class="search-result-card__copy">
+                    <p>Also known as Blacklip Abalone, Greenlip Abalone, Brownlip Abalone, Roe's abalone</p>
+                </div>
+
+                <div class="search-result-card__image">
+                    <img src="/f87b68ae49418b1b34aeca7e096145180e619db9.08d52eee.jpg" alt="Abalone">
+                </div>
+            </div>
+
+            <div class="search-result-card__meta">
+                <span class="search-result-card__meta__fishing_icon search-result-card__meta__fishing_icon__marine">Marine</span>
+            </div>
+        </div>
+    </div>
+
+    <div class="nsw-col nsw-col-sm-6 nsw-col-xl-4">
+        <div class="search-result-card">
+            <div class="search-result-card__title">
+                <h4><a href="#">Albacore</a></h4>
+                <em>(Thunnus alalunga)</em>
+            </div>
+
+            <div class="search-result-card__content">
+                <div class="search-result-card__copy">
+                    <p>Also known as albacore tuna</p>
+                </div>
+
+                <div class="search-result-card__image">
+                    <img src="/eef3ecea6744115348a65bbd6484f218fa683804.0808eda5.jpg" alt="Albacore">
+                </div>
+            </div>
+            
+            <div class="search-result-card__tags">
+                <span class="nsw-status-label nsw-status-label--report">Report if seen</span>
+            </div>
+
+            <div class="search-result-card__meta">
+                <span class="search-result-card__meta__fishing_icon search-result-card__meta__fishing_icon__marine">Marine</span>
+            </div>                            
+        </div>
+    </div>
+    
+    <div class="nsw-col nsw-col-sm-6 nsw-col-xl-4">
+        <div class="search-result-card">
+            <div class="search-result-card__title">
+                <h4><a href="#">Alligator Gar</a></h4>
+                <em>(Atractosteus spatula)</em>
+            </div>
+
+            <div class="search-result-card__content">
+
+                <div class="search-result-card__image">
+                    <img src="/4fe6c6f5f7f480ddc3089468abb27a225d1a0e26.87b13e52.jpg" alt="Alligator Gar">
+                </div>
+
+            </div>
+
+            <div class="search-result-card__meta">
+                <span class="search-result-card__meta__fishing_icon search-result-card__meta__fishing_icon__freshwater">Freshwater</span>
+                <span class="search-result-card__meta__fishing_icon search-result-card__meta__fishing_icon__pest-species">Pest Species</span>
+            </div>
+        </div>
+    </div>                   
+
+    <div class="nsw-col nsw-col-sm-6 nsw-col-xl-4">
+        <div class="search-result-card">
+            <div class="search-result-card__title">
+                <h4><a href="#">Ambassis, Mogurnda and Nannoperca genus</a></h4>
+            </div>
+
+            <div class="search-result-card__content">
+                <div class="search-result-card__copy">
+                    <p>Also known as Agassiz's glassfish, chanda perch, gudgeon, pygmy perch sp.</p>
+                </div>
+
+                <div class="search-result-card__image">
+                    <img src="/2fa3547a92c768898aab98cf611284fefdfb3521.3dfbfdb1.jpg" alt="Ambassis, Mogurnda and Nannoperca genus">
+                </div>
+            </div>
+            
+            <div class="search-result-card__tags">
+                <span class="nsw-status-label nsw-status-label--protected">Fully protected</span>
+            </div>
+
+            <div class="search-result-card__meta">
+                <span class="search-result-card__meta__fishing_icon search-result-card__meta__fishing_icon__freshwater">Freshwater</span>
+            </div>                            
+        </div>
+    </div>
+
+    <div class="nsw-col nsw-col-sm-6 nsw-col-xl-4">
+        <div class="search-result-card">
+            <div class="search-result-card__title">
+                <h4><a href="#">Asian black-spined toad</a></h4>
+                <em>(Duttaphrynus melanostictus)</em>
+            </div>
+
+            <div class="search-result-card__content">
+                <div class="search-result-card__image">
+                    <img src="/23fb3cd5845d1af3448a99309506834d1e2f5947.59c32795.jpg" alt="Asian black-spined toad">
+                </div>
+            </div>
+            
+            <div class="search-result-card__tags">
+                <span class="nsw-status-label nsw-status-label--report">Report if seen</span>
+            </div>
+
+            <div class="search-result-card__meta">
+                <span class="search-result-card__meta__fishing_icon search-result-card__meta__fishing_icon__freshwater">Freshwater</span>
+                <span class="search-result-card__meta__fishing_icon search-result-card__meta__fishing_icon__pest-species">Pest Species</span>
+            </div>                            
+        </div>
+    </div>
+    
+    <div class="nsw-col nsw-col-sm-6 nsw-col-xl-4">
+        <div class="search-result-card">
+            <div class="search-result-card__title">
+                <h4><a href="#">Asian green mussel</a></h4>
+                <em>(Perna viridis)</em>
+            </div>
+
+            <div class="search-result-card__content">
+                <div class="search-result-card__copy">
+                    <p>Also known as Bivalve mollusc</p>
+                </div>
+
+                <div class="search-result-card__image">
+                    <img src="/54c94ce0346cacc79dd00411fe72acbfd0920802.199f3750.jpg" alt="Asian green mussel">
+                </div>
+            </div>
+            
+            <div class="search-result-card__meta">
+                <span class="search-result-card__meta__fishing_icon search-result-card__meta__fishing_icon__marine">Marine</span>
+                <span class="search-result-card__meta__fishing_icon search-result-card__meta__fishing_icon__pest-species">Pest Species</span>
+            </div>                            
+        </div>
+    </div>
+
+    <div class="nsw-col nsw-col-sm-6 nsw-col-xl-4">
+        <div class="search-result-card">
+            <div class="search-result-card__title">
+                <h4><a href="#">Asian paddle crab</a></h4>
+                <em>(Charybdis japonica)</em>
+            </div>
+
+            <div class="search-result-card__content">
+                <div class="search-result-card__image">
+                    <img src="/56a4b7d851691773fdae728a9bbc195a31d4b447.924088de.jpg" alt="Asian paddle crab">
+                </div>
+            </div>
+            
+            <div class="search-result-card__meta">
+                <span class="search-result-card__meta__fishing_icon search-result-card__meta__fishing_icon__marine">Marine</span>
+                <span class="search-result-card__meta__fishing_icon search-result-card__meta__fishing_icon__pest-species">Pest Species</span>
+            </div>                            
+        </div>
+    </div>
+
+    <div class="nsw-col nsw-col-sm-6 nsw-col-xl-4">
+        <div class="search-result-card">
+            <div class="search-result-card__title">
+                <h4><a href="#">Australian Herring - Tommy Ruff</a></h4>
+                <em>(Arripis georgianus)</em>
+            </div>
+
+            <div class="search-result-card__content">
+                <div class="search-result-card__copy">
+                    <p>Also known as tommy rough, ruffie</p>
+                </div>
+
+                <div class="search-result-card__image">
+                    <img src="/80f5787676fac55567f6cc6ccc1056ac7854a8f3.d29f5bc6.jpg" alt="Australian Herring - Tommy Ruff">
+                </div>
+            </div>
+            
+            <div class="search-result-card__meta">
+                <span class="search-result-card__meta__fishing_icon search-result-card__meta__fishing_icon__marine">Marine</span>
+            </div>                            
+        </div>
+    </div>
+    
+    <div class="nsw-col nsw-col-sm-6 nsw-col-xl-4">
+        <div class="search-result-card">
+            <div class="search-result-card__title">
+                <h4><a href="#">Basking Shark</a></h4>
+                <em>(Cetorhinus maximus)</em>
+            </div>
+
+            <div class="search-result-card__content">
+                <div class="search-result-card__image">
+                    <img src="/9be78616b86eebc40fe31aab8ef96616d6ee1367.e1aa4bc8.jpg" alt="Basking Shark">
+                </div>
+            </div>
+
+            <div class="search-result-card__tags">
+                <span class="nsw-status-label nsw-status-label--protected">Fully protected</span>
+            </div>
+
+            <div class="search-result-card__meta">
+                <span class="search-result-card__meta__fishing_icon search-result-card__meta__fishing_icon__marine">Marine</span>
+            </div>                            
+        </div>
+    </div>    
+
+    <div class="nsw-col nsw-col-sm-6 nsw-col-xl-4">
+        <div class="search-result-card">
+            <div class="search-result-card__title">
+                <h4><a href="#">Bigeye Thresher</a></h4>
+                <em>(Alopias superciliosus)</em>
+            </div>
+
+            <div class="search-result-card__content">
+                <div class="search-result-card__image">
+                    <img src="/547c05a2d647012ffc87472a62075e8803377f96.fdc73526.jpg" alt="Bigeye Thresher">
+                </div>
+            </div>
+            
+            <div class="search-result-card__meta">
+                <span class="search-result-card__meta__fishing_icon search-result-card__meta__fishing_icon__marine">Marine</span>
+            </div>                            
+        </div>
+    </div>
+
+    <div class="nsw-col nsw-col-sm-6 nsw-col-xl-4">
+        <div class="search-result-card">
+            <div class="search-result-card__title">
+                <h4><a href="#">Black Cowrie</a></h4>
+                <em>(Zoila friendii thersites)</em>
+            </div>
+
+            <div class="search-result-card__content">
+                <div class="search-result-card__copy">
+                    <p>Also known as Black Cowry, Black Cowries, humpbacked cowry</p>
+                </div>
+
+                <div class="search-result-card__image">
+                    <img src="/88839229cedfe01a628aa365bdcdeae5acc21c37.4478020e.jpg" alt="Black Cowrie">
+                </div>
+            </div>
+            
+            <div class="search-result-card__meta">
+                <span class="search-result-card__meta__fishing_icon search-result-card__meta__fishing_icon__marine">Marine</span>
+            </div>                            
+        </div>
+    </div>
+
+    <div class="nsw-col nsw-col-sm-6 nsw-col-xl-4">
+        <div class="search-result-card">
+            <div class="search-result-card__title">
+                <h4><a href="#">Black Stingray</a></h4>
+                <em>(Dasyatis thetidis)</em>
+            </div>
+
+            <div class="search-result-card__content">
+                <div class="search-result-card__image">
+                    <img src="/e1316d95d1dceff005cea5ae7f8b95caaa85e0cb.aeba3bb6.jpg" alt="Black Stingray">
+                </div>
+            </div>
+            
+            <div class="search-result-card__meta">
+                <span class="search-result-card__meta__fishing_icon search-result-card__meta__fishing_icon__marine">Marine</span>
+            </div>                            
+        </div>
+    </div>        
+
+</div>
+
+                <div class="nsw-block pirsa-pagination">
+    <nav class="nsw-pagination" aria-label="Pagination">
+        <ul>
+            <li>
+                <a class="nsw-icon-button disabled" href="#" aria-disabled="true">
+                    <span class="material-icons nsw-material-icons" focusable="false" aria-hidden="true">keyboard_arrow_left</span>
+                    <span class="sr-only">Previous</span>
+                </a>
+            </li>
+            <li><a class="active" href="#"><span class="sr-only">Page </span>1</a></li>
+            <li><a href="#"><span class="sr-only">Page </span>2</a></li>
+            <li><a href="#"><span class="sr-only">Page </span>3</a></li>
+            <li><a href="#"><span class="sr-only">Page </span>4</a></li>
+            <li><a href="#"><span class="sr-only">Page </span>5</a></li>
+            <li><a href="#"><span class="sr-only">Page </span>6</a></li>
+            <li><a href="#"><span class="sr-only">Page </span>7</a></li>
+            <li><a href="#"><span class="sr-only">Page </span>8</a></li>
+            <li><span>…</span></li>
+            <li><a href="#"><span class="sr-only">Page </span>12</a></li>
+            <li>
+                <a class="nsw-icon-button" href="#">
+                    <span class="material-icons nsw-material-icons" focusable="false" aria-hidden="true">keyboard_arrow_right</span>
+                    <span class="sr-only">Next</span>
+                </a>
+            </li>
+        </ul>
+    </nav>
+</div>
+
+    
+                <!-- END: Main content -->
+    
+            </div>
+    
+            <!-- <a href="#content" class="nsw-button nsw-button--dark pirsa-button--rounded nsw-m-y-md"><span>Back to
+                    top</span><span class="material-icons nsw-material-icons" focusable="false"
+                    aria-hidden="true">north</span></a> -->
+    
+        </div>
+    </main>
+
+    <footer class="nsw-footer pirsa-footer">
+    <div class="nsw-footer__lower nsw-p-top-md">
+      <div class="nsw-container">
+        <div class="nsw-grid">
+            <div class="nsw-col nsw-col-md-6 nsw-col-lg-6">
+                <h2 class="nsw-footer__heading">Acknowledgement</h2>
+                <p class="nsw-footer__acknowledgement">The Department of Primary Industries and Regions respects Aboriginal people as the state’s first people and nations. We recognise Aboriginal people as traditional owners and occupants of South Australian land and waters. We pay our respects to Aboriginal cultures and to Elders past, present and emerging.</p>
+                <div class="nsw-footer__social">
+                    <a class="nsw-icon-button" href="#" target="_blank" rel="noopener" aria-label="LinkedIn">
+                        <svg role="img" width="33" height="32" viewBox="0 0 33 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M24.0096 0C25.1055 0 26.1378 0.210275 27.1063 0.630824C28.0749 1.05137 28.9223 1.62485 29.6487 2.35125C30.3751 3.07766 30.9486 3.92513 31.3692 4.89367C31.7897 5.86221 32 6.89446 32 7.99044V23.9713C32 25.0673 31.7897 26.1059 31.3692 27.0872C30.9486 28.0685 30.3751 28.9223 29.6487 29.6487C28.9223 30.3751 28.0749 30.9486 27.1063 31.3692C26.1378 31.7897 25.1055 32 24.0096 32H7.99044C6.89446 32 5.86221 31.7897 4.89367 31.3692C3.92513 30.9486 3.07766 30.3751 2.35125 29.6487C1.62485 28.9223 1.05137 28.0685 0.630824 27.0872C0.210275 26.1059 0 25.0673 0 23.9713V7.99044C0 6.89446 0.210275 5.86221 0.630824 4.89367C1.05137 3.92513 1.62485 3.07766 2.35125 2.35125C3.07766 1.62485 3.92513 1.05137 4.89367 0.630824C5.86221 0.210275 6.89446 0 7.99044 0H24.0096ZM21.9833 6.99642H18.6189C17.9562 6.99642 17.3445 7.11111 16.7838 7.3405C16.223 7.56989 15.7387 7.86937 15.3309 8.23895C14.9231 8.60852 14.5982 9.03544 14.356 9.51971C14.1139 10.004 13.9928 10.4883 13.9928 10.9725V12.9988H11.0108V16.9749H13.9928V25.0036H18.0072V16.9749H20.9892V12.9988H18.0072V12.0048C18.0072 11.6734 18.1282 11.4186 18.3704 11.2401C18.6125 11.0617 18.8228 10.9725 19.0012 10.9725H21.9833V6.99642Z" fill="white"></path>
+                        <title>Facebook</title>
+                        </svg>
+                        <span class="sr-only">Facebook</span>
+                    </a>
+                    <a class="nsw-icon-button" href="#" target="_blank" rel="noopener" aria-label="LinkedIn">
+                        <svg role="img" width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M24.0096 0C25.1055 0 26.1378 0.210275 27.1063 0.630824C28.0749 1.05137 28.9223 1.62485 29.6487 2.35125C30.3751 3.07766 30.9486 3.92513 31.3692 4.89367C31.7897 5.86221 32 6.89446 32 7.99044V23.9713C32 25.0673 31.7897 26.1059 31.3692 27.0872C30.9486 28.0685 30.3751 28.9223 29.6487 29.6487C28.9223 30.3751 28.0749 30.9486 27.1063 31.3692C26.1378 31.7897 25.1055 32 24.0096 32H7.99044C6.89446 32 5.86221 31.7897 4.89367 31.3692C3.92513 30.9486 3.07766 30.3751 2.35125 29.6487C1.62485 28.9223 1.05137 28.0685 0.630824 27.0872C0.210275 26.1059 0 25.0673 0 23.9713V7.99044C0 6.89446 0.210275 5.86221 0.630824 4.89367C1.05137 3.92513 1.62485 3.07766 2.35125 2.35125C3.07766 1.62485 3.92513 1.05137 4.89367 0.630824C5.86221 0.210275 6.89446 0 7.99044 0H24.0096ZM11.0108 12.0048H6.99642V25.0036H11.0108V12.0048ZM9.0227 10.9725C9.55794 10.9725 10.0231 10.7814 10.4182 10.399C10.8132 10.0167 11.0108 9.5452 11.0108 8.98447C11.0108 8.42374 10.8132 7.95221 10.4182 7.56989C10.0231 7.18757 9.55794 6.99642 9.0227 6.99642C8.46197 6.99642 7.98407 7.18757 7.58901 7.56989C7.19395 7.95221 6.99642 8.42374 6.99642 8.98447C6.99642 9.5452 7.19395 10.0167 7.58901 10.399C7.98407 10.7814 8.46197 10.9725 9.0227 10.9725ZM25.0036 17.4719C25.0036 16.5544 24.7487 15.6559 24.2389 14.7766C23.7292 13.8973 23.0665 13.2282 22.2509 12.7694C21.5117 12.3616 20.6515 12.145 19.6702 12.1195C18.689 12.094 17.8033 12.2597 17.0131 12.6165V12.0048H12.9988V25.0036H17.0131V17.0514L18.6571 16.2485C18.861 16.1466 19.1414 16.0956 19.4982 16.0956C19.855 16.0956 20.1227 16.1593 20.3011 16.2867C20.454 16.3632 20.6069 16.5289 20.7599 16.7838C20.9128 17.0386 20.9892 17.268 20.9892 17.4719V25.0036H25.0036V17.4719Z" fill="white"></path>
+                        <title>LinkedIn</title>   
+                        </svg>                  
+                        <span class="sr-only">LinkedIn</span>
+                    </a>
+                    <a class="nsw-icon-button" href="#" target="_blank" rel="noopener" aria-label="LinkedIn">
+                        <svg role="img" width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M32 9.02821V22.9718C32 27.9575 27.958 32 22.9718 32H9.02821C4.04205 32 0 27.9575 0 22.9718V9.02821C0 4.04205 4.04205 0 9.02821 0H22.9718C27.958 0 32 4.04205 32 9.02821Z" fill="white"></path>
+                        <path d="M15.6566 17.3836L14.8934 16.2959L8.9662 7.84876H11.4783L16.3118 14.6741L17.0776 15.7557L23.0224 24.1513H20.4051L15.6566 17.3836ZM17.8911 14.8232L17.126 13.7427L12.1155 6.66669H6.66675L14.078 17.2283L14.8419 18.3171L19.7646 25.3334H25.3334L17.8911 14.8232Z" fill="#575757"></path>
+                        <path d="M14.6667 16.6667L15.3712 17.79L15.248 18.0874L9.59543 25.3333H8L14.5428 16.9629L14.6667 16.6667Z" fill="#575757"></path>
+                        <path d="M24 6.66669L17.4526 15.0425L17.3333 15.3334L16.629 14.2227L16.7489 13.933L22.4402 6.66669H24Z" fill="#575757"></path>
+                        <title>X</title>                  
+                        </svg>
+                        <span class="sr-only">X</span>
+                    </a>
+                    <a class="nsw-icon-button" href="#" target="_blank" rel="noopener" aria-label="LinkedIn">
+                        <svg role="img" width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M31.9837 8.91827V23.081C31.9837 28.0069 27.9929 32 23.0695 32H8.91422C3.99087 32 0 28.0069 0 23.081V8.91827C0 3.99287 3.99087 0 8.91422 0H23.0695C27.9929 0 31.9837 3.99287 31.9837 8.91827Z" fill="white"></path>
+                        <path d="M16.1066 19.461C14.1072 19.5262 12.4672 17.8851 12.532 15.885C12.5913 14.0703 14.063 12.5975 15.8767 12.5386C17.8762 12.4734 19.5165 14.1141 19.4513 16.1147C19.3925 17.9294 17.9204 19.4021 16.1066 19.461ZM16.0698 10.4005C12.9218 10.3576 10.3522 12.9285 10.3953 16.0776C10.4364 19.0978 12.8943 21.5572 15.9133 21.5992C19.0612 21.6423 21.6315 19.071 21.588 15.9212C21.5466 12.901 19.0884 10.4416 16.0698 10.4005Z" fill="#575757"></path>
+                        <path d="M24.6359 20.5783C24.6359 22.8264 22.8145 24.6489 20.5673 24.6489H11.4159C9.16888 24.6489 7.34734 22.8264 7.34734 20.5783V11.4219C7.34734 9.1736 9.16888 7.35129 11.4156 7.35129H20.5673C22.8145 7.35129 24.6359 9.17401 24.6359 11.4222V20.5783ZM20.5677 5.2149H11.4159C7.98971 5.2149 5.21216 7.99399 5.21216 11.4219V20.5783C5.21216 24.0062 7.98931 26.7851 11.4159 26.7851H20.5677C23.9939 26.7851 26.7716 24.0062 26.7716 20.5783V11.4219C26.7716 7.99399 23.9939 5.2149 20.5677 5.2149Z" fill="#575757"></path>
+                        <path d="M21.7603 8.78353C20.8776 8.72703 20.1469 9.45822 20.203 10.3413C20.2492 11.0714 20.8387 11.6614 21.5684 11.7081C22.4518 11.7649 23.1829 11.0334 23.1261 10.1499C23.0795 9.41983 22.4901 8.83022 21.7603 8.78353Z" fill="#575757"></path>
+                        <title>Instagram</title>
+                        </svg>
+                        <span class="sr-only">Instagram</span>
+                    </a>
+                    <a class="nsw-icon-button" href="#" target="_blank" rel="noopener" aria-label="LinkedIn">
+                        <svg width="33" height="32" viewBox="0 0 33 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M32.9674 8.91827V23.081C32.9674 28.0069 28.9765 32 24.0531 32H9.89786C4.97452 32 0.983643 28.0069 0.983643 23.081V8.91827C0.983643 3.99287 4.97452 0 9.89786 0H24.0531C28.9765 0 32.9674 3.99287 32.9674 8.91827Z" fill="white"></path>
+                        <path d="M24.8037 15.1258C25.4704 15.5107 25.4704 16.473 24.8037 16.8579L13.8108 23.2046C13.1442 23.5895 12.3108 23.1084 12.3108 22.3386L12.3108 9.64511C12.3108 8.87531 13.1442 8.39419 13.8108 8.77909L24.8037 15.1258Z" fill="#575757"></path>
+                        <title>YouTube</title>
+                        </svg>
+                        <span class="sr-only">YouTube</span>
+                    </a>                                                
+                </div>
+            </div>
+            <div class="nsw-col nsw-col-xs-12 nsw-col-md-6 nsw-col-lg-5 nsw-offset-lg-1 nsw-col-xl-4 nsw-offset-xl-2">
+                <div class="nsw-grid">
+                    <div class="nsw-col nsw-col-xs-12 nsw-col-md-6 nsw-col-lg-6 nsw-p-top-0">
+                        <h2 class="nsw-footer__heading nsw-m-top-0">PIRSA Head Office</h2>
+                        <p>11 Waymouth Street<br> Adelaide SA 5000</p>
+                        <p>Postal address<br> GPO Box 1671<br> Adelaide SA 5001</p>
+                        <p><a href="#">More locations</a></p>            
+                    </div>
+                    <div class="nsw-col nsw-col-xs-12 nsw-col-md-6 nsw-col-lg-6 nsw-p-top-0">
+                        <h2 class="nsw-footer__heading nsw-m-top-0">Explore related sites</h2>
+                        <ul class="pirsa-footer__link-list">
+                            <li><a href="#">Fruit fly</a></li>
+                            <li><a href="#">Adelaide great wine capital</a></li>
+                            <li><a href="#">Same dish, new fish</a></li>
+                            <li><a href="#">History of agriculture</a></li>
+                            <li><a href="#">One Biodiversity</a></li>
+                        </ul>                        
+                    </div>
+                </div>
+            </div>
+          </div>
+        <hr>
+        <h2 class="nsw-footer__heading nsw-m-top-0">SA.GOV.AU</h2>
+        <ul class="copyright-link-list">
+            <li>Copyright © 2025 PIRSA</li>
+            <li><a href="#">Privacy Statement</a></li>
+            <li><a href="#">Disclaimer</a></li>
+            <li><a href="#">Accessibility</a></li>
+            <li><a href="#">Sitemap</a></li>
+        </ul>
+      </div>
+    </div>
+  </footer>
+
+    <script type="module" src="/pirsa.b828852a.js"></script>
+<script src="/pirsa.8d41213b.js"></script>
+<script>window.NSW.initSite();
+
+</script>
+</body>
+
+</html>
