@@ -8,7 +8,8 @@
   "source": "src/index.html",
   "scripts": {
     "dev": "parcel",
-    "build": "parcel build src/*.html --public-url ./ --no-cache"
+    "build": "parcel build src/*.html --public-url ./ --no-cache",
+    "build:css": "parcel build src/styles/style.scss --public-url ./ --no-cache"
   },
   "devDependencies": {
     "@parcel/transformer-jsonld": "^2.12.0",
