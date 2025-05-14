@@ -14,11 +14,11 @@
 
     &__sidebar {
         .nsw-layout--3-col & {
-            order: 2;
+            //order: 2;
             width: 100%;
             
             @include breakpoint('lg') {
-                order: 1;
+                //order: 1;
                 padding-right: 1rem;
                 width: 21rem;
                 min-width: 21rem;
@@ -40,9 +40,9 @@
         }
 
         .nsw-layout--2-col & {
-            order: 2;
+            //order: 2;
             @include breakpoint('lg') {
-                order: 1;
+                //order: 1;
                 padding-right: 1rem;
                 width: 21rem;
                 min-width: 21rem;
@@ -50,9 +50,9 @@
         }
 
         .search-results & {
-            order: 0;
+            //order: 0;
             @include breakpoint('lg') {
-                order: 1;
+                //order: 1;
             }            
         }
     }
@@ -60,12 +60,12 @@
     &__main {
         
         .nsw-layout--3-col & {
-            order: 1;
+            //order: 1;
             width: auto;
         }
 
         .nsw-layout--2-col & {
-            order: 1;
+            //order: 1;
             max-width: unset;
             width: unset;
         }
