@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html class="page" lang="en">
+
+<include src="partials/head.html">
+    {
+    "title": "Fishing limits search"
+    }
+</include>
+
+<body class="page__body search-results">
+
+    <include src="partials/header.html"></include>
+    <include src="partials/main-nav.html"></include>
+    <include src="partials/page-banner-fishing-limits.html"></include>
+
+    <section class="nsw-section">
+        <div class="nsw-container pirsa-breadcrumbs">
+            <nav aria-label="Breadcrumbs" class="nsw-breadcrumbs js-breadcrumbs">
+                <ol>
+                    <li>
+                        <a href="home.html">Home</a>
+                    </li>
+                    <li>
+                        <a href="#">Rec fishing</a>
+                    </li>
+                    <li>
+                        <a href="#">Rules</a>
+                    </li>                                        
+                    <li>
+                        <a href="#" class="current" aria-current="page">Fishing limits search</a>
+                    </li>
+                </ol>
+            </nav>
+            <div class="pirsa-page-updated">Page updated: 26 Feb 2025</div>
+        </div>
+    </section>
+    <main id="content" class="nsw-container results-listing">
+        <div class="nsw-layout">
+            <main class="nsw-layout__main">
+                <h1>Fishing limits search</h1>
+                <p>Recreational fishers must comply with the daily fishing limits for marine and freshwater species caught in South Australian waters.</p>
+                <p>All limits apply for a 24-hour period from midnight to midnight. Once you have caught the limit for a species, you are not allowed to take any more.</p>
+                <p>Use the search function below to select different species and see their daily fishing limits.</p>
+                <p>Any species that is not listed in the search does not have size or bag limit restrictions in SA – take only what you need for personal use.</p>
+                <p>For more information, check the <a href="#">explanations for size, bag and boat limits</a>, including how to request a measuring device. Limits may vary for <a href="#">charter boat fishing</a>.</p>
+                <p>Download the printable <a href="#">SA recreational fishing limits brochure</a> (PDF 2.5 MB).</p>
+            </main>
+        </div>
+        <div class="nsw-layout nsw-layout--2-col">
+            <div class="nsw-layout__sidebar">
+                <!-- START: sidebar content -->
+                <include src="partials/fishing-limits-filters.html"></include>
+                <!-- END: sidebar content -->
+            </div>
+            <div class="nsw-layout__main">
+                <!-- START: Main content -->
+                <div class="nsw-results-bar">
+                    <div class="nsw-results-bar__info">Showing results 1 - 12 of 45 results</div>
+                    <div class="nsw-results-bar__sorting">
+                        <label class="nsw-form__label" for="results-sort">Sort by:</label>
+                        <select class="nsw-form__select" id="results-sort" name="results-sort">
+                            <option value="3">Common name</option>
+                            <option value="3">Relevance</option>
+                            <option value="3">Most popular</option>
+                        </select>
+                    </div>
+                </div>
+
+                <include src="partials/search-result-cards-fishing-limits.html"></include>
+
+                <include src="partials/pagination.html"></include>
+
+    
+                <!-- END: Main content -->
+    
+            </div>
+    
+            <!-- <a href="#content" class="nsw-button nsw-button--dark pirsa-button--rounded nsw-m-y-md"><span>Back to
+                    top</span><span class="material-icons nsw-material-icons" focusable="false"
+                    aria-hidden="true">north</span></a> -->
+    
+        </div>
+    </main>
+
+    <include src="partials/footer.html"></include>
+
+    <include src="partials/scripts.html"></include>
+</body>
+
+</html>

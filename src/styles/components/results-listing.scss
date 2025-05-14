@@ -67,4 +67,66 @@
             }
         }
     }
+
+    //custom card search result for fishing limits page
+    .search-result-card {
+        height: 100%;
+        background-color: var(--nsw-white);
+        border: 1px solid var(--nsw-grey-03);
+        border-radius: var(--nsw-border-radius);
+        padding: 1rem;
+        display: flex;
+        flex-direction: column;
+        min-height: 26rem;
+
+        &__title {
+            a {
+                text-decoration: none;
+            }
+        }
+
+        &__content {
+            font-size: var(--nsw-font-size-sm-desktop);
+            line-height: var(--nsw-line-height-sm-desktop);
+            flex-grow: 1;
+            padding-top: .5rem;
+        }
+
+        &__image {
+            padding: 1em 0;
+            text-align: center;
+        }
+
+        &__tags{
+            justify-self: flex-end;
+            margin-bottom: 1rem;
+        }
+
+        &__meta {
+            justify-self: flex-end;
+
+            &__fishing_icon {
+                background-repeat: no-repeat;
+                background-size: 1.25rem auto; 
+                background-position: left center;  
+                padding-left: 1.5rem;
+                margin-right: 1rem;
+
+                &__marine {
+                    background-image: url('../image/search/fishing/icons/91884ad8b9a694b941c7ed0f97a4034007dbae8b.png');
+                }
+                &__freshwater {
+                    background-image: url('../image/search/fishing/icons/934fb7f7317ce5e194de9832b6f7af73e9afede4.png');
+                }
+                &__pest-species {
+                    background-image: url('../image/search/fishing/icons/e07042c9ba1187dc9500fb078ed182e29749f119.png');
+                }                                
+            }
+        }
+
+    }
+
+
+
+
 }
