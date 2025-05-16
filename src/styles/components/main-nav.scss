@@ -83,8 +83,13 @@
 
             h3 {
                 a {
-                    padding: 0 !important;
+                   padding: 4px !important;
                 }
+            }
+
+            /* if extra padding needed to align element */
+            &--padding {
+                padding: 4px;
             }
 
             &__logo {
@@ -111,7 +116,8 @@
                     margin-top: 1rem;
 
                     a {
-                        padding: 0 !important;
+                        //padding: 0 !important;
+                        padding: 2px 4px !important;
                     }
                 }
 
@@ -135,7 +141,8 @@
 
                         a {
                             font-weight: var(--nsw-font-normal);
-                            padding:0;
+                            //padding:0;
+                            padding: 2px 4px;
                         }
                     }
                 }
