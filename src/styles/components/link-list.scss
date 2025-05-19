@@ -31,4 +31,9 @@
     .pirsa-icon {
         color: var(--nsw-brand-supplementary);
     }
+
+    &__item {
+        font-size: 20px;
+        line-height: 28px;
+    }
 }

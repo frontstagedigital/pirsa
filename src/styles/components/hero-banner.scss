@@ -48,7 +48,7 @@
         margin: 0;
         position: absolute;
         z-index: 1;
-        width: calc(100vw - 1em);
+        width: calc(100vw - 2em);
         height: 100%;
     }
 
@@ -76,12 +76,12 @@
 
         h1 {
             @include breakpoint('md') {
-                font-size: var(--nsw-font-size-xxl-mobile);
+                // font-size: var(--nsw-font-size-xxl-mobile);
                 max-width: 25rem;
             }
             @include breakpoint('lg') {
-                font-size: var(--nsw-font-size-xxl-mobile);
-                max-width: 35rem;
+                // font-size: var(--nsw-font-size-xxl-mobile);
+                max-width: 40rem;
             }            
         }
     }
