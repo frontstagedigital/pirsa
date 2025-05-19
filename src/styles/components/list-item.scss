@@ -21,6 +21,7 @@
             flex-direction: column-reverse;
             width: 100%;
             gap: 1rem;
+            text-decoration: none;
             
             @include breakpoint('sm') {
                 flex-direction: row-reverse;
@@ -35,18 +36,16 @@
     }
 
     &__title {
-        a{
             .nsw-search-results & {
                 font-size: 18px;
                 line-height: 28px;
                 font-weight: 600;
-                text-decoration: none;
+                text-decoration: underline;
 
                 @include breakpoint('lg') {
                     font-size: 20px;
                 }
             }
-        }
     }
 
     &__label {
@@ -83,6 +82,7 @@
     &__copy {
         .nsw-search-results & {
             color: var(--nsw-grey-02);
+            font-weight: 400;
         }
     }
 
