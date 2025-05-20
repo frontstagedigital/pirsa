@@ -2,6 +2,12 @@
     height: auto;
     position: relative;
 
+    .nsw-col & {
+        @include breakpoint('md') {
+            height: 100%;
+        }    
+    }
+
     &.nsw-card--horizontal {
         display: block;
         @include breakpoint('lg') {
@@ -184,12 +190,5 @@
         .nsw-card__date {
             font-size: var(--pirsa-font-size-meta);
         }
-    }
-}
-
-//if card is within a col, make height 100%
-.nsw-col {
-    .pirsa-card {
-        height: 100%;
     }
 }
