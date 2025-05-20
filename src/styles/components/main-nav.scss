@@ -19,8 +19,14 @@
 
     }
 
+    &__title {
+        font-size: 1.125rem;
+    }
+
     li {
         a {
+            padding: 0.875rem 1.25rem;
+
             @include breakpoint('lg') {
                 color: var(--pirsa-brand-primary);
                 font-weight: 600;
@@ -55,7 +61,13 @@
     }
 
     &__header {
-        border-color: var(--pirsa-brand-light);
+        border-color: var(--nsw-grey-04);
+        padding: 0.875rem 1.25rem;
+
+        @include breakpoint('lg') {
+            border-color: var(--pirsa-brand-light);
+            padding: .5rem 1rem;
+        }
 
         .nsw-icon-button .nsw-material-icons {
             color: var(--nsw-black);
@@ -70,12 +82,25 @@
 
         li {
             a {
-                color: var(--pirsa-brand-primary);
+                //color: var(--pirsa-brand-primary);
             }
         }
 
         .nsw-main-nav__title a {
-            color: var(--pirsa-brand-primary);
+            //color: var(--pirsa-brand-primary);
+        }
+
+        .nsw-main-nav__header {
+            button:not(.js-close-nav) {
+                span {
+                    font-size: 1.125rem;
+                }
+
+                span.material-icons {
+                    color: var(--pirsa-brand-primary);
+                    margin-right: .25rem;
+                }
+            }
         }
 
         &__mega-menu {
