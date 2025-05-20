@@ -1,8 +1,42 @@
 .nsw-accordion {
+
+    &__title {
+        background-color: transparent;
+        
+        .active {
+            background-color: var(--pirsa-accordion-active);
+            color: var(--nsw-text-dark);
+            border-color: var(--pirsa-accordion-active);
+            border-bottom-left-radius: 0;
+            border-bottom-right-radius: 0;
+
+            .nsw-accordion__button {
+                background-color: var(--pirsa-accordion-active);
+                color: var(--nsw-text-dark);
+                border-color: var(--pirsa-accordion-active);
+            }
+
+            .nsw-material-icons {
+                color: var(--nsw-brand-dark);
+            }
+        }
+    }
+
+    &__button {
+        background-color: var(--nsw-white);
+        border: 1px solid var(--nsw-grey-04);
+        border-radius: var(--nsw-border-radius);
+    }
+
     &__content {
         border-right: 1px solid var(--nsw-grey-04);
         border-bottom: 1px solid var(--nsw-grey-04);
         border-left: 1px solid var(--nsw-grey-04);
-        border-radius: var(--nsw-border-radius);
+        border-bottom-left-radius: var(--nsw-border-radius);
+        border-bottom-right-radius: var(--nsw-border-radius);
+
+        &[hidden="until-found"] {
+            border: 0;
+        }
     }
 }
