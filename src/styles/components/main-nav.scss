@@ -74,6 +74,16 @@
         }
     }
 
+    &__sub {
+        &-list {
+            li.parent-title {
+                a {
+                   font-weight: var(--nsw-font-bold);
+                }
+            }
+        }
+    }
+
     &__sub-nav {
 
         @include breakpoint('lg') {
