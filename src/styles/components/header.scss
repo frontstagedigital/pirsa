@@ -19,6 +19,12 @@
         button {
             color: var(--nsw-grey-01);
         }
+
+        &-area {
+            input {
+                background-color: var(--nsw-white);
+            }
+        }
     }
     
     .nsw-header__menu {
