@@ -16,7 +16,7 @@ $(document).ready(function () {
     }
   });
   initTranslateMobile();
-
+  splitMegaMenuGroupsIntoColumns();
 });
 
 function initTranslateMobile() {
@@ -61,4 +61,35 @@ function closeMenu(button, menu) {
   menu.hide();
   button.attr("aria-expanded", false);
   menu.attr("aria-hidden", true);
+}
+
+function splitMegaMenuGroupsIntoColumns() {
+  const menuContainers = document.querySelectorAll('.nsw-grid.nsw-main-nav__sub-nav__mega-menu');
+
+  menuContainers.forEach(container => {
+    const groups = Array.from(container.querySelectorAll('.nsw-main-nav__sub-nav__mega-menu__group'));
+    const total = groups.length;
+    if (total === 0) return;
+
+    const perColumn = Math.ceil(total / 3);
+    console.log('perColumn');
+    // Clear the container (we'll re-add everything in column groups)
+    container.innerHTML = '';
+
+    for (let i = 0; i < 3; i++) {
+      const startIndex = i * perColumn;
+      const endIndex = Math.min(startIndex + perColumn, total);
+
+      if (startIndex >= total) break;
+
+      const colDiv = document.createElement('div');
+      colDiv.className = 'nsw-col nsw-col-md-6 nsw-col-lg-3';
+
+      for (let j = startIndex; j < endIndex; j++) {
+        colDiv.appendChild(groups[j]);
+      }
+
+      container.appendChild(colDiv);
+    }
+  });
 }
