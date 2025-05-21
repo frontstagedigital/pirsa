@@ -20,6 +20,18 @@
                 color: var(--nsw-brand-dark);
             }
         }
+
+        &:hover {
+            .nsw-accordion__button {
+                background-color: var(--pirsa-accordion-active);
+                color: var(--nsw-text-dark);
+                border-color: var(--pirsa-accordion-active);
+
+                .nsw-material-icons {
+                    color: var(--nsw-text-dark);
+                }
+            }
+        }
     }
 
     &__button {
