@@ -10,4 +10,14 @@
         vertical-align: text-bottom;        
         line-height: 14px;
     }
+    &--pirsa {
+        border-color: var(--pirsa-brand-primary);
+        background-color: var(--pirsa-brand-primary);
+        color: var(--nsw-white);
+    }
+    &--sardi {
+        border-color: var(--sardi-brand-primary);
+        background-color: var(--sardi-brand-primary);
+        color: var(--nsw-white);
+    }
 }
