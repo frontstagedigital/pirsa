@@ -3,7 +3,7 @@
 
 <include src="partials/head.html">
     {
-    "title": "Search Results"
+    "title": "Search Results News"
     }
 </include>
 
@@ -27,11 +27,11 @@
 
           <div class="nsw-tabs"> 
             <ul class="nsw-tabs__list">
-              <li><a href="search-results.html" class="active">All<span class="nsw-status-label nsw-status-label--results">3</span></a></li>
+              <li><a href="search-results.html">All<span class="nsw-status-label nsw-status-label--results">3</span></a></li>
               <li><a href="search-results-people.html">People<span class="nsw-status-label nsw-status-label--results">12</span></a></li>
               <li><a href="search-results-research.html">Research<span class="nsw-status-label nsw-status-label--results">10</span></a></li>
               <li><a href="#">Documents<span class="nsw-status-label nsw-status-label--results">4</span></a></li>
-              <li><a href="search-results-news.html">News & events<span class="nsw-status-label nsw-status-label--results">14</span></a></li>
+              <li><a href="search-results-news.html" class="active">News & events<span class="nsw-status-label nsw-status-label--results">14</span></a></li>
             </ul>
           </div>
           <div class="nsw-tabs__content"></div>
@@ -45,18 +45,18 @@
             <div class="nsw-layout__main">
 
               <div class="nsw-results-bar nsw-m-top-0">
-                <div class="nsw-results-bar__info">Showing results 1 - 10 of 5917 results</div>
+                <div class="nsw-results-bar__info">Showing results 1 - 10 of 512 results</div>
                 <div class="nsw-results-bar__sorting">
                   <label class="nsw-form__label" for="results-sort">Sort by:</label>
                   <select class="nsw-form__select" id="results-sort" name="results-sort">
-                    <option value="3">Relevance</option>
-                    <option value="3">Most popular</option>
                     <option value="3">Most recent</option>
+                    <option value="3">Relevance</option>                   
+                    <option value="3">Most popular</option>
                   </select>
                 </div>
               </div>
         
-              <include src="partials/search-results-list.html"></include>
+              <include src="partials/search-results-news.html"></include>
 
             </div>
 

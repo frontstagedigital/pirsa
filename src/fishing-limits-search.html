@@ -10,7 +10,15 @@
 <body class="page__body search-results">
 
     <include src="partials/header.html"></include>
-    <include src="partials/main-nav.html"></include>
+        <include src="partials/main-nav.html">
+        {
+            "mainNavItem1Class": "",
+            "mainNavItem2Class": "",
+            "mainNavItem3Class": "active",
+            "mainNavItem4Class": "",
+            "mainNavItem5Class": ""
+        }
+    </include>
     <include src="partials/page-banner-fishing-limits.html"></include>
 
     <section class="nsw-section">
@@ -31,7 +39,6 @@
                     </li>
                 </ol>
             </nav>
-            <div class="pirsa-page-updated">Page updated: 26 Feb 2025</div>
         </div>
     </section>
     <main id="content" class="nsw-container results-listing">
