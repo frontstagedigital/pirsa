@@ -39,11 +39,13 @@
             .nsw-search-results & {
                 font-size: 18px;
                 line-height: 28px;
-                font-weight: 600;
                 text-decoration: underline;
-
+                
                 @include breakpoint('lg') {
                     font-size: 20px;
+                }
+                a {
+                    font-weight: 600;
                 }
             }
     }
