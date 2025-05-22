@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html class="page" lang="en">
+
+<include src="partials/head.html">
+    {
+    "title": "Weeds finder"
+    }
+</include>
+
+<body class="page__body search-results">
+
+    <include src="partials/header.html"></include>
+        <include src="partials/main-nav.html">
+        {
+            "mainNavItem1Class": "",
+            "mainNavItem2Class": "",
+            "mainNavItem3Class": "active",
+            "mainNavItem4Class": "",
+            "mainNavItem5Class": "",
+            "mainNavItem6Class": ""        }
+    </include>
+    <include src="partials/page-banner-weeds-finder.html"></include>
+
+    <section class="nsw-section">
+        <div class="nsw-container pirsa-breadcrumbs">
+            <nav aria-label="Breadcrumbs" class="nsw-breadcrumbs js-breadcrumbs">
+                <ol>
+                    <li>
+                        <a href="home.html">Home</a>
+                    </li>
+                    <li>
+                        <a href="#">Biosecurity</a>
+                    </li>
+                    <li>
+                        <a href="#">Weeds</a>
+                    </li>                                        
+                    <li>
+                        <a href="#" class="current" aria-current="page">Identifying declared weeds</a>
+                    </li>
+                </ol>
+            </nav>
+        </div>
+    </section>
+    <main id="content" class="nsw-container results-listing">
+        <div class="nsw-layout">
+            <main class="nsw-layout__main">
+                <h1>Identifying declared weeds in SA</h1>
+                <div class="nsw-wysiwyg-content pirsa-m-top-1">
+                <p>Identify weeds that pose a serious risk to South Australia's environment and primary industries. Find out about:</p>
+                <ul><li>recommended manual and chemical control options</li><li>legal obligations for landholders</li><li>restrictions on weed movement and sale</li><li>reporting requirements</li><li>links to state policies.</li></ul>                
+                </div>
+            </main>
+        </div>
+        <div class="nsw-layout nsw-layout--2-col">
+            <div class="nsw-layout__sidebar">
+                <!-- START: sidebar content -->
+                <include src="partials/weeds-finder-filters.html"></include>
+                <!-- END: sidebar content -->
+            </div>
+            <div class="nsw-layout__main">
+                <!-- START: Main content -->
+                <div class="nsw-results-bar">
+                    <div class="nsw-results-bar__info">Showing results 1 - 12 of 45 results</div>
+                    <div class="nsw-results-bar__sorting">
+                        <label class="nsw-form__label" for="results-sort">Sort by:</label>
+                        <select class="nsw-form__select" id="results-sort" name="results-sort">
+                            <option value="3">Common name</option>
+                            <option value="3">Relevance</option>
+                            <option value="3">Most popular</option>
+                        </select>
+                    </div>
+                </div>
+
+                <include src="partials/search-result-cards-weeds-finder.html"></include>
+
+                <include src="partials/pagination.html"></include>
+
+    
+                <!-- END: Main content -->
+    
+            </div>
+    
+            <!-- <a href="#content" class="nsw-button nsw-button--dark pirsa-button--rounded nsw-m-y-md"><span>Back to
+                    top</span><span class="material-icons nsw-material-icons" focusable="false"
+                    aria-hidden="true">north</span></a> -->
+    
+        </div>
+    </main>
+
+    <include src="partials/footer.html"></include>
+
+    <include src="partials/scripts.html"></include>
+</body>
+
+</html>

@@ -77,7 +77,7 @@
         padding: 1rem;
         display: flex;
         flex-direction: column;
-        min-height: 26rem;
+        min-height: 23rem;
 
         &__title {
             a {
@@ -93,8 +93,12 @@
         }
 
         &__image {
-            padding: 1em 0;
+            padding: 0;
+            margin-bottom: 1rem;
+            margin-top: 1rem;
             text-align: center;
+            height: 12.5rem;
+            overflow: hidden;
         }
 
         &__tags{
@@ -105,22 +109,41 @@
         &__meta {
             justify-self: flex-end;
 
-            &__fishing_icon {
+            &__icon {
                 background-repeat: no-repeat;
-                background-size: 1.25rem auto; 
+                background-size: 1.15rem auto; 
                 background-position: left center;  
                 padding-left: 1.5rem;
                 margin-right: 1rem;
 
                 &__marine {
-                    background-image: url('../image/search/fishing/icons/91884ad8b9a694b941c7ed0f97a4034007dbae8b.png');
+                    background-image: url('../image/search/fishing/icons/marine.svg');
                 }
                 &__freshwater {
-                    background-image: url('../image/search/fishing/icons/934fb7f7317ce5e194de9832b6f7af73e9afede4.png');
+                    background-image: url('../image/search/fishing/icons/freshwater.svg');
                 }
                 &__pest-species {
                     background-image: url('../image/search/fishing/icons/e07042c9ba1187dc9500fb078ed182e29749f119.png');
-                }                                
+                }
+                &__climber {
+                    background-image: url('../image/search/weeds/icons/climber.svg');
+                }              
+                &__grass {
+                    background-image: url('../image/search/weeds/icons/grass.svg');
+                }              
+                &__herb {
+                    background-image: url('../image/search/weeds/icons/herb.svg');
+                }              
+                &__perennial {
+                    background-image: url('../image/search/weeds/icons/perennial.svg');
+                }              
+                &__shrub {
+                    background-image: url('../image/search/weeds/icons/shrub.svg');
+                }              
+                &__tree {
+                    background-image: url('../image/search/weeds/icons/tree.svg');
+                }                                                              
+                
             }
         }
 
