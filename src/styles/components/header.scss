@@ -23,6 +23,10 @@
         &-area {
             input {
                 background-color: var(--nsw-white);
+                height: 4rem;
+                @include breakpoint('lg') {
+                    height: 3rem;
+                }
             }
         }
     }
