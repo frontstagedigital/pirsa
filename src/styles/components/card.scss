@@ -42,6 +42,21 @@
                 padding-bottom: 2rem;
             }              
         }
+
+        .nsw-card__image {
+            overflow: hidden;
+            img {
+                transition: .25s ease;
+            }
+        }
+    
+        &:hover {
+            .nsw-card__image img {
+                transform: scale(1.1);
+            }
+        }
+
+
     }
 
     &--multi-cta {
@@ -194,6 +209,20 @@
             font-size: var(--pirsa-font-size-meta);
         }
     }
+
+    &__image {
+        overflow: hidden;
+        img {
+            transition: .25s ease;
+        }        
+    }
+
+    &:hover {
+        .nsw-card__image img {
+            transform: scale(1.1);
+        }
+    }
+
 }
 
 .view-all-events {
