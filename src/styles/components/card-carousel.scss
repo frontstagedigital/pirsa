@@ -32,15 +32,38 @@
         &__buttons {
             display: flex;
             margin-top: 0;
-            justify-content: space-between !important;
             width: 100%;
+            gap: 10px!important;
             
             @include breakpoint('md') {
                 justify-content: flex-end;
                 width: auto;
             }   
 
+            li {
+                margin: 0;
+            }
+
+            button {
+                width: 3rem;
+                height: 3rem;
+            }
+
         }
+
+        &__container {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            width: 100%;
+            padding-top: 1rem;
+
+            @include breakpoint('md') {
+                width: unset;
+                gap: 2rem;
+            }
+        }
+
     }
 
     .nsw-carousel__wrapper {
