@@ -48,9 +48,21 @@
         border: 2px solid;
         border-radius: 50%;
         color: var(--nsw-text-light);
-        font-size: 1.875em;        
-        padding: 7px;
-        height: 3rem;
-        width: 3rem;        
+        font-size: 1.25em;        
+        padding: 4px;
+        height: 2rem;
+        width: 2rem;
+        bottom: 1.25rem;
+        left: 1.25rem;        
+
+        @include breakpoint('lg') {
+            font-size: 1.875em;        
+            padding: 7px;
+            height: 3rem;
+            width: 3rem;    
+            bottom: 2rem;
+            left: 2rem;   
+        }
+
     }    
 }

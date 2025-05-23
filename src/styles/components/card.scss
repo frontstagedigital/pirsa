@@ -177,6 +177,14 @@
 
     height: auto;
 
+    &__content {
+        padding: 1.25rem 1.25rem 3.875rem;
+        
+        @include breakpoint('lg') {
+            padding: 2rem 2rem 5.875rem;
+        }
+    }
+
     &--pirsa {
 
         &__meta {
@@ -231,9 +239,6 @@
             }
         }
     }
-
-
-
 }
 
 .view-all-events {
