@@ -44,33 +44,4 @@
     .nsw-list-item:first-child {
         padding-top: 2rem;
     }
-
-    .nsw-filters {
-        &__wrapper {
-            background-color: unset;
-        }
-
-        &__title {
-            padding-bottom: 20px;
-            border-bottom: 1px solid var(--nsw-grey-03);
-        }
-        &__controls button:hover:enabled {
-            background-color: var(--nsw-grey-02);
-        }
-    }
-    // handle accordion toggle new colour overrides
-    .active .nsw-filters__controls button {
-        background-color: var(--nsw-off-white);
-        color: #000;
-    }
-    .active .nsw-filters__controls .nsw-material-icons {
-        color: #000;
-        outline: 2px solid var(--nsw-brand-dark);
-    }
-    .nsw-filters__controls button:hover:enabled{
-        color: var(--nsw-text-light);
-    }
-    .nsw-filters__controls button:hover:enabled .nsw-material-icons:last-child {
-        outline: 2px solid var(--nsw-white);
-    }
 }

@@ -1,25 +1,28 @@
 .nsw-filters {
 
     &__wrapper {
-        background-color: var(--nsw-off-white);
+        //background-color: var(--nsw-off-white);
 
         .nsw-filters--down & {
                   
             @include breakpoint('lg') {
-              background-color: var(--nsw-off-white);
-              padding-left: 2rem;
-              padding-right: 2rem;
+              //background-color: var(--nsw-off-white);
             }
         }
     }
 
     &__title {
         margin-top: 0;
-        padding-bottom: 0;
+        padding-bottom: 1em;
         color: #000;
+        border-bottom: 1px solid var(--nsw-grey-03);
     }
 
-    .nsw-filters__item-content {
+    &__controls button:hover:enabled {
+        background-color: var(--nsw-grey-02);
+    }
+
+    &__item-content {
         color: var(--nsw-grey-02);
     }
 
@@ -33,13 +36,34 @@
         }
     }
 
-    .nsw-filters__cancel {
+    &__cancel {
         button[type="reset"] {
             text-decoration: none;
         }
     }
 
-    .nsw-filters__more {
+    &__more {
         text-decoration: none;
     }
+
+
+
+
+
+    // handle accordion toggle new colour overrides
+    .active .nsw-filters__controls button {
+        background-color: var(--nsw-off-white);
+        color: #000;
+    }
+    .active .nsw-filters__controls .nsw-material-icons {
+        color: #000;
+        outline: 2px solid var(--nsw-brand-dark);
+    }
+    .nsw-filters__controls button:hover:enabled{
+        color: var(--nsw-text-light);
+    }
+    .nsw-filters__controls button:hover:enabled .nsw-material-icons:last-child {
+        outline: 2px solid var(--nsw-white);
+    }
+
 }
