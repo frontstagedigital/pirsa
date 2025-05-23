@@ -598,4 +598,112 @@
         }      
     }
 
+
+    &-b {
+
+        &-top {
+
+            &-0 {
+                border-top: 0 !important;
+            }
+
+            //@include breakpoint('xs') {
+            @media screen and (min-width: 0) and (max-width: 575px) {  
+                &-xs {
+                    &-0 {
+                        border-top: 0 !important;
+                    }                                                    
+                }
+            }
+
+            //@include breakpoint('sm') {
+            @media screen and (min-width: 576px) and (max-width: 765px) {              
+                &-sm {
+                    &-0 {
+                        border-top: 0 !important;
+                    }                                                         
+                }
+            }
+
+            //@include breakpoint('md') {
+            @media screen and (min-width: 768px) and (max-width: 991px) {  
+                &-md {
+                    &-0 {
+                        border-top: 0 !important;
+                    }                                                       
+                }
+            }
+
+            //@include breakpoint($nsw-desktop-breakpoint) {
+            @media screen and (min-width: 992px) and (min-width: 1199px) {  
+                &-lg {
+                    &-0 {
+                        border-top: 0 !important;
+                    }                                                         
+                }
+            }
+
+            //@include breakpoint('xl') {
+            @media screen and (min-width: 1200px) {  
+                &-xl {
+                    &-0 {
+                        border-top: 0 !important;
+                    }                                                        
+                }
+            }
+        }
+
+        &-bottom {
+
+            &-0 {
+                border-bottom: 0 !important;
+            } 
+
+            //@include breakpoint('xs') {
+            @media screen and (min-width: 0) and (max-width: 575px) {  
+                &-xs {
+                    &-0 {
+                        border-bottom: 0 !important;
+                    }                                                      
+                }
+            }
+
+            //@include breakpoint('sm') {
+            @media screen and (min-width: 576px) and (max-width: 765px) {              
+                &-sm {
+                    &-0 {
+                        border-bottom: 0 !important;
+                    }                                                      
+                }
+            }
+
+            //@include breakpoint('md') {
+            @media screen and (min-width: 768px) and (max-width: 991px) {  
+                &-md {
+                    &-0 {
+                        border-bottom: 0 !important;
+                    }                                                       
+                }
+            }
+
+            //@include breakpoint($nsw-desktop-breakpoint) {
+            @media screen and (min-width: 992px) and (min-width: 1199px) {  
+                &-lg {
+                    &-0 {
+                        border-bottom: 0 !important;
+                    }                                                      
+                }
+            }
+
+            //@include breakpoint('xl') {
+            @media screen and (min-width: 1200px) {  
+                &-xl {
+                    &-0 {
+                        border-bottom: 0 !important;
+                    }                                                        
+                }
+            }
+        }      
+    }    
+
 }

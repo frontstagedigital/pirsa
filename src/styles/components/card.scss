@@ -217,11 +217,18 @@
         }        
     }
 
-    &:hover {
-        .nsw-card__image img {
-            transform: scale(1.1);
+    &:not(.pirsa-card) {
+        &:hover {
+            .nsw-card__image img {
+                transform: scale(1.1);
+            }
+            .nsw-card__content {
+                background-color: var(--pirsa-dark-grey);
+            }
         }
     }
+
+
 
 }
 
