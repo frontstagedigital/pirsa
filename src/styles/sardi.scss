@@ -1,27 +1,24 @@
 /* SARDI theme overrides */
 
 .sardi {
-    // --sardi-brand-primary: #009661;
-    --nsw-brand-dark: #007C54;
-    // --sardi-brand-dark: #007C54;
+    --sardi-brand-primary: #007C54;
     --nsw-brand-supplementary: #009661;
-    // --sardi-brand-light: #EEF7F4;
     --nsw-brand-light: #EEF7F4;
 
-    --nsw-link: #007C54;
+    //--nsw-link: #007C54;
 
     --pirsa-accordion-active: #C8E6DC;
 
-    .nsw-breadcrumbs a:not(.current) {
-        color: var(--nsw-brand-dark);
-    }
+    // .nsw-breadcrumbs a:not(.current) {
+    //     color: var(--nsw-brand-dark);
+    // }
 
     .pirsa-section {
         background-color: var(--nsw-brand-light);
     }
 
     .pirsa-utility-list {
-        color: var(--nsw-brand-dark);
+        color: var(--sardi-brand-primary);
     }
 
     .pirsa-icon {
@@ -48,8 +45,98 @@
  
     .pirsa-content-block {
         a {
-            color: var(--nsw-brand-dark);
+            //color: var(--sardi-brand-primary);
         }
     }
 
+    .pirsa-section__sidebar {
+        a {
+            color: var(--sardi-brand-primary);
+        }
+
+        .nsw-tag {
+            color: var(--sardi-brand-primary);
+            border-color: var(--sardi-brand-primary);
+        }
+
+        .nsw-steps--dark .nsw-steps__item:before,
+        .nsw-steps--fill.nsw-steps--dark .nsw-steps__item:before {
+            color: var(--sardi-brand-primary);
+            border-color: var(--sardi-brand-primary);
+            background-color: var(--sardi-brand-primary);
+        }
+        .nsw-steps--dark .nsw-steps__content:before {
+            background-color: var(--sardi-brand-primary);
+        }
+    }
+
+    .pirsa-searchbar { 
+        .nsw-form__input {
+            color: var(--sardi-brand-primary);
+            border-color: var(--sardi-brand-primary);
+        }
+        .nsw-button {
+            color: var(--sardi-brand-primary);
+            border-color: var(--sardi-brand-primary);
+        }
+    }
+
+    .nsw-button {
+        &--dark {
+            background-color: var(--sardi-brand-primary);
+
+            &-outline-solid {
+                border-color: var(--sardi-brand-primary);
+                color: var(--sardi-brand-primary);
+            }
+        }
+
+        &:hover {
+            background-color: var(--sardi-brand-primary);
+            border-color: var(--sardi-brand-primary);
+            color: var(--nsw-text-light);
+        }
+    }
+
+    .pirsa-link-list {
+        a {
+            color: var(--sardi-brand-primary);
+        }
+    }
+
+    .nsw-carousel__control {
+        border-color: var(--sardi-brand-primary);
+        .nsw-icon {
+            color: var(--sardi-brand-primary);
+        }
+    }
+
+    .nsw-carousel__nav-item { 
+        button {
+            border-color: var(--sardi-brand-primary);
+        }
+
+        &--selected {
+            button {
+                background-color: var(--sardi-brand-primary);
+                border-color: var(--sardi-brand-primary);
+            }
+        }
+    }
+
+    .nsw-card {
+        &--dark {
+            .nsw-card__content {
+                background-color: var(--sardi-brand-primary);
+
+            }
+
+            &:hover {
+                color: var(--nsw-text-dark);
+                .nsw-card__content {
+                    background-color: var(--nsw-white);
+                }
+            }
+        }
+    }
 }
