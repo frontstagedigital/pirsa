@@ -21,6 +21,7 @@
     }
 
     &__header {
+        border-bottom: 1px solid var(--neutral-grey-02, #495054);
         a {
             background-color: var(--nsw-brand-supplementary);
             border-radius: 4px 4px 0px 0px;
