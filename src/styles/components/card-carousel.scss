@@ -34,6 +34,7 @@
             margin-top: 0;
             width: 100%;
             gap: 10px!important;
+            justify-content: space-between !important;
             
             @include breakpoint('md') {
                 justify-content: flex-end;
