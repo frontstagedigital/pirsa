@@ -59,6 +59,10 @@
           }        
 
     }
+    
+    .sardi .nsw-icon-button:first-child {
+        color: var(--nsw-brand-supplementary);
+    }
 
     &__header {
         border-color: var(--nsw-grey-04);
