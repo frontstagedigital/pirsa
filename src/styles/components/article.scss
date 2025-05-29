@@ -1,0 +1,21 @@
+.pirsa-news-article {
+    margin-top: 0.5rem;
+    @include breakpoint('lg') {
+        margin-top: -1rem;
+    }
+    .nsw-intro {
+        font-size: 20px;
+        line-height: 28px;
+    }
+    &__info {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 1rem;
+    }
+
+    .nsw-content-block__title {
+        @include breakpoint('lg') {
+            padding-top: 1.5rem;
+        }
+    }
+}
