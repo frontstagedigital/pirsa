@@ -25,6 +25,10 @@
             line-height: var(--nsw-line-height-xs-desktop);
             display: unset;
         }
+
+        .nsw-breadcrumbs__toggle-button {
+            line-height: 19px;
+        }
     }
 
     .pirsa-page-updated {
