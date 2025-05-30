@@ -1,4 +1,8 @@
 .results-listing {
+    h1 {
+        margin-bottom: 2rem;
+    }
+
     .nsw-results-bar {
         border-bottom: 1px solid var(--neutral-grey-03, #CDD3D6);
         padding-bottom: 1.5rem;
@@ -104,6 +108,11 @@
         &__tags{
             justify-self: flex-end;
             margin-bottom: 1rem;
+
+            .nsw-status-label {
+                padding-top: 5px;
+                padding-bottom: 5px;
+            }
         }
 
         &__meta {
