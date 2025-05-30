@@ -1,19 +1,25 @@
 .pirsa-breadcrumbs {
     display: flex;
     flex-wrap: wrap;
-    row-gap: 1rem;
+    gap: 1rem;
 
-    @include breakpoint('sm') {
-        flex-wrap: unset;
-    }
+    // @include breakpoint('sm') {
+    //     flex-wrap: unset;
+    // }
 
     .nsw-breadcrumbs {
         flex-grow: 1;
         margin-top: 0;
 
-        ol li {
-            //margin-top: 0;      
-        } 
+        ol {
+            display: flex;
+            flex-wrap: wrap;
+            row-gap: 0.5rem;
+            
+            li {
+                margin-top: 0;      
+            } 
+        }
 
         a{
             line-height: var(--nsw-line-height-xs-desktop);
@@ -26,6 +32,6 @@
         font-size: var(--nsw-font-size-xs-desktop);
         line-height: var(--nsw-line-height-xs-desktop);
         flex-shrink: 0;
-        margin-top: .5rem; 
+        // margin-top: .5rem; 
     }
 }
