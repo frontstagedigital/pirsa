@@ -64,3 +64,14 @@ Steps to release to matrix:
 - add, commit and push changes to origin
 
 In Matrix, run Update on the Git Bridge Asset and check that the nested asset 'Foot #477067' is referencing the correct pirsa.hash.js file. The hash will change with each release and update. 
+
+git checkout matrix-release
+git pull
+git fetch
+git merge origin/dev
+npm run build
+npm run build:css
+npm run build:js
+git add .
+git commit -m "Merged from dev and updated"
+git push
