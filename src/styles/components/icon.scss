@@ -1,36 +1,36 @@
 .pirsa-icon {
-    // background-repeat: no-repeat;
-    // background-size: 1.25rem auto; 
-    // background-position: center center;
+    background-repeat: no-repeat;
+    background-size: 1.75rem auto; 
+    background-position: center center;
+    display: inline-block;
     width: 3em;
     height: 3em;    
-    min-width: 3em;
-    min-height: 3em;        
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    // text-indent: -9999px;
+    text-indent: -9999px;
 
-    // &__apple {
-    //     background-image: url('../image/icon-apple.svg');
-    // }
+    &__apple {
+        background-image: url('../image/icon-apple.svg');
+    }
 
-    // &__fish {
-    //     background-image: url('../image/icon-fish.svg');
-    // }
+    &__fish {
+        background-image: url('../image/icon-fish.svg');
+    }
     
-    // &__pig {
-    //     background-image: url('../image/icon-pig.svg');
-    // }
+    &__pig {
+        background-image: url('../image/icon-pig.svg');
+    }
     
-    // &__plant-leaf {
-    //     background-image: url('../image/icon-plant-leaf.svg');
-    // }    
+    &__plant-leaf {
+        background-image: url('../image/icon-plant-leaf.svg');
+    }
+
+    &__pageview {
+        background-image: url('../image/icon-pageview.svg');
+    }    
 
     &--rounded {
         background-color: white;
         border-radius: 50%;
-        //padding: 4px;
+        padding: 4px;
     }
 
     &--outline {
