@@ -83,12 +83,11 @@
         background-color: var(--nsw-grey-02);
         color: var(--nsw-text-light);
         border: 0;
+        a {
+            color: var(--nsw-text-light);
+        }
     }    
-
-    a {
-        color: var(--nsw-text-light);
-    }
-  
+ 
     .nsw-material-icons {
         border: 2px solid;
         border-radius: 50%;
