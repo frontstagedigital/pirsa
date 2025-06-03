@@ -74,6 +74,15 @@
         }
     }
 
+    &--video {
+        .nsw-media {
+            @include breakpoint('lg') {
+                display: flex;
+                width: 50%;
+            }   
+        }
+    }
+
 
     &--avatar {
         border: 1px solid var(--nsw-grey-04);
