@@ -68,7 +68,67 @@
                 <p>For a complete list of restricted produce and guidance on how to meet quarantine rules, visit:&nbsp;<a href="https://fruitfly.sa.gov.au/restricted-produce">fruitfly.sa.gov.au/restricted-produce</a></p>
             </div>
 
-            <div class="pirsa-widget pirsa-widget__page_helpful"> <div class="nsw-form"> <div class="nsw-form__group"> <fieldset class="nsw-form__fieldset"> <legend> <span class="nsw-form__legend">Was this page helpful?</span> </legend> <input class="nsw-form__radio-input" type="radio" name="form-radio-2" id="form-radio-2-a" value="Yes"> <label class="nsw-form__radio-label" for="form-radio-2-a">Yes</label> <input class="nsw-form__radio-input" type="radio" name="form-radio-2" id="form-radio-2-b" value="No"> <label class="nsw-form__radio-label" for="form-radio-2-b">No</label> </fieldset> </div> </div> </div>
+            <form id="form_email_439267" enctype="multipart/form-data"
+                action="https://pir.sa.gov.au/biosecurity/food_safety/meat/meat_standards" method="post"><input
+                    type="hidden" name="SQ_FORM_439267_PAGE" value="1" class="sq-form-field"
+                    id="SQ_FORM_439267_PAGE"><input type="hidden" name="form_email_439267_referral_url"
+                    value="https://pir.sa.gov.au/biosecurity/food_safety/meat">
+
+                  <div class="pirsa-widget pirsa-widget__page_helpful" id="js-pirsa-widget__page_helpful">
+                    <div class="nsw-form">
+                        <div class="nsw-form__group">
+                            <fieldset class="nsw-form__fieldset">
+                                <legend> <span class="nsw-form__legend">Was this page helpful?</span> </legend>
+
+                                <input class="nsw-form__radio-input js-pirsa-widget__page_helpful-radio" type="radio" name="q439267:q1" id="q439267_q1_0"
+                                    value="0">
+                                <label class="nsw-form__radio-label" for="q439267_q1_0">Yes</label>
+
+                                <input class="nsw-form__radio-input js-pirsa-widget__page_helpful-radio" type="radio" name="q439267:q1" id="q439267_q1_1"
+                                    value="1">
+                                <label class="nsw-form__radio-label" for="q439267_q1_1">No</label>
+
+                            </fieldset>
+                        </div>
+
+                        <div id="js-pirsa-widget__page_helpful--comment" class="pirsa-m-top-1-5">
+                            <div class="nsw-form__group">
+                                <label class="nsw-form__label" for="contact-feedback">Give us your feedback:</label>
+                                <span class="nsw-form__helper" id="contact-feedback-helper-text">The more information
+                                    you provide, the better we'll be able to action your feedback. <br>Please <a
+                                        href="https://forms.sa.gov.au/#/form/617f1304ad9c5a87d87b73e8">contact us</a> if
+                                    you require more information or help.</span>
+                                <textarea class="nsw-form__input" name="q439267:q2" id="q439267_q2" maxlength="300"
+                                    aria-describedby="contact-feedback-helper-text"></textarea>
+                            </div>
+                            <div class="nsw-form__group">
+                                %form_recaptcha%
+                                <input type="submit" id="form_email_439267_submit" name="form_email_439267_submit" class="nsw-button nsw-button--dark pirsa-m-top-1" value="Submit">
+                            </div>
+                        </div>
+
+
+
+            </form>
+
+            <script>
+            document.addEventListener("DOMContentLoaded", function () {
+              var widget = document.getElementById("js-pirsa-widget__page_helpful");
+              var commentSection = document.getElementById("js-pirsa-widget__page_helpful-comment");
+              var radios = widget.getElementsByClassName("js-pirsa-widget__page_helpful-radio");
+
+              commentSection.style.display = "none";
+
+              Array.prototype.forEach.call(radios, function(radio) {
+                radio.addEventListener("change", function () {
+                  commentSection.style.display = "block";
+                });
+              });
+            });
+            </script>
+
+
+
 
             <div class="pirsa-back-to-top__wrapper">
               <a href="#top" class="nsw-button nsw-button--dark pirsa-button--rounded pirsa-back-to-top__link"><span>Back to top</span><span class="material-icons nsw-material-icons" focusable="false" aria-hidden="true">arrow_upward</span></a>
