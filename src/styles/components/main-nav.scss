@@ -92,6 +92,8 @@
 
         @include breakpoint('lg') {
             background-color: var(--nsw-off-white);
+            padding-top: 1.5rem;
+            padding-bottom: 1rem;
         }
 
         li {
@@ -119,6 +121,10 @@
 
         &__mega-menu {
             padding: 0 1rem;
+
+            .nsw-col:not(:first-of-type) {
+                padding-top: 0;
+            }
 
             h3 {
                 a {
