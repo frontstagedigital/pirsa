@@ -82,12 +82,22 @@
         display: flex;
         flex-direction: column;
         min-height: 23rem;
+        position: relative;
 
         &__title {
             a {
                 text-decoration: none;
+
+                &:after {
+                    z-index: 100;
+                    content: "";
+                    position: absolute;
+                    inset: 0;
+                }
             }
         }
+
+
 
         &__content {
             font-size: var(--nsw-font-size-sm-desktop);

@@ -13,6 +13,13 @@
     //     color: var(--nsw-brand-dark);
     // }
 
+
+    @include breakpoint($nsw-desktop-breakpoint) {    
+        .nsw-main-nav__list > li:not(.sardi) > a.active {
+            box-shadow: inset 0 -4px 0 var(--pirsa-brand-dark);
+        }
+    }
+
     .pirsa-section {
         background-color: var(--nsw-brand-light);
     }

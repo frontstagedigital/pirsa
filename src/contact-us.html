@@ -52,13 +52,13 @@
                     <div class="nsw-content-block__content">
                       <div class="nsw-content-block__title">24-hour hotlines</div>
                       <ul class="nsw-content-block__list">
-                        <li>Fishwatch: <a href="#">1800 065 522</a></li>
-                        <li>Emergency animal diseases: <a href="#">1800 675 888</a></li>
-                        <li>Exotic plant pest: <a href="#">1800 084 881</a></li>
-                        <li>Fruit fly and quarantine: <a href="#">1300 666 010</a></li>
-                        <li>Riverland industry: <a href="#">1800 255 556</a></li>
-                        <li>Emergency management: <a href="#">1800 255 556</a></li>
-                        <li>Tomato market access: <a href="#">1800 182 838</a></li>
+                        <li>Fishwatch: <a href="tel:1800065522">1800 065 522</a></li>
+                        <li>Emergency animal diseases: <a href="tel:1800675888">1800 675 888</a></li>
+                        <li>Exotic plant pest: <a href="tel:1800084881">1800 084 881</a></li>
+                        <li>Fruit fly and quarantine: <a href="tel:1300666010">1300 666 010</a></li>
+                        <li>Riverland industry: <a href="tel:1800255556">1800 255 556</a></li>
+                        <li>Emergency management: <a href="tel:1800255556">1800 255 556</a></li>
+                        <li>Tomato market access: <a href="tel:1800182838">1800 182 838</a></li>
                       </ul>
                     </div>
                   </div>
@@ -144,7 +144,7 @@
                                         <div class="nsw-status-label nsw-status-label--pirsa pirsa-m-bottom-0-5">PIRSA</div>
                                         <div class="nsw-content-block__title pirsa-content-block__title">Clare</div>
                                         <p class="nsw-content-block__copy">70 Farrell Flat Road<br>Clare SA 5453</p>
-                                        <p class="nsw-content-block__copy"><strong>Telephone:</strong> (08) 8842 6222</p>
+                                        <p class="nsw-content-block__copy"><strong>Telephone:</strong> <a href="tel:0888426222">(08) 8842 6222</a></p>
                                         <p class="nsw-content-block__copy"><strong>Postal address</strong><br>PO Box 1078<br>Clare SA 5453</p>
                                         <div class="nsw-content-block__link"><a href="#" class="js-pirsa-show-on-map" data-location="Clare">Show on map</a></div>
                                         <div class="nsw-content-block__link"><a href="#">Get directions</a></div>
@@ -208,17 +208,17 @@
                   {
                     position: { lat: -34.92617141869481, lng: 138.5991804386152 },
                     title: 'PIRSA Head Office',
-                    content: '<p>11 Waymouth Street<br>Adelaide SA 5000</p><p>Telephone: (08) 8207 5332<br>Email: <a href="mailto:pirsa.fisherieslicensing@sa.gov.au">pirsa.fisherieslicensing@sa.gov.au</a></p><p><strong>Postal address</strong><br>GPO Box 1671<br>Adelaide SA 5001</p><p><a href="https://www.google.com/maps/dir/?api=1&destination=-34.92617141869481,138.5991804386152">Get directions</a></p>', 
+                    content: '<p>11 Waymouth Street<br>Adelaide SA 5000</p><p>Telephone: <a href="tel:0882075332">(08) 8207 5332</a><br>Email: <a href="mailto:pirsa.fisherieslicensing@sa.gov.au">pirsa.fisherieslicensing@sa.gov.au</a></p><p><a href="https://www.google.com/maps/dir/?api=1&destination=-34.92617141869481,138.5991804386152">Get directions</a></p>', 
                   },
                   {
                     position: { lat: -34.96855655292912, lng: 138.63998563818043 },
                     title: 'South Australian Research and Development Institute (SARDI)',
-                    content: '<p>Plant Research Centre<br>The University of Adelaide<br>Waite Campus<br>2b Hartley Grove<br>Urrbrae SA 5064</p><p><strong>Email:</strong> <a href="mailto:pirsa.sardi@sa.gov.au">pirsa.sardi@sa.gov.au</a></p><p><strong>Postal address</strong><br>GPO Box 397<br>Adelaide SA 5001</p><p><a href="https://www.google.com/maps/dir/?api=1&destination=-34.96855655292912,138.63998563818043">Get directions</a></p>',
+                    content: '<p>Plant Research Centre<br>The University of Adelaide<br>Waite Campus<br>2b Hartley Grove<br>Urrbrae SA 5064</p><p><strong>Email:</strong> <a href="mailto:pirsa.sardi@sa.gov.au">pirsa.sardi@sa.gov.au</a></p><p><a href="https://www.google.com/maps/dir/?api=1&destination=-34.96855655292912,138.63998563818043">Get directions</a></p>',
                   },
                   {
                     position: { lat: -33.827946163689084, lng: 138.61674902931986 }, 
                     title: 'Clare',
-                    content: '<p>70 Farrell Flat Road<br>Clare SA 5453</p><p><strong>Telephone:</strong> (08) 8842 6222</p><p><strong>Postal address</strong><br>PO Box 1078<br>Clare SA 5453</p><p><a href="https://www.google.com/maps/dir/?api=1&destination=-33.827946163689084,138.61674902931986">Get directions</a></p>',
+                    content: '<p>70 Farrell Flat Road<br>Clare SA 5453</p><p><strong>Telephone:</strong> <a href="tel:0888426222">(08) 8842 6222</a></p><p><a href="https://www.google.com/maps/dir/?api=1&destination=-33.827946163689084,138.61674902931986">Get directions</a></p>',
                   }
                 ];
                 // Create an info window to share between markers.
@@ -290,6 +290,9 @@
               .gm-style-iw-ch span {
                 font-weight: bold;
                 font-size: 1.25rem;
+              }
+              .gm-style-iw-d p {
+                font-size: .920rem;
               }
             </style>
 
