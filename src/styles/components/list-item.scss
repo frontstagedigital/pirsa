@@ -46,6 +46,12 @@
                 }
                 a {
                     font-weight: 600;
+
+                    .material-icons {
+                        vertical-align: text-top;
+                        margin-left: .5rem;
+                        margin-right: .5rem;
+                    }
                 }
             }
     }
