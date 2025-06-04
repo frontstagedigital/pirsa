@@ -1,5 +1,11 @@
 .nsw-filters {
 
+    padding-top: 1rem;
+    @include breakpoint('lg') {
+        padding-top: 0;
+    }
+
+
     &__wrapper {
         //background-color: var(--nsw-off-white);
 
@@ -18,8 +24,38 @@
         border-bottom: 1px solid var(--nsw-grey-03);
     }
 
-    &__controls button:hover:enabled {
-        background-color: var(--nsw-grey-02);
+    &__controls { 
+
+
+        button {
+            background-color: var(--nsw-white);
+            border: 1px solid var(--nsw-grey-04);
+            border-radius: var(--nsw-border-radius);
+
+            &:hover:enabled {
+                background-color: var(--pirsa-accordion-active);
+                color: var(--nsw-text-dark) !important;
+                border-color: var(--pirsa-accordion-active);
+
+                .nsw-material-icons {
+                    color: var(--nsw-brand-dark);
+                    outline-color: var(--nsw-brand-dark);
+
+                    &:last-child {
+                        color: var(--nsw-brand-dark);
+                        outline-color: var(--nsw-brand-dark) !important;
+                    }
+
+                }
+            }   
+
+        }
+    }
+
+    &__item {
+        .nsw-material-icons {
+            color: var(--nsw-brand-dark);
+        }
     }
 
     &__item-content {
@@ -45,25 +81,15 @@
     &__more {
         text-decoration: none;
     }
+}   
 
+.active .nsw-filters__controls button {
+    background-color: var(--pirsa-accordion-active);
+    color: var(--nsw-text-dark); 
+    border-color: var(--pirsa-accordion-active);
+}
 
-
-
-
-    // handle accordion toggle new colour overrides
-    .active .nsw-filters__controls button {
-        background-color: var(--nsw-off-white);
-        color: #000;
-    }
-    .active .nsw-filters__controls .nsw-material-icons {
-        color: #000;
-        outline: 2px solid var(--nsw-brand-dark);
-    }
-    .nsw-filters__controls button:hover:enabled{
-        color: var(--nsw-text-light);
-    }
-    .nsw-filters__controls button:hover:enabled .nsw-material-icons:last-child {
-        outline: 2px solid var(--nsw-white);
-    }
-
+.active .nsw-filters__controls .nsw-material-icons {
+    color: var(--nsw-brand-dark);
+    outline-color: var(--nsw-brand-dark);  
 }
