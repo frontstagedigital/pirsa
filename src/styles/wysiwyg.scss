@@ -1,6 +1,6 @@
 .nsw-wysiwyg-content {
 
-    ul {
+    ul:not(.nsw-tabs__list) {
         padding-left: 2rem;
         li {
             list-style: initial;
