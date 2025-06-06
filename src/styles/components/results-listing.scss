@@ -70,6 +70,22 @@
                 }
             }
         }
+
+        //Use with nsw-card--pirsa
+        &-invert {
+            .nsw-card__content {
+                background-color: var(--nsw-brand-light);
+                color: var(--nsw-text-dark);  
+            }
+                
+            &:hover {
+                .nsw-card__content {
+                    color: var(--nsw-text-dark);
+                    background-color: var(--nsw-off-white);
+                }
+            }
+        }
+
     }
 
     //custom card search result for fishing limits page

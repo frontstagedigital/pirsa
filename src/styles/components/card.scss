@@ -229,6 +229,21 @@
         }
     }
 
+    //Use with nsw-card--pirsa
+    &--pirsa-invert {
+            .nsw-card__content {
+                background-color: var(--nsw-brand-light);
+                color: var(--nsw-text-dark);  
+            }
+            
+        &:hover {
+            .nsw-card__content {
+                color: var(--nsw-text-dark);
+                background-color: var(--nsw-off-white);
+            }
+        }
+    }
+
     &__image {
         overflow: hidden;
         img {
@@ -241,7 +256,6 @@
             transform: scale(1.1);
         }
     }
-
 
     &:not(.pirsa-card) {
         &:hover {
