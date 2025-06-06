@@ -47,12 +47,15 @@
               <div class="nsw-results-bar nsw-m-top-0">
                 <div class="nsw-results-bar__info">Showing results 1 - 10 of 5917 results</div>
                 <div class="nsw-results-bar__sorting">
-                  <label class="nsw-form__label" for="results-sort">Sort by:</label>
-                  <select class="nsw-form__select" id="results-sort" name="results-sort">
+                  <form id="js-results-bar-sort" class="nsw-display-flex nsw-align-items-center" method="GET" action="#">
+                  <label class="nsw-form__label" for="sort">Sort by:</label>
+                  <select class="nsw-form__select" id="sort" name="sort">
                     <option value="3">Relevance</option>
                     <option value="3">Most popular</option>
                     <option value="3">Most recent</option>
                   </select>
+                          <noscript><button type="submit" class="nsw-button nsw-button--dark nsw-m-left-xs">Submit</button></noscript>
+                </form>
                 </div>
               </div>
         
