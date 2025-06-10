@@ -62,3 +62,18 @@ function closeMenu(button, menu) {
   button.attr("aria-expanded", false);
   menu.attr("aria-hidden", true);
 }
+
+document.addEventListener('DOMContentLoaded', function () {
+  //Disable form submit on header search if query is empty
+  const headerSearchForm = document.querySelector('#header-search form');
+  if (headerSearchForm instanceof HTMLFormElement) {
+    const headerSearchInput = headerSearchForm.querySelector('input[name="query"]');
+    if (headerSearchInput instanceof HTMLInputElement) {
+      headerSearchForm.addEventListener('submit', function(event) {
+        if (headerSearchInput.value.trim() === '') {
+            event.preventDefault();
+        }
+      });
+    }
+  }
+});
