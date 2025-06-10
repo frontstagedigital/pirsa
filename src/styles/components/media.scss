@@ -1,7 +1,18 @@
 .nsw-media {
+
+    &__video {
+        border-radius: var(--nsw-border-radius);
+        &--has_caption {
+            border-bottom-left-radius: 0;
+            border-bottom-right-radius: 0;
+        }
+    }
+
     figcaption {
         font-size: unset;
         line-height: unset;
+        border-bottom-left-radius: var(--nsw-border-radius);
+        border-bottom-right-radius: var(--nsw-border-radius);
 
         .nsw-accordion {
             margin-top: 1rem;

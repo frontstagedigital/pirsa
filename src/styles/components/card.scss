@@ -23,6 +23,16 @@
             }
         }
 
+        .nsw-card__image {
+            border-top-left-radius: var(--nsw-border-radius);
+            border-top-right-radius: var(--nsw-border-radius);
+            @include breakpoint('lg') {
+                border-bottom-left-radius: var(--nsw-border-radius);
+                border-top-left-radius: var(--nsw-border-radius);
+                border-top-right-radius: 0;
+            }  
+        }
+
     }
 
     .nsw-card__content {
