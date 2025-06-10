@@ -2,6 +2,12 @@
     height: auto;
     position: relative;
 
+    .nsw-card__image {
+        border-top-left-radius: var(--nsw-border-radius);
+        border-top-right-radius: var(--nsw-border-radius);
+    }
+
+
     .nsw-col & {
         @include breakpoint('md') {
             //height: 100%;
@@ -14,16 +20,50 @@
             display: flex;
         }    
 
-        .nsw-card__image + .nsw-card__content {
+        .nsw-card__image + .nsw-card__content{
             border-left-width: 1px;
             border-bottom-left-radius: var(--nsw-border-radius);
+            border-top-right-radius: 0;
             @include breakpoint('lg') {
                 border-left-width: 0px;
                 border-bottom-left-radius: 0px;
+                border-top-right-radius: var(--nsw-border-radius);
             }
         }
 
+        .nsw-card__image {
+            border-top-left-radius: var(--nsw-border-radius);
+            border-top-right-radius: var(--nsw-border-radius);
+            @include breakpoint('lg') {
+                border-bottom-left-radius: var(--nsw-border-radius);
+                border-top-left-radius: var(--nsw-border-radius);
+                border-top-right-radius: 0;
+            }  
+        }
+
+        .nsw-media__video {
+            border-bottom-left-radius: 0;
+            border-bottom-right-radius: 0;
+            @include breakpoint('lg') {
+                border-bottom-left-radius: var(--nsw-border-radius);
+                border-top-left-radius: var(--nsw-border-radius);
+                border-top-right-radius: 0;
+                border-bottom-right-radius: 0;
+            }  
+        }
+
+         .nsw-media + .nsw-card__content {
+            border-top-left-radius: 0;
+            border-top-right-radius: 0;
+            @include breakpoint('lg') {
+                border-left-width: 0px;
+                border-top-left-radius: 0;
+                border-bottom-left-radius: 0;
+            }
+         }
+
     }
+
 
     .nsw-card__content {
         border-color: var(--nsw-grey-04);
