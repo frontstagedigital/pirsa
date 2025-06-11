@@ -17,6 +17,9 @@
         .nsw-accordion {
             margin-top: 1rem;
         }
+        .nsw-accordion__content {
+            background: var(--nsw-white);
+        }
 
         .nsw-accordion__button[aria-expanded=false] {
             background-color: var(--nsw-white);
