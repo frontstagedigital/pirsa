@@ -7,7 +7,7 @@ document.addEventListener('DOMContentLoaded', function () {
     if (sortSelect instanceof HTMLSelectElement) {
       sortSelect.addEventListener('change', function () { 
         // Disable the select element
-        sortSelect.disabled = true; 
+        //sortSelect.disabled = true; 
 
         // Create and insert the loader
         const loader = document.createElement('div');
@@ -17,6 +17,8 @@ document.addEventListener('DOMContentLoaded', function () {
 
         // Submit the form
         form.submit();
+        
+        
       });
     }
   }
