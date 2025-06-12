@@ -31,6 +31,13 @@
         }
     }
     
+    .nsw-header__search-area input {
+         @include breakpoint('lg') {
+            outline: solid 3px var(--nsw-focus);
+            outline-offset: 0;
+         }
+    }
+
     .nsw-header__menu {
         top: 8px;
         right: 0;

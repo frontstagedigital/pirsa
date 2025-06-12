@@ -72,6 +72,7 @@ document.addEventListener('DOMContentLoaded', function () {
       headerSearchForm.addEventListener('submit', function(event) {
         if (headerSearchInput.value.trim() === '') {
             event.preventDefault();
+            document.getElementById('header-search').hidden = false;
         }
       });
     }
