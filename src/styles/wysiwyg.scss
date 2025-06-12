@@ -1,9 +1,35 @@
+// list styles for page content
+.nsw-layout__main {
+    ul:not(.nsw-tabs__list, .nsw-content-block__list--bare),
+    ol {
+        padding-left: 2rem;
+
+        li {
+            list-style: inherit;
+            margin-top: 0;
+        }
+    }
+    // list exception - pagination
+    .nsw-pagination {
+        ul {
+            padding: 0;
+            
+            li {
+            padding-left: 0;
+            list-style: none;
+            }
+        }
+    }
+}
+
+
 .nsw-wysiwyg-content {
 
     ul:not(.nsw-tabs__list) {
         padding-left: 2rem;
         li {
             list-style: initial;
+            margin-top: 0;
         }
     }
 
