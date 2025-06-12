@@ -1,6 +1,6 @@
 // list styles for page content
 .nsw-layout__main {
-    ul:not(.nsw-tabs__list),
+    ul:not(.nsw-tabs__list, .nsw-content-block__list--bare),
     ol {
         padding-left: 2rem;
 
@@ -9,7 +9,7 @@
             margin-top: 0;
         }
     }
-    // list exceptions - pagination and bare lists
+    // list exception - pagination
     .nsw-pagination {
         ul {
             padding: 0;
@@ -20,15 +20,6 @@
             }
         }
     }
-    ul.nsw-content-block__list--bare {
-        padding: 0;
-
-        li {
-            padding-left: 0;
-            list-style: none;
-        }
-    }
-    // end exceptions
 }
 
 
