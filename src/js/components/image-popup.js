@@ -1,9 +1,11 @@
 document.addEventListener("DOMContentLoaded", function () {
   const gallery = document.querySelector(".js-image-popup-gallery");
   const popup = document.querySelector(".js-image-popup");
-  const popupContainer = popup.querySelector(".image-popup-container");
 
-  if (!gallery || !popup || !popupContainer) return;
+  if (!gallery || !popup) return;
+
+  const popupContainer = popup.querySelector(".image-popup-container");
+  if (!popupContainer) return;
 
   // Create loader element once and reuse it
   const loader = document.createElement("div");
@@ -28,7 +30,7 @@ document.addEventListener("DOMContentLoaded", function () {
     // Clear any existing image or loader
     popupContainer.querySelectorAll("img, .nsw-loader").forEach(el => el.remove());
 
-    // Add loader to popup container
+    // Add loader
     popupContainer.appendChild(loader.cloneNode(true));
 
     // Show popup
@@ -41,31 +43,23 @@ document.addEventListener("DOMContentLoaded", function () {
     img.title = imageTitle || "";
 
     img.onload = function () {
-      // Remove loader and insert image
-      const existingLoader = popupContainer.querySelector(".nsw-loader");
-      if (existingLoader) existingLoader.remove();
-
+      popupContainer.querySelector(".nsw-loader")?.remove();
       popupContainer.appendChild(img);
     };
 
     img.onerror = function () {
-      const existingLoader = popupContainer.querySelector(".nsw-loader");
-      if (existingLoader) existingLoader.remove();
-
-      const errorMsg = document.createElement("div");
-      errorMsg.textContent = "Failed to load image.";
-      errorMsg.className = "nsw-text-danger"; // Optional styling class
-      popupContainer.appendChild(errorMsg);
+      popupContainer.querySelector(".nsw-loader")?.remove();
+      console.error("Image failed to load:", imageUrl);
     };
   });
 
-  // Click on background or close button to close
+  // Close on background click or close button
   popup.addEventListener("click", function (e) {
     const isCloseButton = e.target.closest(".image-popup-close-button");
     const isOutsideImage = !e.target.closest("img");
 
     if (isCloseButton || isOutsideImage) {
-      popupContainer.querySelectorAll("img, .nsw-loader, .nsw-text-danger").forEach(el => el.remove());
+      popupContainer.querySelectorAll("img, .nsw-loader").forEach(el => el.remove());
       popup.style.display = "none";
     }
   });
@@ -73,7 +67,7 @@ document.addEventListener("DOMContentLoaded", function () {
   // Close on Escape key
   document.addEventListener("keydown", function (e) {
     if (e.key === "Escape" && getComputedStyle(popup).display === "flex") {
-      popupContainer.querySelectorAll("img, .nsw-loader, .nsw-text-danger").forEach(el => el.remove());
+      popupContainer.querySelectorAll("img, .nsw-loader").forEach(el => el.remove());
       popup.style.display = "none";
     }
   });
