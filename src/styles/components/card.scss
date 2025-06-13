@@ -122,6 +122,15 @@
         }
     }
 
+    &--image-popup {
+        .nsw-card__content {
+            padding-bottom: 1.25rem;
+            @include breakpoint('lg') {
+                padding-bottom: 2rem;
+            }               
+        }
+    }
+
 
     &--avatar {
         border: 1px solid var(--nsw-grey-04);
