@@ -29,7 +29,7 @@
         margin: 2rem 0;
     }
 
-    a:not(.nsw-button, .nsw-card a, .nsw-list-item a, .pirsa-card a, .nsw-link.list a) {
+    a:not(.nsw-button, .nsw-card a, .nsw-list-item a, .pirsa-card a, .nsw-link-list a) {
         //only style link which does not have a span with icon
         &[target=_blank]:not(:has(span.material-icons)):not([href$='.pdf']),
         &.external { 
