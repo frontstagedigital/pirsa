@@ -20,18 +20,6 @@
             }
         }
     }
-}
-
-
-.nsw-wysiwyg-content {
-
-    ul:not(.nsw-tabs__list) {
-        padding-left: 2rem;
-        li {
-            list-style: initial;
-            margin-top: 0;
-        }
-    }
 
     hr {
         background-color: var(--nsw-grey-03);
@@ -42,9 +30,6 @@
     }
 
     a:not(.nsw-button) {
-        //text-decoration: none;
-        font-weight: var(--nsw-font-normal);
-
         //only style link which does not have a span with icon
         &[target=_blank]:not(:has(span.material-icons)):not([href$='.pdf']),
         &.external { 
@@ -85,4 +70,8 @@
           }
 
     }
+
+
+
+
 }
