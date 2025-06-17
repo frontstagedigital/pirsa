@@ -71,8 +71,16 @@
           }
 
     }
+}
 
-
-
-
+/* Remove extra padding when on content page */
+.nsw-container {
+    .nsw-layout__main {
+        .nsw-section {
+            .nsw-container {
+                padding-left: 0;
+                padding-right: 0;
+            }
+        }
+    }
 }
