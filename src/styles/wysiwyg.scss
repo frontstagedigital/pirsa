@@ -1,12 +1,13 @@
 // list styles for page content
-.nsw-layout__main {
+.nsw-layout__main,
+.nsw-wysiwyg-content {
     ul:not(.nsw-tabs__list, .nsw-content-block__list--bare),
     ol {
         padding-left: 2rem;
 
         li {
             list-style: inherit;
-            margin-top: 0;
+            //margin-top: 0;
         }
     }
     // list exception - pagination
@@ -40,7 +41,7 @@
                 font-size: 1.25rem;
                 font-weight: var(--nsw-font-normal);
                 font-style: normal;
-                margin-left: .5rem;
+                margin-left: .2rem;
                 text-decoration: none;
                 vertical-align: sub;
             }
@@ -57,7 +58,7 @@
                 font-size: 1.25rem;
                 font-style: normal;
                 font-weight: var(--nsw-font-normal);
-                margin-left: .5rem;
+                margin-left: .2rem;
                 text-decoration: none;
                 vertical-align: sub;
             }
