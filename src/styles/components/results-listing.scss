@@ -181,7 +181,15 @@
                 &__tree {
                     background-image: url('../image/search/weeds/icons/tree.svg');
                 }                                                              
-                
+                &__annual {
+                    background-image: url('../image/search/weeds/icons/annual.svg');
+                }                  
+                &__aquatic {
+                    background-image: url('../image/search/fishing/icons/aquatic.svg');
+                }
+                &__cactussucculent {
+                    background-image: url('../image/search/fishing/icons/cactussucculent.svg');
+                }                     
             }
         }
 
