@@ -2,7 +2,7 @@
 .nsw-layout__main,
 .nsw-wysiwyg-content {
     ul:not(.nsw-tabs__list, .nsw-content-block__list--bare, .pirsa-content-block ul.nsw-content-block__list),
-    ol {
+    ol:not(.nsw-carousel__list) {
         padding-left: 2rem;
 
         li {
