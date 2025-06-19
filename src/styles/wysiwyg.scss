@@ -32,7 +32,7 @@
 
     a:not(.nsw-button, .nsw-card a, .nsw-list-item a, .pirsa-card a, .nsw-link-list a) {
         //only style link which does not have a span with icon
-        &[target=_blank]:not(:has(span.material-icons)):not([href$='.pdf']),
+        &[target=_blank]:not(:has(span.material-icons)):not([href$='.pdf']):not([href$='.doc']):not([href$='.xls']),
         &.external { 
             &::after {
                 content: "\e89e";
@@ -50,9 +50,12 @@
             }
         }
 
-        &[href$='.pdf'] {
+        &[href$='.pdf'],
+        &[href$='.doc'],
+        &[href$='.docx'],
+        &[href$='.xls'],
+        &[href$='.xlsx'] {
             &::after {
-                content: "\e415";
                 display: inline-block;
                 font-family: "Material Icons";
                 font-size: 1.25rem;
@@ -69,6 +72,28 @@
                 display: none;
             }
         }
+
+        &[href$='.pdf'] {
+            &::after {
+                content: "\e415";
+            }
+        }
+
+        &[href$='.doc'],
+        &[href$='.docx'] {
+            &::after {
+                content: "\e873";
+            }
+        }
+
+        &[href$='.xls'],
+        &[href$='.xlsx'] {
+            &::after {
+                content: "\f1be";
+            }
+        }
+
+
     }
 
     /* target any headings that are the first child of a div and add margin-top */
