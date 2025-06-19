@@ -5,6 +5,12 @@
         text-decoration: none;
     }    
 
+    .nsw-content-block__content {
+        ul,ol {
+            padding-left: 1rem;
+        }
+    }
+
     .nsw-content-block__list {
 
         li {
