@@ -669,8 +669,10 @@ var _inPageNav = require("./components/in-page-nav");
 var _searchJs = require("./components/search.js");
 var _videoBannerControls = require("./components/video-banner-controls");
 var _downloadPdf = require("./components/download-pdf");
+var _imagePopupJs = require("./components/image-popup.js");
+var _gridJs = require("./components/grid.js");
 
-},{"./utils/jquery":"l94D0","./components/header":"fes7L","./components/side-nav":"aBFC8","./components/in-page-nav":"2Bdwy","./components/video-banner-controls":"jhdoO","./components/download-pdf":"4g62A","./components/search.js":"8gcwp"}],"l94D0":[function(require,module,exports,__globalThis) {
+},{"./utils/jquery":"l94D0","./components/header":"fes7L","./components/side-nav":"aBFC8","./components/in-page-nav":"2Bdwy","./components/search.js":"8gcwp","./components/video-banner-controls":"jhdoO","./components/download-pdf":"4g62A","./components/image-popup.js":"3Dl7W","./components/grid.js":"fkXfp"}],"l94D0":[function(require,module,exports,__globalThis) {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 var _jquery = require("jquery");
 var _jqueryDefault = parcelHelpers.interopDefault(_jquery);
@@ -7531,6 +7533,32 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 });
 
+},{}],"8gcwp":[function(require,module,exports,__globalThis) {
+document.addEventListener('DOMContentLoaded', function() {
+    const resultsBarSortform = document.getElementById('js-results-bar-sort');
+    if (resultsBarSortform instanceof HTMLFormElement) {
+        const sortSelect = resultsBarSortform.querySelector('select[name="sort"]');
+        if (sortSelect instanceof HTMLSelectElement) sortSelect.addEventListener('change', function() {
+            // Disable the select element
+            //sortSelect.disabled = true; 
+            // Create and insert the loader
+            const loader = document.createElement('div');
+            loader.className = 'nsw-loader nsw-m-left-xs';
+            loader.innerHTML = '<span aria-hidden="true" class="nsw-loader__circle nsw-loader__circle--sm"></span>';
+            sortSelect.parentNode.insertBefore(loader, sortSelect.nextSibling);
+            // Submit the form
+            resultsBarSortform.submit();
+        });
+    }
+    document.querySelectorAll(".js-filters-item").forEach(function(filterItem) {
+        const filterItemCheckedBox = filterItem.querySelector(".js-filters-item-checkbox:checked");
+        if (filterItemCheckedBox) {
+            const filterItemButton = filterItem.querySelector(".js-filters-item-button");
+            if (filterItemButton && filterItemButton.getAttribute("aria-expanded") === "false") filterItemButton.click();
+        }
+    });
+});
+
 },{}],"jhdoO":[function(require,module,exports,__globalThis) {
 function messageVideoiFrame(vidFunc, vidID, vidSrc) {
     let videoiFrame = document.getElementById(vidID).contentWindow;
@@ -7610,23 +7638,99 @@ if (downloadPDF) downloadPDF.forEach((element)=>{
     new DownloadPDF(element).init();
 });
 
-},{}],"8gcwp":[function(require,module,exports,__globalThis) {
-document.addEventListener('DOMContentLoaded', function() {
-    const form = document.getElementById('js-results-bar-sort');
-    if (form instanceof HTMLFormElement) {
-        const sortSelect = form.querySelector('select[name="sort"]');
-        if (sortSelect instanceof HTMLSelectElement) sortSelect.addEventListener('change', function() {
-            // Disable the select element
-            //sortSelect.disabled = true; 
-            // Create and insert the loader
-            const loader = document.createElement('div');
-            loader.className = 'nsw-loader nsw-m-left-xs';
-            loader.innerHTML = '<span aria-hidden="true" class="nsw-loader__circle nsw-loader__circle--sm"></span>';
-            sortSelect.parentNode.insertBefore(loader, sortSelect.nextSibling);
-            // Submit the form
-            form.submit();
+},{}],"3Dl7W":[function(require,module,exports,__globalThis) {
+document.addEventListener("DOMContentLoaded", function() {
+    const gallery = document.querySelector(".js-image-popup-gallery");
+    const popup = document.querySelector(".js-image-popup");
+    if (!gallery || !popup) return;
+    const popupContainer = popup.querySelector(".image-popup-container");
+    if (!popupContainer) return;
+    // Create loader element once and reuse it
+    const loader = document.createElement("div");
+    loader.className = "nsw-loader";
+    loader.innerHTML = `
+    <span aria-hidden="true" class="nsw-loader__circle"></span>
+    <span role="status" class="nsw-loader__label">Loading</span>
+  `;
+    // Click on gallery item
+    gallery.addEventListener("click", function(e) {
+        const link = e.target.closest(".js-image-popup-gallery-item-link");
+        if (!link) return;
+        e.preventDefault();
+        const imageUrl = link.getAttribute("data-url");
+        const imageTitle = link.getAttribute("data-title");
+        if (!imageUrl) return;
+        // Clear any existing image or loader
+        popupContainer.querySelectorAll("img, .nsw-loader").forEach((el)=>el.remove());
+        // Add loader
+        popupContainer.appendChild(loader.cloneNode(true));
+        // Show popup
+        popup.style.display = "flex";
+        // Preload image
+        const img = new Image();
+        img.src = imageUrl;
+        img.alt = imageTitle || "";
+        img.title = imageTitle || "";
+        img.onload = function() {
+            popupContainer.querySelector(".nsw-loader")?.remove();
+            popupContainer.appendChild(img);
+        };
+        img.onerror = function() {
+            popupContainer.querySelector(".nsw-loader")?.remove();
+            console.error("Image failed to load:", imageUrl);
+        };
+    });
+    // Close on background click or close button
+    popup.addEventListener("click", function(e) {
+        const isCloseButton = e.target.closest(".image-popup-close-button");
+        const isOutsideImage = !e.target.closest("img");
+        if (isCloseButton || isOutsideImage) {
+            popupContainer.querySelectorAll("img, .nsw-loader").forEach((el)=>el.remove());
+            popup.style.display = "none";
+        }
+    });
+    // Close on Escape key
+    document.addEventListener("keydown", function(e) {
+        if (e.key === "Escape" && getComputedStyle(popup).display === "flex") {
+            popupContainer.querySelectorAll("img, .nsw-loader").forEach((el)=>el.remove());
+            popup.style.display = "none";
+        }
+    });
+});
+
+},{}],"fkXfp":[function(require,module,exports,__globalThis) {
+document.addEventListener("DOMContentLoaded", function() {
+    const gridSelector = '.js-nsw-grid-auto';
+    const colSelector = '.nsw-col';
+    const grids = document.querySelectorAll(gridSelector);
+    if (!grids.length) return;
+    grids.forEach((grid)=>{
+        // collect each .nsw-col’s element, breakpoint and its existing size class
+        const cols = Array.from(grid.querySelectorAll(colSelector)).map((col)=>{
+            const matches = Array.from(col.classList).map((c)=>c.match(/^nsw-col-([a-z]+)-(\d+)$/)).filter(Boolean);
+            if (!matches.length) return null;
+            const [, bp, size] = matches.pop();
+            return {
+                el: col,
+                bp,
+                oldClass: `nsw-col-${bp}-${size}`
+            };
+        }).filter(Boolean);
+        const count = cols.length;
+        if (count <= 1) return; // nothing to do if only one column
+        // pick new size based on number of columns
+        let newSize;
+        if (count === 2) newSize = 6;
+        else if (count === 3) newSize = 4;
+        else if (count === 4) newSize = 3;
+        else if (count === 5) newSize = 4;
+        else /* count >= 6 */ newSize = 3;
+        // swap out each col’s old class for the new one
+        cols.forEach(({ el, bp, oldClass })=>{
+            el.classList.remove(oldClass);
+            el.classList.add(`nsw-col-${bp}-${newSize}`);
         });
-    }
+    });
 });
 
 },{}]},["56AJI","lhpGb"], "lhpGb", "parcelRequire54eb")
