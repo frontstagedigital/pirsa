@@ -1,7 +1,7 @@
 // list styles for page content
 .nsw-layout__main,
 .nsw-wysiwyg-content {
-    ul:not(.nsw-tabs__list, .nsw-content-block__list--bare, .pirsa-content-block ul.nsw-content-block__list),
+    ul:not(.nsw-tabs__list, .nsw-content-block__list--bare, .pirsa-content-block ul.nsw-content-block__list, .pirsa-content-block .nsw-content-block__content ul),
     ol:not(.nsw-carousel__list) {
         padding-left: 2rem;
 
