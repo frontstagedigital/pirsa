@@ -8,6 +8,9 @@
     .nsw-content-block__content {
         ul,ol {
             padding-left: 1rem;
+            li {
+                list-style: inherit;
+            }
         }
     }
 
