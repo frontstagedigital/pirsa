@@ -21,3 +21,12 @@
     }
 
 }
+
+.landing .nsw-section:has(.pirsa-breadcrumbs),
+.landing main.nsw-layout__main {
+    background-color: var(--pirsa-accent-light);
+}
+
+.bg-white {
+      background-color: #ffffff;
+  }
