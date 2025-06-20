@@ -1,6 +1,6 @@
 // Handles the landing pages background styling
 document.addEventListener("DOMContentLoaded", () => {
-  if (body.classList.contains("landing") && !body.classList.contains("landing--no-bg")) {
+  if (document.body.classList.contains("landing") && !document.body.classList.contains("landing--no-bg")) {
   const sections = document.querySelectorAll("body.landing main#content .nsw-section");
 
   // First pass: check for content and apply 'no-padding' to empty wrapper sections
