@@ -1,19 +1,30 @@
 // Handles the landing pages background styling
-
 document.addEventListener("DOMContentLoaded", () => {
-  const main = document.querySelector("body.landing main#content");
-  if (!main) return; // not a landing page
+  const sections = document.querySelectorAll("main#content .nsw-section");
 
-  const sections = document.querySelectorAll("main .nsw-section");
-  let visibleIndex = 0;
-
+  // First pass: check for content and apply 'no-padding' to empty wrapper sections
   sections.forEach(section => {
-    // check height for visible content
-    const height = section.getBoundingClientRect().height;
-    console.log(`Section height: ${height}`);
+    section.classList.remove("no-padding");
 
-    // Skip empty sections
-    if (height > 0) {
+    const container = section.querySelector(":scope > .nsw-container");
+
+    // checks for html elements or text content in the container
+    if (container) {
+      const hasContent = Array.from(container.childNodes).some(node =>
+        node.nodeType === Node.ELEMENT_NODE ||
+        (node.nodeType === Node.TEXT_NODE && node.textContent.trim() !== "")
+      );
+
+      if (!hasContent) {
+        section.classList.add("no-padding");
+      }
+    }
+  });
+
+  // Second pass: apply alternating backgrounds only to non-empty sections
+  let visibleIndex = 0;
+  sections.forEach(section => {
+    if (!section.classList.contains("no-padding")) {
       if (visibleIndex % 2 === 0) {
         section.classList.add("pirsa-section");
       } else {
