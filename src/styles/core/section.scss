@@ -22,9 +22,22 @@
 
 }
 
+// handle background colors
 .landing .nsw-section:has(.pirsa-breadcrumbs),
 .landing main.nsw-layout__main {
     background-color: var(--pirsa-accent-light);
+}
+
+.landing main {
+    padding-bottom: 0;
+}
+
+.landing footer {
+    margin-top: 0;
+}
+
+.landing main:last-child {
+    padding-bottom: 2rem;
 }
 
 .bg-white {
