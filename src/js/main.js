@@ -8,3 +8,4 @@ import "./components/video-banner-controls";
 import "./components/download-pdf"; 
 import "./components/image-popup.js"; 
 import "./components/grid.js"; 
+import "./components/landing.js";
