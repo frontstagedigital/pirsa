@@ -28,6 +28,11 @@
     background-color: var(--pirsa-accent-light);
 }
 
+.landing--no-bg .nsw-section:has(.pirsa-breadcrumbs),
+.landing--no-bg main.nsw-layout__main {
+    background-color: #fff;
+}
+
 .landing main {
     padding-bottom: 0;
 }
