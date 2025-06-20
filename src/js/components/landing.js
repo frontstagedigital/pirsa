@@ -1,6 +1,7 @@
 // Handles the landing pages background styling
 document.addEventListener("DOMContentLoaded", () => {
-  const sections = document.querySelectorAll("main#content .nsw-section");
+
+  const sections = document.querySelectorAll("body.landing main#content .nsw-section");
 
   // First pass: check for content and apply 'no-padding' to empty wrapper sections
   sections.forEach(section => {
