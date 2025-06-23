@@ -329,3 +329,11 @@
 .view-all-events {
     padding-top: 1rem;
 }
+
+.person-cards[data-showDescription="No"] .nsw-card__copy p {
+    display: none;
+}
+
+.person-cards[data-imageAlign="center"] .pirsa-card__image {
+    align-self: center;
+}
