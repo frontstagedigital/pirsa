@@ -97,7 +97,7 @@
     }
 
     /* target any headings that are the first child of a div and add margin-top */
-    div:not(.nsw-col) {
+    div:not(.nsw-col, .nsw-card__copy) {
         > :is(h2, h3, h4, h5, h6, .nsw-h2, .nsw-h3, .nsw-h4, .nsw-h5, .nsw-h6) {
             &:first-child {
                 margin-top: 2rem;
