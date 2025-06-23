@@ -671,8 +671,9 @@ var _videoBannerControls = require("./components/video-banner-controls");
 var _downloadPdf = require("./components/download-pdf");
 var _imagePopupJs = require("./components/image-popup.js");
 var _gridJs = require("./components/grid.js");
+var _landingJs = require("./components/landing.js");
 
-},{"./utils/jquery":"l94D0","./components/header":"fes7L","./components/side-nav":"aBFC8","./components/in-page-nav":"2Bdwy","./components/search.js":"8gcwp","./components/video-banner-controls":"jhdoO","./components/download-pdf":"4g62A","./components/image-popup.js":"3Dl7W","./components/grid.js":"fkXfp"}],"l94D0":[function(require,module,exports,__globalThis) {
+},{"./utils/jquery":"l94D0","./components/header":"fes7L","./components/side-nav":"aBFC8","./components/in-page-nav":"2Bdwy","./components/search.js":"8gcwp","./components/video-banner-controls":"jhdoO","./components/download-pdf":"4g62A","./components/image-popup.js":"3Dl7W","./components/grid.js":"fkXfp","./components/landing.js":"ayXt9"}],"l94D0":[function(require,module,exports,__globalThis) {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 var _jquery = require("jquery");
 var _jqueryDefault = parcelHelpers.interopDefault(_jquery);
@@ -7731,6 +7732,33 @@ document.addEventListener("DOMContentLoaded", function() {
             el.classList.add(`nsw-col-${bp}-${newSize}`);
         });
     });
+});
+
+},{}],"ayXt9":[function(require,module,exports,__globalThis) {
+// Handles the landing pages background styling
+document.addEventListener("DOMContentLoaded", ()=>{
+    if (document.body.classList.contains("landing") && !document.body.classList.contains("landing--no-bg")) {
+        const sections = document.querySelectorAll("body.landing main#content .nsw-section");
+        // First pass: check for content and apply 'no-padding' to empty wrapper sections
+        sections.forEach((section)=>{
+            section.classList.remove("no-padding");
+            const container = section.querySelector(":scope > .nsw-container");
+            // checks for html elements or text content in the container
+            if (container) {
+                const hasContent = Array.from(container.childNodes).some((node)=>node.nodeType === Node.ELEMENT_NODE || node.nodeType === Node.TEXT_NODE && node.textContent.trim() !== "");
+                if (!hasContent) section.classList.add("no-padding");
+            }
+        });
+        // Second pass: apply alternating backgrounds only to non-empty sections
+        let visibleIndex = 0;
+        sections.forEach((section)=>{
+            if (!section.classList.contains("no-padding")) {
+                if (visibleIndex % 2 === 0) section.classList.add("pirsa-section");
+                else section.classList.add("bg-white");
+                visibleIndex++;
+            }
+        });
+    }
 });
 
 },{}]},["56AJI","lhpGb"], "lhpGb", "parcelRequire54eb")
