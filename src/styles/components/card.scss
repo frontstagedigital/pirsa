@@ -330,10 +330,17 @@
     padding-top: 1rem;
 }
 
+// person tiles cct
 .person-cards[data-showDescription="No"] .nsw-card__copy p {
     display: none;
 }
 
 .person-cards[data-imageAlign="center"] .pirsa-card__image {
     align-self: center;
+}
+
+@include breakpoint('md') { 
+    .nsw-section:has(.person-cards) {
+        padding: 1rem 0;
+    }
 }
