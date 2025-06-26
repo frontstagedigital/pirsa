@@ -54,11 +54,7 @@
 }
 
 // consecutive single accordion spacing
-section.nsw-section.no-padding:has(.nsw-accordion) {
+section.accordion-single {
     margin-top: 2rem;
-}
-
-
-section.nsw-section.no-padding:has(.nsw-accordion) + section.nsw-section.no-padding:has(.nsw-accordion) {
-    margin-top: 0.5rem;
+    margin-bottom: 2rem;
 }

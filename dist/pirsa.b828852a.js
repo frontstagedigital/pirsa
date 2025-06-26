@@ -672,8 +672,9 @@ var _downloadPdf = require("./components/download-pdf");
 var _imagePopupJs = require("./components/image-popup.js");
 var _gridJs = require("./components/grid.js");
 var _landingJs = require("./components/landing.js");
+var _singleAccordionJs = require("./components/single-accordion.js");
 
-},{"./utils/jquery":"l94D0","./components/header":"fes7L","./components/side-nav":"aBFC8","./components/in-page-nav":"2Bdwy","./components/search.js":"8gcwp","./components/video-banner-controls":"jhdoO","./components/download-pdf":"4g62A","./components/image-popup.js":"3Dl7W","./components/grid.js":"fkXfp","./components/landing.js":"ayXt9"}],"l94D0":[function(require,module,exports,__globalThis) {
+},{"./utils/jquery":"l94D0","./components/header":"fes7L","./components/side-nav":"aBFC8","./components/in-page-nav":"2Bdwy","./components/search.js":"8gcwp","./components/video-banner-controls":"jhdoO","./components/download-pdf":"4g62A","./components/image-popup.js":"3Dl7W","./components/grid.js":"fkXfp","./components/landing.js":"ayXt9","./components/single-accordion.js":"7Ad0j"}],"l94D0":[function(require,module,exports,__globalThis) {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 var _jquery = require("jquery");
 var _jqueryDefault = parcelHelpers.interopDefault(_jquery);
@@ -7759,6 +7760,26 @@ document.addEventListener("DOMContentLoaded", ()=>{
             }
         });
     }
+});
+
+},{}],"7Ad0j":[function(require,module,exports,__globalThis) {
+// handles single accordion marigns
+document.addEventListener('DOMContentLoaded', ()=>{
+    document.querySelectorAll('section.accordion-single').forEach((section)=>{
+        // Get previous and next siblings
+        const prev = section.previousElementSibling;
+        const next = section.nextElementSibling;
+        // ---- TOP MARGIN LOGIC ----
+        if (prev?.matches('section.nsw-section.no-padding') && prev.querySelector('.nsw-container')?.innerHTML.trim() === '') {
+            const prevPrev = prev.previousElementSibling;
+            if (prevPrev?.classList.contains('accordion-single')) section.style.marginTop = '0.5rem';
+        }
+        // ---- BOTTOM MARGIN LOGIC ----
+        if (next?.matches('section.nsw-section.no-padding') && next.querySelector('.nsw-container')?.innerHTML.trim() === '') {
+            const nextNext = next.nextElementSibling;
+            if (nextNext?.classList.contains('accordion-single')) section.style.marginBottom = '0.5rem';
+        }
+    });
 });
 
 },{}]},["56AJI","lhpGb"], "lhpGb", "parcelRequire54eb")

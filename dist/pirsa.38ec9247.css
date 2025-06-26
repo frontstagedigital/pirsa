@@ -13841,11 +13841,12 @@ a:active {
   border: 0;
 }
 
-section.nsw-section.no-padding:has(.nsw-accordion) {
+section.accordion-single {
   margin-top: 2rem;
+  margin-bottom: 2rem;
 }
 
-section.nsw-section.no-padding:has(.nsw-accordion) + section.nsw-section.no-padding:has(.nsw-accordion), .pirsa-news-article {
+.pirsa-news-article {
   margin-top: .5rem;
 }
 
@@ -14228,6 +14229,20 @@ section.nsw-section.no-padding:has(.nsw-accordion) + section.nsw-section.no-padd
   padding-top: 1rem;
 }
 
+.person-cards[data-showDescription="No"] .nsw-card__copy p {
+  display: none;
+}
+
+.person-cards[data-imageAlign="center"] .pirsa-card__image {
+  align-self: center;
+}
+
+@media (width >= 48rem) {
+  .nsw-section:has(.person-cards) {
+    padding: 1rem 0;
+  }
+}
+
 .pirsa-carousel {
   --carousel-item-auto-size: 320px;
 }
@@ -14393,6 +14408,10 @@ section.nsw-section.no-padding:has(.nsw-accordion) + section.nsw-section.no-padd
   line-height: var(--nsw-line-height-md-desktop);
   border-bottom: 1px solid var(--nsw-grey-03);
   padding-bottom: 1.5rem;
+}
+
+.search-results .pirsa-content-block .nsw-content-block__content ul, .search-results .pirsa-content-block .nsw-content-block__content ol {
+  padding-left: 0;
 }
 
 .search-results .pirsa-content-block .nsw-content-block__list {
@@ -15539,13 +15558,14 @@ ul .nsw-main-nav__sub-nav__mega-menu__group__list-links li a {
 .translate-mobile .translate__languages {
   background: #fff;
   border: 1px solid #000;
-  border-radius: .25rem;
+  border-bottom: none;
+  border-radius: .25rem .25rem 0 0;
   width: 100%;
   height: 250px;
   padding-left: 0;
   display: none;
   position: absolute;
-  bottom: 32px;
+  bottom: 16px;
   overflow-y: scroll;
 }
 
@@ -15562,6 +15582,11 @@ ul .nsw-main-nav__sub-nav__mega-menu__group__list-links li a {
 .translate-mobile .nsw-form__select {
   cursor: pointer;
   background: url("data:image/svg+xml,%3Csvg fill='%23333333' version='1.1' xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 32 32'%3E%3Cpath d='M16 26l16-16-4-4-12 12-12-12-4 4 15 16z'%3E%3C/path%3E%3C/svg%3E") right 1rem center no-repeat, #fff !important;
+}
+
+.translate-mobile.active {
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
 }
 
 .translate-mobile.active .translate__container {
@@ -16192,6 +16217,7 @@ ul .nsw-main-nav__sub-nav__mega-menu__group__list-links li a {
 
 .nsw-tabs__list a {
   color: var(--pirsa-grey-tabs);
+  z-index: 90;
 }
 
 .nsw-tabs__list a.active:after {
@@ -16369,32 +16395,32 @@ ul .nsw-main-nav__sub-nav__mega-menu__group__list-links li a {
   }
 }
 
-.nsw-layout__main ul:not(.nsw-tabs__list, .nsw-content-block__list--bare, .pirsa-content-block ul.nsw-content-block__list, .pirsa-content-block .nsw-content-block__content ul), .nsw-layout__main ol:not(.nsw-carousel__list), .nsw-wysiwyg-content ul:not(.nsw-tabs__list, .nsw-content-block__list--bare, .pirsa-content-block ul.nsw-content-block__list, .pirsa-content-block .nsw-content-block__content ul), .nsw-wysiwyg-content ol:not(.nsw-carousel__list) {
+body.content ul:not(.pirsa-footer__link-list, .nsw-main-nav__list, .nsw-main-nav__sub-nav__mega-menu__group__list-links, .nsw-main-nav__mobile-extra-links ul, .nsw-side-nav ul, .nsw-main-nav__sub-list, .copyright-link-list, .nsw-in-page-nav ul, .nsw-tabs__list, .nsw-content-block__list--bare, .pirsa-content-block ul.nsw-content-block__list, .pirsa-content-block .nsw-content-block__content ul, .pirsa-link-list ul), body.content ol:not(.nsw-carousel__list, .nsw-breadcrumbs ol), .nsw-wysiwyg-content ul:not(.pirsa-footer__link-list, .nsw-main-nav__list, .nsw-main-nav__sub-nav__mega-menu__group__list-links, .nsw-main-nav__mobile-extra-links ul, .nsw-side-nav ul, .nsw-main-nav__sub-list, .copyright-link-list, .nsw-in-page-nav ul, .nsw-tabs__list, .nsw-content-block__list--bare, .pirsa-content-block ul.nsw-content-block__list, .pirsa-content-block .nsw-content-block__content ul, .pirsa-link-list ul), .nsw-wysiwyg-content ol:not(.nsw-carousel__list, .nsw-breadcrumbs ol) {
   padding-left: 2rem;
 }
 
-.nsw-layout__main ul:not(.nsw-tabs__list, .nsw-content-block__list--bare, .pirsa-content-block ul.nsw-content-block__list, .pirsa-content-block .nsw-content-block__content ul) li, .nsw-layout__main ol:not(.nsw-carousel__list) li, .nsw-wysiwyg-content ul:not(.nsw-tabs__list, .nsw-content-block__list--bare, .pirsa-content-block ul.nsw-content-block__list, .pirsa-content-block .nsw-content-block__content ul) li, .nsw-wysiwyg-content ol:not(.nsw-carousel__list) li {
+body.content ul:not(.pirsa-footer__link-list, .nsw-main-nav__list, .nsw-main-nav__sub-nav__mega-menu__group__list-links, .nsw-main-nav__mobile-extra-links ul, .nsw-side-nav ul, .nsw-main-nav__sub-list, .copyright-link-list, .nsw-in-page-nav ul, .nsw-tabs__list, .nsw-content-block__list--bare, .pirsa-content-block ul.nsw-content-block__list, .pirsa-content-block .nsw-content-block__content ul, .pirsa-link-list ul) li, body.content ol:not(.nsw-carousel__list, .nsw-breadcrumbs ol) li, .nsw-wysiwyg-content ul:not(.pirsa-footer__link-list, .nsw-main-nav__list, .nsw-main-nav__sub-nav__mega-menu__group__list-links, .nsw-main-nav__mobile-extra-links ul, .nsw-side-nav ul, .nsw-main-nav__sub-list, .copyright-link-list, .nsw-in-page-nav ul, .nsw-tabs__list, .nsw-content-block__list--bare, .pirsa-content-block ul.nsw-content-block__list, .pirsa-content-block .nsw-content-block__content ul, .pirsa-link-list ul) li, .nsw-wysiwyg-content ol:not(.nsw-carousel__list, .nsw-breadcrumbs ol) li {
   list-style: inherit;
 }
 
-.nsw-layout__main .nsw-pagination ul, .nsw-wysiwyg-content .nsw-pagination ul {
+body.content .nsw-pagination ul, .nsw-wysiwyg-content .nsw-pagination ul {
   padding: 0;
 }
 
-.nsw-layout__main .nsw-pagination ul li, .nsw-wysiwyg-content .nsw-pagination ul li {
+body.content .nsw-pagination ul li, .nsw-wysiwyg-content .nsw-pagination ul li {
   padding-left: 0;
   list-style: none;
 }
 
-.nsw-layout__main hr, .nsw-wysiwyg-content hr {
+body.content hr, .nsw-wysiwyg-content hr {
   background-color: var(--nsw-grey-03);
 }
 
-.nsw-layout__main hr:has( + h2), .nsw-wysiwyg-content hr:has( + h2) {
+body.content hr:has( + h2), .nsw-wysiwyg-content hr:has( + h2) {
   margin: 2rem 0;
 }
 
-.nsw-layout__main a:not(.nsw-button, .nsw-card a, .nsw-list-item a, .pirsa-card a, .nsw-link-list a)[target="_blank"]:not(:has(span.material-icons)):not([href$=".pdf"]):not([href$=".doc"]):not([href$=".xls"]):after, .nsw-layout__main a:not(.nsw-button, .nsw-card a, .nsw-list-item a, .pirsa-card a, .nsw-link-list a).external:after, .nsw-wysiwyg-content a:not(.nsw-button, .nsw-card a, .nsw-list-item a, .pirsa-card a, .nsw-link-list a)[target="_blank"]:not(:has(span.material-icons)):not([href$=".pdf"]):not([href$=".doc"]):not([href$=".xls"]):after, .nsw-wysiwyg-content a:not(.nsw-button, .nsw-card a, .nsw-list-item a, .pirsa-card a, .nsw-link-list a).external:after {
+body.content a:not(.nsw-button, .nsw-icon-button, .nsw-card a, .nsw-list-item a, .pirsa-card a, .nsw-link-list a)[target="_blank"]:not(:has(span.material-icons)):not([href$=".pdf"]):not([href$=".doc"]):not([href$=".xls"]):not([href$=".docx"]):not([href$=".xlsx"]):after, body.content a:not(.nsw-button, .nsw-icon-button, .nsw-card a, .nsw-list-item a, .pirsa-card a, .nsw-link-list a).external:after, .nsw-wysiwyg-content a:not(.nsw-button, .nsw-icon-button, .nsw-card a, .nsw-list-item a, .pirsa-card a, .nsw-link-list a)[target="_blank"]:not(:has(span.material-icons)):not([href$=".pdf"]):not([href$=".doc"]):not([href$=".xls"]):not([href$=".docx"]):not([href$=".xlsx"]):after, .nsw-wysiwyg-content a:not(.nsw-button, .nsw-icon-button, .nsw-card a, .nsw-list-item a, .pirsa-card a, .nsw-link-list a).external:after {
   content: "";
   font-family: Material Icons;
   font-size: 1.25rem;
@@ -16406,11 +16432,11 @@ ul .nsw-main-nav__sub-nav__mega-menu__group__list-links li a {
   display: inline-block;
 }
 
-.nsw-layout__main a:not(.nsw-button, .nsw-card a, .nsw-list-item a, .pirsa-card a, .nsw-link-list a)[target="_blank"]:not(:has(span.material-icons)):not([href$=".pdf"]):not([href$=".doc"]):not([href$=".xls"]):hover, .nsw-layout__main a:not(.nsw-button, .nsw-card a, .nsw-list-item a, .pirsa-card a, .nsw-link-list a).external:hover, .nsw-wysiwyg-content a:not(.nsw-button, .nsw-card a, .nsw-list-item a, .pirsa-card a, .nsw-link-list a)[target="_blank"]:not(:has(span.material-icons)):not([href$=".pdf"]):not([href$=".doc"]):not([href$=".xls"]):hover, .nsw-wysiwyg-content a:not(.nsw-button, .nsw-card a, .nsw-list-item a, .pirsa-card a, .nsw-link-list a).external:hover {
+body.content a:not(.nsw-button, .nsw-icon-button, .nsw-card a, .nsw-list-item a, .pirsa-card a, .nsw-link-list a)[target="_blank"]:not(:has(span.material-icons)):not([href$=".pdf"]):not([href$=".doc"]):not([href$=".xls"]):not([href$=".docx"]):not([href$=".xlsx"]):hover, body.content a:not(.nsw-button, .nsw-icon-button, .nsw-card a, .nsw-list-item a, .pirsa-card a, .nsw-link-list a).external:hover, .nsw-wysiwyg-content a:not(.nsw-button, .nsw-icon-button, .nsw-card a, .nsw-list-item a, .pirsa-card a, .nsw-link-list a)[target="_blank"]:not(:has(span.material-icons)):not([href$=".pdf"]):not([href$=".doc"]):not([href$=".xls"]):not([href$=".docx"]):not([href$=".xlsx"]):hover, .nsw-wysiwyg-content a:not(.nsw-button, .nsw-icon-button, .nsw-card a, .nsw-list-item a, .pirsa-card a, .nsw-link-list a).external:hover {
   outline: 0;
 }
 
-.nsw-layout__main a:not(.nsw-button, .nsw-card a, .nsw-list-item a, .pirsa-card a, .nsw-link-list a)[href$=".pdf"]:after, .nsw-layout__main a:not(.nsw-button, .nsw-card a, .nsw-list-item a, .pirsa-card a, .nsw-link-list a)[href$=".doc"]:after, .nsw-layout__main a:not(.nsw-button, .nsw-card a, .nsw-list-item a, .pirsa-card a, .nsw-link-list a)[href$=".docx"]:after, .nsw-layout__main a:not(.nsw-button, .nsw-card a, .nsw-list-item a, .pirsa-card a, .nsw-link-list a)[href$=".xls"]:after, .nsw-layout__main a:not(.nsw-button, .nsw-card a, .nsw-list-item a, .pirsa-card a, .nsw-link-list a)[href$=".xlsx"]:after, .nsw-wysiwyg-content a:not(.nsw-button, .nsw-card a, .nsw-list-item a, .pirsa-card a, .nsw-link-list a)[href$=".pdf"]:after, .nsw-wysiwyg-content a:not(.nsw-button, .nsw-card a, .nsw-list-item a, .pirsa-card a, .nsw-link-list a)[href$=".doc"]:after, .nsw-wysiwyg-content a:not(.nsw-button, .nsw-card a, .nsw-list-item a, .pirsa-card a, .nsw-link-list a)[href$=".docx"]:after, .nsw-wysiwyg-content a:not(.nsw-button, .nsw-card a, .nsw-list-item a, .pirsa-card a, .nsw-link-list a)[href$=".xls"]:after, .nsw-wysiwyg-content a:not(.nsw-button, .nsw-card a, .nsw-list-item a, .pirsa-card a, .nsw-link-list a)[href$=".xlsx"]:after {
+body.content a:not(.nsw-button, .nsw-icon-button, .nsw-card a, .nsw-list-item a, .pirsa-card a, .nsw-link-list a)[href$=".pdf"]:after, body.content a:not(.nsw-button, .nsw-icon-button, .nsw-card a, .nsw-list-item a, .pirsa-card a, .nsw-link-list a)[href$=".doc"]:after, body.content a:not(.nsw-button, .nsw-icon-button, .nsw-card a, .nsw-list-item a, .pirsa-card a, .nsw-link-list a)[href$=".docx"]:after, body.content a:not(.nsw-button, .nsw-icon-button, .nsw-card a, .nsw-list-item a, .pirsa-card a, .nsw-link-list a)[href$=".xls"]:after, body.content a:not(.nsw-button, .nsw-icon-button, .nsw-card a, .nsw-list-item a, .pirsa-card a, .nsw-link-list a)[href$=".xlsx"]:after, .nsw-wysiwyg-content a:not(.nsw-button, .nsw-icon-button, .nsw-card a, .nsw-list-item a, .pirsa-card a, .nsw-link-list a)[href$=".pdf"]:after, .nsw-wysiwyg-content a:not(.nsw-button, .nsw-icon-button, .nsw-card a, .nsw-list-item a, .pirsa-card a, .nsw-link-list a)[href$=".doc"]:after, .nsw-wysiwyg-content a:not(.nsw-button, .nsw-icon-button, .nsw-card a, .nsw-list-item a, .pirsa-card a, .nsw-link-list a)[href$=".docx"]:after, .nsw-wysiwyg-content a:not(.nsw-button, .nsw-icon-button, .nsw-card a, .nsw-list-item a, .pirsa-card a, .nsw-link-list a)[href$=".xls"]:after, .nsw-wysiwyg-content a:not(.nsw-button, .nsw-icon-button, .nsw-card a, .nsw-list-item a, .pirsa-card a, .nsw-link-list a)[href$=".xlsx"]:after {
   font-family: Material Icons;
   font-size: 1.25rem;
   font-style: normal;
@@ -16421,28 +16447,32 @@ ul .nsw-main-nav__sub-nav__mega-menu__group__list-links li a {
   display: inline-block;
 }
 
-.nsw-layout__main a:not(.nsw-button, .nsw-card a, .nsw-list-item a, .pirsa-card a, .nsw-link-list a)[href$=".pdf"]:hover, .nsw-layout__main a:not(.nsw-button, .nsw-card a, .nsw-list-item a, .pirsa-card a, .nsw-link-list a)[href$=".doc"]:hover, .nsw-layout__main a:not(.nsw-button, .nsw-card a, .nsw-list-item a, .pirsa-card a, .nsw-link-list a)[href$=".docx"]:hover, .nsw-layout__main a:not(.nsw-button, .nsw-card a, .nsw-list-item a, .pirsa-card a, .nsw-link-list a)[href$=".xls"]:hover, .nsw-layout__main a:not(.nsw-button, .nsw-card a, .nsw-list-item a, .pirsa-card a, .nsw-link-list a)[href$=".xlsx"]:hover, .nsw-wysiwyg-content a:not(.nsw-button, .nsw-card a, .nsw-list-item a, .pirsa-card a, .nsw-link-list a)[href$=".pdf"]:hover, .nsw-wysiwyg-content a:not(.nsw-button, .nsw-card a, .nsw-list-item a, .pirsa-card a, .nsw-link-list a)[href$=".doc"]:hover, .nsw-wysiwyg-content a:not(.nsw-button, .nsw-card a, .nsw-list-item a, .pirsa-card a, .nsw-link-list a)[href$=".docx"]:hover, .nsw-wysiwyg-content a:not(.nsw-button, .nsw-card a, .nsw-list-item a, .pirsa-card a, .nsw-link-list a)[href$=".xls"]:hover, .nsw-wysiwyg-content a:not(.nsw-button, .nsw-card a, .nsw-list-item a, .pirsa-card a, .nsw-link-list a)[href$=".xlsx"]:hover {
+body.content a:not(.nsw-button, .nsw-icon-button, .nsw-card a, .nsw-list-item a, .pirsa-card a, .nsw-link-list a)[href$=".pdf"]:hover, body.content a:not(.nsw-button, .nsw-icon-button, .nsw-card a, .nsw-list-item a, .pirsa-card a, .nsw-link-list a)[href$=".doc"]:hover, body.content a:not(.nsw-button, .nsw-icon-button, .nsw-card a, .nsw-list-item a, .pirsa-card a, .nsw-link-list a)[href$=".docx"]:hover, body.content a:not(.nsw-button, .nsw-icon-button, .nsw-card a, .nsw-list-item a, .pirsa-card a, .nsw-link-list a)[href$=".xls"]:hover, body.content a:not(.nsw-button, .nsw-icon-button, .nsw-card a, .nsw-list-item a, .pirsa-card a, .nsw-link-list a)[href$=".xlsx"]:hover, .nsw-wysiwyg-content a:not(.nsw-button, .nsw-icon-button, .nsw-card a, .nsw-list-item a, .pirsa-card a, .nsw-link-list a)[href$=".pdf"]:hover, .nsw-wysiwyg-content a:not(.nsw-button, .nsw-icon-button, .nsw-card a, .nsw-list-item a, .pirsa-card a, .nsw-link-list a)[href$=".doc"]:hover, .nsw-wysiwyg-content a:not(.nsw-button, .nsw-icon-button, .nsw-card a, .nsw-list-item a, .pirsa-card a, .nsw-link-list a)[href$=".docx"]:hover, .nsw-wysiwyg-content a:not(.nsw-button, .nsw-icon-button, .nsw-card a, .nsw-list-item a, .pirsa-card a, .nsw-link-list a)[href$=".xls"]:hover, .nsw-wysiwyg-content a:not(.nsw-button, .nsw-icon-button, .nsw-card a, .nsw-list-item a, .pirsa-card a, .nsw-link-list a)[href$=".xlsx"]:hover {
   outline: 0;
 }
 
-.nsw-layout__main a:not(.nsw-button, .nsw-card a, .nsw-list-item a, .pirsa-card a, .nsw-link-list a)[href$=".pdf"]:before, .nsw-layout__main a:not(.nsw-button, .nsw-card a, .nsw-list-item a, .pirsa-card a, .nsw-link-list a)[href$=".doc"]:before, .nsw-layout__main a:not(.nsw-button, .nsw-card a, .nsw-list-item a, .pirsa-card a, .nsw-link-list a)[href$=".docx"]:before, .nsw-layout__main a:not(.nsw-button, .nsw-card a, .nsw-list-item a, .pirsa-card a, .nsw-link-list a)[href$=".xls"]:before, .nsw-layout__main a:not(.nsw-button, .nsw-card a, .nsw-list-item a, .pirsa-card a, .nsw-link-list a)[href$=".xlsx"]:before, .nsw-wysiwyg-content a:not(.nsw-button, .nsw-card a, .nsw-list-item a, .pirsa-card a, .nsw-link-list a)[href$=".pdf"]:before, .nsw-wysiwyg-content a:not(.nsw-button, .nsw-card a, .nsw-list-item a, .pirsa-card a, .nsw-link-list a)[href$=".doc"]:before, .nsw-wysiwyg-content a:not(.nsw-button, .nsw-card a, .nsw-list-item a, .pirsa-card a, .nsw-link-list a)[href$=".docx"]:before, .nsw-wysiwyg-content a:not(.nsw-button, .nsw-card a, .nsw-list-item a, .pirsa-card a, .nsw-link-list a)[href$=".xls"]:before, .nsw-wysiwyg-content a:not(.nsw-button, .nsw-card a, .nsw-list-item a, .pirsa-card a, .nsw-link-list a)[href$=".xlsx"]:before {
+body.content a:not(.nsw-button, .nsw-icon-button, .nsw-card a, .nsw-list-item a, .pirsa-card a, .nsw-link-list a)[href$=".pdf"]:before, body.content a:not(.nsw-button, .nsw-icon-button, .nsw-card a, .nsw-list-item a, .pirsa-card a, .nsw-link-list a)[href$=".doc"]:before, body.content a:not(.nsw-button, .nsw-icon-button, .nsw-card a, .nsw-list-item a, .pirsa-card a, .nsw-link-list a)[href$=".docx"]:before, body.content a:not(.nsw-button, .nsw-icon-button, .nsw-card a, .nsw-list-item a, .pirsa-card a, .nsw-link-list a)[href$=".xls"]:before, body.content a:not(.nsw-button, .nsw-icon-button, .nsw-card a, .nsw-list-item a, .pirsa-card a, .nsw-link-list a)[href$=".xlsx"]:before, .nsw-wysiwyg-content a:not(.nsw-button, .nsw-icon-button, .nsw-card a, .nsw-list-item a, .pirsa-card a, .nsw-link-list a)[href$=".pdf"]:before, .nsw-wysiwyg-content a:not(.nsw-button, .nsw-icon-button, .nsw-card a, .nsw-list-item a, .pirsa-card a, .nsw-link-list a)[href$=".doc"]:before, .nsw-wysiwyg-content a:not(.nsw-button, .nsw-icon-button, .nsw-card a, .nsw-list-item a, .pirsa-card a, .nsw-link-list a)[href$=".docx"]:before, .nsw-wysiwyg-content a:not(.nsw-button, .nsw-icon-button, .nsw-card a, .nsw-list-item a, .pirsa-card a, .nsw-link-list a)[href$=".xls"]:before, .nsw-wysiwyg-content a:not(.nsw-button, .nsw-icon-button, .nsw-card a, .nsw-list-item a, .pirsa-card a, .nsw-link-list a)[href$=".xlsx"]:before {
   display: none;
 }
 
-.nsw-layout__main a:not(.nsw-button, .nsw-card a, .nsw-list-item a, .pirsa-card a, .nsw-link-list a)[href$=".pdf"]:after, .nsw-wysiwyg-content a:not(.nsw-button, .nsw-card a, .nsw-list-item a, .pirsa-card a, .nsw-link-list a)[href$=".pdf"]:after {
+body.content a:not(.nsw-button, .nsw-icon-button, .nsw-card a, .nsw-list-item a, .pirsa-card a, .nsw-link-list a)[href$=".pdf"]:after, .nsw-wysiwyg-content a:not(.nsw-button, .nsw-icon-button, .nsw-card a, .nsw-list-item a, .pirsa-card a, .nsw-link-list a)[href$=".pdf"]:after {
   content: "";
 }
 
-.nsw-layout__main a:not(.nsw-button, .nsw-card a, .nsw-list-item a, .pirsa-card a, .nsw-link-list a)[href$=".doc"]:after, .nsw-layout__main a:not(.nsw-button, .nsw-card a, .nsw-list-item a, .pirsa-card a, .nsw-link-list a)[href$=".docx"]:after, .nsw-wysiwyg-content a:not(.nsw-button, .nsw-card a, .nsw-list-item a, .pirsa-card a, .nsw-link-list a)[href$=".doc"]:after, .nsw-wysiwyg-content a:not(.nsw-button, .nsw-card a, .nsw-list-item a, .pirsa-card a, .nsw-link-list a)[href$=".docx"]:after {
+body.content a:not(.nsw-button, .nsw-icon-button, .nsw-card a, .nsw-list-item a, .pirsa-card a, .nsw-link-list a)[href$=".doc"]:after, body.content a:not(.nsw-button, .nsw-icon-button, .nsw-card a, .nsw-list-item a, .pirsa-card a, .nsw-link-list a)[href$=".docx"]:after, .nsw-wysiwyg-content a:not(.nsw-button, .nsw-icon-button, .nsw-card a, .nsw-list-item a, .pirsa-card a, .nsw-link-list a)[href$=".doc"]:after, .nsw-wysiwyg-content a:not(.nsw-button, .nsw-icon-button, .nsw-card a, .nsw-list-item a, .pirsa-card a, .nsw-link-list a)[href$=".docx"]:after {
   content: "";
 }
 
-.nsw-layout__main a:not(.nsw-button, .nsw-card a, .nsw-list-item a, .pirsa-card a, .nsw-link-list a)[href$=".xls"]:after, .nsw-layout__main a:not(.nsw-button, .nsw-card a, .nsw-list-item a, .pirsa-card a, .nsw-link-list a)[href$=".xlsx"]:after, .nsw-wysiwyg-content a:not(.nsw-button, .nsw-card a, .nsw-list-item a, .pirsa-card a, .nsw-link-list a)[href$=".xls"]:after, .nsw-wysiwyg-content a:not(.nsw-button, .nsw-card a, .nsw-list-item a, .pirsa-card a, .nsw-link-list a)[href$=".xlsx"]:after {
+body.content a:not(.nsw-button, .nsw-icon-button, .nsw-card a, .nsw-list-item a, .pirsa-card a, .nsw-link-list a)[href$=".xls"]:after, body.content a:not(.nsw-button, .nsw-icon-button, .nsw-card a, .nsw-list-item a, .pirsa-card a, .nsw-link-list a)[href$=".xlsx"]:after, .nsw-wysiwyg-content a:not(.nsw-button, .nsw-icon-button, .nsw-card a, .nsw-list-item a, .pirsa-card a, .nsw-link-list a)[href$=".xls"]:after, .nsw-wysiwyg-content a:not(.nsw-button, .nsw-icon-button, .nsw-card a, .nsw-list-item a, .pirsa-card a, .nsw-link-list a)[href$=".xlsx"]:after {
   content: "";
 }
 
-.nsw-layout__main div:not(.nsw-col) > :is(h2, h3, h4, h5, h6, .nsw-h2, .nsw-h3, .nsw-h4, .nsw-h5, .nsw-h6):first-child, .nsw-wysiwyg-content div:not(.nsw-col) > :is(h2, h3, h4, h5, h6, .nsw-h2, .nsw-h3, .nsw-h4, .nsw-h5, .nsw-h6):first-child {
+body.content div:not(.nsw-col, .nsw-card__copy, .nsw-accordion__content, .nsw-accordion__content div, .nsw-layout__sidebar div) > :is(h2, h3, h4, h5, h6, .nsw-h2, .nsw-h3, .nsw-h4, .nsw-h5, .nsw-h6):first-child, .nsw-wysiwyg-content div:not(.nsw-col, .nsw-card__copy, .nsw-accordion__content, .nsw-accordion__content div, .nsw-layout__sidebar div) > :is(h2, h3, h4, h5, h6, .nsw-h2, .nsw-h3, .nsw-h4, .nsw-h5, .nsw-h6):first-child {
   margin-top: 2rem;
+}
+
+body.content .nsw-accordion__content > div:not(:first-child):not(:empty), .nsw-wysiwyg-content .nsw-accordion__content > div:not(:first-child):not(:empty) {
+  padding-top: 2rem;
 }
 
 .nsw-container .nsw-layout__main .nsw-section .nsw-container {
