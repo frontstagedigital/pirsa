@@ -1,8 +1,8 @@
 // list styles for page content
-.nsw-layout__main,
+body.content,
 .nsw-wysiwyg-content {
-    ul:not(.nsw-tabs__list, .nsw-content-block__list--bare, .pirsa-content-block ul.nsw-content-block__list, .pirsa-content-block .nsw-content-block__content ul),
-    ol:not(.nsw-carousel__list) {
+    ul:not(.pirsa-footer__link-list, .nsw-main-nav__list, .nsw-main-nav__sub-nav__mega-menu__group__list-links, .nsw-main-nav__mobile-extra-links ul, .nsw-side-nav ul, .nsw-main-nav__sub-list, .copyright-link-list, .nsw-in-page-nav ul, .nsw-tabs__list, .nsw-content-block__list--bare, .pirsa-content-block ul.nsw-content-block__list, .pirsa-content-block .nsw-content-block__content ul, .pirsa-link-list ul),
+    ol:not(.nsw-carousel__list, .nsw-breadcrumbs ol) {
         padding-left: 2rem;
 
         li {
@@ -30,9 +30,9 @@
         margin: 2rem 0;
     }
 
-    a:not(.nsw-button, .nsw-card a, .nsw-list-item a, .pirsa-card a, .nsw-link-list a) {
+    a:not(.nsw-button, .nsw-icon-button, .nsw-card a, .nsw-list-item a, .pirsa-card a, .nsw-link-list a) {
         //only style link which does not have a span with icon
-        &[target=_blank]:not(:has(span.material-icons)):not([href$='.pdf']):not([href$='.doc']):not([href$='.xls']),
+        &[target=_blank]:not(:has(span.material-icons)):not([href$='.pdf']):not([href$='.doc']):not([href$='.xls']):not([href$='.docx']):not([href$='.xlsx']),
         &.external { 
             &::after {
                 content: "\e89e";
@@ -96,13 +96,17 @@
 
     }
 
-    /* target any headings that are the first child of a div and add margin-top */
-    div:not(.nsw-col) {
+    /* target any headings that are the first child of a div and not only child and add margin-top */
+    div:not(.nsw-col, .nsw-card__copy, .nsw-accordion__content, .nsw-accordion__content div, .nsw-layout__sidebar div) {
         > :is(h2, h3, h4, h5, h6, .nsw-h2, .nsw-h3, .nsw-h4, .nsw-h5, .nsw-h6) {
             &:first-child {
                 margin-top: 2rem;
             }
         }
+    }   
+
+    .nsw-accordion__content > div:not(:first-child):not(:empty) {
+        padding-top: 2rem;
     }    
 
 }

@@ -218,13 +218,16 @@
         padding-left: 0px;
         position: absolute;
         overflow-y: scroll;
-        bottom: 32px;
+        bottom: 16px;
         width: 100%;
         border: 1px solid black;
         background: #0b3f471a;
         border-radius: 0.25rem;
         overflow-y: scroll;
         background: white;
+        border-bottom: none;
+        border-bottom-left-radius: 0;
+        border-bottom-right-radius: 0;
 
         a {
             font-weight: 700;
@@ -244,6 +247,8 @@
     }
 
     &.active {
+        border-top-left-radius: 0;
+        border-top-right-radius: 0;
         .translate__container {
             bottom: calc(100% - 2.75rem);
             max-height: 250px;

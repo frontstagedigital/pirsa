@@ -70,6 +70,12 @@
             padding-bottom: 1.5rem;
         }
 
+        .nsw-content-block__content {
+            ul,ol {
+                padding-left: 0;
+            }
+        }
+
         .nsw-content-block__list {
             list-style: none;
 
