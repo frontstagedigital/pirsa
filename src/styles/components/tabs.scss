@@ -2,6 +2,7 @@
     &__list { 
         a { 
             color: var(--pirsa-grey-tabs);
+            z-index: 90;
             &.active {
                 &:after {
                     border-color: var( --nsw-brand-supplementary);
