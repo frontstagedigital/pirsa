@@ -37,7 +37,16 @@
 
                 @include breakpoint('sm') {
                     transform: unset;
-                }                  
+                }  
+                @include breakpoint('md') {
+                    transform: unset;
+                }                    
+                @include breakpoint('lg') {
+                    transform: translateY(-14%);
+                }  
+                @include breakpoint('xl') {
+                    transform: translateY(-18%);
+                }                                                                  
             }
         }
     }
