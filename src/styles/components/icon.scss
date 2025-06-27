@@ -32,6 +32,10 @@
     //     background-image: url('../image/icon-pageview.svg');
     // }    
 
+    img {
+        width: 2em;
+    }
+
     &--rounded {
         background-color: white;
         border-radius: 50%;
