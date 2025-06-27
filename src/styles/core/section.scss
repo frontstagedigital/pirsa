@@ -58,8 +58,8 @@
     }
 }
 
-.nsw-section__page-title {
-    padding-bottom: 0;
+.landing:not(.landing--no-bg) .nsw-section__page-title {
+    padding-bottom: 0; 
 }
 
 .landing .nsw-section__page-title {
