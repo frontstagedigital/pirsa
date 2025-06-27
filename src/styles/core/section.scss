@@ -22,14 +22,12 @@
 
 }
 
-// handle background colors
-.landing .nsw-section:has(.pirsa-breadcrumbs),
-.landing main.nsw-layout__main {
+// handle background colors and landing page layout
+.landing .nsw-section:has(.pirsa-breadcrumbs) {
     background-color: var(--nsw-brand-light);
 }
 
-.landing--no-bg .nsw-section:has(.pirsa-breadcrumbs),
-.landing--no-bg main.nsw-layout__main {
+.landing--no-bg .nsw-section:has(.pirsa-breadcrumbs) {
     background-color: #fff;
 }
 
@@ -41,10 +39,33 @@
     margin-top: 0;
 }
 
-.landing main:last-child {
+.bg-white {
+    background-color: #ffffff;
+}
+
+//  from <head>
+.last-section {
+    padding-bottom: 2rem;
+}
+
+@media (width >=48rem) {
+    .last-section {
+        padding-bottom: 4rem;
+    }
+
+    .landing .nsw-section:has(.pirsa-breadcrumbs) {
+        padding-bottom: 0.5rem;
+    }
+}
+
+.nsw-section__page-title {
     padding-bottom: 0;
 }
 
-.bg-white {
-      background-color: #ffffff;
-  }
+.landing .nsw-section__page-title {
+    background-color: var(--nsw-brand-light);
+}
+
+.landing--no-bg .nsw-section__page-title {
+    background-color: #fff;
+}

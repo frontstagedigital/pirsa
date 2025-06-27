@@ -18,6 +18,8 @@ document.addEventListener("DOMContentLoaded", () => {
 
       if (!hasContent) {
         section.classList.add("no-padding");
+      } else {
+        lastNonEmptySection = section; // Track the last section with actual content
       }
     }
   });
@@ -34,5 +36,9 @@ document.addEventListener("DOMContentLoaded", () => {
       visibleIndex++;
     }
   });
+
+  if (lastNonEmptySection) {
+    lastNonEmptySection.classList.add("last-section");
+  }
   }
 });

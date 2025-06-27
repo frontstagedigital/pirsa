@@ -7748,6 +7748,7 @@ document.addEventListener("DOMContentLoaded", ()=>{
             if (container) {
                 const hasContent = Array.from(container.childNodes).some((node)=>node.nodeType === Node.ELEMENT_NODE || node.nodeType === Node.TEXT_NODE && node.textContent.trim() !== "");
                 if (!hasContent) section.classList.add("no-padding");
+                else lastNonEmptySection = section; // Track the last section with actual content
             }
         });
         // Second pass: apply alternating backgrounds only to non-empty sections
@@ -7759,6 +7760,7 @@ document.addEventListener("DOMContentLoaded", ()=>{
                 visibleIndex++;
             }
         });
+        if (lastNonEmptySection) lastNonEmptySection.classList.add("last-section");
     }
 });
 

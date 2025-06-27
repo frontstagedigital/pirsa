@@ -13767,11 +13767,11 @@ a:active {
   padding-top: .5rem;
 }
 
-.landing .nsw-section:has(.pirsa-breadcrumbs), .landing main.nsw-layout__main {
+.landing .nsw-section:has(.pirsa-breadcrumbs) {
   background-color: var(--nsw-brand-light);
 }
 
-.landing--no-bg .nsw-section:has(.pirsa-breadcrumbs), .landing--no-bg main.nsw-layout__main {
+.landing--no-bg .nsw-section:has(.pirsa-breadcrumbs) {
   background-color: #fff;
 }
 
@@ -13783,11 +13783,33 @@ a:active {
   margin-top: 0;
 }
 
-.landing main:last-child {
+.bg-white {
+  background-color: #fff;
+}
+
+.last-section {
+  padding-bottom: 2rem;
+}
+
+@media (width >= 48rem) {
+  .last-section {
+    padding-bottom: 4rem;
+  }
+
+  .landing .nsw-section:has(.pirsa-breadcrumbs) {
+    padding-bottom: .5rem;
+  }
+}
+
+.nsw-section__page-title {
   padding-bottom: 0;
 }
 
-.bg-white {
+.landing .nsw-section__page-title {
+  background-color: var(--nsw-brand-light);
+}
+
+.landing--no-bg .nsw-section__page-title {
   background-color: #fff;
 }
 
@@ -14815,6 +14837,24 @@ section.accordion-single {
 @media (width >= 36rem) {
   .pirsa-hero-banner__video .nsw-media__video iframe, .pirsa-hero-banner__video .nsw-media__video video {
     transform: unset;
+  }
+}
+
+@media (width >= 48rem) {
+  .pirsa-hero-banner__video .nsw-media__video iframe, .pirsa-hero-banner__video .nsw-media__video video {
+    transform: unset;
+  }
+}
+
+@media (width >= 62rem) {
+  .pirsa-hero-banner__video .nsw-media__video iframe, .pirsa-hero-banner__video .nsw-media__video video {
+    transform: translateY(-14%);
+  }
+}
+
+@media (width >= 75rem) {
+  .pirsa-hero-banner__video .nsw-media__video iframe, .pirsa-hero-banner__video .nsw-media__video video {
+    transform: translateY(-18%);
   }
 }
 
