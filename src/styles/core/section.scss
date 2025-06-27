@@ -35,7 +35,7 @@
     padding-bottom: 0;
 }
 
-.landing footer {
+.landing:not(.landing--no-bg) footer {
     margin-top: 0;
 }
 
