@@ -1,8 +1,8 @@
 // list styles for page content
 main,
 .nsw-wysiwyg-content {
-    ul:not(.pirsa-footer__link-list, .nsw-main-nav__list, .nsw-main-nav__sub-nav__mega-menu__group__list-links, .nsw-main-nav__mobile-extra-links ul, .nsw-side-nav ul, .nsw-main-nav__sub-list, .copyright-link-list, .nsw-in-page-nav ul, .nsw-tabs__list, .nsw-content-block__list--bare, .pirsa-content-block ul.nsw-content-block__list, .pirsa-content-block .nsw-content-block__content ul, .pirsa-link-list ul, .nsw-link-list ul, .pirsa-utility-list.nsw-utility-list--horizontal ul, .nsw-pagination ul, .pagination-list),
-    ol:not(.nsw-carousel__list, .nsw-breadcrumbs ol) {
+    ul:not(.pirsa-footer__link-list, .nsw-main-nav__list, .nsw-main-nav__sub-nav__mega-menu__group__list-links, .nsw-main-nav__mobile-extra-links ul, .nsw-side-nav ul, .nsw-main-nav__sub-list, .copyright-link-list, .nsw-in-page-nav ul, .nsw-tabs__list, .nsw-content-block__list--bare, .pirsa-content-block ul.nsw-content-block__list, .pirsa-content-block .nsw-content-block__content ul, .pirsa-link-list ul, .nsw-link-list ul, .pirsa-utility-list.nsw-utility-list--horizontal ul, .nsw-pagination ul, .pagination-list, .pirsa-carousel__controls__buttons),
+    ol:not(.nsw-carousel__list, .nsw-breadcrumbs ol, .nsw-carousel__navigation) {
         padding-left: 2rem;
 
         li {
