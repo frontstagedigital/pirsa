@@ -6,12 +6,13 @@
     }    
 
     .nsw-content-block__content {
-        ul,ol {
+        ul:not(.nsw-content-block__list),ol {
             padding-left: 1rem;
             li {
                 list-style: inherit;
             }
         }
+
     }
 
     .nsw-content-block__list {
