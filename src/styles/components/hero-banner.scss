@@ -114,20 +114,12 @@
             
             @include breakpoint('md') {
                 height: unset;
-            }                
-            
-        }
-
-        &--search {
-            img {
+            }
+            &__search {
                 @include breakpoint('sm') {
                     height: 9rem;
                 }   
-                
-                @include breakpoint('md') {
-                    height: 9rem;
-                }                      
-            }
+            }   
         }
     }
 
