@@ -122,7 +122,11 @@
             img {
                 @include breakpoint('sm') {
                     height: 9rem;
-                }      
+                }   
+                
+                @include breakpoint('md') {
+                    height: 9rem;
+                }                      
             }
         }
     }
