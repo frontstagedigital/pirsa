@@ -46,7 +46,14 @@
             @include breakpoint('md') {
                 height: unset;
             }                
-            
+
+            &.search-logo {
+                @include breakpoint('sm') {
+                    height: 9rem !important;
+                }
+            }              
+                
+
         }
     }
 

@@ -117,11 +117,7 @@
             }
         }
 
-        img.search-logo {
-            @include breakpoint('sm') {
-                height: 9rem !important;
-            }
-        }   
+ 
     }
 
     .nsw-hero-banner__button {
