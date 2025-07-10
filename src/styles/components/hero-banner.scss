@@ -115,7 +115,7 @@
             @include breakpoint('md') {
                 height: unset;
             }
-            &__search {
+            & .search-logo {
                 @include breakpoint('sm') {
                     height: 9rem;
                 }   
