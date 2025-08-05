@@ -146,4 +146,11 @@
             }
         }
     }
+
+    .pirsa-card--small:hover {
+        .nsw-material-icons {
+            border-color: var(--sardi-brand-primary);
+            color: var(--sardi-brand-primary);
+        }
+    }
 }

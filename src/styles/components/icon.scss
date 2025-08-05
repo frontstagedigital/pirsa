@@ -42,6 +42,10 @@
         //padding: 4px;
     }
 
+    &--no-fill {
+        background-color: transparent;
+    }
+
     &--outline {
         border: 2px solid currentColor;
     }
