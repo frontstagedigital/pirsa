@@ -10,3 +10,4 @@ import "./components/image-popup.js";
 import "./components/grid.js"; 
 import "./components/landing.js";
 import "./components/single-accordion.js";
+import "./components/accordion-links.js";
