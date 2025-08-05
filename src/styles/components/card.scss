@@ -195,7 +195,7 @@
         height: 100%;
 
         .nsw-card__content {
-            padding: 1rem;
+            padding: 1rem 4rem 1rem 1rem;
         }
 
         .nsw-card__title {
@@ -207,6 +207,27 @@
         a {
             font-weight: var(--nsw-font-normal);
         }
+
+        .nsw-material-icons {
+            border: 2px solid;
+            border-radius: 50%;
+            color: var(--nsw-text-light);
+            font-size: 1.25em;        
+            padding: 4px;
+            height: 2rem;
+            width: 2rem;
+            top: 1rem;
+            right: 1em;        
+
+            @include breakpoint('lg') {
+                font-size: 1.625em;        
+                padding: 5px;
+                height: 2.5rem;
+                width: 2.5rem;    
+                top: 1rem;
+                right: 1rem;   
+            }
+        }     
     }
 
     //light grey version
