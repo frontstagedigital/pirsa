@@ -5,6 +5,11 @@
     align-items: stretch;
     min-height: 5rem;
 
+    //hide card if asset status not live
+    &[data-asset-status=""] {
+        display: none;
+    }
+
     &--fill {
         background-color: var(--nsw-white);
     }
