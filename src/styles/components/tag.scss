@@ -17,3 +17,10 @@
     padding-left: 12px;
     padding-right: 12px;
 }
+
+.nsw-tag {
+   &--sardi {
+      color: var(--sardi-brand-primary);
+      border-color: var(--sardi-brand-primary);
+   }
+}
