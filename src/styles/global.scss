@@ -10,7 +10,7 @@
     .nsw-card__image img,
     .pirsa-card:not(.nsw-card):hover .nsw-card__image img,
     .pirsa-card:not(.nsw-card) .nsw-card__image img {
-        transform: none;
-        transition: none;
+        transform: none !important;
+        transition: none !important;
     }
 }
