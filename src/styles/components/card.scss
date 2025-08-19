@@ -262,6 +262,10 @@
 
     height: auto;
 
+    &__title {
+        margin-top: 0;
+    }
+
     &__content {
         padding: 1.25rem 1.25rem 3.875rem;
         
@@ -294,6 +298,7 @@
         }
     
         .nsw-card__title {
+            margin-top: 0;
             font-size: var(--pirsa-font-size-title);
         }
     
