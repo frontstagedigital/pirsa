@@ -1,31 +1,51 @@
 document.addEventListener('DOMContentLoaded', () => {
-  setTimeout(() => {
-    // handle multiple carousels on a page
-    document.querySelectorAll('.js-carousel').forEach((carousel) => {
+  const carousels = Array.from(document.querySelectorAll('.js-carousel'));
+
+  // Wait until dots exist, then initial sync
+  carousels.forEach((carousel) => {
+    const poll = setInterval(() => {
       const nav = carousel.querySelector('.js-carousel__navigation');
       if (!nav) return;
+      clearInterval(poll);
+      syncNav(nav);
+    }, 100);
+    setTimeout(() => clearInterval(poll), 5000); // safety cap
 
-      // sync aria-current on nav buttons to --selected class
-      const sync = () => {
-        nav.querySelectorAll('.js-carousel__nav-item').forEach((li) => {
-          const btn = li.querySelector('button');
-          if (!btn) return;
-          if (li.classList.contains('nsw-carousel__nav-item--selected')) {
-            btn.setAttribute('aria-current', 'true');
-          } else {
-            btn.removeAttribute('aria-current');
-          }
-        });
-      };
+    // Re-sync after any click inside the carousel (dots or arrows)
+    carousel.addEventListener('click', () => queueSync(carousel));
+  });
 
-      // initial pass for this carousel
-      sync();
+  // Re-sync on resize (immediate + shortly after to catch rebuilds)
+  let resizeTimer;
+  window.addEventListener('resize', () => {
+    carousels.forEach(queueSync);
+    clearTimeout(resizeTimer);
+    resizeTimer = setTimeout(() => carousels.forEach(queueSync), 200);
+  });
 
-      // resync on nav or control click
-      nav.addEventListener('click', () => setTimeout(sync, 0));
-      carousel.querySelectorAll('.js-carousel__control').forEach((ctrl) => {
-        ctrl.addEventListener('click', () => setTimeout(sync, 0));
-      });
+  function queueSync(carousel) {
+    // next tick (after DS flips classes)...
+    requestAnimationFrame(() => {
+      const nav = carousel.querySelector('.js-carousel__navigation');
+      if (nav) syncNav(nav);
     });
-  }, 200); // delay to allow DS to inject dots
+    // ...and again shortly after in case the DS rebuild is async
+    setTimeout(() => {
+      const nav = carousel.querySelector('.js-carousel__navigation');
+      if (nav) syncNav(nav);
+    }, 150);
+  }
+
+  function syncNav(nav) {
+    const selected = nav.querySelector('.nsw-carousel__nav-item--selected');
+    if (!selected) return; // don't clear aria until DS marks one selected
+
+    nav.querySelectorAll('.js-carousel__nav-item').forEach((li) => {
+      const btn = li.querySelector('button');
+      if (!btn) return;
+      const isSelected = li.classList.contains('nsw-carousel__nav-item--selected');
+      if (isSelected) btn.setAttribute('aria-current', 'true');
+      else btn.removeAttribute('aria-current');
+    });
+  }
 });
