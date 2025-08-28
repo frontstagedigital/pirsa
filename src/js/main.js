@@ -11,3 +11,4 @@ import "./components/grid.js";
 import "./components/landing.js";
 import "./components/single-accordion.js";
 import "./components/accordion-links.js";
+import "./components/carousel.js";
