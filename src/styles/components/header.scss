@@ -1,3 +1,14 @@
+.fruitfly .pirsa-header .nsw-header__waratah a {
+    width: 204px;
+    height: 34px;
+    @include breakpoint('sm') {
+        width: 300px;
+    }
+    @include breakpoint('lg') {
+        width: 396px;
+    }
+}
+
 .pirsa-header {
     .nsw-header__waratah {
         justify-content: left;
@@ -5,6 +16,7 @@
 
         a {
             width: 160px;
+
         }
 
         img {
@@ -86,6 +98,10 @@
         .nsw-header__search-area {
             right: 462px;// 494 + 16 - 48 (search menu + padding - search button)
             width: 16.25rem;
+
+            .fruitfly & {
+                right: 268px; // 300 + 16 - 48 (search menu + padding - search button)
+            }
 
             form .nsw-material-icons {
                 font-size: 2rem;
