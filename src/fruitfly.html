@@ -12,22 +12,11 @@
 
     <include src="partials/header.html"></include>
         <include src="partials/main-nav.html"></include>
-    <include src="partials/hero-banner-pirsa.html"></include>
-
-    <section class="nsw-section pirsa-section">
-        <div class="nsw-container pirsa-breadcrumbs">
-            <nav aria-label="Breadcrumbs" class="nsw-breadcrumbs js-breadcrumbs">
-                <ol>
-                    <li>
-                      <a href="home.html">Home</a>
-                    </li>
-                    <li>
-                      <a href="#" class="current" aria-current="page">SARDI Research</a>
-                    </li>
-                </ol>
-            </nav>
-        </div>       
-      </section>  
+    <include src="partials/hero-banner-pirsa.html">
+                {
+                "heading": "Fruit fly in South Australia"
+                }
+    </include>
 
       <main id="content">
 
@@ -36,12 +25,12 @@
     <section class="nsw-section pirsa-section">
         <div class="nsw-container">
 
-            <h2 class="nsw-h3">Research &amp; reports</h2>
+            <h2 class="nsw-h3">Search Fruit fly</h2>
             <include src="partials/searchbar.html"></include>
 
             <div class="nsw-grid">
                 <div class="nsw-col nsw-col-sm-8 nsw-col-md-9">
-                    <h2 class="nsw-h3">About us </h2>
+                    <h2 class="nsw-h3">About Fruit fly</h2>
                     <p>SARDI is the state’s primary industries research provider and collaborates with key industries, primary producers, research institutions and other organisations. </p>
                     <p>SARDI applied science plays a key role in advancing the productivity, quality, competitiveness, and long-term sustainability of the state’s primary industries. This work addresses the challenges faced by many primary producers now and into the future. </p>
                     <p>SARDI has delivered applied science that has grown South Australia’s primary industries for over 30 years.</p>
@@ -99,13 +88,6 @@
             <div class="nsw-p-top-md nsw-hide-md">
                 <a href="#" class="nsw-button nsw-button--dark-outline-solid pirsa-button--rounded">View full report</a>  
             </div>  
-        </div>
-    </section>
-
-    <section class="nsw-section pirsa-section ">
-        <div class="nsw-container">
-            <h3>Our Strategic Pillars</h3>
-            <include src="partials/info-cards-sardi.html"></include>
         </div>
     </section>
 
