@@ -1,11 +1,83 @@
-.fruitfly .pirsa-header .nsw-header__waratah a {
-    width: 204px;
-    height: 34px;
-    @include breakpoint('sm') {
-        width: 300px;
+.fruitfly {
+    .pirsa-header .nsw-header__waratah a {
+        width: 204px;
+        height: 34px;
+
+        @include breakpoint('sm') {
+            width: 300px;
+        }
+
+        @include breakpoint('lg') {
+            width: 396px;
+        }
     }
-    @include breakpoint('lg') {
-        width: 396px;
+
+    @media screen and (min-width: 62rem) {
+        .pirsa-header .nsw-header__main {
+            margin: 14px 0;
+        }
+    }
+
+    .nsw-header__inner {
+        @include breakpoint('lg') {
+            padding: 12px 0;
+        }
+    }
+
+    .nsw-main-nav__list {
+        column-gap: 6px;
+
+        @include breakpoint('xl') {
+            column-gap: 20px;
+        }
+
+        @media screen and (min-width: 1440px) {
+            column-gap: 40px;
+        }
+    }
+
+    .nsw-masthead,
+    .nsw-skip a {
+        background-color: #00427A;
+    }
+
+    .nsw-masthead {
+        padding: 0.5rem 0;
+
+        @include breakpoint('lg') {
+            padding: 14px 0;
+        }
+
+        .menu-item {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            text-decoration: none;
+            color: #fff;
+            font-size: 14px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 19px;
+            padding: 10px 1rem;
+        }
+
+        .home-text {
+            display: flex;
+            gap: 4px;
+            ;
+        }
+    }
+
+    .masthead-logo {
+        width: 180px;
+
+        @include breakpoint('sm') {
+            width: 200px;
+        }
+
+        @include breakpoint('lg') {
+            width: unset;
+        }
     }
 }
 
