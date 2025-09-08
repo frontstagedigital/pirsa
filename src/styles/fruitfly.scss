@@ -1,0 +1,134 @@
+/* Fruitfly theme overrides */
+
+.fruitfly {
+    --fruitfly-brand-primary: #3E001C;
+    --nsw-brand-supplementary: #3E001C;
+    --nsw-brand-light: #F5F1F3;
+    --pirsa-accent-light: #F5F1F3;
+    --nsw-brand-dark: #3E001C;
+
+    --pirsa-accordion-active: #C8E6DC;
+--pirsa-brand-primary:#3E001C;
+    // .nsw-main-nav li a {
+
+    // }
+
+    .nsw-breadcrumbs a:not(.current) {
+        color: var(--nsw-brand-dark);
+    }
+
+
+
+    .pirsa-section {
+        background-color: var(--nsw-brand-light);
+    }
+
+    .pirsa-utility-list {
+        color: var(--fruitfly-brand-primary);
+    }
+
+ 
+    .pirsa-content-block {
+        a {
+            //color: var(--fruitfly-brand-primary);
+        }
+    }
+
+    .pirsa-section__sidebar {
+        a {
+            color: var(--fruitfly-brand-primary);
+        }
+
+        .nsw-tag {
+            color: var(--fruitfly-brand-primary);
+            border-color: var(--fruitfly-brand-primary);
+        }
+
+        .nsw-steps--dark .nsw-steps__item:before,
+        .nsw-steps--fill.nsw-steps--dark .nsw-steps__item:before {
+            color: var(--fruitfly-brand-primary);
+            border-color: var(--fruitfly-brand-primary);
+            background-color: var(--fruitfly-brand-primary);
+        }
+        .nsw-steps--dark .nsw-steps__content:before {
+            background-color: var(--fruitfly-brand-primary);
+        }
+    }
+
+    .pirsa-searchbar { 
+        .nsw-form__input {
+            color: var(--fruitfly-brand-primary);
+            border-color: var(--fruitfly-brand-primary);
+        }
+        .nsw-button {
+            color: var(--fruitfly-brand-primary);
+            border-color: var(--fruitfly-brand-primary);
+        }
+    }
+
+    .nsw-button {
+        &--dark {
+            background-color: var(--fruitfly-brand-primary);
+
+            &-outline-solid {
+                border-color: var(--fruitfly-brand-primary);
+                color: var(--fruitfly-brand-primary);
+            }
+        }
+
+        &:hover {
+            background-color: var(--fruitfly-brand-primary);
+            border-color: var(--fruitfly-brand-primary);
+            color: var(--nsw-text-light);
+        }
+    }
+
+    .pirsa-link-list {
+        a {
+            color: var(--fruitfly-brand-primary);
+        }
+    }
+
+    .nsw-carousel__control {
+        border-color: var(--fruitfly-brand-primary);
+        .nsw-icon {
+            color: var(--fruitfly-brand-primary);
+        }
+    }
+
+    .nsw-carousel__nav-item { 
+        button {
+            border-color: var(--fruitfly-brand-primary);
+        }
+
+        &--selected {
+            button {
+                background-color: var(--fruitfly-brand-primary);
+                border-color: var(--fruitfly-brand-primary);
+            }
+        }
+    }
+
+    .nsw-card {
+        &--dark {
+            .nsw-card__content {
+                background-color: var(--fruitfly-brand-primary);
+
+            }
+
+            &:hover {
+                color: var(--nsw-text-dark);
+                .nsw-card__content {
+                    background-color: var(--nsw-white);
+                }
+            }
+        }
+    }
+
+    .pirsa-card--small:hover {
+        .nsw-material-icons {
+            border-color: var(--fruitfly-brand-primary);
+            color: var(--fruitfly-brand-primary);
+        }
+    }
+}
