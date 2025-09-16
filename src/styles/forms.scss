@@ -19,6 +19,7 @@
 
 
         input[type="text"],
+        input[type="email"],
         textarea {
             width: 100%;
         }
@@ -26,6 +27,7 @@
         @include breakpoint('sm') {
 
             input[type="text"],
+            input[type="email"],
             textarea {
                 width: 540px;
             }

@@ -17,6 +17,17 @@
         color: var(--nsw-brand-dark);
     }
 
+    .ff-outbreak-map {
+        height: 320px;
+
+        @include breakpoint('md') {
+            height: 480px;
+        }
+
+        @include breakpoint('lg') {
+            height: 640px;
+        }
+    }
 
 
     .pirsa-section {
