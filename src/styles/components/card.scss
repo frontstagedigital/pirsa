@@ -249,6 +249,10 @@
             .nsw-card__content {
                 background-color: var(--nsw-off-white);
                 border-color: var(--nsw-off-white);
+
+                .fruitfly & {
+                    background-color: #E9DCE2;
+                }
             }
     
             .nsw-material-icons {
