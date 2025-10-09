@@ -747,7 +747,7 @@ function analyzeContentType(result) {
     isResearch: collection === 'pirsa~ds-website' && pageType === 'research',
     isReport: collection === 'pirsa~ds-website' && pageType === 'report',
     isContact: collection === 'pirsa~ds-contacts',
-    isDocument: collection === 'pirsa~ds-documents',
+    isDocument: collection === 'pirsa~ds-fruit-fly-documents',
     isNewsEvent: collection === 'pirsa~ds-news-events'
   };
 }
@@ -860,7 +860,7 @@ function generateContactSummary(result) {
 }
 
 function generateResultImage(contentType, result) {
-  if ((contentType.isEvent || contentType.isNews) && safeGet(result, 'listMetadata.image.0')) {
+  if ((contentType.isEvent || contentType.isNews) && safeGet(result, 'listMetadata.newsImage.0')) {
     return '<div class="nsw-list-item__image">' +
       '<a href="' + (result.clickTrackingUrl || result.liveUrl || '') + '">' +
       '<img src="' + result.listMetadata.image[0] + '" alt="' + (result.title || '') + '">' +
