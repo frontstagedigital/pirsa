@@ -79,6 +79,38 @@
             width: unset;
         }
     }
+
+    .pirsa-header .nsw-header__waratah {
+        padding: 14px 0;
+        @include breakpoint('lg') {
+            padding: 0;
+        }
+    }
+    .pirsa-header .nsw-header__search {
+        right: 48px;
+        @include breakpoint('sm') {
+            right: 64px;
+        }
+        @include breakpoint('lg') {
+            right: 0;
+        }
+    }
+
+    .pirsa-header .nsw-header__phone {
+        position: absolute;
+        top: 8px;
+        right: 96px;
+        @include breakpoint('sm') {
+            right: 128px;
+        }
+        @include breakpoint('lg') {
+            display: none;
+        }
+
+        &-link {
+            text-decoration: none;
+        }
+    }
 }
 
 .pirsa-header {
