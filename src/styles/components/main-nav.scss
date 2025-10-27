@@ -39,7 +39,7 @@
     } 
 
     &__list {
-        flex-grow: 1;
+        // flex-grow: 1;
         @include breakpoint('lg') {
             padding: 12px 0;
             column-gap: 10px;
