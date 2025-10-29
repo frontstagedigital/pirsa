@@ -39,7 +39,7 @@
     } 
 
     &__list {
-        flex-grow: 1;
+        // flex-grow: 1;
         @include breakpoint('lg') {
             padding: 12px 0;
             column-gap: 10px;
@@ -200,6 +200,19 @@
         background-color: var(--pirsa-accent-light);
         width: 100%;
     }
+
+    .nav-phone-button {
+        margin-left: auto;
+        margin-right: 1rem;
+        display: none;
+        font-weight: 700;
+
+        @media screen and (min-width: 62rem) {
+            display: inline-block;
+        }
+    }
+
+
 
 }
 
