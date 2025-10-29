@@ -673,8 +673,10 @@ var _imagePopupJs = require("./components/image-popup.js");
 var _gridJs = require("./components/grid.js");
 var _landingJs = require("./components/landing.js");
 var _singleAccordionJs = require("./components/single-accordion.js");
+var _accordionLinksJs = require("./components/accordion-links.js");
+var _carouselJs = require("./components/carousel.js");
 
-},{"./utils/jquery":"l94D0","./components/header":"fes7L","./components/side-nav":"aBFC8","./components/in-page-nav":"2Bdwy","./components/search.js":"8gcwp","./components/video-banner-controls":"jhdoO","./components/download-pdf":"4g62A","./components/image-popup.js":"3Dl7W","./components/grid.js":"fkXfp","./components/landing.js":"ayXt9","./components/single-accordion.js":"7Ad0j"}],"l94D0":[function(require,module,exports,__globalThis) {
+},{"./utils/jquery":"l94D0","./components/header":"fes7L","./components/side-nav":"aBFC8","./components/in-page-nav":"2Bdwy","./components/search.js":"8gcwp","./components/video-banner-controls":"jhdoO","./components/download-pdf":"4g62A","./components/image-popup.js":"3Dl7W","./components/grid.js":"fkXfp","./components/landing.js":"ayXt9","./components/single-accordion.js":"7Ad0j","./components/accordion-links.js":"8p2MP","./components/carousel.js":"4Wlnb"}],"l94D0":[function(require,module,exports,__globalThis) {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 var _jquery = require("jquery");
 var _jqueryDefault = parcelHelpers.interopDefault(_jquery);
@@ -7782,6 +7784,76 @@ document.addEventListener('DOMContentLoaded', ()=>{
             if (nextNext?.classList.contains('accordion-single')) section.style.marginBottom = '0.5rem';
         }
     });
+});
+
+},{}],"8p2MP":[function(require,module,exports,__globalThis) {
+document.addEventListener("DOMContentLoaded", ()=>{
+    const hash = window.location.hash;
+    if (!hash) return;
+    const targetId = hash.substring(1);
+    const targetElement = document.getElementById(targetId);
+    if (!targetElement) return;
+    const accordionContent = targetElement.closest(".js-accordion .nsw-accordion__content");
+    if (!accordionContent) return;
+    const accordionId = accordionContent.id;
+    const accordion = accordionContent.closest(".js-accordion");
+    const accordionButton = accordion?.querySelector(`.nsw-accordion__button[aria-controls="${accordionId}"]`);
+    if (!accordionButton) return;
+    const isExpanded = accordionButton.getAttribute("aria-expanded") === "true";
+    if (!isExpanded) accordionButton.click();
+    // Always scroll, even if already expanded
+    setTimeout(()=>{
+        targetElement.scrollIntoView({
+            behaviour: "smooth"
+        });
+    }, 200);
+});
+
+},{}],"4Wlnb":[function(require,module,exports,__globalThis) {
+document.addEventListener('DOMContentLoaded', ()=>{
+    const carousels = Array.from(document.querySelectorAll('.js-carousel'));
+    // Wait until dots exist, then initial sync
+    carousels.forEach((carousel)=>{
+        const poll = setInterval(()=>{
+            const nav = carousel.querySelector('.js-carousel__navigation');
+            if (!nav) return;
+            clearInterval(poll);
+            syncNav(nav);
+        }, 100);
+        setTimeout(()=>clearInterval(poll), 5000); // safety cap
+        // Re-sync after any click inside the carousel (dots or arrows)
+        carousel.addEventListener('click', ()=>queueSync(carousel));
+    });
+    // Re-sync on resize (immediate + shortly after to catch rebuilds)
+    let resizeTimer;
+    window.addEventListener('resize', ()=>{
+        carousels.forEach(queueSync);
+        clearTimeout(resizeTimer);
+        resizeTimer = setTimeout(()=>carousels.forEach(queueSync), 200);
+    });
+    function queueSync(carousel) {
+        // next tick (after DS flips classes)...
+        requestAnimationFrame(()=>{
+            const nav = carousel.querySelector('.js-carousel__navigation');
+            if (nav) syncNav(nav);
+        });
+        // ...and again shortly after in case the DS rebuild is async
+        setTimeout(()=>{
+            const nav = carousel.querySelector('.js-carousel__navigation');
+            if (nav) syncNav(nav);
+        }, 150);
+    }
+    function syncNav(nav) {
+        const selected = nav.querySelector('.nsw-carousel__nav-item--selected');
+        if (!selected) return; // don't clear aria until DS marks one selected
+        nav.querySelectorAll('.js-carousel__nav-item').forEach((li)=>{
+            const btn = li.querySelector('button');
+            if (!btn) return;
+            const isSelected = li.classList.contains('nsw-carousel__nav-item--selected');
+            if (isSelected) btn.setAttribute('aria-current', 'true');
+            else btn.removeAttribute('aria-current');
+        });
+    }
 });
 
 },{}]},["56AJI","lhpGb"], "lhpGb", "parcelRequire54eb")
