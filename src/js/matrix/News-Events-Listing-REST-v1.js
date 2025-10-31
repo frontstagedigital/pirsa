@@ -762,6 +762,7 @@ function generateNewsCard(result) {
 
   var newsType = safeGet(result, 'listMetadata.newstype.0', '');
   var imageUrl = safeGet(result, 'listMetadata.newsImage.0', '');
+  var newsSummary = safeGet(result, 'listMetadata.newsSummary.0', '');
 
   var clickUrl = result.liveUrl || result.clickTrackingUrl || '';
   var summary = result.summary || '';
@@ -804,7 +805,13 @@ function generateNewsCard(result) {
   }
   html.add('</div>');
 
-  if (summary) {
+  if (isEvent) {
+    if (newsSummary) {
+      html.add('<div class="nsw-card__copy" style="order:3;">');
+      html.add('<p>' + newsSummary + '</p>');
+      html.add('</div>');
+    }
+  } else if (summary) {
     html.add('<div class="nsw-card__copy" style="order:3;">');
     html.add('<p>' + summary + '</p>');
     html.add('</div>');
