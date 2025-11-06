@@ -759,6 +759,20 @@ function generateResultMeta(contentType, result) {
     html.add('<div class="nsw-list-item__label">Project</div>');
   } else if (contentType.isReport) {
     html.add('<div class="nsw-list-item__label">Report</div>');
+
+    html.add('<div class="nsw-list-item__info-container nsw-display-flex nsw-p-top-xs nsw-justify-content-between">');
+    html.add('<div class="nsw-list-item__info nsw-list-item__info--report">');
+
+    var publicationYear = safeGet(result, 'listMetadata.publicationYear.0', '');
+    if (publicationYear) html.add('<span>' + publicationYear + ' </span>');
+
+    if (result.fileSize) {
+      var sizeInMB = (result.fileSize / (1024 * 1024)).toFixed(2);
+      html.add('<span style="font-weight:700;"> PDF [' + sizeInMB + ' MB]</span>');
+    }
+    html.add('</div>');
+    html.add('</div>');
+
   } else if (contentType.isResearch) {
     html.add('<div class="nsw-list-item__label">research</div>');
   } else if (contentType.isPage) {
@@ -797,13 +811,13 @@ function generateResultTitle(contentType, result) {
     html.add('<a href="' + (result.clickTrackingUrl || result.liveUrl || '') + '">');
     html.add(result.title || 'Untitled');
 
-    if (contentType.isReport) {
-        html.add(' <span class="material-icons nsw-material-icons notranslate" title="pdf file">picture_as_pdf</span>');
-        if (result.fileSize) {
-            var sizeInMB = (result.fileSize / (1024 * 1024)).toFixed(2);
-            html.add('<span>(PDF, ' + sizeInMB + ' MB)</span>');
-        }
-    }
+    // if (contentType.isReport) {
+    //     html.add(' <span class="material-icons nsw-material-icons notranslate" title="pdf file">picture_as_pdf</span>');
+    //     if (result.fileSize) {
+    //         var sizeInMB = (result.fileSize / (1024 * 1024)).toFixed(2);
+    //         html.add('<span>(PDF, ' + sizeInMB + ' MB)</span>');
+    //     }
+    // }
     html.add('</a>');
   }
 
@@ -814,6 +828,17 @@ function generateResultTitle(contentType, result) {
 function generateResultSummary(contentType, result) {
   if (contentType.isProfile) {
     return generateProfileSummary(result);
+  } else if (contentType.isReport) {
+    var parts = [];
+    var shortDescription = safeGet(result, 'listMetadata.shortDescription.0', '');
+    if (shortDescription) {
+      parts.push('<div class="nsw-list-item__copy">' + shortDescription + '...</div>');
+    }
+    var additionalAuthors = safeGet(result, 'listMetadata.additionalAuthors.0', '');
+    if (additionalAuthors) {
+      parts.push('<div class="nsw-list-item__copy">' + additionalAuthors + '</div>');
+    }
+    return parts.join('');
   } else {
     var summary = safeGet(result, 'listMetadata.summary.0', '') || result.summary || '';
     if (summary) {
