@@ -807,6 +807,11 @@ function generateResultTitle(contentType, result) {
   if (contentType.isProfile) {
     var profileName = result.title || 'Untitled';
     html.add('<a href="' + (result.clickTrackingUrl || result.liveUrl || '') + '">' + profileName + '</a>');
+  } else if (contentType.isReport) {
+    var fileTitle = safeGet(result, 'listMetadata.fileTitle.0', result.title || 'Untitled');
+    if (fileTitle) {
+      html.add('<a href="' + (result.clickTrackingUrl || result.liveUrl || '') + '">' + fileTitle + '</a>');
+    }
   } else {
     html.add('<a href="' + (result.clickTrackingUrl || result.liveUrl || '') + '">');
     html.add(result.title || 'Untitled');
