@@ -95,6 +95,10 @@
             &-outline-solid {
                 border-color: var(--sardi-brand-primary);
                 color: var(--sardi-brand-primary);
+
+                .nsw-material-icons {
+                    color: var(--sardi-brand-primary);
+                }
             }
         }
 
