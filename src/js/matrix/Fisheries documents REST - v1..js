@@ -165,7 +165,7 @@ function extractUrlParameters() {
     var queryString = '%globals_server_query_string%';
     var params = {
         query: '%globals_get_query%' || '',
-        sort: '%globals_get_sort%' || 'default',
+        sort: '%globals_get_sort%' || 'date',
         filters: {},
         start_rank: parseInt('%globals_get_start_rank%') || 1
     };
@@ -358,7 +358,7 @@ function processSearchData(apiData) {
             totalMatching: safeGet(apiData, 'response.resultPacket.resultsSummary.totalMatching', 0)
         },
         totalResults: safeGet(apiData, 'response.resultPacket.resultsSummary.totalMatching', 0),
-        currentSort: urlParams.sort || 'default',
+        currentSort: urlParams.sort || 'date',
         currentQuery: urlParams.query || ''
     };
 }
