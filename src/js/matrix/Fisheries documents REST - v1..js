@@ -165,7 +165,7 @@ function extractUrlParameters() {
     var queryString = '%globals_server_query_string%';
     var params = {
         query: '%globals_get_query%' || '',
-        sort: '%globals_get_sort%' || 'date',
+        sort: '%globals_get_sort%' || 'dmetapublicationDate',
         filters: {},
         start_rank: parseInt('%globals_get_start_rank%') || 1
     };
@@ -358,7 +358,7 @@ function processSearchData(apiData) {
             totalMatching: safeGet(apiData, 'response.resultPacket.resultsSummary.totalMatching', 0)
         },
         totalResults: safeGet(apiData, 'response.resultPacket.resultsSummary.totalMatching', 0),
-        currentSort: urlParams.sort || 'date',
+        currentSort: urlParams.sort || 'dmetapublicationDate',
         currentQuery: urlParams.query || ''
     };
 }
@@ -701,7 +701,7 @@ function generateResultsBar(searchData) {
            '<label class="nsw-form__label" for="sort">Sort by:</label>' +
            '<select class="nsw-form__select" name="sort" id="sort" form="global-search" onchange="this.form.submit()">' +
            '<option value="default"' + (searchData.currentSort === 'default' ? ' selected="selected"' : '') + '>Relevance</option>' +
-           '<option value="date"' + (searchData.currentSort === 'date' ? ' selected="selected"' : '') + '>Most recent</option>' +
+           '<option value="dmetapublicationDate"' + (searchData.currentSort === 'dmetapublicationDate' ? ' selected="selected"' : '') + '>Most recent</option>' +
            '</select>' +
            '<button type="submit" class="nsw-button nsw-button--dark nsw-m-left-xs sr-only">Submit</button>' +
            '</div>' +
