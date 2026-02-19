@@ -67,6 +67,7 @@
         .nsw-layout--2-col & {
             //order: 1;
             @include breakpoint('lg') {
+                min-width: 0;
                 max-width: 100%;
                 width: 100%;
             }

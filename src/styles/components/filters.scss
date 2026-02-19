@@ -93,3 +93,20 @@
     color: var(--nsw-brand-dark);
     outline-color: var(--nsw-brand-dark);  
 }
+
+.search-results .nsw-filters.nsw-filters--down {
+    padding-bottom: 0.5rem;
+}
+
+// ios search filters color fix
+.search-results .nsw-filters__item-name,
+.results-listing .nsw-filters__item-name,
+.search-results .nsw-filters__controls .filters-toggle,
+.results-listing .nsw-filters__controls .filters-toggle {
+    color: var(--nsw-text-dark, #22272b);
+}
+
+.search-results .nsw-filters__controls .nsw-material-icons,
+.results-listing .nsw-filters__controls .nsw-material-icons {
+    color: var(--nsw-brand-dark);
+}
