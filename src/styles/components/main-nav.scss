@@ -88,11 +88,16 @@
     }
 
     &__sub-nav {
+        // allow mobile menu scroll on overflow
+        height: 100vh;
+        display: flex;
+        flex-direction: column;
 
         @include breakpoint('lg') {
             background-color: var(--nsw-off-white);
             padding-top: 1.5rem;
             padding-bottom: 1rem;
+            height: auto;
         }
 
         li {
@@ -134,6 +139,34 @@
             /* if extra padding needed to align element */
             &--padding {
                 padding: 4px;
+            }
+
+            // desktop left info section styling
+            &__info {
+                ul {
+                    display: inline-block;
+                    margin-top: 1rem;
+                    list-style-type: disc;
+                    padding-left: 1.25rem;
+
+                    li {
+                        list-style-type: disc;
+                        width: unset;
+                        margin: 0;
+                        box-shadow: unset;
+                        width: auto;
+                        border: none;
+                    }
+                }
+
+                a {
+                    background-color: unset;
+                    outline-width: unset;
+                    font-weight: unset;
+                    padding: unset;
+                    display: inline-block;
+                    width: unset;
+                }
             }
 
             &__logo {

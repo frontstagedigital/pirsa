@@ -28,6 +28,11 @@
         }
     }
 
+    .home-searchbar-mobile {
+        @include breakpoint('md') {
+            display: none;
+        }
+    }
 
     .pirsa-section {
         background-color: var(--nsw-brand-light);
