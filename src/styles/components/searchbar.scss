@@ -18,10 +18,12 @@
         overflow: hidden;
         text-overflow: ellipsis; 
         white-space: nowrap;
+        height: 3rem;
 
 
         @include breakpoint('lg') {
             font-size: 1.25rem;
+            height: 3.5rem;
         }
 
         &:focus {
@@ -40,4 +42,13 @@
     .nsw-material-icons {
         font-size: 1.75rem;
     }
+}
+
+//  searchbar input and button z-index override
+.js-search-concierge .pirsa-searchbar .nsw-button {
+    z-index: 101 !important;
+}
+
+.js-search-concierge .concierge-input {
+    z-index: 101 !important;
 }
