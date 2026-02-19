@@ -122,3 +122,9 @@ main,
         }
     }
 }
+
+// handles dot points when CTA button component align centred
+.nsw-wysiwyg-content.nsw-text-center ul,
+.nsw-wysiwyg-content.nsw-text-center ol {
+    list-style-position: inside;
+}
