@@ -22,3 +22,69 @@
     }
 
 }
+
+// Lightbox Image Gallery styles
+.pirsa__image-gallery,
+.pirsa__image-gallery--3-col,
+.pirsa__image-gallery--2-col {
+    margin-left: 0;
+    margin-right: 0;
+}
+
+.pirsa__image-gallery a {
+    text-decoration: none;
+    color: inherit;
+    border: 2px solid transparent;
+    /* default transparent border */
+    border-radius: 4px;
+    transition: border-color 0.2s ease, transform 0.2s ease;
+}
+
+.pirsa__image-gallery a:hover,
+.pirsa__image-gallery a:focus {
+    border-color: #0b4a8b;
+    /* NSW primary blue */
+    outline: none;
+    /* remove default outline */
+    transform: translateY(-2px);
+
+    /* subtle lift on hover */
+    .nsw-card__image {
+        background: #fff;
+    }
+}
+
+.pirsa__image-gallery a:focus-visible {
+    box-shadow: 0 0 0 3px #0b4a8b33;
+    /* accessible focus halo */
+}
+
+.pirsa__image-gallery img {
+    width: 100%;
+    aspect-ratio: 1 / 1;
+    /* force square */
+    object-fit: contain;
+    display: block;
+    border-radius: 4px;
+    margin-bottom: 10px;
+}
+
+.pirsa__image-gallery.nsw-grid .nsw-card__content {
+    padding: 2rem;
+}
+
+
+#baguetteBox-slider {
+    top: 50px;
+    height: calc(100% - 100px);
+}
+
+#baguetteBox-overlay .full-image {
+    padding-bottom: 30px;
+}
+
+#baguetteBox-overlay .full-image figcaption {
+    background: none;
+    padding: 0 25% 0 25%;
+    top: calc(100% - 10px);
+}

@@ -187,6 +187,12 @@
     &--video {
         background-color: transparent;
         min-height: unset;
+
+        input, a, button {
+            &:focus {
+                outline: 3px solid #0098CB;
+            }
+        }
     }
 
 }
