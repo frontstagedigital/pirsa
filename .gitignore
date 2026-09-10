@@ -1,4 +1,4 @@
 node_modules/
-package-lock.json
 dist
 .parcel-cache
+.DS_Store

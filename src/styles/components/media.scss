@@ -1,0 +1,57 @@
+.nsw-media {
+
+    &__video {
+        border-radius: var(--nsw-border-radius);
+        &--has_caption {
+            border-bottom-left-radius: 0;
+            border-bottom-right-radius: 0;
+        }
+    }
+
+    figcaption {
+        font-size: unset;
+        line-height: unset;
+        border-bottom-left-radius: var(--nsw-border-radius);
+        border-bottom-right-radius: var(--nsw-border-radius);
+
+        .nsw-accordion {
+            margin-top: 1rem;
+        }
+        .nsw-accordion__content {
+            background: var(--nsw-white);
+        }
+
+        .nsw-accordion__button[aria-expanded=false] {
+            // background-color: var(--nsw-white);
+
+            &:hover {
+                color: var(--nsw-text-dark);
+
+                .nsw-material-icons {
+                    color: var(--nsw-brand-dark);
+                }
+            }
+
+        }
+    }
+
+
+    &--circle {
+        height: 180px;
+        min-height: 180px;
+        width: 180px;
+        border-radius: 100%; 
+        overflow: hidden; 
+        display: flex; 
+        align-items: center; 
+        justify-content: center;   
+        margin: 0 auto;
+
+        img {
+            width: 100%; 
+            height: 100%; 
+            object-fit: cover; 
+        }
+    }
+
+}

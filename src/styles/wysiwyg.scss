@@ -1,0 +1,130 @@
+// list styles for page content
+main,
+.nsw-wysiwyg-content {
+    ul:not(.pirsa-footer__link-list, .nsw-main-nav__list, .nsw-main-nav__sub-nav__mega-menu__group__list-links, .nsw-main-nav__mobile-extra-links ul, .nsw-side-nav ul, .nsw-main-nav__sub-list, .copyright-link-list, .nsw-in-page-nav ul, .nsw-tabs__list, .nsw-content-block__list--bare, .pirsa-content-block ul.nsw-content-block__list, .pirsa-content-block .nsw-content-block__content ul, .pirsa-link-list ul, .nsw-link-list ul, .pirsa-utility-list.nsw-utility-list--horizontal ul, .nsw-pagination ul, .pagination-list, .pirsa-carousel__controls__buttons),
+    ol:not(.nsw-carousel__list, .nsw-breadcrumbs ol, .nsw-carousel__navigation) {
+        padding-left: 2rem;
+
+        li {
+            list-style: inherit;
+            //margin-top: 0;
+        }
+    }
+    // list exception - pagination
+    .nsw-pagination {
+        ul {
+            padding: 0;
+            
+            li {
+            padding-left: 0;
+            list-style: none;
+            }
+        }
+    }
+
+    hr {
+        background-color: var(--nsw-grey-03);
+    }
+
+    hr:has(+h2) {
+        margin: 2rem 0;
+    }
+
+    a:not(.nsw-button, .nsw-icon-button, .nsw-card a, .nsw-list-item a, .pirsa-card a, .nsw-link-list a) {
+        //only style link which does not have a span with icon
+        &[target=_blank]:not(:has(span.material-icons)):not([href$='.pdf']):not([href$='.doc']):not([href$='.xls']):not([href$='.docx']):not([href$='.xlsx']),
+        &.external { 
+            &::after {
+                content: "\e89e";
+                display: inline-block;
+                font-family: "Material Icons";
+                font-size: 1.25rem;
+                font-weight: var(--nsw-font-normal);
+                font-style: normal;
+                margin-left: .2rem;
+                text-decoration: none;
+                vertical-align: sub;
+            }
+            &:hover {
+                outline: 0;
+            }
+        }
+
+        &[href$='.pdf'],
+        &[href$='.doc'],
+        &[href$='.docx'],
+        &[href$='.xls'],
+        &[href$='.xlsx'] {
+            &::after {
+                display: inline-block;
+                font-family: "Material Icons";
+                font-size: 1.25rem;
+                font-style: normal;
+                font-weight: var(--nsw-font-normal);
+                margin-left: .2rem;
+                text-decoration: none;
+                vertical-align: sub;
+            }
+            &:hover {
+                outline: 0;
+            }
+            &::before {
+                display: none;
+            }
+        }
+
+        &[href$='.pdf'] {
+            &::after {
+                content: "\e415";
+            }
+        }
+
+        &[href$='.doc'],
+        &[href$='.docx'] {
+            &::after {
+                content: "\e873";
+            }
+        }
+
+        &[href$='.xls'],
+        &[href$='.xlsx'] {
+            &::after {
+                content: "\f1be";
+            }
+        }
+
+
+    }
+
+    /* target any headings that are the first child of a div and not only child and add margin-top */
+    div:not(.nsw-col, .nsw-card__copy, .nsw-accordion__content, .nsw-accordion__content div, .nsw-layout__sidebar div, .nsw-card__title) {
+        > :is(h2, h3:not(.nsw-card__title), h4:not(.search-result-card__title h4), h5, h6, .nsw-h2, .nsw-h3, .nsw-h4, .nsw-h5, .nsw-h6) {
+            &:first-child {
+                margin-top: 2rem;
+            }
+        }
+    }   
+
+    .nsw-accordion__content > div:not(:first-child):not(:empty) {
+        padding-top: 2rem;
+    }    
+
+}
+
+/* Remove extra padding when on content page */
+.nsw-container {
+    .nsw-layout__main {
+        .nsw-section {
+            .nsw-container {
+                padding-left: 0;
+                padding-right: 0;
+            }
+        }
+    }
+}
+
+// handles dot points when CTA button component align centred
+.nsw-wysiwyg-content.nsw-text-center ul,
+.nsw-wysiwyg-content.nsw-text-center ol {
+    list-style-position: inside;
+}

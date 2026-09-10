@@ -1,0 +1,26 @@
+.pirsa-tag {
+    background-color: var(--nsw-brand-dark);
+    border-color: var(--nsw-brand-dark);
+    color: var(--nsw-brand-light);
+
+    &:hover:not(.nsw-tag--checkbox, span) {
+       background-color: var(--nsw-brand-light);
+       color: var(--nsw-brand-dark);
+    }
+    &:visited {
+       color: var(--nsw-brand-light);
+    }
+}
+
+.nsw-tag:not(.pirsa-tag) {
+   background-color: var(--nsw-white);
+    padding-left: 12px;
+    padding-right: 12px;
+}
+
+.nsw-tag {
+   &--sardi {
+      color: var(--sardi-brand-primary);
+      border-color: var(--sardi-brand-primary);
+   }
+}

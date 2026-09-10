@@ -1,0 +1,160 @@
+/* SARDI theme overrides */
+
+.sardi {
+    --sardi-brand-primary: #007C54;
+    --nsw-brand-supplementary: #009661;
+    --nsw-brand-light: #EEF7F4;
+    --pirsa-accent-light: #EEF7F4;
+    //--nsw-link: #007C54;
+
+    --pirsa-accordion-active: #C8E6DC;
+
+    // .nsw-breadcrumbs a:not(.current) {
+    //     color: var(--nsw-brand-dark);
+    // }
+
+
+    @include breakpoint($nsw-desktop-breakpoint) {    
+        .nsw-main-nav__list > li:not(.sardi) > a.active {
+            box-shadow: inset 0 -4px 0 var(--pirsa-brand-dark);
+        }
+    }
+
+    .pirsa-section {
+        background-color: var(--nsw-brand-light);
+    }
+
+    .pirsa-utility-list {
+        color: var(--sardi-brand-primary);
+    }
+
+    .pirsa-icon {
+        &__apple {
+            background-image: url('../image/icon-apple-green.svg');
+        }
+    
+        &__fish {
+            background-image: url('../image/icon-fish-green.svg');
+        }
+        
+        &__pig {
+            background-image: url('../image/icon-pig-green.svg');
+        }
+        
+        &__plant-leaf {
+            background-image: url('../image/icon-plant-leaf-green.svg');
+        }   
+
+        &__pageview {
+            background-image: url('../image/icon-pageview-green.svg');
+        }
+    }
+ 
+    .pirsa-content-block {
+        a {
+            //color: var(--sardi-brand-primary);
+        }
+    }
+
+    .pirsa-section__sidebar {
+        a {
+            color: var(--sardi-brand-primary);
+        }
+
+        .nsw-tag {
+            color: var(--sardi-brand-primary);
+            border-color: var(--sardi-brand-primary);
+        }
+
+        .nsw-steps--dark .nsw-steps__item:before,
+        .nsw-steps--fill.nsw-steps--dark .nsw-steps__item:before {
+            color: var(--sardi-brand-primary);
+            border-color: var(--sardi-brand-primary);
+            background-color: var(--sardi-brand-primary);
+        }
+        .nsw-steps--dark .nsw-steps__content:before {
+            background-color: var(--sardi-brand-primary);
+        }
+    }
+
+    .pirsa-searchbar { 
+        .nsw-form__input {
+            color: var(--sardi-brand-primary);
+            border-color: var(--sardi-brand-primary);
+        }
+        .nsw-button {
+            color: var(--sardi-brand-primary);
+            border-color: var(--sardi-brand-primary);
+        }
+    }
+
+    .nsw-button {
+        &--dark {
+            background-color: var(--sardi-brand-primary);
+
+            &-outline-solid {
+                border-color: var(--sardi-brand-primary);
+                color: var(--sardi-brand-primary);
+
+                .nsw-material-icons {
+                    color: inherit;
+                }
+            }
+        }
+
+        &:hover {
+            background-color: var(--sardi-brand-primary);
+            border-color: var(--sardi-brand-primary);
+            color: var(--nsw-text-light);
+        }
+    }
+
+    .pirsa-link-list {
+        a {
+            color: var(--sardi-brand-primary);
+        }
+    }
+
+    .nsw-carousel__control {
+        border-color: var(--sardi-brand-primary);
+        .nsw-icon {
+            color: var(--sardi-brand-primary);
+        }
+    }
+
+    .nsw-carousel__nav-item { 
+        button {
+            border-color: var(--sardi-brand-primary);
+        }
+
+        &--selected {
+            button {
+                background-color: var(--sardi-brand-primary);
+                border-color: var(--sardi-brand-primary);
+            }
+        }
+    }
+
+    .nsw-card {
+        &--dark {
+            .nsw-card__content {
+                background-color: var(--sardi-brand-primary);
+
+            }
+
+            &:hover {
+                color: var(--nsw-text-dark);
+                .nsw-card__content {
+                    background-color: var(--nsw-white);
+                }
+            }
+        }
+    }
+
+    .pirsa-card--small:hover {
+        .nsw-material-icons {
+            border-color: var(--sardi-brand-primary);
+            color: var(--sardi-brand-primary);
+        }
+    }
+}

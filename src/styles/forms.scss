@@ -1,0 +1,50 @@
+.nsw-form {
+
+    &__checkbox {
+        &-label {
+            padding-left: 2.75rem;
+            &:before {
+                height: 1.75rem;
+                width: 1.75rem;
+            }
+            &::after {
+                top: .2rem;
+                left: .2rem;
+            }
+        }
+    }
+
+    &__group {
+        margin-top: 2rem;
+
+
+        input[type="text"],
+        input[type="email"],
+        textarea {
+            width: 100%;
+        }
+
+        @include breakpoint('sm') {
+
+            input[type="text"],
+            input[type="email"],
+            textarea {
+                width: 540px;
+            }
+        }
+
+        abbr {
+            border-bottom: none;
+        }
+    }
+
+}
+
+// checkbox styling
+#mc_embed_signup .mc-field-group ul li {
+    list-style: none;
+}
+
+#mc_embed_signup .mc-field-group ul li input {
+    margin-right: 0.5rem;
+}

@@ -1,0 +1,86 @@
+.pirsa-large-card {
+    align-items: flex-end;
+    color: var(--nsw-text-light);
+    min-height: 32.5rem;
+    position: relative;
+
+    .pirsa-card-bg {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-size: cover;
+        background-position: center;
+        transition: transform 2.0s ease;
+        z-index: 0;
+    }
+
+    &:hover .pirsa-card-bg,
+    &:focus-within .pirsa-card-bg {
+        transform: scale(1.1);
+    }
+
+    .nsw-card__image {
+        display: none;
+    }
+
+    .nsw-card__title {
+        margin-top: 0;
+        @include breakpoint('lg') {
+            font-size: var(--nsw-font-size-lg-desktop);
+            line-height: var(--nsw-line-height-lg-desktop);
+        }  
+    }
+
+
+     .nsw-card__copy {
+        //font-size:var(--pirsa-font-size-copy);
+        padding-bottom: 1rem;
+     }    
+
+    .nsw-card__content {
+        background-color: var(--pirsa-dark-overlay);
+        border: none;
+        height: auto;
+        margin-top: auto;
+        width: 100%;
+        z-index: 1;
+
+        &:hover {
+            background-color: var(--pirsa-dark-overlay-hover);
+        }
+    }
+    
+    .nsw-card__tag {
+        font-size: var(--pirsa-font-size-meta);
+        font-weight: var(--nsw-font-normal);
+        text-transform: uppercase;
+    }
+
+    a {
+        color: var(--nsw-text-light);
+    }
+  
+    .nsw-material-icons {
+        border: 2px solid;
+        border-radius: 50%;
+        color: var(--nsw-text-light);
+        font-size: 1.25em;        
+        padding: 4px;
+        height: 2rem;
+        width: 2rem;
+        bottom: 1.25rem;
+        left: 1.25rem;        
+
+        @include breakpoint('lg') {
+            font-size: 1.875em;        
+            padding: 7px;
+            height: 3rem;
+            width: 3rem;    
+            bottom: 2rem;
+            left: 2rem;   
+        }
+
+    }    
+}

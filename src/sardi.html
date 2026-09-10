@@ -7,25 +7,118 @@
     }
 </include>
 
-<body class="page__body">
+<body class="page__body sardi">
+    <include src="partials/skip-links.html"></include>
 
     <include src="partials/header.html"></include>
+        <include src="partials/main-nav.html">
+        {
+            "mainNavItem1Class": "",
+            "mainNavItem2Class": "",
+            "mainNavItem3Class": "",
+            "mainNavItem4Class": "",
+            "mainNavItem5Class": "",
+            "mainNavItem6Class": "active"     
+        }
+    </include>
+    <include src="partials/hero-banner-sardi.html"></include>
 
-    <div class="nsw-container">
-        <div class="nsw-layout">
-            <div class="nsw-layout__sidebar nsw-layout__sidebar--desktop">
-                <!-- START: Left sidebar content -->
-                <div class="nsw-docs__box nsw-docs__box--large">left</div>
-                <!-- END: Left sidebar content -->
+    <section class="nsw-section pirsa-section">
+        <div class="nsw-container pirsa-breadcrumbs">
+            <nav aria-label="Breadcrumbs" class="nsw-breadcrumbs js-breadcrumbs">
+                <ol>
+                    <li>
+                      <a href="home.html">Home</a>
+                    </li>
+                    <li>
+                      <a href="#" class="current" aria-current="page">SARDI Research</a>
+                    </li>
+                </ol>
+            </nav>
+        </div>       
+      </section>  
+
+      <main id="content">
+
+
+    <!-- START PIR 196 intro block -->
+    <section class="nsw-section pirsa-section">
+        <div class="nsw-container">
+
+            <h2 class="nsw-h3">Research &amp; reports</h2>
+            <include src="partials/searchbar.html"></include>
+
+            <div class="nsw-grid">
+                <div class="nsw-col nsw-col-sm-8 nsw-col-md-9">
+                    <h2 class="nsw-h3">About us </h2>
+                    <p>SARDI is the state’s primary industries research provider and collaborates with key industries, primary producers, research institutions and other organisations. </p>
+                    <p>SARDI applied science plays a key role in advancing the productivity, quality, competitiveness, and long-term sustainability of the state’s primary industries. This work addresses the challenges faced by many primary producers now and into the future. </p>
+                    <p>SARDI has delivered applied science that has grown South Australia’s primary industries for over 30 years.</p>
+                </div>
+                <div class="nsw-col nsw-col-sm-4 nsw-col-md-3">
+                    <h3>Popular links</h3>
+                    <div class="nsw-link-list pirsa-link-list">
+                        <ul>
+                            <li><a href="#"><span class="pirsa-icon pirsa-icon__fish pirsa-icon--outline pirsa-icon--rounded" focusable="false" aria-hidden="true">fish</span> <span>Aquatic sciences</span></a></li>
+                            <li><a href="#"><span class="pirsa-icon pirsa-icon__plant-leaf pirsa-icon--outline pirsa-icon--rounded" focusable="false" aria-hidden="true">leaf</span> <span>Crop sciences</span></a></li>    
+                            <li><a href="#"><span class="pirsa-icon pirsa-icon__apple pirsa-icon--outline pirsa-icon--rounded" focusable="false" aria-hidden="true">apple</span> <span>Food sciences</span></a></li>
+                            <li><a href="#"><span class="pirsa-icon pirsa-icon__pig pirsa-icon--outline pirsa-icon--rounded" focusable="false" aria-hidden="true">pig</span> <span>Livestock sciences</span></a></li>     
+                            <li><a href="#"><span class="pirsa-icon pirsa-icon__pageview pirsa-icon--outline pirsa-icon--rounded" focusable="false" aria-hidden="true">pageview</span> <span>Careers &amp; scholarships</span></a></li>     
+                        </ul>
+                      </div>
+                </div>
             </div>
-            <main class="nsw-layout__main">
-                <!-- START: Main content -->
-                <div class="nsw-docs__box nsw-docs__box--large">main</div>
-                <!-- END: Main content -->
-            </main>
         </div>
-    </div>
+    </section>
+    <!-- END PIR 196 intro block -->
 
+    <section class="nsw-section">
+        <div class="nsw-container">
+            <div class="nsw-display-flex">
+                <div class="nsw-align-self-center nsw-flex-grow-1">
+                    <h3>Explore our research projects</h3>
+                </div>
+                <div class="nsw-show-md">
+                    <a href="sardi-project-listing.html" class="nsw-button nsw-button--dark-outline-solid pirsa-button--rounded">View all projects</a>  
+                </div>          
+            </div>
+        
+            <include src="partials/large-cards-sardi.html"></include>
+            
+            <div class="nsw-hide-md">
+                <a href="sardi-project-listing.html" class="nsw-button nsw-button--dark-outline-solid pirsa-button--rounded">View all projects</a>  
+            </div>   
+
+        </div>
+    </section>
+
+    <section class="nsw-section pirsa-section">
+        <div class="nsw-container">
+            <include src="partials/carousel-items-sardi.html"></include>
+
+        </div>
+    </section>
+
+    <section class="nsw-section">
+        <div class="nsw-container">
+            <h3>Strategic Plan For The Future</h3>
+            <p>SARDI's evolutionary pathway involves delivering innovation through collaboration.</p>
+            <p>The strategic plan outlines the vision, mission, strengths, and opportunities that will guide us over the next 5 years. It forms the framework to achieve SARDI's mandate as a key economic development asset for the state.</p>
+
+            <div class="nsw-p-top-md nsw-hide-md">
+                <a href="#" class="nsw-button nsw-button--dark-outline-solid pirsa-button--rounded">View full report</a>  
+            </div>  
+        </div>
+    </section>
+
+    <section class="nsw-section pirsa-section ">
+        <div class="nsw-container">
+            <h3>Our Strategic Pillars</h3>
+            <include src="partials/info-cards-sardi.html"></include>
+        </div>
+    </section>
+
+    </main>
 
     <include src="partials/footer.html"></include>
 

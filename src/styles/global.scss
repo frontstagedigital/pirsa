@@ -1,0 +1,16 @@
+.nsw-section.no-padding {
+    padding: 0;
+}
+
+/* styles to disable unnecessary motion */
+@media (prefers-reduced-motion: reduce) {
+    .pirsa-large-card:hover .pirsa-card-bg, 
+    .pirsa-large-card:focus-within .pirsa-card-bg,
+    .nsw-card:hover .nsw-card__image img,
+    .nsw-card__image img,
+    .pirsa-card:not(.nsw-card):hover .nsw-card__image img,
+    .pirsa-card:not(.nsw-card) .nsw-card__image img {
+        transform: none !important;
+        transition: none !important;
+    }
+}

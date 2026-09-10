@@ -1,0 +1,208 @@
+.pirsa-hero-banner {
+    background-color: var(--nsw-brand-dark);
+    color: var(--nsw-text-light);
+    min-height: 25rem;
+    @include breakpoint('lg') {
+        min-height: 30rem;
+    }   
+
+    &__overlay {
+        background-color: var(--pirsa-dark-overlay);
+    }    
+
+    &__video {
+        //background-color: var(--pirsa-dark-overlay);
+        overflow: hidden;
+        max-height: 25rem;
+        position: relative;
+
+        @include breakpoint('lg') {
+            max-height: 30rem;
+        }          
+
+        .nsw-media__video {
+            width: 100vh;
+            
+            @include breakpoint('sm') {
+                width: 100%;
+            }   
+            
+            iframe, video {
+                height: 100%;
+                object-fit: cover;
+                position: absolute;
+                width: 100%;
+                z-index: -1;
+                transform: translateX(-25%);
+
+                @include breakpoint('sm') {
+                    transform: unset;
+                }  
+                @include breakpoint('md') {
+                    transform: unset;
+                }                    
+                @include breakpoint('lg') {
+                    transform: translateY(-14%);
+                }  
+                @include breakpoint('xl') {
+                    transform: translateY(-18%);
+                }                                                                  
+            }
+        }
+    }
+
+    & &__wrapper {
+        bottom: 0;
+        padding: 0;
+        margin: 0;
+        position: absolute;
+        z-index: 1;
+        width: calc(100vw - 2em);
+        height: 100%;
+    }
+
+    /* default content styling for video banner */
+    & &__content {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        padding: 0;
+        padding-bottom: 2rem;
+        width: 100%;
+        max-width: 100%;
+
+        @include breakpoint('sm') {
+            width: 90%;
+        }
+
+        @include breakpoint('md') {
+            width: 93%;
+        }
+
+        .nsw-button {
+            margin-top: 0;
+        }
+
+        h1 {
+            @include breakpoint('md') {
+                // font-size: var(--nsw-font-size-xxl-mobile);
+                max-width: 25rem;
+            }
+            @include breakpoint('lg') {
+                // font-size: var(--nsw-font-size-xxl-mobile);
+                max-width: 40rem;
+            }            
+        }
+    }
+
+    &__logo {
+        position: absolute;
+        right: 0;
+        top: 0;
+        z-index: 1;
+
+        @include breakpoint('sm') {
+            right: 1rem;
+        }
+
+        img {
+            height: 6.625rem;
+            
+            @include breakpoint('sm') {
+                height: 10rem;
+            }    
+            
+            @include breakpoint('md') {
+                height: unset;
+            }
+        }
+
+ 
+    }
+
+    .nsw-hero-banner__button {
+        bottom: 2.5rem;
+        position: absolute;
+        right: 1rem;
+        z-index: 1;
+
+        .nsw-material-icons {
+            border: 2px solid transparent;
+            border-radius: 50%;
+            background-color: var(--nsw-text-light);
+            font-size: 1.25em;        
+            padding: 4px;
+            height: 2rem;
+            width: 2rem;
+        }  
+
+    }
+
+    &--image {
+        padding: 0;
+        min-height: 25rem;
+        color: var(--nsw-font-light);
+        background-size: cover;
+        background-position: center;
+        
+        @include breakpoint('lg') {
+            min-height: 30rem;
+        }
+        .nsw-hero-banner__container {
+            //background-color: var(--pirsa-dark-overlay);
+            padding-bottom: 0;
+            padding-top: 0;
+            min-height: 25rem;
+            
+            @include breakpoint('lg') {
+                min-height: 30rem;
+            }
+        }
+
+        .pirsa-hero-banner__content {
+            width: calc(100vw - 2em);
+
+            h1 {
+                max-width: unset;
+            }               
+
+        }  
+
+        .pirsa-page-banner__overlay:after {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: var(--pirsa-overlay);
+        }
+
+    }
+
+    &--text {
+        .pirsa-hero-banner__overlay {
+            background-color: transparent;
+        }
+        .pirsa-hero-banner__content {
+            width: calc(100vw - 2em);
+
+            h1 {
+                max-width: unset;
+            }               
+
+        }          
+    }
+
+    &--video {
+        background-color: transparent;
+        min-height: unset;
+
+        input, a, button {
+            &:focus {
+                outline: 3px solid #0098CB;
+            }
+        }
+    }
+
+}

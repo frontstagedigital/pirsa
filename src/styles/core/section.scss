@@ -1,0 +1,71 @@
+.pirsa-section {
+    background-color: var(--pirsa-accent-light);
+
+    .pirsa-section__sidebar {
+        padding: 1.5rem;
+    
+        &__content {
+            border-bottom: 1px solid var(--nsw-grey-03);
+            padding-bottom: 2rem;
+        }
+    
+        &:last-of-type {
+            .pirsa-section__sidebar__content {
+                border-bottom: 0;
+            }
+        }
+    
+        & + & {
+            padding-top: .5rem;
+        }
+    }
+
+}
+
+// handle background colors and landing page layout
+.landing .nsw-section:has(.pirsa-breadcrumbs) {
+    background-color: var(--nsw-brand-light);
+}
+
+.landing--no-bg .nsw-section:has(.pirsa-breadcrumbs) {
+    background-color: #fff;
+}
+
+.landing main {
+    padding-bottom: 0;
+}
+
+.landing:not(.landing--no-bg) footer {
+    margin-top: 0;
+}
+
+.bg-white {
+    background-color: #ffffff;
+}
+
+//  from <head>
+.last-section {
+    padding-bottom: 2rem;
+}
+
+@media (width >=48rem) {
+    .last-section {
+        padding-bottom: 4rem;
+    }
+
+    .landing .nsw-section:has(.pirsa-breadcrumbs) {
+        padding-bottom: 0.5rem;
+    }
+}
+
+.landing:not(.landing--no-bg) .nsw-section__page-title {
+    padding-bottom: 0; 
+}
+
+.landing .nsw-section__page-title {
+    background-color: var(--nsw-brand-light);
+}
+
+.landing--no-bg .nsw-section__page-title {
+    background-color: #fff;
+}

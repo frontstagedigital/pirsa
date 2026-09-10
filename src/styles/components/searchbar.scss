@@ -1,0 +1,54 @@
+.pirsa-searchbar {
+    .nsw-button {
+        border-color: var(--nsw-brand-dark);
+        border-radius: 3rem;
+        padding: .5rem;
+        margin-left: -3rem;
+
+        @include breakpoint('lg') {
+            margin-left: -3.5rem;
+        }
+    }
+
+    .nsw-form__input {
+        border-color: var(--nsw-brand-dark);
+        border-radius: 3rem;
+        padding-left: 1.5rem;
+        padding-right: 3rem;
+        overflow: hidden;
+        text-overflow: ellipsis; 
+        white-space: nowrap;
+        height: 3rem;
+
+
+        @include breakpoint('lg') {
+            font-size: 1.25rem;
+            height: 3.5rem;
+        }
+
+        &:focus {
+            position: unset;
+        }
+    }
+    .nsw-button {
+        height: 3rem;
+        width: 3rem;
+        
+        @include breakpoint('lg') {
+            height: 3.5rem;
+            width: 3.5rem;
+        }
+    }
+    .nsw-material-icons {
+        font-size: 1.75rem;
+    }
+}
+
+//  searchbar input and button z-index override
+.js-search-concierge .pirsa-searchbar .nsw-button {
+    z-index: 101 !important;
+}
+
+.js-search-concierge .concierge-input {
+    z-index: 101 !important;
+}

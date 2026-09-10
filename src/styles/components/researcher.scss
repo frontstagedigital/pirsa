@@ -1,0 +1,10 @@
+.email-holder {
+    display: inline-flex;
+    flex-wrap: wrap;
+
+    span:after {
+        content: " ";
+        white-space: pre;
+        unicode-bidi: isolate;
+    }
+}

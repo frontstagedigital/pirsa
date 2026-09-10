@@ -1,0 +1,330 @@
+.fruitfly {
+    .pirsa-header .nsw-header__waratah a {
+        width: 204px;
+        height: 34px;
+
+        @include breakpoint('sm') {
+            width: 300px;
+        }
+
+        @include breakpoint('lg') {
+            width: 396px;
+        }
+    }
+
+    @media screen and (min-width: 62rem) {
+        .pirsa-header .nsw-header__main {
+            margin: 14px 0;
+        }
+    }
+
+    .nsw-header__inner {
+        @include breakpoint('lg') {
+            padding: 12px 0;
+        }
+    }
+
+    .nsw-main-nav__list {
+        column-gap: 6px;
+
+        @include breakpoint('xl') {
+            column-gap: 20px;
+        }
+
+        @media screen and (min-width: 1440px) {
+            column-gap: 40px;
+        }
+    }
+
+    .nsw-masthead,
+    .nsw-skip a {
+        background-color: #00427A;
+    }
+
+    .nsw-masthead {
+        padding: 0.5rem 0;
+
+        @include breakpoint('lg') {
+            padding: 16px 0;
+        }
+
+        .menu-item {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            text-decoration: none;
+            color: #fff;
+            font-size: 14px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 19px;
+            padding: 10px 1rem;
+        }
+
+        .home-text {
+            display: flex;
+            gap: 4px;
+            ;
+        }
+    }
+
+    .masthead-logo {
+        width: 180px;
+
+        @include breakpoint('sm') {
+            width: 200px;
+        }
+
+        @include breakpoint('lg') {
+            width: unset;
+        }
+    }
+
+    .pirsa-header .nsw-header__waratah {
+        padding: 14px 0;
+        @include breakpoint('lg') {
+            padding: 0;
+        }
+    }
+    .pirsa-header .nsw-header__search {
+        right: 48px;
+        @include breakpoint('sm') {
+            right: 64px;
+        }
+        @include breakpoint('lg') {
+            right: 0;
+        }
+    }
+
+    .pirsa-header .nsw-header__phone {
+        position: absolute;
+        top: 8px;
+        right: 96px;
+        @include breakpoint('sm') {
+            right: 128px;
+        }
+        @include breakpoint('lg') {
+            display: none;
+        }
+
+        &-link {
+            text-decoration: none;
+        }
+    }
+}
+
+.pirsa-header {
+    .nsw-header__waratah {
+        justify-content: left;
+        padding: 14px 6px;
+
+        a {
+            width: 160px;
+
+        }
+
+        img {
+            width: 100%;
+        }
+    }
+
+    .nsw-header__search {
+        top: 8px;
+        right: 64px; 
+
+        button {
+            color: var(--nsw-grey-01);
+        }
+
+        &-area {
+            input {
+                background-color: var(--nsw-white);
+                height: 4rem;
+                @include breakpoint('lg') {
+                    height: 3rem;
+                }
+            }
+        }
+    }
+    
+    .nsw-header__menu {
+        top: 8px;
+        right: 0;
+        left: unset;
+
+        button {
+            color: var(--nsw-grey-01);
+        }
+    }
+
+    .translate__container {
+        display: none;
+    }
+
+    #translateMenu0[aria-hidden=true] {
+        display: none;
+    }
+
+    .menu-item {
+        display: none;
+    }
+
+
+    @media screen and (min-width: 62rem) {
+        
+        border-bottom: 1px solid var(--nsw-grey-03);
+
+        .nsw-header__main {
+            margin: 20px 0;
+        }
+
+        .nsw-header__waratah {
+            // justify-content: left;
+            padding: 0;
+    
+            a {
+                width: 240px;
+            }
+        }
+
+        .nsw-header__search {
+            top: 50%;
+            right: 0;
+            align-items: center;
+            display: flex;
+            gap: 6px;
+
+            button .nsw-material-icons {
+                font-size: 2rem;
+            }
+        }
+
+        .nsw-header__search-area {
+            right: 462px;// 494 + 16 - 48 (search menu + padding - search button)
+            width: 16.25rem;
+
+            .fruitfly & {
+                right: 268px; // 300 + 16 - 48 (search menu + padding - search button)
+            }
+
+            form .nsw-material-icons {
+                font-size: 2rem;
+            }
+        }
+        .nsw-icon-button {
+            color: var(--nsw-grey-01);
+        }
+
+        .translate__container {
+            display: block;
+        }
+
+        .translate__button {
+            display: flex;
+            padding: 0 16px;
+            align-items: center;
+            flex-direction: row;
+            // gap: 4px;
+            width: unset;
+            height: 48px;
+
+            .globe {
+                width: 24px;
+                height: 24px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+
+            .text {
+                color: var(--neutral-grey-02, #495054);
+                font-size: 14px;
+                font-weight: 400;
+                line-height: 19px;
+                padding-left: 10px;
+            }
+
+            .chevron {
+                width: 24px;
+                height: 24px;
+                transition: transform .3s;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+        }
+
+        .translate__button[aria-expanded="true"] .chevron {
+            transform: rotate(180deg);
+        }
+
+        .translate__languages {
+            background: var(--nsw-white);
+            border: 1px solid var(--nsw-grey-04);
+            box-shadow: 0 4px 12px 0 rgba(0, 0, 0, .15);
+            list-style: none;
+            margin: 0;
+            max-height: 400px;
+            min-width: 295px;
+            overflow-y: scroll;
+            padding: 0;
+            position: absolute;
+            right: 0;
+            top: 60px;
+            width: 100%;
+            z-index: 201;
+
+            li {
+                margin: 0;
+                padding: 0;
+            }
+
+            a {
+                display: block;
+                line-height: 1.5rem;
+                padding: .5rem 1.5rem;
+                border-bottom: 1px solid var(--nsw-grey-04);
+                color: var(--nsw-grey-01);
+                width: unset;
+                height: unset;
+                text-align: left;
+                font-size: inherit;
+
+                &:focus {
+                    outline-offset: -3px;
+                }
+            }
+        }
+
+        .menu-item {
+            display: flex;
+            text-decoration: none;
+            color: var(--neutral-grey-02, #495054);
+            font-size: 14px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 19px;
+            width: unset;
+            padding: 0 16px;
+        }
+    }
+
+    @media screen and (min-width: 75rem) {
+        .nsw-header__main {
+            margin: 14px 0;
+        }
+
+        .nsw-header__waratah a {
+            width: 297px;
+        }
+
+        .nsw-header__search {
+            gap: 8px;
+        }
+
+        .nsw-header__search-area {
+            right: 470px; // 502 + 16 - 48
+            width: 24.625rem;
+        }
+    }
+}

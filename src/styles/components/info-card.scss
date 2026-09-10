@@ -1,0 +1,91 @@
+.pirsa-info-card {
+    color: var(--nsw-text-dark);
+    display: flex;
+    flex-direction: row;
+    align-items: stretch;
+    min-height: 5rem;
+
+    //hide card if asset status not live
+    &[data-asset-status=""] {
+        display: none;
+    }
+
+    &--fill {
+        background-color: var(--nsw-white);
+    }
+
+    &--border {
+        border-radius: var(--nsw-border-radius);
+        border: 1px solid var(--nsw-grey-03);    
+    }
+
+    &--full-height {
+        min-height: 7rem;
+        height: 100%;
+    }
+
+    // &:hover {
+    //     color: var(--nsw-text-light);
+
+    //     .pirsa-info-card__content {
+    //         background-color: var(--nsw-brand-dark);
+
+    //         a {
+    //             color: var(--nsw-text-light);
+    //         }
+    //     }
+    // }
+
+    &__avatar {
+        padding: 1rem;
+        
+        &__image {
+            height: 3.375rem;
+            width: 3.375rem;
+            border-radius: 100%; 
+            overflow: hidden; 
+            display: flex; 
+            align-items: center; 
+            justify-content: center;   
+        }
+
+        img {
+            width: 100%; 
+            height: 100%; 
+            object-fit: cover; 
+        }
+    }
+
+    &__icon {
+        padding: 1rem;
+
+        img {
+            max-width: 3rem;
+            height: auto;
+        }
+    }
+
+    &__content {
+        padding: 1rem 1.5rem 1rem 1rem;
+        font-size: var(--nsw-font-size-xs-desktop);
+        line-height: var(--nsw-line-height-xs-desktop);
+        // transition: background .15s ease-in-out, border .15s ease-in-out;        
+
+        // a {
+        //     font-weight: var(--nsw-text-normal);
+        //     color: var(--nsw-text-dark);
+        //     text-decoration: none;
+        //     transition: color .15s ease-in-out;
+        // }
+    }
+
+    &__title {
+        font-size: var(--pirsa-font-size-title);
+        font-weight: var(--nsw-font-bold);
+    }
+
+    &__subtitle {
+        font-size: var(--pirsa-font-size-copy);
+    }
+
+}

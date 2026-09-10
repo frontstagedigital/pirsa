@@ -1,0 +1,34 @@
+.pirsa-steps {
+    .nsw-steps__item {
+
+        &:last-child {
+
+          .nsw-steps__content {
+            &::before {
+              display: none;
+            }
+          }
+
+        }
+    }
+
+    &.nsw-steps {
+      &--small {
+        .nsw-steps__item {
+          &:before {
+            width: 1.25rem;
+            height: 1.25rem;
+            top: .25rem;
+          }
+        }
+        .nsw-steps__content {
+          &:before {
+            top: 1.5rem;
+            bottom: -.5rem;
+            left: .5rem;
+          }
+        }
+
+      }
+    }
+}

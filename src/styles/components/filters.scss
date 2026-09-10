@@ -1,0 +1,112 @@
+.nsw-filters {
+
+    padding-top: 1rem;
+    @include breakpoint('lg') {
+        padding-top: 0;
+    }
+
+
+    &__wrapper {
+        //background-color: var(--nsw-off-white);
+
+        .nsw-filters--down & {
+                  
+            @include breakpoint('lg') {
+              //background-color: var(--nsw-off-white);
+            }
+        }
+    }
+
+    &__title {
+        margin-top: 0;
+        padding-bottom: 1em;
+        color: #000;
+        border-bottom: 1px solid var(--nsw-grey-03);
+    }
+
+    &__controls { 
+
+
+        button {
+            background-color: var(--nsw-white);
+            border: 1px solid var(--nsw-grey-04);
+            border-radius: var(--nsw-border-radius);
+
+            &:hover:enabled {
+                background-color: var(--pirsa-accordion-active);
+                color: var(--nsw-text-dark) !important;
+                border-color: var(--pirsa-accordion-active);
+
+                .nsw-material-icons {
+                    color: var(--nsw-brand-dark);
+                    outline-color: var(--nsw-brand-dark);
+
+                    &:last-child {
+                        color: var(--nsw-brand-dark);
+                        outline-color: var(--nsw-brand-dark) !important;
+                    }
+
+                }
+            }   
+
+        }
+    }
+
+    &__item {
+        .nsw-material-icons {
+            color: var(--nsw-brand-dark);
+        }
+    }
+
+    &__item-content {
+        color: var(--nsw-grey-02);
+    }
+
+    &--down {
+        .nsw-filters__item:first-child {
+            border-top: 0;
+        }
+        .nsw-filters__item,
+        .nsw-filters__accept {
+            border-top: 1px solid var(--nsw-grey-03);
+        }
+    }
+
+    &__cancel {
+        button[type="reset"] {
+            text-decoration: none;
+        }
+    }
+
+    &__more {
+        text-decoration: none;
+    }
+}   
+
+.active .nsw-filters__controls button {
+    background-color: var(--pirsa-accordion-active);
+    color: var(--nsw-text-dark); 
+    border-color: var(--pirsa-accordion-active);
+}
+
+.active .nsw-filters__controls .nsw-material-icons {
+    color: var(--nsw-brand-dark);
+    outline-color: var(--nsw-brand-dark);  
+}
+
+.search-results .nsw-filters.nsw-filters--down {
+    padding-bottom: 0.5rem;
+}
+
+// ios search filters color fix
+.search-results .nsw-filters__item-name,
+.results-listing .nsw-filters__item-name,
+.search-results .nsw-filters__controls .filters-toggle,
+.results-listing .nsw-filters__controls .filters-toggle {
+    color: var(--nsw-text-dark, #22272b);
+}
+
+.search-results .nsw-filters__controls .nsw-material-icons,
+.results-listing .nsw-filters__controls .nsw-material-icons {
+    color: var(--nsw-brand-dark);
+}

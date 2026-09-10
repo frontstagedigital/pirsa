@@ -1,0 +1,201 @@
+.results-listing {
+    h1 {
+        margin-bottom: 2rem;
+    }
+
+    .nsw-results-bar {
+        border-bottom: 1px solid var(--neutral-grey-03, #CDD3D6);
+        padding-bottom: 1.5rem;
+        margin: 2rem 0 1.5rem;
+        @include breakpoint('lg') {
+            margin: 0 0 1rem;
+        }
+    }
+    .nsw-grid {
+        @media screen and (min-width: 48rem) {
+            margin: 0 -0.5rem;
+        }
+    }
+    .nsw-col {
+        padding: 8px;
+
+        @media screen and (min-width: 75rem) {
+            padding: 12px 8px;
+        }
+    }
+
+    .nsw-card__title {
+        font-size: var(--nsw-font-size-lg-mobile);
+        line-height: var(--nsw-line-height-lg-mobile);
+
+        @include breakpoint('lg') {
+            font-size: var(--nsw-font-size-lg-desktop);
+            line-height: var(--nsw-line-height-lg-desktop);
+        }
+    }
+
+    //  news cards
+    .nsw-card--pirsa {
+        .nsw-card__image {
+            @include breakpoint('lg') {
+                height: 16rem;
+                min-height: 16rem;
+            }
+        }
+        .nsw-material-icons {
+            border: 2px solid;
+            border-radius: 50%;
+            color: var(--nsw-brand-dark);
+            font-size: 1.25em;
+            height: 2rem;
+            width: 2rem;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            @include breakpoint('lg') {
+                height: 2.5rem;
+                width: 2.5rem;
+                font-size: 1.5rem;
+            }
+        }
+
+        &:hover {
+            .nsw-card__content {
+                background-color: var(--nsw-brand-light);
+                color: var(--nsw-text-dark);
+        
+                a {
+                    color: var(--nsw-text-dark);
+                }
+            }
+        }
+
+        //Use with nsw-card--pirsa
+        &-invert {
+            .nsw-card__content {
+                background-color: var(--nsw-brand-light);
+                color: var(--nsw-text-dark);  
+            }
+                
+            &:hover {
+                .nsw-card__content {
+                    color: var(--nsw-text-dark);
+                    background-color: var(--nsw-off-white);
+                }
+            }
+        }
+
+    }
+
+    //custom card search result for fishing limits page
+    .search-result-card {
+        height: 100%;
+        background-color: var(--nsw-white);
+        border: 1px solid var(--nsw-grey-03);
+        border-radius: var(--nsw-border-radius);
+        padding: 1rem;
+        display: flex;
+        flex-direction: column;
+        min-height: 23rem;
+        position: relative;
+
+        &__title {
+            a {
+                text-decoration: none;
+
+                &:after {
+                    z-index: 100;
+                    content: "";
+                    position: absolute;
+                    inset: 0;
+                }
+            }
+        }
+
+
+
+        &__content {
+            font-size: var(--nsw-font-size-sm-desktop);
+            line-height: var(--nsw-line-height-sm-desktop);
+            flex-grow: 1;
+            padding-top: .5rem;
+        }
+
+        &__image {
+            padding: 0;
+            margin-bottom: 1rem;
+            margin-top: 1rem;
+            text-align: center;
+            height: 12.5rem;
+            overflow: hidden;
+        }
+
+        &__tags{
+            justify-self: flex-end;
+            margin-bottom: 1rem;
+
+            .nsw-status-label {
+                padding-top: 5px;
+                padding-bottom: 5px;
+            }
+        }
+
+        &__meta {
+            justify-self: flex-end;
+
+            &__icon {
+                background-repeat: no-repeat;
+                background-size: 1.15rem auto; 
+                background-position: left center;  
+                padding-left: 1.5rem;
+                margin-right: 1rem;
+
+                &__marine {
+                    background-image: url('../image/search/fishing/icons/marine.svg');
+                }
+                &__freshwater {
+                    background-image: url('../image/search/fishing/icons/freshwater.svg');
+                }
+                &__reservoir {
+                    background-image: url('../image/search/fishing/icons/reservoir.svg');
+                }                
+                &__pest-species {
+                    background-image: url('../image/search/fishing/icons/e07042c9ba1187dc9500fb078ed182e29749f119.png');
+                }
+                &__climber {
+                    background-image: url('../image/search/weeds/icons/climber.svg');
+                }              
+                &__grass {
+                    background-image: url('../image/search/weeds/icons/grass.svg');
+                }              
+                &__herb {
+                    background-image: url('../image/search/weeds/icons/herb.svg');
+                }              
+                &__perennial {
+                    background-image: url('../image/search/weeds/icons/perennial.svg');
+                }              
+                &__shrub {
+                    background-image: url('../image/search/weeds/icons/shrub.svg');
+                }              
+                &__tree {
+                    background-image: url('../image/search/weeds/icons/tree.svg');
+                }                                                              
+                &__annual {
+                    background-image: url('../image/search/weeds/icons/annual.svg');
+                }                  
+                &__aquatic {
+                    background-image: url('../image/search/weeds/icons/aquatic.svg');
+                }
+                &__cactussucculent {
+                    background-image: url('../image/search/weeds/icons/cactussucculent.svg');
+                }                     
+            }
+        }
+
+    }
+
+
+
+
+}

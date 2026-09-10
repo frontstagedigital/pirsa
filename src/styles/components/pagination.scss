@@ -1,0 +1,24 @@
+.pirsa-pagination {
+    a {
+        color: var(--nsw-grey-01);
+        &.active {
+            &:after {
+                background-color: var(--nsw-brand-supplementary);
+            }
+        }
+    }
+
+    &.nsw-block {
+        margin-top: 1.5rem;
+        margin-bottom: 1rem;
+
+        @include breakpoint('lg') {
+            margin-bottom: 0;
+
+            .results-listing &{
+                margin-bottom: 1.5rem;
+            }
+        }
+    }
+}
+

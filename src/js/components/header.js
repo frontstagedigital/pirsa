@@ -20,14 +20,25 @@ $(document).ready(function () {
 });
 
 function initTranslateMobile() {
+  // Toggle mobile translate dropdown
   $('.translate-mobile .nsw-form__select').on('mousedown', function (event) {
     event.preventDefault();
     $('.translate-mobile').toggleClass('active');
-  })
+  });
+  
+  // Toggle mobile translate dropdown with spacebar
   $(".translate-mobile .nsw-form__select").on("keydown", function (e) {
     if (e.keyCode == 32) {
-      event.preventDefault();
+      e.preventDefault();
       $(".translate-mobile").toggleClass("active");
+    }
+  });
+  
+  // Close mobile translate dropdown when clicking outside
+  $('html').on('click', function (event) {
+    // if NOT mobile menu && is active then close
+    if (!$(event.target).closest('.translate-mobile').length && $('.translate-mobile').hasClass('active')) {
+      $('.translate-mobile').removeClass('active');
     }
   });
 }
@@ -51,3 +62,18 @@ function closeMenu(button, menu) {
   button.attr("aria-expanded", false);
   menu.attr("aria-hidden", true);
 }
+
+document.addEventListener('DOMContentLoaded', function () {
+  //Disable form submit on header search if query is empty
+  const headerSearchForm = document.querySelector('#header-search form');
+  if (headerSearchForm instanceof HTMLFormElement) {
+    const headerSearchInput = headerSearchForm.querySelector('input[name="query"]');
+    if (headerSearchInput instanceof HTMLInputElement) {
+      headerSearchForm.addEventListener('submit', function(event) {
+        if (headerSearchInput.value.trim() === '') {
+            event.preventDefault();
+        }
+      });
+    }
+  }
+});

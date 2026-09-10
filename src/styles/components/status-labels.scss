@@ -1,0 +1,42 @@
+.nsw-status-label {
+    &--results {
+        border-color: var(--nsw-brand-supplementary);
+        background-color: var(--nsw-brand-supplementary);
+        color: var(--nsw-white);
+        font-size: .688rem;
+        font-weight: var(--nsw-font-normal);
+        margin-left: 0.5rem;
+        padding: 0.0625rem .5rem;
+        vertical-align: text-bottom;        
+        line-height: 14px;
+    }
+    &--pirsa {
+        border-color: var(--pirsa-brand-primary);
+        background-color: var(--pirsa-brand-primary);
+        color: var(--nsw-white);
+    }
+    &--sardi {
+        border-color: var(--sardi-brand-primary);
+        background-color: var(--sardi-brand-primary);
+        color: var(--nsw-white);
+    }
+
+    &--protected {
+        border-color: var(--pirsa-dark-grey);
+        background-color: var(--pirsa-dark-grey);
+        color: var(--nsw-white);
+    }   
+    
+    &--report {
+        border-color: var(--pirsa-misc-yellow);
+        background-color: var(--pirsa-misc-yellow);
+        color: var(--nsw-black);
+    }       
+    
+}
+
+// to handle non-sardi pages (contact page)
+.nsw-status-label--sardi {
+    border-color: #007C54;
+    background-color: #007C54;
+}

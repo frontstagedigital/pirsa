@@ -1,0 +1,83 @@
+.nsw-side-nav {
+
+    a {
+        background-color: var(--pirsa-side-nav-light);
+        padding: 1rem 1rem 1rem 2rem;
+        
+        &.current {
+            background-color: var(--pirsa-accent-light);
+            padding-left: 2.75rem;
+
+            &::before {
+                color: var(--nsw-brand-supplementary);
+                content: "\f1df";
+                font-family: "Material Icons";
+                font-size: 1.25rem;
+                font-weight: var(--nsw-font-normal);
+                position: absolute;
+                left: 1rem;
+            }
+        }
+    }
+
+    &__header {
+        border-bottom: 1px solid var(--neutral-grey-02, #495054);
+        a {
+            background-color: var(--nsw-brand-supplementary);
+            border-radius: 4px 4px 0px 0px;
+            color: var(--nsw-text-light);
+            padding: 1rem;
+
+            &:hover {
+                background-color: var(--nsw-brand-dark);
+            }
+        }       
+    }
+
+    > ul {
+        > li {
+            &.active {
+                border-left: 0;
+                line-height: 1.4rem;
+                position: relative;
+            }
+        }
+    }
+    .active > ul > li a {
+        padding-left: 3.5rem;
+    }
+
+    &--accordion-mobile {
+        .nsw-side-nav__header {
+            a {
+                background-image: url('../image/icon-chevron-down.svg');
+                background-repeat: no-repeat;
+                background-size: 1.875rem auto; 
+                background-position: right 1rem center; 
+                @include breakpoint('lg') {
+                    background-image: none;
+                }                     
+            }
+            &.active a {
+                background-image: url('../image/icon-chevron-up.svg');
+                @include breakpoint('lg') {
+                    background-image: none;
+                }                     
+            }
+        } 
+
+        &-open {
+            ul {
+                display: block !important;
+                border-bottom: 1px solid var(--nsw-grey-04);
+            }
+        }
+
+        ul {
+            display: none;
+            @include breakpoint('lg') {
+                display: block;
+            }           
+        }
+    }
+}

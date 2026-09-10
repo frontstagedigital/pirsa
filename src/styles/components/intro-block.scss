@@ -1,0 +1,27 @@
+.pirsa-intro {
+    h2 {
+        font-size: 1.5rem;
+        line-height: 2rem;
+
+        @include breakpoint('lg') {
+            font-size: var(--nsw-font-size-xl-desktop);
+            line-height: var(--nsw-line-height-xl-desktop);
+            padding-bottom: 1rem;
+        }
+    }
+
+    h3 {
+        font-size: 1.5rem;
+        line-height: 2rem;
+        padding: 1rem 0;
+
+        @include breakpoint('lg') {
+            padding-top: 0;
+        }
+    }
+
+    &__content {
+        font-size: 20px;
+        line-height: 28px;
+    }
+}

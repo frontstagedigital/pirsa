@@ -17,6 +17,13 @@ Run the app, you can view the app by visiting `http://localhost:1234/`.
 
 Builds the website for production to the dist folder.
 
+#### `npm run build:css`:
+
+Builds a single style.css file.
+
+#### `npm run build:js`:
+
+Compiles src/js/main.js as a single JS file in the dist folder.
 
 ## Branch Structure
 
@@ -36,6 +43,7 @@ How it works:
 - The workflow lives in .github/workflows/pa11y-a11y-check.yml.
 - When you open a PR, the site gets built and served locally.
 - Pa11y crawls every .html page inside the dist/ folder and checks for accessibility issues.
+- Enabled caching using setup-node’s built-in cache: 'npm'
 
 If it finds problems:
 - The build will fail if A11Y_ENFORCE=true (which it is by default).
@@ -44,3 +52,26 @@ If you need to bypass temporarily, you can set A11Y_ENFORCE=false. It'll let you
 
 Why it’s here:
 We want to make sure the site works well for everyone. Pa11y helps us catch issues early, while we’re still in PRs.
+
+
+## Release to matrix
+
+There is a branch, matrix-release, that is used to release Squiz Matrix. There are a couple of additional build commands; build:css and build:js to create single css and js files for use in the design customisation and nested content. 
+
+Steps to release to matrix:
+- merge origin/dev into matrix-release
+- run build, build:css and build:js 
+- add, commit and push changes to origin
+
+In Matrix, run Update on the Git Bridge Asset and check that the nested asset 'Foot #477067' is referencing the correct pirsa.hash.js file. The hash will change with each release and update. 
+
+git checkout matrix-release
+git pull
+git fetch
+git merge origin/dev
+npm run build
+npm run build:css
+npm run build:js
+git add .
+git commit -m "Merged from dev and updated"
+git push
